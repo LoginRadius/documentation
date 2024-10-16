@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'LoginRadius',
   tagline: 'Identity is Complex, We Make it Simple!',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon-lr.ico',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
