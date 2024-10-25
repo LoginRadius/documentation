@@ -13,7 +13,7 @@ This is the list of browsers that are supported by LoginRadius, including the di
 | Opera                        | Yes       | All including Latest one     |
 | UC Browser                   | Yes       | All including Latest one     |
 | Yandex                       | Yes       | All including Latest one     |
-| Microsoft Edge               | Ye
+| Microsoft Edge               | Ye | All including Latest one
 
  
 
