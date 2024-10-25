@@ -1,6 +1,6 @@
 # Customer Intelligence Overview
 
-The Overview section will give you an idea of key statistics of your LoginRadius site. In this section, we have covered the overview of multiple statistics available in the [insight](https://adminconsole.loginradius.com/insights/overview) tab under the <a href = https://adminconsole.loginradius.com/ target=_blank>**Admin Console**</a> which represents the customer information with regard to various aspects of analytics. This contains useful charts and analytic tools to view and measure the overall performance of your site in terms of customer registration and login. The information is aggregated and categorized into identity analytics, provider analytics, login analytics and comparative analysis. This analytics will be helpful to improve the overall application performance and understand the customer experience.
+The Overview section will give you an idea of key statistics of your LoginRadius site. In this section, we have covered the overview of multiple statistics available in the [insight](https://adminconsole.loginradius.com/insights/overview) tab  which represents the customer information with regard to various aspects of analytics. This contains useful charts and analytic tools to view and measure the overall performance of your site in terms of customer registration and login. The information is aggregated and categorized into identity analytics, provider analytics, login analytics and comparative analysis. This analytics will be helpful to improve the overall application performance and understand the customer experience.
 
 ## Key-terminology
 This section defines the basic terminology used in customer insights. Key terms include Active Customer, Logins, Provider vs. Social Provider, Unique Profile Login, Customer Profiles, and Customer Accounts. Detailed explanations of these terms can be found  [here](https://www.loginradius.com/docs/customer-intelligence/key-terminology).
@@ -27,7 +27,7 @@ The [Login Stats](https://adminconsole.loginradius.com/insights/login-analytics/
 > LoginRadius uses details like user agent, provider, IP, language, host, date, and time to display device, browser, and provider engagement. For other sections, the Admin Console uses user profiles to show data based on login activity (e.g., last login dates).
 
 ## Comparative-analysis
-In this <a href = https://adminconsole.loginradius.com/insights/comparative-analytics/month-comparision target=_blank>section</a>, the customer will see the historical analysis section provides comparative charts of the number of registrations in the selected months. you can select different months, domains, and customer accounts or customer profiles and also Compare the number of customer registrations between selected months.
+In this [section](https://adminconsole.loginradius.com/insights/comparative-analytics/month-comparision), the customer will see the historical analysis section provides comparative charts of the number of registrations in the selected months. you can select different months, domains, and customer accounts or customer profiles and also Compare the number of customer registrations between selected months.
 
 > ## Data Collection Method:
 > LoginRadius uses user profiles to compare records month-to-month.
