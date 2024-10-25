@@ -29,7 +29,7 @@ This section contains a comparative chart of the percentages of response time ta
 
 ## Lookup profile
 
-This section contains a comparative chart of the percentages of response time taken by the profile lookup APIs over a period of the selected time interval. It helps you track the exact time the LoginRadius API is taking to serve the specific amount of requests. It shows response time in multiple ranges like <1s,  <500ms, <3s and >3s. By clicking on a specific response time, you will be able to see the corresponding API stats..
+This section contains a comparative chart of the percentages of response time taken by the profile lookup APIs over a period of the selected time interval. It helps you track the exact time the LoginRadius API is taking to serve the specific amount of requests. It shows response time in multiple ranges like less then 1s, less then 500ms, less then 3s and greater then 3s. By clicking on a specific response time, you will be able to see the corresponding API stats..
 
 You can also select the days/time from the provided drop down and once clicked on “REFRESH”, it will show the updated API performance. If you observe a higher percentage of APIs taking longer than usual (degraded response time), you should reach out to LoginRadius Support to have a look at it.
 
@@ -37,7 +37,7 @@ You can also select the days/time from the provided drop down and once clicked o
 
 ## Auth Profile
 
-This section contains a comparative chart of the percentages of response time taken by the authentication APIs over a period of the selected time interval. Similar to look-up profile analytics, this graph shows response time in multiple ranges like <1s,  <500ms, <3s and >3s. Further clicking on a specific response time, you will be able to see the corresponding API stats. If you observe any abnormal response time for the Auth API performance, you should reach out to LoginRadius Support to have a look at it.
+This section contains a comparative chart of the percentages of response time taken by the authentication APIs over a period of the selected time interval. Similar to look-up profile analytics, this graph shows response time in multiple ranges like less then 1s, less then 500ms, less then 3s and greater then 3s. Further clicking on a specific response time, you will be able to see the corresponding API stats. If you observe any abnormal response time for the Auth API performance, you should reach out to LoginRadius Support to have a look at it.
 
 ![Auth Profile](https://apidocs.lrcontent.com/images/4_1830962f200fb161416.86731801.png "Auth Profile")
 
@@ -46,7 +46,7 @@ This section contains a comparative chart of the percentages of response time ta
 
 If you want to know the LoginRadius account create APIs performance for a specific duration of time, you can refer to this section, as it contains a comparative chart of the percentages of response time taken by the profile creation APIs over a period of the selected time interval. 
 
-In general way we can say how much time the LoginRadius API is taking to create an account. Similar to other analytics, this graph also shows response times in multiple ranges like <1s,  <500ms, <3s and >3s. Further clicking on a specific response time, you will be able to see the corresponding API stats. 
+In general way we can say how much time the LoginRadius API is taking to create an account. Similar to other analytics, this graph also shows response times in multiple ranges like less then 1s, less then 500ms, less then 3s and greater then 3s. Further clicking on a specific response time, you will be able to see the corresponding API stats. 
 
 ![Create API](https://apidocs.lrcontent.com/images/5_396162f201239c2ce7.75398198.png "Create API")
 
@@ -55,7 +55,7 @@ In general way we can say how much time the LoginRadius API is taking to create 
 
 This section contains a comparative chart of the percentages of response time taken by the profile deletion API over a period of the selected time interval.
 
-In general way we can say how much time the LoginRadius API is taking to delete an account. Similar to other analytics, this graph also shows response times in multiple ranges like <1s,  <500ms, <3s and >3s. Further clicking on a specific response time, you will be able to see the corresponding API stats.
+In general way we can say how much time the LoginRadius API is taking to delete an account. Similar to other analytics, this graph also shows response times in multiple ranges like less then 1s, less then 500ms, less then 3s and greater then  3s. Further clicking on a specific response time, you will be able to see the corresponding API stats.
 
 ![Delete API](https://apidocs.lrcontent.com/images/6_369862f201788aa601.45655243.png "Delete API")
 
@@ -64,6 +64,6 @@ In general way we can say how much time the LoginRadius API is taking to delete 
 
 This section contains a comparative chart of the percentages of response time taken by the profile update APIs over a period of the selected time interval.
 
-In general way we can say how much time the LoginRadius API is taking to update an profile. Similar to other analytics, this graph also shows response times in multiple ranges like <1s,  <500ms, <3s and >3s. Further clicking on a specific response time, you will be able to see the corresponding API stats.
+In general way we can say how much time the LoginRadius API is taking to update an profile. Similar to other analytics, this graph also shows response times in multiple ranges like less then 1s, less then 500ms, less then 3s and greater then  3s. Further clicking on a specific response time, you will be able to see the corresponding API stats.
 
 ![Modify API](https://apidocs.lrcontent.com/images/7_2938962f201a5801485.11510944.png "Modify API")
