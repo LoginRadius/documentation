@@ -13,6 +13,15 @@ const FeatureList = [
     ),
   },
   {
+    title: 'Academy',
+    Svg: require('@site/static/img/undraw_docusaurus_academy.svg').default,
+    description: (
+      <>
+        Configure seamless authentication of your customers into your application and getting started with LoginRadius.
+      </>
+    ),
+  },
+  {
     title: 'Security',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
