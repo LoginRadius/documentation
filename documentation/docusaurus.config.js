@@ -20,7 +20,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
+  organizationName: 'LoginRadius', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -89,7 +89,7 @@ const config = {
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://adminconsole.loginradius.com/dashboard',
-            label: 'Admmin Console',
+            label: 'Admin Console',
             position: 'right',
           },
         ],
@@ -110,16 +110,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Terms',
+                href: 'https://www.loginradius.com/terms/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Privacy',
+                href: 'https://www.loginradius.com/privacy-policy/',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Contact',
+                href: 'https://www.loginradius.com/contact-sales/',
               },
             ],
           },
@@ -131,8 +131,8 @@ const config = {
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Admin Console',
+                href: 'https://adminconsole.loginradius.com/dashboard',
               },
             ],
           },
