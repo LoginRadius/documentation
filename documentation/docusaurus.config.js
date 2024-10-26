@@ -82,14 +82,14 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'AdminConsoleSidebar', // AdminConsoleSidebar
+            sidebarId: 'DocsSidebar', // AdminConsoleSidebar
             position: 'left',
-            label: 'Admin Console',
+            label: 'Docs',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            href: 'https://adminconsole.loginradius.com/dashboard',
+            label: 'Admmin Console',
             position: 'right',
           },
         ],
