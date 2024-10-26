@@ -27,6 +27,27 @@ const FeatureList = [
     description: (
       <>
         SDKs, Turnkey plugins, and JS Libraries that will help you to deploy your LoginRadius Identity Platform in no time.
+        <ul>
+          {[
+            { url: 'sdk-reference/dotnet', title: '.NET' },
+            { url: 'sdk-reference/android', title: 'Android (Java)' },
+            { url: 'sdk-reference/dart', title: 'Dart (Flutter)' },
+            { url: 'sdk-reference/go', title: 'Go' },
+            { url: 'sdk-reference/java', title: 'Java' },
+            { url: 'sdk-reference/js', title: 'JavaScript' },
+            { url: 'sdk-reference/node', title: 'Node.js' },
+            { url: 'sdk-reference/php', title: 'PHP' },
+            { url: 'sdk-reference/community/laravel', title: 'PHP (Laravel)' },
+            { url: 'sdk-reference/python', title: 'Python' },
+            { url: 'sdk-reference/ruby', title: 'Ruby' },
+            { url: 'sdk-reference/rust', title: 'Rust' },
+            { url: 'sdk-reference/ios', title: 'Swift (iOS)' },
+          ].map((link) => (
+            <li key={link.title}>
+              <a href={link.url}>{link.title}</a>
+            </li>
+          ))}
+        </ul>
       </>
     ),
   },
