@@ -21,3 +21,9 @@
   align-items: center;
   justify-content: center;
 }
+
+.buttons_src-pages-index-module {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}

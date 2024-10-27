@@ -42,3 +42,118 @@
 .hero--primary {
   --ifm-hero-background-color: #073857;
 }
+
+
+
+/* General reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #09263C;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+  font-size: 1rem;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+
+.navbar__link {
+  transition: color 0.3s;
+}
+
+.navbar__link:hover {
+  color: #00b8e6;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #00b8e6, #09263C);
+  color: white;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  background-color: #008ecf;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.button--secondary:hover {
+  background-color: #005f8c;
+}
+
+.button--lg {
+  font-size: 1.1rem;
+}
+
+/* Features Section */
+.features_src-components-HomepageFeatures-styles-module {
+  background-color: #f4f7fa;
+  padding: 3rem 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col--4 {
+  flex: 1;
+  padding: 1rem;
+  min-width: 250px;
+}
+
+.featureSvg_src-components-HomepageFeatures-styles-module {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+.text--center {
+  text-align: center;
+}
+
+*,
+*::before,
+*::after {
+  text-align: left;
+}
+
