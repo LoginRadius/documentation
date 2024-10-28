@@ -1,7 +1,10 @@
   {
     "label": "Customer Management",
-    "position": 2,
+    "position": 1,
     "link": {
-      "type": "generated-index"
+      "type": "doc",
+      "id": "customer-management/overview"
     }
+  
+  
   }
