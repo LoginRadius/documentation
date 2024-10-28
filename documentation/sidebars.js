@@ -19,12 +19,12 @@ const sidebars = {
   // But you can create a sidebar manually
   /*
   AdminConsoleSidebar: [
-    'intro',
-    'hello',
+    'Governance',
+    'customer profiling',
     {
       type: 'category',
       label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
+      items: ['customer-profiling/overview'],
     },
   ],
    */

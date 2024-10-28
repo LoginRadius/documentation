@@ -5,6 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import governanceSideBar from "./docs/governance/sidebars.js"
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -70,7 +71,11 @@ const config = {
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
+      sidebar: {
+        // Use the sidebar defined in sidebars.js
+        governanceSideBar,
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -143,7 +148,7 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-    }),
+    },
 };
 
 export default config;
