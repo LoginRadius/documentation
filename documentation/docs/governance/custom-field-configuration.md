@@ -1,4 +1,4 @@
-#Custom Field Configuration
+# Custom Field Configuration
 
 Custom fields allow for a simple key value storage option that extends the LoginRadius Normalized user profile. These key values should be flat field (objects or Arrays are not supported) and should be limited to 1000 characters.
 

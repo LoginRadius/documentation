@@ -1,7 +1,6 @@
-
   {
-    "label": "Customer Intelligence",
-    "position": 2,
+    "label": "Authentication",
+    "position": 1,
     "link": {
       "type": "generated-index"
     }

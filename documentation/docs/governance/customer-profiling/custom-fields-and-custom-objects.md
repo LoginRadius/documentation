@@ -1,4 +1,4 @@
-#Customer Data Storage
+# Customer Data Storage
 
 The LoginRadius system supports three types of data storage: Normalized User Profile, Custom Fields, and Custom Objects, for storing your user data in the LoginRadius Cloud Directory. We will go over each of these options and their usages below. Review [data point](https://www.loginradius.com/docs/api/v2/data-points-and-response-code/data-points) document to get a better understanding of the data storage structure.
 
