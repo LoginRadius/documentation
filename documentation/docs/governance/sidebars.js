@@ -10,9 +10,11 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
     // Define your sidebar for the specific folder
-    governance : [
-      'overview',  // Move file3.md to the top
-      'data-schema'
+    MyFolderSidebar : [
+      'governance/overview',  // Move file3.md to the top
+      'governance/data-schema',
+      'file2',
+      'file4',
     ],
   };
   

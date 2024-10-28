@@ -56,7 +56,7 @@
 
 /* Typography */
 body {
-  font-family: Arial, sans-serif;
+  font-family: ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica,Apple Color Emoji,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol;
   line-height: 1.6;
 }
 
@@ -97,7 +97,7 @@ p {
 
 .hero__title {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .hero__subtitle {

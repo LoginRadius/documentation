@@ -1,4 +1,4 @@
-Smart Login Introduction
+# Smart Login Introduction
 =====
 **Smart Login** feature allows your customers to easily log in to a device that may not be accessible with standard web or mobile devices.
 
