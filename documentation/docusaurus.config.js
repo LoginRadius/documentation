@@ -10,7 +10,7 @@ import governanceSideBar from "./docs/governance/sidebars.js"
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Identity Platform Documentation',
-  tagline: 'Explore the LoginRadius Identity Platform documentation to seamlessly integrate identity management into your application.Access quick start guides, implementation tutorials, and example code. Find SDKs, APIs, and sample demos to simplify your identity management journey.',
+  tagline: 'Explore the LoginRadius Identity Platform documentation to seamlessly integrate identity management into your application. Access quick start guides, implementation tutorials, and example code. Find SDKs, APIs, and sample demos to simplify your identity management journey.',
   favicon: 'img/favicon-lr.ico',
 
   // Set the production url of your site here
