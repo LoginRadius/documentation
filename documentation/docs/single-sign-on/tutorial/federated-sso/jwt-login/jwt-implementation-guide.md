@@ -2,13 +2,13 @@
 
 To implement the JWT in Loginradius use the following two ways:
 
-- [Implementation of JWT in IDX](#implementationofjwtinidx0)
+- [Implementation of JWT in IDX](#implementation-of-jwt-in-idx)
 
-- [Direct Implementation of API](#directimplementationofjwtusingloginradiusapis4)
+- [Direct Implementation of API](#direct-implementation-of-jwt-using-loginradius-apis)
 
 ## Implementation of JWT in IDX:
 
-**Step 1:** First of all, configure a JWT app in your LoginRadius Admin Console. Refer to the [JWT Admin Console Configuration](#adminconsoleconfiguration1) section for how to configure JWT in the LoginRadius Admin Console.
+**Step 1:** First of all, configure a JWT app in your LoginRadius Admin Console. Refer to the [JWT Admin Console Configuration](#admin-console-configuration) section for how to configure JWT in the LoginRadius Admin Console.
 
 **Step 2:** Whitelist the service provider URL in the LoginRadius Admin Console. Follow this [document](https://www.loginradius.com/docs/api/v2/admin-console/deployment/production-environments/) for information on how to whitelist URLs in the LoginRadius Admin console.
 
@@ -173,7 +173,7 @@ window.location = 'profile.aspx';
 
 ## Direct Implementation of JWT using LoginRadius APIs
 
-Step 1: First of all, configure a JWT app in your LoginRadius Admin Console. Refer to the [JWT Admin Console Configuration](#adminconsoleconfiguration1) section for how to configure JWT in the LoginRadius Admin Console.
+Step 1: First of all, configure a JWT app in your LoginRadius Admin Console. Refer to the [JWT Admin Console Configuration](#admin-console-configuration) section for how to configure JWT in the LoginRadius Admin Console.
 
 Step 2: If you are directly implementing your Login forms or already have an access token or want to generate a JWT based on email/username/Phone number or a password, you can leverage the following APIs:
 
@@ -190,7 +190,6 @@ signature: <JWTresponse>
 }
 ```
 
-For more information on `<JWTresponse>`, refer to [JWT Token Structure](#jsonwebtokenstructure0).
 
 ## Session Management
 

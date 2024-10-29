@@ -6,7 +6,7 @@ This document goes over the full process of leveraging the Federated Single Sign
 
 ## DOMO as SP Configuration Guide
 
-This guide will take you through the setup and implementation of the IDP initiated SSO. It covers everything you need to configure in your [DOMO Application](#partconfiguringsamlindomo1) and [LoginRadius Admin Console](#partconfigurationofsamlinloginradiusadminconsole2). 
+This guide will take you through the setup and implementation of the IDP initiated SSO. It covers everything you need to configure in your [DOMO Application](#part-1---configuring-saml-in-domo) and [LoginRadius Admin Console](#part-2---configuration-of-saml-in-loginradius-admin-console). 
 
 >**Pre-requisites:** You will need an account on Domo to proceed. You can apply for an account on the [Domo website](https://www.domo.com/start/free?email=#/email).
 
@@ -44,7 +44,7 @@ Select the **Manual Setup** and fill out the fields as per the details provided 
 ![step](https://apidocs.lrcontent.com/images/domo8_21325edff4cd59f0a7.41212569.png "step")
 
 
->**Note:** You will need this certificate along with its private key while [configuring details in the LoginRadius Admin Console](#partconfigurationofsamlinloginradiusadminconsole2).
+>**Note:** You will need this certificate along with its private key while [configuring details in the LoginRadius Admin Console](#part-2---configuration-of-saml-in-loginradius-admin-console).
 
 **Step 9:** Under **Advanced Settings**, select the Use **SAML Relay State to redirect** option
 
@@ -58,7 +58,7 @@ Select the **Manual Setup** and fill out the fields as per the details provided 
 **Step 12:** You should now have a new field where you can enter the following Logout URL: ```https://<LoginRadius Site Name>/service/saml/idp/logout?appname=<SAMLAppName>```
 
 **Step 13:** In the upper-right corner, click **SAVE CONFIG**. 
-You have completed the required configuration in Domo. Now you can move over to [Configuring SAML in LoginRadius](#partconfigurationofsamlinloginradiusadminconsole2).
+You have completed the required configuration in Domo. Now you can move over to [Configuring SAML in LoginRadius](#part-2---configuration-of-saml-in-loginradius-admin-console).
 
 ## Part 2 - Configuration of SAML in LoginRadius Admin Console
 
@@ -138,7 +138,7 @@ The following table is an example of email field mapping :
 
 ## Part 3 - Customer Login in DOMO via LoginRadius
 
-**Step 1:** After completing the [Part 1](#partconfiguringsamlindomo1) and [Part 2](#partconfigurationofsamlinloginradiusadminconsole2)  configurations, navigate to the Domo login page, the following screen will appear:
+**Step 1:** After completing the [Part 1](#part-1---configuring-saml-in-domo) and [Part 2](#part-2---configuration-of-saml-in-loginradius-admin-console)  configurations, navigate to the Domo login page, the following screen will appear:
 
 ![step](https://apidocs.lrcontent.com/images/domo15_209315ee025f715f3c6.79160587.png "step")
 

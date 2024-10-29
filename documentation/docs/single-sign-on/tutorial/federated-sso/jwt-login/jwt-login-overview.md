@@ -64,11 +64,11 @@ The payload can be fully customized to include data mapping for any LoginRadius 
 
 This guide will take you through the process of setup and implementation of the JWT SSO. It covers the following:
 
-- [Functional flow of JWT SSO](#jwtssoflow2)
+- Functional flow of JWT SSO
 
-- [Configuration you need to do in LoginRadius Admin Console](#jwtconfigurationguide3)
+- Configuration you need to do in LoginRadius Admin Console
 
-- [Implementing JWT SSO with LoginRadius APIs](#jwtloginradiusapis5)
+- Implementing JWT SSO with LoginRadius APIs
 
 ### JWT SSO Flow
 

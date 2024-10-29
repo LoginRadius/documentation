@@ -14,11 +14,11 @@ The following displays the sequence diagram of the Web SSO process:
 
 The following explains the working of above sequence diagram:
 
-1. When your customer lands on a page included in the SSO grouping, the first step is to [check for an active SSO session](https://www.loginradius.com/docs/api/v2/single-sign-on/getting-started#userloggedincheck5). It is handled by the [ssoNotLoginThenLogout](#-step-3-3-sso-not-login-then-logout-) function, which checks the presence of a browser cookie on the [LoginRadius SiteName].hub.loginradius.com domain. If a cookie is present, it goes into either the success handler (function) or the error handler.
+1. When your customer lands on a page included in the SSO grouping, the first step is to [check for an active SSO session](https://www.loginradius.com/docs/api/v2/single-sign-on/getting-started#userloggedincheck5). It is handled by the [ssoNotLoginThenLogout](#step-33-sso-not-login-then-logout-) function, which checks the presence of a browser cookie on the [LoginRadius SiteName].hub.loginradius.com domain. If a cookie is present, it goes into either the success handler (function) or the error handler.
 
-2. The function triggers the [AJAX call](#settingthessotokenviaajaxcall4) that returns a response based on the presence of the 'lr-user--token' cookie.
+2. The function triggers the [AJAX call](#setting-the-sso-token-via-ajax-call) that returns a response based on the presence of the 'lr-user--token' cookie.
 
-3. You will access either the [Login](#-step-3-1-sso-login) or [Logout](#-step-3-2-sso-logout) SSO functions to trigger the login or logout process, which directs the user into the handler function.
+3. You will access either the [Login](#step-31-sso-login) or [Logout](#step-32-sso-logout) SSO functions to trigger the login or logout process, which directs the user into the handler function.
 
 4. In an active SSO session, you now have a valid access token that you can send to your authentication server or handle this via client-side authentication procedures.
 
@@ -28,9 +28,9 @@ The following explains the working of above sequence diagram:
 
 7. A successful login sets the cookie in your browser on [LoginRadius SiteName].hub.loginradius.com.
 
-8. You can include the [Login](#-step-3-1-sso-login) function to redirect the customer to your authentication procedures through the function handler or callback URL.
+8. You can include the [Login](#step-31-sso-login) function to redirect the customer to your authentication procedures through the function handler or callback URL.
 
-9. To log out your customer, add a [Logout](#-step-3-2-sso-logout) button. This button would call the Logout function, clear the SSO browser session, and redirect the user to either the function handler or callback URL.
+9. To log out your customer, add a [Logout](#step-32-sso-logout) button. This button would call the Logout function, clear the SSO browser session, and redirect the user to either the function handler or callback URL.
 
 10. Trigger your logout procedure with either the function handler or callback URL.
 
@@ -156,7 +156,7 @@ The following JSON response in the console log of your browser will indicate the
 
 When using the Login Interfaces provided by **LoginRadiusV2.js** the **access_token** obtained after the successful login is automatically set for SSO and can be accessed at: **`https://<LoginRadius Site Name>.hub.loginradius.com/ssologin/login`**. This section covers how you can manually set a LoginRadius **access_token** for SSO if the **access_token** was obtained by other means.
 
-Refer the below section for setting the SSO token via Ajax call [(Chrome, Firefox, Internet Explorer, Edge, Safari)](#settingthessotokenviaajaxcall4)
+Refer the below section for setting the SSO token via Ajax call [(Chrome, Firefox, Internet Explorer, Edge, Safari)](#setting-the-sso-token-via-ajax-call)
 
 ### Setting The SSO Token via Ajax Call
 

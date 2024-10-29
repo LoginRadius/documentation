@@ -8,7 +8,7 @@ Let’s say you are using the LoginRadius Identity Platform for your company por
 
 ## Salesforce as SP Configuration Guide
 
-This guide will take you through the setup and integration of Salesforce as a service provider. It covers everything you need to configure in your [Salesforce Application](#partconfigurationinsalesforce1) and [LoginRadius Admin Console](#partconfigurationinadminconsole2). 
+This guide will take you through the setup and integration of Salesforce as a service provider. It covers everything you need to configure in your [Salesforce Application](#part-1---configuration-in-salesforce) and [LoginRadius Admin Console](#part-2---configuration-in-admin-console). 
 
 
 ## Part 1 - Configuration in Salesforce

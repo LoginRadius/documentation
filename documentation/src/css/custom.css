@@ -177,6 +177,8 @@ p {
   background-color: #efefef; /* Background color */
   border-right: 1px solid #dee2e6; /* Right border */
   padding: 1rem; /* Padding around the sidebar */
+  text-transform: capitalize; /* Capitalizes the first letter of each word */
+
 }
 
 /* Target specific classes for more control */

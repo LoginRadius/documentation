@@ -31,8 +31,8 @@ This guide will lead you through the setup and implementation process of IDP-ini
 
 You are required to configure a **SAML app**  in the  LoginRadius Admin Console and **third-party Service Provider**.
 
-1. [Configure the SAML App in LoginRadius Admin Console](#configuringsamlapp1)
-2. [Configure Service Provider Application](#configuringserviceproviderapplication2)
+1. [Configure the SAML App in LoginRadius Admin Console](#configuring-saml-app)
+2. [Configure Service Provider Application](#configuring-service-provider-application)
 
 
 ## Configuring SAML App

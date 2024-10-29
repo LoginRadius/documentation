@@ -12,7 +12,7 @@ The authorization server issues an access_token to a third-party client with the
 
 LoginRadius Identity Platform supports standard  [OAuth 2.0 specs](https://tools.ietf.org/html/rfc6749)  to integrate your OAuth client with LoginRadius. Thus, you can allow your application's customers to log in to an OAuth-enabled application without creating an account.  This document goes over the full process of getting the SSO feature implemented with OAuth 2.0.
 
-This section covers the basic knowledge of [OAuth Roles](#oauthroles2) that you need to know before configuring the OAuth 2.0 in the LoginRadius Identity Platform.
+This section covers the basic knowledge of [OAuth Roles](#oauth-roles) that you need to know before configuring the OAuth 2.0 in the LoginRadius Identity Platform.
 
 ### OAuth Roles
 
@@ -30,13 +30,13 @@ OAuth 2.0 has the following four roles:
 
 Following is the step-by-step guide to Implementing Oauth 2.0 with LoginRadius
 
-- [LoginRadius Admin Console Configuration](#loginradiusadminconsoleconfiguration4)
+- [LoginRadius Admin Console Configuration](#loginradius-admin-console-configuration)
     
-- [Oauth 2.0 Implementation](#oauthimplementation5)
+- [Oauth 2.0 Implementation](#oauth-20-implementation)
     
-- [Supported Query Parameter](#supportedqueryparameter13)
+- [Supported Query Parameter](#supported-query-parameter)
   
-- [Additional Steps in Oauth 2.0](#additionalstepsinoauth14)  
+- [Additional Steps in Oauth 2.0](#additional-steps-in-oauth-20)  
 
 ### LoginRadius Admin Console Configuration
 
@@ -112,15 +112,15 @@ This guide will take you through the implementation of OAuth 2.0 and flow with L
 
 The OAuth 2.0 authorization protocol specification defines the following flows supported by LoginRadius to get an Access Token, these flows are called grant types. This helps in deciding which one is suited for the case depends mostly on the type of application.
 
-- [Authorization Code Flow (Explicit)](#authorizationcodeflowexplicit6)
+- [Authorization Code Flow (Explicit)](#authorization-code-flow-explicit)
     
-- [Oauth2.0 PKCE Flow](#oauthpkceflow8)
+- [Oauth2.0 PKCE Flow](#oauth-20-pkce-flow)
     
-- [Implicit Flow](#implicitflow9)
+- [Implicit Flow](#implicit-flow)
     
-- [Resource Owner Password Credential Flow](#resourceownerpasswordcredentialflow10)
+- [Resource Owner Password Credential Flow](#resource-owner-password-credential-flow)
     
-- [Device Code Flow](#devicecodeflow12)
+- [Device Code Flow](#device-code-flow)
 
 
 #### Authorization Code Flow (Explicit)
@@ -184,7 +184,7 @@ Available Query Parameters
     
     - Response of login dialog if `response_type=code: YOUR_CALLBACK_URI?code={unique code}`
 
-LoginRadius also supports some **additional query parameters** that can be used in the authorization endpoint, to know more about this please click [here](#authorizationendpointsupportedparameters14).
+LoginRadius also supports some **additional query parameters** that can be used in the authorization endpoint, to know more about this please click [here](#authorization-endpoint-supported-parameters).
 
 **Step 2:** Exchanging the Code for an Access Token
 
@@ -260,7 +260,7 @@ https://<siteurl>/service/oauth/{OauthAppName}/authorize?client_id={client_id}&r
 
 -   **client_id:** [required] OAuth Client ID
     
--   **redirect_uri:** [required] This will be the callback URL of your site where you want to redirect back your users for e.g https://abc.com.
+-   **redirect_uri:** [required] This will be the callback URL of your site where you want to redirect back your users for e.g `https://abc.com`.
     
 -  **state:** [optional] A random string that returned with the `access_token` in the redirect callback. This parameter will be returned as it is and as part of the response.
     
@@ -274,7 +274,7 @@ https://<siteurl>/service/oauth/{OauthAppName}/authorize?client_id={client_id}&r
 -   **code_challenge_method:** SHA256 (For **code_challenge_method** currently, we are supporting the **SHA256** Hash algorithm, If this parameter  will not be passed, then the default method **SHA256** will be used)
     
 
-LoginRadius also supports some **additional query parameters** that can be used in the authorization endpoint, to know more about this please click [here](#authorizationendpointsupportedparameters14).
+LoginRadius also supports some **additional query parameters** that can be used in the authorization endpoint, to know more about this please click [here](#authorization-endpoint-supported-parameters).
 
 Steps for using **code_challenge** and **code_challenge_method** in PKCE flow.
 
@@ -407,7 +407,7 @@ The access token request will contain the following parameters. Here is an expla
 
 Now you can use the obtained `access_token`  with any of [LoginRadius  APIs](https://www.loginradius.com/docs/api/v2/getting-started/introduction/) supporting the `access_token` until the token expires or revokes.
 
-LoginRadius also supports some **additional query parameters** that can be used in the authorization endpoint, to know more about this please click [here](#authorizationendpointsupportedparameters14).
+LoginRadius also supports some **additional query parameters** that can be used in the authorization endpoint, to know more about this please click [here](#authorization-endpoint-supported-parameters).
 
 ## Resource Owner Password Credential Flow
 
@@ -584,7 +584,7 @@ The following are some of the error response that you might get during Device Co
 
 Depending on the workflow you choose to leverage, you will need to add different query parameters to the Authorization URL that points to the Login page.
 
-> **Note:** In the [Authorization Code Flow (Explicit)](#authorizationcodeflowexplicit6) the authorization endpoint will be used for authentication and authorization and will return an authorization grant to the client.
+> **Note:** In the [Authorization Code Flow (Explicit)](#authorization-code-flow-explicit) the authorization endpoint will be used for authentication and authorization and will return an authorization grant to the client.
 
 You can use the table below for an overview of all of the different parameters that can be passed to the Authorization Endpoint.  
 
