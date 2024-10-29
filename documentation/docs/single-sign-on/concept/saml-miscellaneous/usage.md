@@ -25,8 +25,8 @@ Here are the steps to use a SAML add-on to troubleshoot the SAML login flow:
 
 Let’s learn about the best practices you can follow while implementing SAML with LoginRaidus. You have to:
 
-- Ensure, how you validate a customer identity transmits [AuthnRequest](#authnrequest3) to the Identity Provider
-- Make sure to encrypt [SAML Assertion](#samlassertion4) and handle [Force Sign-in](#forcesignin5) when a user requests sign-on, but the user’s browser already has an active session.
+- Ensure, how you validate a customer identity transmits [AuthnRequest](#authnrequest) to the Identity Provider
+- Make sure to encrypt [SAML Assertion](#saml-assertion) and handle [Force Sign-in](#force-sign-in) when a user requests sign-on, but the user’s browser already has an active session.
 
 Refer the sections below for the detailed information about best practices:
 

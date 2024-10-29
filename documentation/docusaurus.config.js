@@ -9,8 +9,8 @@ import governanceSideBar from "./docs/governance/sidebars.js"
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'LoginRadius',
-  tagline: 'Identity is Complex, We Make it Simple!',
+  title: 'Identity Platform Documentation',
+  tagline: 'Explore the LoginRadius Identity Platform documentation to seamlessly integrate identity management into your application.Access quick start guides, implementation tutorials, and example code. Find SDKs, APIs, and sample demos to simplify your identity management journey.',
   favicon: 'img/favicon-lr.ico',
 
   // Set the production url of your site here
@@ -76,6 +76,13 @@ const config = {
         // Use the sidebar defined in sidebars.js
         governanceSideBar,
       },
+
+      algolia: {
+        appId: 'Z5ZYP9YXTO', // Replace with your Algolia Application ID
+        apiKey: '57abca036fc42fdece204fd0cc114563', // Replace with your Search-Only API Key
+        indexName: 'loginradius', 
+        contextualSearch: true
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -84,6 +91,8 @@ const config = {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
+
+        
         items: [
           {
             type: 'docSidebar',
@@ -97,6 +106,10 @@ const config = {
             label: 'Admin Console',
             position: 'right',
           },
+          {
+            type: 'search',
+            position: 'right',
+          },
         ],
       },
       footer: {
@@ -107,7 +120,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/authentication/overview',
               },
             ],
           },

@@ -1,0 +1,8 @@
+{
+  "label": "Single Sign On",
+  "position": 4,
+   "link": {
+    "type": "doc",
+    "id": "single-sign-on/overview"
+   }
+}

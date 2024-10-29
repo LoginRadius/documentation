@@ -7,11 +7,16 @@ const FeatureList = [
     title: 'Authentication',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
-      <>
-        A quick run-through of authentication processes and features offered by the LoginRadius Identity Platform.
-      </>
+      <a href="/docs/authentication/overview" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <span>
+            A quick run-through of authentication processes and features offered by the LoginRadius Identity Platform.
+          </span>
+        </div>
+      </a>
     ),
-  },
+}
+,
   {
     title: 'Academy',
     Svg: require('@site/static/img/undraw_docusaurus_academy.svg').default,
@@ -36,7 +41,7 @@ const FeatureList = [
     description: (
       <>
         SDKs, Turnkey plugins, and JS Libraries that will help you to deploy your LoginRadius Identity Platform in no time.
-        <ul>
+        {/* <ul>
           {[
             { url: 'sdk-reference/dotnet', title: '.NET' },
             { url: 'sdk-reference/android', title: 'Android (Java)' },
@@ -56,7 +61,7 @@ const FeatureList = [
               <a href={link.url}>{link.title}</a>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </>
     ),
   },

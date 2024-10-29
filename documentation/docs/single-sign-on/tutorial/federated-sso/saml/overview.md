@@ -27,7 +27,7 @@ Before going into the in-depth detail of SAML, let's first see what are the adva
 - **Centralized Risk Management:** In SAML, the responsibility for proper management of identities lies with the identity provider. This is more manageable and desirable rather than handling multiple service provider systems.
 
 ## SAML Components
-SAML framework consists of three sets of components: [assertions](#assertions3), [protocols](#protocols4), and [bindings](#bindings5). Find the detail of these components in the section below.
+SAML framework consists of three sets of components: [assertions](#assertions), [protocols](#protocols), and [bindings](#bindings). Find the detail of these components in the section below.
 
 ### Assertions
 A SAML assertion is a package of data produced by a SAML authority. Alternatively, you can say that a SAML Assertion is the XML document containing the user authorization that the identity provider sends to the service provider.  
@@ -81,7 +81,7 @@ LoginRadius supports both SAML 1.1 and SAML 2.0 flows. LoginRadius Admin Console
 
 The following are some key points providing better clarity about LoginRadius acting as Identity provider:
 1. LoginRadius acts as an identity provider (IDP), which means that LoginRadius can authorize your app, and your app will act as a service provider (SP).
-2. LoginRadius supports both [Identity Provider Initiated Login](#identityproviderinitiatedlogin7) and [Service Provider Initiated](#serviceproviderinitiatedlogin8) login flows.
+2. LoginRadius supports both [Identity Provider Initiated Login](#identity-provider-initiated-login) and [Service Provider Initiated](#service-provider-initiated-login) login flows.
 
 3. LoginRadius supports Single Logout (SLO).
 4. LoginRadius does not support HTTP Artifact.

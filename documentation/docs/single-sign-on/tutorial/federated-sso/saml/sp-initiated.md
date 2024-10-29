@@ -36,8 +36,8 @@ This guide will take you through the process of setup and implementation of the 
 
 You are required to configure a **SAML app** in the LoginRadius Admin Console and third-party **Service Provider**.
 
-1. [Configure the SAML App in LoginRadius Admin Console](#configuringsamlapp1)
-2. [Configure Service Provider Application](#configureserviceproviderapplication2)
+1. [Configure the SAML App in LoginRadius Admin Console](#configuring-saml-app)
+2. [Configure Service Provider Application](#configure-service-provider-application)
 
 ### Configuring SAML App
 
