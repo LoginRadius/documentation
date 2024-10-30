@@ -27,3 +27,17 @@
   align-items: center;
   justify-content: flex-start;
 }
+
+img {
+  max-width: 25%;
+  float: right; /* This will make the image float to the right */
+  margin-left: 20px; /* Add some margin to separate the image from the text */
+}
+
+img[align='right'] {
+  padding-left: var(--image-alignment-padding);
+}
+
+img[align='left'] {
+  padding-right: var(--image-alignment-padding);
+}
