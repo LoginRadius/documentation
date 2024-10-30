@@ -12,11 +12,6 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-      <img
-          src="img/rocket.svg" // SVG source path
-          alt="Rocket Animation"
-          className={styles.rocketIcon}
-        />
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
