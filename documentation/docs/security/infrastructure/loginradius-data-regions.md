@@ -1,4 +1,4 @@
-LoginRadius Data Regions
+# LoginRadius Data Regions
 ---
 
 ![Data regions](https://apidocs.lrcontent.com/images/regions_1194338828672086c30476b0.61483539.png "LoginRadius Data Regions")

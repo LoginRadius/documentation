@@ -1,4 +1,4 @@
-Identity Experience Framework iframe Implementation
+# Identity Experience Framework iframe Implementation
 ======
 The iframe implementation is an extension of the [LoginRadius Identity Experience Framework](https://www.loginradius.com/docs/api/v2/user-registration/hosted-registration), This allows you to display the Hosted Registration page directly on your website in an iframe. The hosted registration page will emit any events(success and error) directly to the callback handlers on the parent window. You can also emit custom events directly from the Identity Experience Framework iframe to the parent window to further customize any actions. The iframe implementation allows you to leverage the aspects of the Identity Experience Framework directly into your web properties: Ease of implementation, centralized look and feel, customizability.
 

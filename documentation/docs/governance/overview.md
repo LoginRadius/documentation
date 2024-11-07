@@ -1,4 +1,4 @@
-Overview
+# Overview
 =====
 
 This section provides details regarding LoginRadius data storage and security compliances. It also provides information about the hashing algorithms and encryption methods supported by LoginRadius for data security.

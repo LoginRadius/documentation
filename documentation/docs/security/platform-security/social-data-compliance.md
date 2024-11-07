@@ -1,4 +1,4 @@
-Social Data Compliance
+# Social Data Compliance
 ====
 -----
 The LoginRadius platform provides built-in support for Social Network APIs. We have integrated 35+ social networks into the LoginRadius Platform. Social networks have various APIs such as Authentication, User Profile Data, Likes, Groups, as well as Media APIs - Audio, Albums, Picture, Video, etc. LoginRadius is able to integrate all of these APIs into one single format and normalize the data into one LoginRadius data format. Customer needs to only work with LoginRadius API to work with all Social Networks.

@@ -1,4 +1,4 @@
-# Custom SAML Provider Introduction
+# Custom SAML Provider
 
 LoginRadius Identity Platform supports both SAML 1.1 and SAML 2.0 flows to manage an **Identity Provider (IDP)** or as a **Service Provider** in case of Custom IDP and It supports both IDP initiated, and SP-initiated SAML flows.
 

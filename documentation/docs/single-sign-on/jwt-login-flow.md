@@ -1,4 +1,4 @@
-JWT Login Flow
+# JWT Login Flow
 =================
 
 JWT (JSON web Token) is a popular method of SSO, which is widely used by B2C apps, through this system you can allow your user to log into an app which supports JWT. JSON Web Token (JWT) is an open standard ([RFC 7519](https://tools.ietf.org/html/rfc7519)) that defines a compact and self-contained way for securely transmitting information between LoginRadius and your site as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC or other algorithm) or a public/private key pair using RSA. In this flow LoginRadius acts as the Identity Provider and your system acts as the service provider. 

@@ -1,4 +1,4 @@
-# Phone Login Introduction
+# Phone Login  
 
 The **Phone Login** feature allows your customers to register and login using their Phone Number. LoginRadius Identity Platform requires you to verify these customers after the registration via a One-Time Password (OTP). In the case of Phone Login, your customers can login only after the phone number verification. 
 

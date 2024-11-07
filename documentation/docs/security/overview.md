@@ -1,4 +1,4 @@
-## Security Overview
+# Security
 
 This document highlights the multiple aspects of security provided by LoginRadius and will cover below sections:
 

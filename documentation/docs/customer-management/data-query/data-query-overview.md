@@ -1,4 +1,4 @@
-# Data Query Overview
+# Data Query
 
 The Data Query feature allows you to quickly filter your customer list, while the list of your customers is displayed in the LoginRadius Admin Console. This feature is similar to the [Customer Segmentation](https://www.loginradius.com/docs/customer-management/customer-segmentation/customer-segmentation/), while the Customer Segmentation exports the data from the backend based on queries, Data Query allows you to run the query and view customers list on the application screen.
 

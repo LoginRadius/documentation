@@ -1,4 +1,4 @@
-# Custom OAuth Provider Introduction
+# Custom OAuth Provider
 
 **Custom OAuth Provider** is the most implemented protocol by the customers to set up a custom Identity Provider. LoginRadius provides a wide range of social providers for social login. Custom Identity providers are used, where customers requirement is not getting fulfilled by the provided range of social providers in LoginRadius. Thus, you can configure the desired OAuth supported third party/own application for the social login in your application.
 

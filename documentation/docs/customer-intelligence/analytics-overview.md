@@ -1,4 +1,4 @@
-# Analytics Overview
+# Analytics
 
 "Overview" is the first section in the Customer Insights area. The calendar layouts at the top serve as a "heat map" for site login and new user activities. This will let you see what days out of the year your site experienced the highest and lowest login and new user registration volumes. Hover over any day for a quick look at the number of logins and new users on any given day throughout the past 12 months.
 

@@ -1,14 +1,14 @@
 
-#LoginRadius Integration with AEM
+# LoginRadius Integration with AEM
 
-##Overview
+## Overview
 
 LoginRadius Identity Platform is the foundation for your digital customer identity and has the capacity to integrate with many different third-party platforms. Integration with LoginRadius Identity platform makes it easy to manage your marketing content and assets using Adobe Experience Manager (AEM), which is a comprehensive content management solution for building websites, mobile apps and forms.
 
 The LoginRadius Plugin for Adobe Experience Manager enables you to perform a social login and traditional login to your AEM sites quickly and easily, as well as leverage customer profile data for content personalization and optimization.
 
 
-##Features
+## Features
 
 The LoginRadius module enables the integration of social login and standard login/Registration with websites and apps to be built and maintained using AEM. It means connecting your AEM sites to LoginRadius database, for registration, login and profile management, and providing customer management tools for the administrator tasks.
 
@@ -73,7 +73,7 @@ Using LoginRadius CIAM, you can achieve different Auth workflows like Email Regi
 ![enter image description here](https://apidocs.lrcontent.com/images/Workflows_96425e91f6ecac5f89.51528349.png "Account Workflow")
 
 
-##Login methods
+## Login methods
 
 LoginRadius CIAM provides various methods of login :
 
@@ -87,13 +87,13 @@ LoginRadius CIAM provides various methods of login :
 
 ⦁ [One Touch Login](https://www.loginradius.com/authentication/tutorial/one-touch-login/)
 
-##Customer insights 
+## Customer insights 
 
 LoginRadius provides useful charts and analytic tools to view and measure the overall performance of your site, in terms of customer registration and login. The information is aggregated and categorized into identity analytics, provider analytics, login analytics and comparative analysis. For more information refer to [Customer Insight](https://www.loginradius.com/docs/customer-insights/identity-analytics/) section of our document.
 In LoginRadius Admin Console, navigate to [Insights > Identity Analytics >  Customer Stats](https://adminconsole.loginradius.com/insights/identity-analytics/customer-stats) and the following screen appears to show the available insight options:
 
 
-##Set Up Social Login
+## Set Up Social Login
 
 To use the extension in Social Login mode, you need to create a Social Login Component to use in your website. The LoginRadius Social Login component can be inserted in any secure (HTTPS) page in your website, where it will display as social network buttons (To configure the social provider, you can refer to our social provider [document](https://www.loginradius.com/authentication/quick-start/social-login/)).
 

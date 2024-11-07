@@ -1,4 +1,4 @@
-# Session Management Introduction and Configuration
+# Session Management and Configuration
 
 
 LoginRadius provides you with the ability to control and manage your customer’s login session. This guide will take you through the different aspects of Session Management available in the LoginRadius Identity Platform:

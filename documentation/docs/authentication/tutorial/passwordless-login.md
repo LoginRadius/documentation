@@ -1,4 +1,4 @@
-# Passwordless Login Introduction
+# Passwordless Login  
 
 **Passwordless Login** feature allows your registered customers to login without providing a password. A link or OTP is sent to the registered email address or phone number respectively, and once the link or OTP is verified, the customer will be logged into the account. 
 

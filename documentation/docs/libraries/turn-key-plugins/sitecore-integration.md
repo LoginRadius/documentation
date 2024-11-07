@@ -1,4 +1,4 @@
-## LoginRadius Integration with Sitecore 
+# LoginRadius Integration with Sitecore 
 
 
 ## Overview

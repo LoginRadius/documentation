@@ -1,4 +1,4 @@
-# One Touch Login Introduction
+# One Touch Login 
 
 **One Touch Login** allows your customers to log in without the obligation to **register** first and remember the password. A link or OTP is sent to their email address or phone number respectively and once the link or OTP is verified, the customer will be logged into the account. 
    

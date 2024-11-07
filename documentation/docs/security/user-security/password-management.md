@@ -1,4 +1,4 @@
-Password Management
+# Password Management
 ====
 
 As an identity platform, LoginRadius has multiple security features to ensure the security of each identity. The password protocols and procedures such as Password Expiration, Password History, Password Complexity, Password Strength and  Password Hashing Algorithm should be enforced to secure user identity.

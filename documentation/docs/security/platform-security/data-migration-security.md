@@ -1,4 +1,4 @@
-## Data Migration Security and Sanitization
+# Data Migration Security and Sanitization
 
 An important part of transitioning to a new Customer Identity Management platform is ensuring the handling and delivery of your user data is executed efficiently and securely to fully mitigate any risk that is inherently present when accessing or moving sensitive user details.
 

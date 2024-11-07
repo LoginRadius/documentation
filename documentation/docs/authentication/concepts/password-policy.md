@@ -1,4 +1,4 @@
-# Password Policy Introduction
+# Password Policy
 
 The **Password Policy** feature allows you to enhance security by defining the password rules. This guide will help you in setting up Password Policy by configuring the following in the LoginRadius Admin Console:
 

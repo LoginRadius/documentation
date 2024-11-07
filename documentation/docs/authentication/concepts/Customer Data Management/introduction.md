@@ -1,4 +1,4 @@
-# Customer Data Management Introduction
+# Customer Data Management
 
 LoginRadius Identity Platform allows you to organize and manage your customer data in the following ways:
 

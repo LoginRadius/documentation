@@ -1,4 +1,4 @@
-#Use Cases/Demos Overview 
+# Use Cases/Demos 
 
 LoginRadius has various use cases/demos that can help you in the basic implementation of LoginRadius with your multiple platforms. We have covered basic implementations in our demos such as Log In, Registration, Verify Email, Forgot Password, Validations, On Loading process, Social Log In, Password change, Email Management, Update Profile etc. These demos can help you to have the general knowledge about how LoginRadius works with your platform and how you can configure LoginRadius with your instances.
 
