@@ -36,10 +36,10 @@ Setting up our Client-Side Cloud Connectors to your different platforms is simpl
 | Parameter       | Type        | Description                                                                                                                                                                              | Example:                          |
 |-----------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
 | integrationName | String      | Identifier for the integration                                                                                                                                                           | "mixpanel"                        |
-| data            | JSON Object | Either: Profile JSON Object from the LoginRadius Profile JSON or Custom Object if isCustom == true                                                                                                   | [Read Here](#descriptionofdataparameter1) |
-| mapping         | JSON Object | A high-level data mapping on where the LoginRadius Profile JSON should be mapping into your integration.  Set if and only if isCustom == false, if isCustom == true you pass in empty object. | [Read Here](#descriptionofmapping2) |
+| data            | JSON Object | Either: Profile JSON Object from the LoginRadius Profile JSON or Custom Object if isCustom == true                                                                                                   | [Read Here](#description-of-data-parameter) |
+| mapping         | JSON Object | A high-level data mapping on where the LoginRadius Profile JSON should be mapping into your integration.  Set if and only if isCustom == false, if isCustom == true you pass in empty object. | [Read Here](#description-of-mapping) |
 | isCustom        | Boolean     | A boolean determining if we should use a standard data mapping, or to use a custom object abiding to the customers' identity platform                                                    | True False                      |
-| callback        | Function    | A callback to capture the success or error response of the call to `LRObject.Identify`| [Read Here](#descriptionofcallback7)
+| callback        | Function    | A callback to capture the success or error response of the call to `LRObject.Identify`| [Read Here](#description-of-callback)
 
 * The identify call should be in your `onSuccess` callbacks.  More info on how to set up the `onSuccess` methods located [here](https://www.loginradius.com/docs/api/v2/user-registration/user-registration-getting-started-v2)
 

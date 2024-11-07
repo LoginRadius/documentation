@@ -24,7 +24,7 @@ Check the following actions that you can take while performing Server-Side Integ
 
 ## Flows of Server-Side Connectors
  
-There are two flows available for server-side connectors, [Outflow](#cloudconnectoroutflow4) and [Inflow](#cloudconnectorinflow5). Please see below for details on each flow.
+There are two flows available for server-side connectors, [Outflow](#cloud-connector-outflow) and [Inflow](#cloud-connector-inflow). Please see below for details on each flow.
 
 ### Cloud Connector Outflow
 

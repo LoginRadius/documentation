@@ -6,8 +6,8 @@ Angular 6 is a TypeScript-based web application framework which is a complete re
 
 This document will cover two subsections which are as follows:
 
-- [Getting Started](#gettingstarted1)
-- [Important points to remember while working on an Angular 6 demo](#importantpointstorememberwhileworkingonanangulardemo2)
+- [Getting Started](#getting-started)
+- [Important points to remember while working on an Angular 6 demo](#important-points-to-remember-while-working-on-an-angular-6-demo)
 
 ## Getting Started
 This guide covers all the necessary steps that you need to follow for installing and running the Angular 6 Demo.

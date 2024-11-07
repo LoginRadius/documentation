@@ -35,8 +35,8 @@ For API documentation, refer to our [PerfectMind API](https://www.loginradius.co
 
 This guide will take you through the steps you need to follow for integrating LoginRadius into the PerferMind site. This integration uses the LoginRadius JavaScript interfaces along with the LoginRadius PerfectMind SSO API. To achieve this use case, you must perform the following sequential steps:
 
-1.  [SSO Connector Configuration in LoginRadius](#ssoconnectorconfigurationinloginradius3)
-2.  [Add code to IDX (Basic/Advanced Theme)](#addcodetoidxwiththeadvancedthemeonly4)
+1.  [SSO Connector Configuration in LoginRadius](#sso-connector-configuration-in-loginradius)
+2.  [Add code to IDX (Basic/Advanced Theme)](#add-code-to-idx-with-the-basic-theme)
 
 > **Pre-requisites:**
 >
@@ -70,7 +70,7 @@ The following screen will appear:
   - Minimum length of the app name should be **[1]** and maximum length upto **[60]** is allowed.
   - Now all the app names are allowed in lowercase only. If the uppercase is entered it will be automatically coverted into lowercase.
 
-- **API Endpoint:** This value is usually your organization's PerfectMind hosted URL. This URL will be used to make the PerfectMind API call for Create/Update Record, Create a Login session, etc. e.g. https://companyname.perfectmind.com
+- **API Endpoint:** This value is usually your organization's PerfectMind hosted URL. This URL will be used to make the PerfectMind API call for Create/Update Record, Create a Login session, etc. e.g. `https://companyname.perfectmind.com`
 - Access Key
 - Client Number
 - **Location Id:** A Perfectmind GUID that is used for the default location when calling the APIs.
@@ -91,12 +91,12 @@ The following screen will appear:
 
 ## Add code to IDX with the advanced theme only
 
-By default, when a consumer logs in the auth page ( https://sitename.hub.loginradius.com/auth.aspx) , the consumer is redirected to the profile page (https://sitename.hub.loginradius.com/profile.aspx) . You can redirect to the PerfectMind application after login, by making the consumser to log in LoginRadius IDX auth page with some predefined query paramter,e.g,loginflow=PMCMS. You can customize the IDX code base to detect the query parameter and redirect the consumer to PerfectMind SSO Login URL.
+By default, when a consumer logs in the auth page ( `https://sitename.hub.loginradius.com/auth.aspx`) , the consumer is redirected to the profile page (`https://sitename.hub.loginradius.com/profile.aspx`) . You can redirect to the PerfectMind application after login, by making the consumser to log in LoginRadius IDX auth page with some predefined query paramter,e.g,loginflow=PMCMS. You can customize the IDX code base to detect the query parameter and redirect the consumer to PerfectMind SSO Login URL.
 
 Please see the following steps to achieve the above use case with the IDX with Advanced Theme. Please also [Identity Experience Framework Customizations](https://www.loginradius.com/docs/libraries/identity-experience-framework/customization/#advancedthemeeditor19) for more information.
 
 1.  A consumer comes to PerfectMind site for login.
-2.  Redirect the consumer from PerfectMind to the following LoginRadius IDX auth page with some predefined query paramter,e.g,loginflow=PMCMS( you can choose any name for query parameter): https://sitename.hub.loginradius.com/auth.aspx?loginflow=PMCMS ( You will need to work with the PerfectMind Team to perform #1 and #2).
+2.  Redirect the consumer from PerfectMind to the following LoginRadius IDX auth page with some predefined query paramter,e.g,loginflow=PMCMS( you can choose any name for query parameter): `https://sitename.hub.loginradius.com/auth.aspx?loginflow=PMCMS` ( You will need to work with the PerfectMind Team to perform #1 and #2).
 
 3.  Add the following code to the **before.js** file in the auth.aspx in the Admin Console.
 
@@ -104,7 +104,7 @@ Please see the following steps to achieve the above use case with the IDX with A
 
     **The code snippet performs the following actions:**
 
-    - Detects the query parameter loginflow=PMCMS.
+    - Detects the query parameter `loginflow=PMCMS`.
     - Grab the token and make an ajax call to the LoginRadius PerfectMind SSO API.
     - In the success function of the LoginRadius PerfectMind API, it redirects the consumer to the PerfectMind SSO Login URL with the authenticated session. The consumer will be automatically logged in to the PerfectMind site. You need to add this code in the **before.js** file.
 
@@ -160,7 +160,7 @@ Please see the following steps to achieve the above use case with the IDX with A
     };
     ```
 
-4.  If a consumer already logged in to the LoginRadius application and opens the https://sitename.hub.loginradius.com/auth.aspx?loginflow=PMCMS in a new tab, the consumer will be redirected to https://sitename.hub.loginradius.com/profile.aspx page automatically from the LoginRadius server-side IDX code. You can add the following code under before.js in the profile page in the Admin Console to redirect the consumer to the Perfectmind URL after the customer is redirected to profile page.
+4.  If a consumer already logged in to the LoginRadius application and opens the `https://sitename.hub.loginradius.com/auth.aspx?loginflow=PMCMS` in a new tab, the consumer will be redirected to `https://sitename.hub.loginradius.com/profile.aspx` page automatically from the LoginRadius server-side IDX code. You can add the following code under before.js in the profile page in the Admin Console to redirect the consumer to the Perfectmind URL after the customer is redirected to profile page.
 
     ![Theme](https://apidocs.lrcontent.com/images/unnamed-3_2914861a9f9b7b28b38.44503765.png "Basic theme")
 
@@ -229,7 +229,7 @@ LRObject.util.ready(function () {
 
 1. A consumer comes to PerfectMind site for login.
 
-2. Redirect the consumer from PerfectMind to the following LoginRadius IDX auth page with some predefined query paramter, e.g, loginflow=PMCMS ( you can choose any name for query parameter): https://sitename.hub.loginradius.com/auth.aspx?loginflow=PMCMS ( You will need to work with the PerfectMind Team to perform #1 and #2).
+2. Redirect the consumer from PerfectMind to the following LoginRadius IDX auth page with some predefined query paramter, e.g, loginflow=PMCMS ( you can choose any name for query parameter): `https://sitename.hub.loginradius.com/auth.aspx?loginflow=PMCMS `( You will need to work with the PerfectMind Team to perform #1 and #2).
 
 3. The below code snippet makes an ajax call to the PerfectMind API and redirects the consumer to the PerfectMind Login URL with the authenticated session. The consumer will be automatically logged in to the PrefectMind site. You need to add this code in the **before.js** file before you initialize the frame.
 
@@ -338,10 +338,10 @@ LoginRadius PerfectMind SSO API creates a corresponding contact in the PerfectMi
 
 There are two parts of this workflow:
 
-- [The gathering of address information on the registration form](#thegatheringofaddressinformationontheregistrationform10)
-- [Updating Data from the LoginRadius to PerfectMind](#updatingdatafromtheloginradiustoperfectmind11)
+- [The gathering of address information on the registration form](#the-gathering-of-address-information-on-the-registration-form)
+- [Updating Data from the LoginRadius to PerfectMind](#updating-data-from-the-loginradius-to-perfectmind)
 
-**The gathering of address information on the registration form**
+### The gathering of address information on the registration form
 
 LoginRadius provides **Addresses** (array of object type) field with subfields as **Type**, **Address1**, **Address2**, **City**, **State**, **PostalCode**, **Region**, and **Country**. You can gather the customer's address under **Addresses** field. You can leverage the **Type** field to store the residence status flag.
 
@@ -389,7 +389,7 @@ We suggest you can collect the address information after they log in to your Log
   });
 ```
 
-**Updating Data from the LoginRadius to PerfectMind**
+### Updating Data from the LoginRadius to PerfectMind**
 
 - **Option 1: Cloud Connector**
 

@@ -6,10 +6,10 @@ This document takes you through the various ways in which LoginRadius can help y
 
 **This document will cover below topics:**
 
-- [Form contents customization](#formcontentscustomization0)
-- [Email and SMS Template Customization](#emailandsmstemplatecustomization1)
-- [Toggle between multiple Languages](#togglebetweenmultiplelanguages2)
-- [Google Recaptcha Customization](#googlerecaptchacustomization3)
+- [Form contents customization](#form-contents-customization)
+- [Email and SMS Template Customization](#email-and-sms-template-customization)
+- [Toggle between multiple Languages](#toggle-between-multiple-languages)
+- [Google Recaptcha Customization](#google-recaptcha-customization)
 
 ## Form contents customization 
 
@@ -23,7 +23,8 @@ For language customization related to labels, placeholders, validation messages,
 ```
 
 Following is the code of **french.js**:
-```
+
+```js
 var french = {
     "labels": {                                                    // LoginRadius standard fields/labels Language handling
         "emailid": "Courriel",
@@ -94,6 +95,7 @@ var french = {
         "registration": "Enregistrement"
     }
 }
+
 ```
 
 The above code contains key-value pairs for labels, placeholders, validationMessages, etc. keys are properties, and values are objects/array of objects in your local language.
@@ -125,37 +127,44 @@ else
 {
 commonOptions.verificationEmailTemplate = 'verification-default';
 commonOptions.smsTemplateWelcome = 'welcome-default';
-
 }
+
 ```
 The  **language** variable contains the name of the current language.
 
->**Note:** Above code should be added before initializing LRObject, i.e.```
+>**Note:** Above code should be added before initializing LRObject, i.e.
+```
 "var LRObject = new LoginRadiusV2(commonOptions);"
 ```
 
 ### Common options for various email templates:
 
-|Email Template Name|Common option|
-|---|---|-----|-----|
-|Verification Email|verificationEmailTemplate (String)|
-|Forgot password email/Password Reset Email|resetPasswordEmailTemplate (String)|
-|Welcome Email|welcomeEmailTemplate (String)|
-|Delete Account Email |deleteUserEmailTemplate(String)|
-|Add Email|addEmailTemplate(String)|
-|One Touch Login|onetouchLoginEmailTemplate(String)|
+| Email Template Name                   | Common Option                      |
+|---------------------------------------|------------------------------------|
+| Verification Email                    | verificationEmailTemplate (String) |
+| Forgot Password Email/Password Reset  | resetPasswordEmailTemplate (String)|
+| Welcome Email                         | welcomeEmailTemplate (String)      |
+| Delete Account Email                  | deleteUserEmailTemplate (String)   |
+| Add Email                             | addEmailTemplate (String)          |
+| One Touch Login                       | onetouchLoginEmailTemplate (String)|
+
+
+
 
 ### Common option for various SMS templates:
 
-|SMS Template Name|Common option|
-|---|---|-----|-----|
-|Phone Number Verification|smsTemplatePhoneVerification (String)|
-|Phone Number Change|smsTemplateUpdatePhone (String)|
-|Forgot Password|smsTemplateForgot (String)|
-|Welcome SMS|smsTemplateWelcome (String)|
-|One Touch Login| smsTemplateOneTouchLogin|
+| SMS Template Name            | Common Option                        |
+|------------------------------|--------------------------------------|
+| Phone Number Verification    | smsTemplatePhoneVerification (String)|
+| Phone Number Change          | smsTemplateUpdatePhone (String)      |
+| Forgot Password              | smsTemplateForgot (String)           |
+| Welcome SMS                  | smsTemplateWelcome (String)          |
+| One Touch Login              | smsTemplateOneTouchLogin (String)    |
+
 
 ## Toggle between multiple Languages
+
+
  
 In the case of a **multilingual website** where the customer needs to switch between the languages to generate the form accordingly, create the **toggle** and on every switch you need to reload the page as given below and detect the language, based on language detected it will display the form in the respective language.
 
@@ -166,46 +175,53 @@ In the case of a **multilingual website** where the customer needs to switch bet
 <option value>default</option>
 <option value="/auth.aspx?lang=chinese">chinese</option>
 </select>
+
 ```
 
 **Step 2**: Add the following js code in the javascript file to parse language parameter from toggle to the URL:
 
+```
+$('#lang_toggle').on('change', function() {
+  var value = $(this).val();
+window.location.href = value;
+});
 
-`$('#lang_toggle').on('change', function() {`
-  `var value = $(this).val();`
-`window.location.href = value;`
-`});`
-
+```
 
 **Step 3**: Add the language objects modifying the labels in French and Chinese in the javascript. This is meant to be a template that you can modify to include placeholders, validation messages, and error messages in the local languages.
 
-`var french = {`
-    `"labels": {`
-        `"emailid": "Adresse Courriel",`
-        `"password": "Mot de passe."`
-    `},`
-`}`
-`var chinese = {`
-    `"labels": {`
-        `"emailid": "電子郵件",`
-        `"password": "密碼"`
-   ` }`
-`}`
+```
+var french = {
+    "labels": {
+        "emailid": "Adresse Courriel",
+        "password": "Mot de passe."
+    },
+}
+var chinese = {
+    "labels": {
+        "emailid": "電子郵件",
+        "password": "密碼"
+    }
+}
+
+```
 
 **Step 4**: Add the following code to set the language as per the query parameter
 
 
 
-`var queryString = LRObject.util.parseQueryString(window.location.search.replace("?", ""));`
-`if (queryString.lang) {$('#lang_toggle').val("?lang=" + queryString.lang);}`
+```
+var queryString = LRObject.util.parseQueryString(window.location.search.replace("?", ""));
+if (queryString.lang) {
+ $('#lang_toggle').val("?lang=" + queryString.lang);
+}
+if (queryString.language == 'french') {
+    LRObject.$hooks.call('setLocaleBasedInfo', french);
+} else if (queryString.language == 'chinese') {
+    LRObject.$hooks.call('setLocaleBasedInfo', chinese);
+}
 
-
-
-`if (queryString.language == 'french') {`
-`    LRObject.$hooks.call('setLocaleBasedInfo', french);`
-`} else if (queryString.language == 'chinese') {`
-`    LRObject.$hooks.call('setLocaleBasedInfo', chinese);`
-`}`
+```
 
 
 >**Note:** Make sure to call this hook after the LRObject.init method call.
@@ -218,10 +234,13 @@ One can customize Google ReCaptcha as well based on localization.
 
 
 
-`var queryString = LRObject.util.parseQueryString(window.location.search.replace("?", ""));`
-`if(queryString.language == 'french’){`
-`commonOptions.v2RecaptchaLanguage  = ‘fr';`
-`}`
-`else`
-
-`{commonOptions.v2RecaptchaLanguage = 'en';}`
+```
+var queryString = LRObject.util.parseQueryString(window.location.search.replace("?", ""));
+if(queryString.language == 'french’){
+commonOptions.v2RecaptchaLanguage  = ‘fr';
+}
+else
+{
+commonOptions.v2RecaptchaLanguage = 'en';
+}
+```

@@ -87,7 +87,7 @@ var LRConfigObj = {
 ```
 
 
-##Adding a Custom Domain
+## Adding a Custom Domain
 
 This section covers the steps to add custom domain in your iframe for yourLoginRadius account.
 
@@ -116,7 +116,7 @@ ciamwidget_obj.render('action','containerID', 'pagetype', function(response){
 The following are the description of parameters passed inside the above code: 
 
 
-  - Action: This is the name of the action. See the table of the [list of actions](#listofactions4) in the next section.
+  - Action: This is the name of the action. See the table of the [list of actions](#list-of-actions) in the next section.
 
   - containerID: This is the id of the html element in which the iframe will get rendered.
 
@@ -131,7 +131,7 @@ The following are the description of parameters passed inside the above code:
 >**Note:** by default, this should always be set to 'auth.aspx'
 
 
-###List Of Actions
+### List Of Actions
 The following are the list of default actions supported by **LoginRadiusV2.iframeSDK.min.js**:
 
 |Action|Description|
@@ -187,7 +187,7 @@ Response objects will be returned in the following format:
 ```
 
 
-###Sample code for rendering a login interface within an iframe
+### Sample code for rendering a login interface within an iframe
 
 For a quick reference you can use the sample code below:
 

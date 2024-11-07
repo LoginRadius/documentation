@@ -4,8 +4,8 @@ Yii is a modern framework designed to be a solid foundation for your PHP applica
 
 This document contains the following two sections: 
 
-- [YII Setup and Configuration](#yiisetupandconfiguration0)
-- [Demo Features ](#demofeatures1)
+- [YII Setup and Configuration](#yii-setup-and-configuration)
+- [Demo Features ](#demo-features)
 
 This demo will help you quickly implement the LoginRadius Identity Platform with the YII framework. 
 

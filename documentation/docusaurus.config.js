@@ -149,17 +149,17 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Engineering Blog',
+                to: 'https://www.loginradius.com/engineering/',
               },
               {
-                label: 'Admin Console',
-                href: 'https://adminconsole.loginradius.com/dashboard',
+                label: 'Status Page',
+                href: 'https://status.loginradius.com/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} LoginRadius Inc.`,
       },
       prism: {
         theme: prismThemes.github,
