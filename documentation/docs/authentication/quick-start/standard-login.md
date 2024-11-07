@@ -70,7 +70,7 @@ Click the **Edit** button next to any field to begin customizing the field.
 
 
 
-**Step 4: **Save the configuration by clicking the Save button. 
+**Step 4:** Save the configuration by clicking the Save button. 
 
 
 ## Part 2 - Deployment 

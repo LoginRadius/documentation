@@ -1,4 +1,4 @@
-# Single Sign-On Introduction
+# Single Sign-On 
 
 **Single Sign-on (SSO**) refers to an authentication process where users log into one application and are automatically logged into other applications, regardless of the technology, platform, or domain they are using. 
 

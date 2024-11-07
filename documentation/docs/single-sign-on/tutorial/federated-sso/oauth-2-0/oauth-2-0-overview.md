@@ -1,4 +1,4 @@
-# OAuth 2.0 Introduction
+# OAuth 2.0 
 
 ## Overview
 
