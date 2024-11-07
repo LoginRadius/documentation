@@ -199,3 +199,59 @@ p {
 .menu__list-item:hover {
   background-color: #e9ecef; /* Change background on hover */
 }
+
+/* Code block styles */
+pre {
+  background-color: #2e2e2e; /* Dark background color for code blocks */
+  padding: 16px; /* Padding for inner space */
+  border-radius: 4px; /* Slight rounding of the corners */
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace!important; /* Monospace font for code */
+  font-size: 14px; /* Font size for readability */
+  line-height: 1.6; /* Spacing between lines */
+  overflow-x: auto; /* Enable horizontal scrolling for long lines */
+  word-wrap: normal; /* Prevent wrapping inside the code block */
+  border: 1px solid #444; /* Dark border for the block */
+  margin: 20px 0; /* Add spacing around the code block */
+  color: #e0e0e0; /* Light text color for contrast against dark background */
+}
+
+/* Syntax highlighting (if you're using a syntax highlighter like Prism) */
+pre code {
+  display: block; /* Ensure the code inside the block takes up full width */
+  padding: 0; /* Remove padding as it’s already handled by pre */
+  margin: 0; /* Remove margins */
+  color: inherit; /* Inherit color from pre for readability */
+}
+
+/* Inline code styling */
+code {
+  background-color: #444; /* Dark background for inline code */
+  padding: 2px 6px; /* Padding for inline code */
+  font-size: 13px; /* Font size for inline code */
+  border-radius: 4px; /* Rounded corners */
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace!important; /* Monospace font for inline code */
+  color: #f8f8f2; /* Lighter text color for inline code */
+}
+
+/* Optional: Customize colors for syntax highlighting */
+pre code.language-js {
+  color: #f0db4f; /* JavaScript highlighting */
+}
+
+pre code.language-python {
+  color: #3572A5; /* Python highlighting */
+}
+
+/* Customize the scroll bar for longer code blocks */
+pre::-webkit-scrollbar {
+  height: 8px; /* Height of horizontal scrollbar */
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar color */
+  border-radius: 4px; /* Rounded edges for the scrollbar */
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Hover state of scrollbar */
+}

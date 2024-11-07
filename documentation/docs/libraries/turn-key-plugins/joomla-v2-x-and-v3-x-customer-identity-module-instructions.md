@@ -10,7 +10,7 @@ LoginRadius provides Joomla Customer Identity and Access Management Extension fo
 ## Joomla Installation Guide:-
 
 > **Note:** 
-- Before installing the new version of the LoginRadius User registration module, make sure you have [uninstalled](#howtouninstalltheplugin4) the previous version.
+- Before installing the new version of the LoginRadius User registration module, make sure you have [uninstalled](#uninstall-the-plugin) the previous version.
 - Enabling both the versions together i.e. V1 and V2 of Joomla Extension may cause conflicts. For smoother operations, disable one of them.
 
 

@@ -4,9 +4,9 @@ This document goes over how you can configure the page programmatically to displ
 
 In this document, you will be getting details around the different ways of Branding:
 
-- [Query Parameter or URL based detection](#queryparameterbaseddetection1)
-- [Using different JavaScript files](#usingdifferentjavascriptfiles3)
-- [Using different CSS](#usingdifferentcss4)
+- [Query Parameter or URL based detection](#query-parameter-or-url-based-detection)
+- [Using different JavaScript files](#using-different-javascript-files)
+- [Using different CSS](#using-different-css)
 
 ## Query Parameter or URL based detection
 
@@ -15,8 +15,8 @@ By default the Identity Experience Framework page is accessed by visiting `https
 However, if you want to present different branding on the page based on how the customer accesses it, you will first need to detect which brand you need to display.
 
 This can be handled by two different ways as mentioned below:
-- [Query Parameter Based Detection](#queryparameterbaseddetection1)
-- [URL based detection](#urlbaseddetection2)
+- [Query Parameter Based Detection](#query-parameter-based-detection)
+- [URL based detection](#url-based-detection)
 
 ### Query Parameter based detection
 If you choose to use Query Parameters, you can configure a query parameter to detect which brand to display. For example, `https://<<Your LoginRadius Sitename>>.hub.loginradius.com/auth.aspx?brand=Brand_A`

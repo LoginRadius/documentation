@@ -224,20 +224,20 @@ This option will appear on profile along with the **Phone Number** field display
 
 ## Advanced Customization
 
-1. [My website is getting spam, how can I prevent it?](#1-my-website-is-getting-spam-how-can-i-prevent-it-)
-2. [Where to look for customer details in the database?](#2-where-to-look-for-user-details-in-the-database)
-3. [How to verify your server is compatible with LoginRadius API?](#3-how-to-verify-your-server-is-compatible-with-loginradius-api-)
-4. [How to clear cache from the Admin panel?](#4-how-to-clear-cache-from-admin-panel)
-5. [How to uninstall the Module?](#5-how-to-uninstall-the-module-)
+1. [My website is getting spam, how can I prevent it?](#1-my-website-is-getting-spam-how-can-i-prevent-it)
+2. [Where to look for customer details in the database?](#2-where-to-look-for-customer-details-in-the-database)
+3. [How to verify your server is compatible with LoginRadius API?](#3-how-to-verify-your-server-is-compatible-with-loginradius-api)
+4. [How to clear cache from the Admin panel?](#4-how-to-clear-cache-from-the-admin-panel))
+5. [How to uninstall the Module?](#5-how-to-uninstall-the-module)
 
-#####1. MY WEBSITE IS GETTING SPAM, HOW CAN I PREVENT IT?
+##### 1. MY WEBSITE IS GETTING SPAM, HOW CAN I PREVENT IT?
 
 1. Login to Drupal admin panel.
 2. Navigate to the **Configuration** tab, click on **Account Settings**.
 3. Now check the **Require e-mail verification when a visitor creates an account** option under the **REGISTRATION AND CANCELLATION** section.
      ![enter image description here](https://apidocs.lrcontent.com/images/Picture11_75495aba2f17393dc3.94172069.png)
 
-#####2. WHERE TO LOOK FOR CUSTOMER DETAILS IN THE DATABASE
+##### 2. WHERE TO LOOK FOR CUSTOMER DETAILS IN THE DATABASE
 
 Customer details are stored in the user's table and loginradius_mapusers table:-
 users table :
@@ -252,13 +252,13 @@ users table :
 | provider    | Social network provider    |
 | provider_id | Social network provider ID |
 
-#####3. How to verify your server is compatible with LoginRadius API?
+##### 3. How to verify your server is compatible with LoginRadius API?
 To check the server compatibility, make sure to check curl.dll or allow_url_fopen files are enabled in “php.ini” file.
 
-#####4. How to clear cache from the Admin panel
+##### 4. How to clear cache from the Admin panel
 Clear the cache from the drupal Admin panel. To find the settings Go to configuration> performance and click on “clear all caches” button.
 
-#####5. HOW TO UNINSTALL THE MODULE?
+##### 5. HOW TO UNINSTALL THE MODULE?
 
 1. Login to the Drupal admin panel.
 2. Go to the **Modules** tab and disable **CIAM module**

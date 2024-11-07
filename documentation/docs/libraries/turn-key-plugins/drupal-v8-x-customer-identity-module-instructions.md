@@ -32,7 +32,7 @@ This document provides instructions for installing the LoginRadius Customer Iden
 4. Click on the **Extend** tab and you'll see the **CIAM LoginRadius** module in modules list in your site's admin account. ** DO NOT ENABLE** the module immediately, the required LoginRadius PHP SDK library needs to be installed.
 
 5. The PHP SDK needs to be updated before enabling the  **CIAM LoginRadius** module. This can be done in following ways:
-[Manually](#manualstepstoinstallphpsdk6) or [Through Composer](#throughcomposer7)
+[Manually](#manual-steps-to-install-php-sdk) or [Through Composer](#through-composer)
 
 6. Enable the Customer Identity Modules and click on **Save Configuration**.
 
@@ -49,7 +49,7 @@ This document provides instructions for installing the LoginRadius Customer Iden
 5. Click on the **Extend** tab and you'll see the **CIAM LoginRadius** module in modules list in your site's admin account. ** DO NOT ENABLE** the module immediately, the required LoginRadius PHP SDK library needs to be installed.
 
 6. The PHP SDK needs to be updated before enabling the  **CIAM LoginRadius** module. This can be done in the following ways:
-[Manually](#manualstepstoinstallphpsdk6) or [Through Composer](#throughcomposer7)
+[Manually](#manual-steps-to-install-php-sdk) or [Through Composer](#through-composer)
 
 7. Enable the Customer Identity Modules and click on **Save Configuration**.
 
@@ -151,11 +151,11 @@ Composer is now aware that the LoginRadius PHP SDK is required. It will first ad
 
 > **Note:** The complete functionality of this module requires your LoginRadius API Key and Secret. Please find further documentation on how you can obtain this data here:
 
-- [Activation](#activation10)
-- [Authentication](#authentication11)
-- [Advanced Settings](#advancedsettings16)
-- [Single Sign On](#singlesignon27)
-- [Identity Experience Framework](#identityexperienceframework28)
+- [Activation](#activation)
+- [Authentication](#authentication)
+- [Advanced Settings](#advanced-settings)
+- [Single Sign On](#single-sign-on)
+- [Identity Experience Framework](#identity-experience-framework)
 
 ### Activation
 
@@ -224,16 +224,16 @@ Composer is now aware that the LoginRadius PHP SDK is required. It will first ad
 
   For the advanced options please refer to the below links:
 
-- [Enable Passwordless link login](#enablepasswordlesslinklogin17)
-- [Enable Passwordless OTP Login](#enablepasswordlessotplogin18)
-- [Enable password strength](#enablepasswordstrength19)
-- [Message timeout setting](#messagetimeoutsetting20)
-- [Store customer email address in the database](#storecustomeremailaddressinthedatabase21)
-- [Store customer first and last name as their username in the database](#storecustomerfirstandlastnameastheirusernameinthedatabase22)
-- [Delete the customer profile from the LoginRadius database on account delete in Drupal](#deletethecustomerprofilefromtheloginradiusdatabaseonaccountdeleteindrupal23)
-- [Terms and Conditions](#termsandconditions24)
-- [Common Options](#commonoptions25)
-- [Registration Form Schema](#registrationformschema26)
+- [Enable Passwordless link login](#enable-passwordless-link-login)
+- [Enable Passwordless OTP Login](#enable-passwordless-otp-login)
+- [Enable password strength](#enable-password-strength)
+- [Message timeout setting](#message-timeout-setting)
+- [Store customer email address in the database](#store-customer-email-address-in-the-database)
+- [Store customer first and last name as their username in the database](#store-customer-first-and-last-name-as-their-username-in-the-database)
+- [Delete the customer profile from the LoginRadius database on account delete in Drupal](#delete-the-customer-profile-from-the-loginradius-database-on-account-delete-in-drupal)
+- [Terms and Conditions](#terms-and-conditions)
+- [Common Options](#common-options)
+- [Registration Form Schema](#registration-form-schema)
 
 ### Enable Passwordless link login
  LoginRadius customers can set up a login flow that allows users to login without a password by enabling this option. At the same time, Customers have to enable passwordless login from Admin console as well. For more details, Please review our [Passwordless Link Login](https://www.loginradius.com/docs/api/v2/admin-console/platform-configuration/passwordless-login-configuration/#passwordlessloginwithemail0) documentation.
@@ -388,10 +388,10 @@ If there are issues related to login, user interface, upgrade and/or module perf
 ## Advanced Customization
 
 
-1. [Where to look for user details in the database?](#1-where-to-look-for-user-details-in-the-database)
-2. [How to verify your server is compatible with LoginRadius API?](#2-how-to-verify-your-server-is-compatible-with-loginradius-api)
-3. [How to clear cache from Admin Panel?](#3-how-to-clear-cache-from-admin-panel)
-4. [How to uninstall the Module?](#4-how-to-uninstall-the-module)
+1. [Where to look for user details in the database?](#where-to-look-for-user-details-in-the-database)
+2. [How to verify your server is compatible with LoginRadius API?](#how-to-verify-your-server-is-compatible-with-loginradius-api)
+3. [How to clear cache from Admin Panel?](#how-to-clear-cache-from-admin-panel)
+4. [How to uninstall the Module?](#how-to-uninstall-the-module)
 
 
 ### Where to look for user details in the database

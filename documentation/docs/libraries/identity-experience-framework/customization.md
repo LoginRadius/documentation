@@ -183,8 +183,8 @@ We have provided a Theme which can be customized by Basic and Advanced Editor bo
 ![enter image description here](https://apidocs.lrcontent.com/images/6_4152112506400f3df8bea21.92517089.png "")
 
 >**Note:** 
-> - In order to customize the theme by **Advanced Theme Editor**, click on **Switch to Advanced Theme Editor** as shown in the above screen and customize further as explained in the above [Advanced Theme Editor](#advancedthemeeditor10) steps. 
-> - In order to customize the theme by Basic Theme Editor follow the steps given above in [Basic Theme Editor](#basicthemeeditor9).
+> - In order to customize the theme by **Advanced Theme Editor**, click on **Switch to Advanced Theme Editor** as shown in the above screen and customize further as explained in the above [Advanced Theme Editor](#advanced-theme-editor) steps. 
+> - In order to customize the theme by Basic Theme Editor follow the steps given above in [Basic Theme Editor](#basic-theme-editor).
 
 The following sections explain the customization options specific to each page:
 
@@ -272,11 +272,11 @@ Also, few customizations options are directly available in the **Auth - Before S
 
 This section will take you through the available containers for the Authentication Page and their customization:
 
-- [Social Login Container](#sociallogincontainer7)
-- [Required Information Pop-up](#requiredinformationpopup8)
-- [Traditional Login Page](#traditionalloginpage9)
-- [Registration Page](#registrationpage10)
-- [Forgot Password Page](#forgotpasswordpage11)
+- [Social Login Container](#social-login-container)
+- [Required Information Pop-up](#required-information-pop-up)
+- [Traditional Login Page](#traditional-login-page)
+- [Registration Page](#registration-page)
+- [Forgot Password Page](#forgot-password-page)
 
 To populate the containers, you need to include HTML tags and  JavaScript code as explained below:
 
@@ -408,10 +408,10 @@ Also, few customizations options are directly available in the default **Profile
 
 This section will take you through the following available containers for the profile page customization:
 
-- [Social Linking Interface](#sociallinkinginterface17)
-- [Profile Editor Interface](#profileeditorinterface18)
-- [Set Password Interface](#setpasswordinterface19)
-- [Change Password Interface](#changepasswordinterface20)
+- [Social Linking Interface](#social-linking-interface)
+- [Profile Editor Interface](#profile-editor-interface)
+- [Set Password Interface](#set-password-interface)
+- [Change Password Interface](#change-password-interface)
 
 To populate the containers, you need to include HTML tags and JavaScript code as explained below:
 
@@ -485,13 +485,13 @@ You can change the above id by updating the value of `window.lr_raas_settings.ch
 
 ## Basic Theme Profile Page
 
-1. [Markup](#markup18)
-   - [Social Login Interface](#sociallinkinginterface19)
-   - [Update Profile](#updateprofile20)
-   - [Add Email](#addemail21)
-   - [Change Password](#changepassword22)
-2. [Custom Styling](#customstyling23)
-3. [Custom Scripts](#customscripts24)
+1. [Markup](#1-markup)
+   - [Social Login Interface](#social-linking-interface)
+   - [Update Profile](#update-profile)
+   - [Add Email](#add-email)
+   - [Change Password](#change-password)
+2. [Custom Styling](#2custom-styling)
+3. [Custom Scripts](#3-custom-scripts)
 
 ### 1. Markup
 

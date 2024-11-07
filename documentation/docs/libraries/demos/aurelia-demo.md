@@ -7,9 +7,9 @@ This [demo](https://github.com/LoginRadius/demo/tree/v2-aurelia-demo) shows how 
 
 This document will cover three subsections which are as follows:
 
-- [Getting Started](#gettingstarted1)
-- [Features Implemented](#featuresimplemented2)
-- [Important points to remember while working on Aurelia Demo](#importantpointstorememberwhileworkingonaureliademo3)
+- [Getting Started](#getting-started)
+- [Features Implemented](#features-implemented)
+- [Important points to remember while working on Aurelia Demo](#important-points-to-remember-while-working-on-aurelia-demo)
 
 ## Getting Started
 This section will explain the steps included in the setup of the Aurelia Demo and how to run the demo.
