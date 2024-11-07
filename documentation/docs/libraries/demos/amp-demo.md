@@ -1,4 +1,4 @@
-## AMP Configuration Overview
+# AMP Configuration 
 
 AMP (Accelerated Mobile Pages) is a website publishing technology being developed by Google. By successfully implementing the AMP framework, you are able to have your AMP pages cached on AMP servers and have the pages served quickly to your mobile customers. This document provides you with quick steps on obtaining a LoginRadius access token within your AMP page.
 

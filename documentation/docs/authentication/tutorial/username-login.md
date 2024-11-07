@@ -1,4 +1,4 @@
-# Username Login Introduction
+# Username Login  
 
 Username Login provides an easy way to allow customers to login to your website or app without remembering an email. Customers can simply login by entering their Username and Password. It is a traditional login option, which is similar to the email login.
 

@@ -1,4 +1,4 @@
-# Standard Login Introduction
+# Standard Login 
 
 The Standard Login workflow is a fundamental component of LoginRadius, providing customers with a seamless authentication experience using a unique ID (email or username) and password. This workflow encompasses Registration, Login, Customer Profile, and Password Management features.
 

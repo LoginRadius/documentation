@@ -1,4 +1,4 @@
-# Customer Intelligence Overview
+# Customer Intelligence
 
 The Overview section will give you an idea of key statistics of your LoginRadius site. In this section, we have covered the overview of multiple statistics available in the [insight](https://adminconsole.loginradius.com/insights/overview) tab  which represents the customer information with regard to various aspects of analytics. This contains useful charts and analytic tools to view and measure the overall performance of your site in terms of customer registration and login. The information is aggregated and categorized into identity analytics, provider analytics, login analytics and comparative analysis. This analytics will be helpful to improve the overall application performance and understand the customer experience.
 

@@ -1,4 +1,4 @@
-# SMS/Text/Voice OTP Provider Introduction
+# SMS/Text/Voice OTP Provider
 
 A **SMS/Text/Voice OTP Provider** enables a system to send and receive text messages or Voice OTP to and from an SMS/Voice OTP capable device over the global telecommunication network. The SMS Gateway translates the message and makes it compatible for delivery over the network so that it can reach the recipient.
 

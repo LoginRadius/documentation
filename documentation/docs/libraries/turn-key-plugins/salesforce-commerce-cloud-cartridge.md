@@ -1,4 +1,4 @@
-Salesforce Commerce Cloud Cartridge
+# Salesforce Commerce Cloud Cartridge
 ===
 ---
 The LoginRadius integration cartridge can be added to a Salesforce Commerce Cloud(SFCC) website based on the SalesForce Reference Architecture (SFRA) to override the default authentication provider. This document is intended to give an overview of the cartridge, and how it can be implemented within an SFRA site.

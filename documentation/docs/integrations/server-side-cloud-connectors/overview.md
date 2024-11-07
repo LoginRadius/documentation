@@ -1,4 +1,4 @@
-# Cloud Connectors Overview
+# Cloud Connectors
 
 The server-side integration handles server to server communications between the LoginRadius Cloud Storage and third-party applications. It is triggered based on one of over 40 different action triggers and is triggered automatically when the selected action occurs. Data flows automatically to the specified third party or back to the LoginRadius Cloud Storage in real-time.
  

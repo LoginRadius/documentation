@@ -1,4 +1,6 @@
-# How do I configure social data settings?
+# Configure social data settings
+
+## How do I configure social data settings?
 
 You are provided with the basic data of customers who are registered using a social account. You can request additional data points by enabling **Extended Data** permission. Please see https://www.loginradius.com/datapoints/ for datapoints collected under Basic and Extended data permissions.
 

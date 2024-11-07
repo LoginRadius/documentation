@@ -1,4 +1,4 @@
-Cryptographic Hashing Algorithms
+# Cryptographic Hashing Algorithms
 =========
 ----
 

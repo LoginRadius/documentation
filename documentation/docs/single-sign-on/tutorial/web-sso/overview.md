@@ -1,4 +1,4 @@
-# Web SSO Introduction
+# Web SSO
 
 Web SSO is a method of browser-based session management that utilizes browser storage mechanisms like sessionStorage, localStorage, cookies to maintain the user’s session across your applications. A centralized domain managed by LoginRadius [IDX](https://www.loginradius.com/docs/getting-started/glossary/#h7) is utilized to perform the authentication. When requested, this centralized domain shares the session with authorized applications.
 

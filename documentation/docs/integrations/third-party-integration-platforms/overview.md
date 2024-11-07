@@ -1,4 +1,4 @@
-# 3rd Party Integration Platforms Overview
+# 3rd Party Integration Platforms
 
 The LoginRadius Integrations enable you to have a seamless integration between LoginRadius and other 3rd Party Integration Platforms/Services. There are different types of integrations available depending on the 3rd Party Integration Platforms/Services you choose, and each may use its own specifications. This document provides an overview of the different types of 3rd Party Integration Platforms/Services supported by LoginRadius.
 

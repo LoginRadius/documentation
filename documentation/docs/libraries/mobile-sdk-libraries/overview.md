@@ -1,4 +1,4 @@
-## Mobile SDK Overview
+# Mobile SDK
 
 
 Mobile SDKs follow a similar approach like web-based SDKs, but the mobile SDKs provide native implementation methods in the respective mobile platforms like Android, iOS, Xamarin, PhoneGap, and Ionic. 

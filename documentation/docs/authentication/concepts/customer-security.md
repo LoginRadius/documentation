@@ -1,4 +1,4 @@
-# Customer Security Introduction
+# Customer Security
 
 Customer Security is an essential part of Customer Experience. LoginRadius emphasis on customer security to prevent harmful and malicious activities and ensures that the customer profiles and data are protected from fraudulent activity.
 

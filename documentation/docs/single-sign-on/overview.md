@@ -1,4 +1,4 @@
-## SSO Introduction
+# SSO
 
 Single Sign-On (SSO) refers to the authentication process that allows your customers to access multiple applications with a single set of login credentials and an active login session. The following are the two examples of the Single Sign-On environments:
 

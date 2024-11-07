@@ -1,4 +1,4 @@
-# JWT Login Overview
+# JWT Login
 
 JWT is an open standard ([RFC 7519](https://tools.ietf.org/html/rfc7519)) that defines a compact, self-sufficient, and secure way of transmitting information among parties as a JSON object. The passed information can be verified and trusted since it is digitally signed. JWTs can be signed using a secret (with the HMAC or other algorithms) or a public/private key pair using RSA.
 

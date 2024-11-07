@@ -1,4 +1,4 @@
-# Integrations Overview
+# Integrations 
 
 LoginRadius Integrations allow you to sync data from your LoginRadius Cloud Database to other 3rd party systems, as well as sync back the data from the 3rd party systems to your LoginRadius Cloud Database. Hence, two-way syncing of data is supported and the data is identified based on the LoginRadius Unique Identifier (UID).
 

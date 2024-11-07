@@ -1,4 +1,4 @@
-# Customer Management Overview
+# Customer Management
 
 In the Customer Management area of the LoginRadius Admin Console, you can easily search and manage various elements of customer accounts.
 

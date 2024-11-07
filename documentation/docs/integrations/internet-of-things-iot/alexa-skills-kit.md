@@ -1,4 +1,4 @@
-Alexa Skills Kit Integration
+# Alexa Skills Kit Integration
 
 Alexa Skills Kit (ASK) is the official collection of tools, documentation and APIs for development on Amazon's Alexa voice service. This document goes over the process of using LoginRadius along with the Alexa Skills Kit to enable account linking within your Alexa Skills.
 

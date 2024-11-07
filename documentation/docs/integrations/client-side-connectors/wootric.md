@@ -1,4 +1,4 @@
-#Wootric
+# Wootric
 
 Wootric is a popular platform for measuring and boosting customer happiness. The LoginRadius Wootric Front-End integration allows you to easily push customer data into Wootric to help you further analyze the data collected from Wootric Surveys.
 

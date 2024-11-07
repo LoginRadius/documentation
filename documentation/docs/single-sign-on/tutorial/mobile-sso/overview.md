@@ -1,4 +1,4 @@
-# Mobile SSO Introduction
+# Mobile SSO
 
 The LoginRadius **Mobile SSO** flow is similar to the [LoginRadius Web SSO](https://www.loginradius.com/docs/api/v2/single-sign-on/getting-started/) flow, the key difference is that it allows you to have a single login across multiple apps once logged into an app.
 

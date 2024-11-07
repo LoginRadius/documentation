@@ -1,4 +1,4 @@
-SMTP Overview
+# SMTP Overview
 ==============
 This section covers the basics of SMTP, what it does and how LoginRadius utilizes your SMTP server.
 

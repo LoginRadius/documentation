@@ -1,4 +1,4 @@
-# OpenID Connect Overview
+# OpenID Connect
 
 LoginRadius provides a way to integrate your OpenID Connect client with LoginRadius, it supports standard [OpenID Connect specs](http://openid.net/specs/openid-connect-core-1_0.html).
 

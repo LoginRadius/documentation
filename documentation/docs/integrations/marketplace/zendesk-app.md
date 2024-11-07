@@ -1,4 +1,4 @@
-Zendesk App Integration
+# Zendesk App Integration
 ===================================
 -------------------------
 

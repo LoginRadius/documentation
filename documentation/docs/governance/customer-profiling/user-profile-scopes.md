@@ -1,4 +1,4 @@
-Customer Profile Scopes
+# Customer Profile Scopes
 =====
 
 Scope can be defined as a degree of access to the customer data. It is used to describe the kind and amount of data that can be accessed while getting the customer profile from social login.

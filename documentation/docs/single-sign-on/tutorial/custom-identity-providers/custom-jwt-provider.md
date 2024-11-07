@@ -1,4 +1,4 @@
-# JWT as IDP Introduction
+# JWT as IDP
 
 JWT is an SSO method and is widely used by B2C apps. It is used to pass the authenticated user’s identity between an Identity Provider (IDP) and a Service Provider (SP). Where:
 

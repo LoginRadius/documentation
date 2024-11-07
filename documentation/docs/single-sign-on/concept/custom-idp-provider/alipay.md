@@ -1,4 +1,4 @@
-# AliPay Introduction
+# AliPay 
 
 Alipay is a popular Chinese third-party mobile and online payment platform. Alipay users use Alipay identity to log in to the merchant application securely, and the merchant can obtain basic open information (user ID, user avatar, nickname, gender, province, city, etc.) of Alipay users, and provide corresponding open services.
 
