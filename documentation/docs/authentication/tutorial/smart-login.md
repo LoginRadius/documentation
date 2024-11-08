@@ -1,5 +1,5 @@
 # Smart Login  
-=====
+
 **Smart Login** feature allows your customers to easily log in to a device that may not be accessible with standard web or mobile devices.
 
 The Smart Login feature does not require a password to log in and is designed to help you delegate the authentication process to a different device. It is commonly used in Smart Phone Apps, Smart TV Apps, Gaming Consoles (Xbox, PS, etc). 
