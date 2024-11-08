@@ -78,6 +78,7 @@ const config = {
           hideable: true,
         },
       },
+
       sidebar: {
         governanceSideBar,
       },
@@ -88,6 +89,7 @@ const config = {
         indexName: 'loginradius', 
         contextualSearch: true
       },
+
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -106,6 +108,44 @@ const config = {
             label: 'Docs',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {
+      label: 'API Reference',
+      position: 'left',
+      items: [
+        {
+          label: 'Authentication API',
+          to: '#',
+          description: 'Learn about user authentication API',
+        },
+        {
+          label: 'User Management API',
+          to: '#',
+          description: 'Manage user profiles and accounts',
+        },
+      ],
+    },
+
+    // Libraries with Dropdown
+    {
+      label: 'Libraries',
+      position: 'left',
+      items: [
+        {
+          label: 'JavaScript SDK',
+          to: '#',
+          description: 'Get started with JavaScript SDK',
+        },
+        {
+          label: 'Python SDK',
+          to: '#',
+          description: 'Get started with Python SDK',
+        },
+      ],
+    },
+    
+    // Quick Start and Changelog Links
+    {to: '/docs/quick-start', label: 'Quick Start', position: 'left'},
+    {to: '/changelog', label: 'Changelog', position: 'left'},
           {
             href: 'https://adminconsole.loginradius.com/dashboard',
             label: 'Admin Console',
