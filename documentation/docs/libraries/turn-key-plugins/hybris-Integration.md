@@ -82,7 +82,7 @@ Using the LoginRadius Identity Platform you can achieve different Auth workflows
 ![enter image description here](https://apidocs.lrcontent.com/images/Workflows_96425e91f6ecac5f89.51528349.png "Account Workflow")
 
 
-##Login methods
+## Login methods
 
 LoginRadius Identity Platform provides you the following various methods of login :
 

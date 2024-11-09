@@ -66,7 +66,7 @@ Here is the flow for the Single Sign-on (SSO) process:
 
 
 
-##Authentication Flow 
+## Authentication Flow 
 
 Using LoginRadius CIAM, you can achieve different Auth workflows like Email Registration, Phone Registration, Social Registration, Passwordless login, Username Registration, Username with duplicate Emails for  SAP Commerce storefront. This will give freedom to you to choose the Auth workflow as per your requirement.  In LoginRadius Admin Console, navigate to [Platform Configuration> Identity Workflow > Authentication Workflow > Account Workflow](https://adminconsole.loginradius.com/platform-configuration/identity-workflow/authentication-workflow/account-workflow) and the following screen appears to show the available authentication workflow:
 

@@ -1,8 +1,8 @@
 # Identity Experience Framework iframe Implementation
-======
+
 The iframe implementation is an extension of the [LoginRadius Identity Experience Framework](https://www.loginradius.com/docs/api/v2/user-registration/hosted-registration), This allows you to display the Hosted Registration page directly on your website in an iframe. The hosted registration page will emit any events(success and error) directly to the callback handlers on the parent window. You can also emit custom events directly from the Identity Experience Framework iframe to the parent window to further customize any actions. The iframe implementation allows you to leverage the aspects of the Identity Experience Framework directly into your web properties: Ease of implementation, centralized look and feel, customizability.
 
-##Components
+## Components
 
 The Identity Experience Framework  Implementation is comprised of four JavaScript files, two of them to be added onto your parent website, and two for the Identity Experience Framework that assists in performing the operations.
 Get a copy of the Iframe Identity Experience Framework files from here: [iframe hosted library](https://github.com/LoginRadius/hosted-page/tree/iframe-hosted-page). 
@@ -30,7 +30,7 @@ Get a copy of the Iframe Identity Experience Framework files from here: [iframe 
 [Deployment >Identity Experience Framework  > Profile Pages > Before Script](https://adminconsole.loginradius.com/deployment/idx).
 
 
-##Configuration
+## Configuration
 
 This section will take you through the configuration of JS files that will use in IDX implementation with iframe.
 
@@ -38,7 +38,7 @@ This section will take you through the configuration of JS files that will use i
 The **iframeSDK-Options.js** file contains most of the configurations for the implementation and it saves those configurations in different JavaScript Objects, Below are the following details on setting up the configurations.
 
 
-1.**Specify your LoginRadius Site/App Name:**
+1. **Specify your LoginRadius Site/App Name:**
 
 	Create an object with the name `LRConfigObj` to contain the SDK's configurations and provide it with your app/site name using the following Object property:
 
@@ -51,7 +51,7 @@ The **iframeSDK-Options.js** file contains most of the configurations for the im
   }
   ```
 	
-2.Next, we will be adding an object named **iframeSettings** inside our **LRConfigObj** to contain all iframe properties:
+2. Next, we will be adding an object named **iframeSettings** inside our **LRConfigObj** to contain all iframe properties:
  - height: You can manage the height of the Iframe from this parameter
  - width: You can manage the width of the frame from this parameter
  - class: You can pass custom class names here to add custom CSS to the Iframe.
@@ -68,7 +68,7 @@ iframeSettings : {
 }
 }
 ```
-3.(Optional) using a custom domain: You can pass a custom domain value in the LRConfigObj via the customdomain property.
+3. (Optional) using a custom domain: You can pass a custom domain value in the LRConfigObj via the customdomain property.
 This property is passed a domain in the instance that you are using a custom domain.
 The code should be look like this :
 ```
@@ -97,9 +97,9 @@ This section covers the steps to add custom domain in your iframe for yourLoginR
 
 	`'customdomain': 'your custom domain'`
 
->**Note:** This needs to be enabled by [LoginRadius,  LoginRadius Support](https://adminconsole.loginradius.com/support/tickets/open-a-new-ticket) for details.
+> **Note:** This needs to be enabled by [LoginRadius,  LoginRadius Support](https://adminconsole.loginradius.com/support/tickets/open-a-new-ticket) for details.
 
-##LoginRadiusV2.iframeSDK.min.js
+### LoginRadiusV2.iframeSDK.min.js
 
 Using the **LoginRadiusV2.iframeSDK.min.js** will allow you to render the iframes on your Parent website's page.
 
@@ -128,7 +128,7 @@ The following are the description of parameters passed inside the above code:
 
 
 
->**Note:** by default, this should always be set to 'auth.aspx'
+> **Note:** by default, this should always be set to 'auth.aspx'
 
 
 ### List Of Actions
@@ -147,7 +147,7 @@ The following are the list of default actions supported by **LoginRadiusV2.ifram
 
 Custom events can also be emitted from the LoginRadius Identity Experience Framework.
 
-##Implementation
+## Implementation
 
 The following are the steps to generate an interface:
 

@@ -10,7 +10,7 @@ You will need the following installed on your computer:
 - [Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) (with npm)
 - [MeteorJS](https://v2-docs.meteor.com/install.html)
 
-##Quickstart Guide
+## Quickstart Guide
 
 To begin, obtain your [API credentials](https://www.loginradius.com/docs/api/v2/admin-console/platform-security/api-key-and-secret/) from the LoginRadius Admin Console.
 

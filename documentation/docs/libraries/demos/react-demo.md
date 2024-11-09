@@ -1,7 +1,5 @@
 # LoginRadius React Demo
 
-
-## Overview
 This demo shows how to use the LoginRadius JavaScript library - available through CDNs - in the context of the React framework. 
 
 ## How to Run

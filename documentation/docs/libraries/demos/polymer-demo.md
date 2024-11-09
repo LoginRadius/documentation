@@ -1,7 +1,5 @@
 # LoginRadius Polymer Demo
 
-## Overview
-
 This document contains all details regarding our LoginRadius Polymer 3.0 [demo](https://github.com/LoginRadius/demo/tree/v2-polymerjs-demo). This demo has been implemented as a single page application using the polymer-3-application starter template.
 
 ## Installation

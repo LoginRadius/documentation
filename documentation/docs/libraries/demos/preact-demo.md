@@ -1,7 +1,5 @@
 # LoginRadius Preact Demo
 
-## Overview
-
 Preact is a venture to recreate the core value proposition of React using a small amount of code as possible, with support for ES2015. Currently, the size of the library is around 3kb (minified & gzipped).
 
 This demo shows how to use the LoginRadius JavaScript library - available through CDNs - in the context of the Preact framework.

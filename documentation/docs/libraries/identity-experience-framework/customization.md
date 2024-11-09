@@ -1,4 +1,4 @@
-# Identity Experience Framework
+# Customization
 
 Identity Experience Framework is a ready to use solution for web pages available on a dedicated instance of LoginRadius, which is hosted on the LoginRadius server. The IDX has pre-configured features like registration, login and forgot password and more including multiple themes.  
 
@@ -797,7 +797,7 @@ function refreshParent(){
 window.close();
 ```
 
-** Step 4: ** You are required to make the following code changes in the auth.aspx file to avoid opening multiple pop-up windows:
+**Step 4:** You are required to make the following code changes in the auth.aspx file to avoid opening multiple pop-up windows:
 
 
 Locate the following code in the **Auth - Before Script** file:
@@ -812,7 +812,7 @@ Replace the above code with the following:
 <script type="text/html" id="loginradiuscustom_tmpl"><a class="lr-provider-label lr-sl-shaded-brick-button lr-flat-<#=Name.toLowerCase()#>" href="<#= Endpoint #>&same_window=1" title="Sign up with <#= Name #>" alt="Sign in with <#= Name#>"><span class="lr-sl-icon lr-sl-icon-<#= Name.toLowerCase()#>"></span>Login with <#= Name#> </a></script>
 ```
 
-**Step 5:** **Save **the file and you are done with setting up the IDX as a pop-up.
+**Step 5:** **Save** the file and you are done with setting up the IDX as a pop-up.
 
 ## X-Frame-Options
 

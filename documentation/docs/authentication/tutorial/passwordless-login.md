@@ -21,7 +21,7 @@ LoginRadius Identity Platform allows you to implement the Passwordless Login fea
 
 This guide will take you through the process to set up and implement Passwordless Login. It covers everything you need to know on how to configure Passwordless Login in the LoginRadius Identity Platform and deploy it onto your web application. 
 
->Pre-requisites: 
+>**Pre-requisites:** 
 * Passwordless Login should be enabled on your account.   
 * Basic knowledge of  HTML/JavaScript.  
 

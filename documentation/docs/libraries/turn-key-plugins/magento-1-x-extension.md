@@ -38,9 +38,9 @@ This document provides an installation guide for the Magento v1.x Customer Ident
    ![enter image description here](https://apidocs.lrcontent.com/images/3_32521594a5aa4bc3f52.45936906.png)
      
 
-##Activation & Configuration
+## Activation & Configuration
 
-###Account Configuration
+### Account Configuration
 
 > **Note:** The full functionality of this extension requires a LoginRadius Site name, LoginRadius API Key, and a LoginRadius API Secret. If you do not have this data. Please find further documentation on how you can obtain this data [here](https://www.loginradius.com/docs/api/v2/admin-console/platform-security/api-key-and-secret/#api-key-and-secret)
  

@@ -16,7 +16,9 @@ Features include register, login, social login, email verification, forgot passw
 ## Installation
 
 1. Clone the GitHub repo from [here](https://github.com/LoginRadius/demo/tree/v2-emberjs-demo) 
-2. Configure the file `/vendor/loginradius/option.js` to match your credentials.  **Note: make sure you fill out all of the fields to prevent unexpected behavior.**
+2. Configure the file `/vendor/loginradius/option.js` to match your credentials.  
+
+> **Note: make sure you fill out all of the fields to prevent unexpected behavior.**
 3. On terminal or any command prompt run:
     * `cd to the directory`
     * `npm install`
@@ -34,11 +36,12 @@ Features include register, login, social login, email verification, forgot passw
   * **Solution**: Place option.js under `vendor` folder, and as usual, call `var LRObject = new LoginRadiusV2(commonOptions)`. Import using the asset manifest file `ember-cli-build.js`, with the line `app.import('vendor/loginradius/option.js')`.
 
 * Deploying the LR interfaces on the DOM:
-   a.
+   
+   **a.**
   * **Problem**: Where to bind DOM elements and initialize LRObject interfaces?
   * **Solution**: Use components, and the lifecycle hook `didInsertElement()`. After the component is successfully rendered, `didInsertElement()` will be triggered.
 
-   b.
+   **b.**
   * **Problem**: Writing the methods correctly, the LR interfaces do not appear on the DOM.
   * **Solution**: Get rid of the `LRObject.util.ready` wrapper.
 

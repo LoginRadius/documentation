@@ -6,10 +6,10 @@
 
 > This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs
 
-##Download SDK
+## Download SDK
 Get a copy of the React Native SDK and demo projects [here](https://github.com/LoginRadius/react-native-sdk).
 
-##Configure your Account
+## Configure your Account
 To get your app supported LoginRadius React Native SDK, you need to slightly configure your LoginRadius user account.
 
 1. Add another parameter to your User Registration Email template

@@ -1,7 +1,5 @@
 # LoginRadius Vue.js Demo
 
-## Overview 
-
 Vue is an open-source model–view–ViewModel JavaScript framework for building user interfaces and single-page applications. Vue.js features an incrementally adaptable architecture that focuses on declarative rendering and component composition.
 
 ## Getting Started

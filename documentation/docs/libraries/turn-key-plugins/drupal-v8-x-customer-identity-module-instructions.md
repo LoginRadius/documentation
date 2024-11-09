@@ -67,13 +67,9 @@ Follow the following instruction to upload PHP SDK manually.
 
 1. Get the loginradius folder from given path and copy the folder
 2. Go to your FTP.
-
 3. Open the folder /vendor/.
-
 4. Paste the loginradius folder into this directory.
-
 5. Add the following path in file /vendor/composer/autoload_namespaces.php 'LoginRadiusSDK\\\\' => array(\$vendorDir . '/loginradius/php-sdk/src'),
-
 6. If you have autoload_psr4.php file then please add the following path in this file /vendor/composer/autoload_psr4.php:-
    'LoginRadiusSDK\\\\' => array(\$vendorDir . '/loginradius/php-sdk/src/LoginRadiusSDK'),
 
@@ -197,6 +193,7 @@ Composer is now aware that the LoginRadius PHP SDK is required. It will first ad
     ![enter image description here](https://apidocs.lrcontent.com/images/emailtemplate_205975e05ac8162e058.85449523.png "enter image title here")
 
 ### Phone Authentication Settings
+  
   Phone Authentication will be displayed in the admin authentication tab only if Phone Workflow is enabled in your app.
 > **Note:** If only the Phone Id Login option is enabled for the App, a random Email Id will be generated if a user registered using the PhoneID. Format of random email id is: **randomid+timestamp@yourdomain.com**
 

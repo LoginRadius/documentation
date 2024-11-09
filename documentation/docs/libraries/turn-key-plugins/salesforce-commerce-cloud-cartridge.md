@@ -1,7 +1,7 @@
 # Salesforce Commerce Cloud Cartridge
-===
 ---
 The LoginRadius integration cartridge can be added to a Salesforce Commerce Cloud(SFCC) website based on the SalesForce Reference Architecture (SFRA) to override the default authentication provider. This document is intended to give an overview of the cartridge, and how it can be implemented within an SFRA site.
+
 ## SFCC Configuration
 Follow the below steps  to add LoginRadius integration cartridge to configure SFCC website: 
 1. [Download](https://github.com/LoginRadius/sfcc-identity-plugin) the Customer Identity cartridge folder. The loginRadius.js in the folder ( _cartridge/client/default/js/loginRadius/loginRadius.js_) exports a constructor function that defines a LoginRadius type. The type instances have functions defined that act as a wrapper for fetching LoginRadius (LR) forms that are used for customer authentication related UI tasks. 

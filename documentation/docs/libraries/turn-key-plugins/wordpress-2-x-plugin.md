@@ -141,7 +141,7 @@ LoginRadius [Single Sign-On](https://www.loginradius.com/docs/api/v2/single-sign
 
 ### Debug Mode
 
-- To generate Debug log for debugging purpose, enable **WordPress developer mode** option from **wp-config.php **
+- To generate Debug log for debugging purpose, enable **WordPress developer mode** option from **wp-config.php**
 
 > **Note:** When the log is enabled, then it will start writing the log to the 'ciam_debug.log' file which is present at the plugin root.
 
@@ -205,9 +205,9 @@ Below screenshot is for Forgot Password page.
 Reset password interfaces can be used from the Reset password page created from the plugin authentication tab from the admin panel. It can also be used from the page on which admin has applied the shortcode for Reset password i.e. [ciam_password_form].
 
 To auto-generate the registration page, navigate to Wordpress Admin Panel->CIAM->Authentication and check 'Enable Auto Generate User Registration' under User Registration Integration section.
-
 The customer can reset their password from the link which they receive in their mail after doing the forgot password process.
-  ![enter image description here](https://apidocs.lrcontent.com/images/reset_36685de0e6d3cd85d2.28232477.png "enter image title here")
+
+![enter image description here](https://apidocs.lrcontent.com/images/reset_36685de0e6d3cd85d2.28232477.png "enter image title here")
 
 ### Default WP Login Form
 
@@ -219,7 +219,7 @@ Default WP Login Form is used for admin purpose. If the admin wants to bypass th
 
 ![enter image description here](https://apidocs.lrcontent.com/images/Picture2_180335a86988ac4da11.10623642.png)
 
-###Add additional email
+### Add additional email
 
 The customer can add additional email to their account. This email will get saved into the LoginRadius [Cloud Directory](https://www.loginradius.com/docs/api/v2/cloud-directory-api/overview/) and can be used to manage the account.
 
@@ -233,7 +233,7 @@ Click on Add Email button near to the email field. Popup will appear to enter th
 
 The new email will be appeared in the profile after verifying it.
 
-###Remove email
+### Remove email
 
 The customer can also remove the additional or existing email from their account. 
 
@@ -251,7 +251,6 @@ In order to customize the LoginRadius Interface like Login, Register, forgot pas
     To customize the form’s field label or button label, please follow our [Javascript Hooks](https://www.loginradius.com/docs/api/v2/user-registration/javascript-hooks#languagecustomizations20) document.
 
 ### Where to look user details in database?
-
 
 - You can see the user's email id and username in the "wp_users" table.
 - And plugin options setting in the "wp_options" table. 

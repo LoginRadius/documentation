@@ -1,4 +1,4 @@
-# Passkey Authentication Configuration
+# Passkey Authentication
 
 ## Introduction
 
@@ -37,10 +37,10 @@ Passkey Authentication is a modern, passwordless authentication method that enha
 
 When passkey authentication is enabled, users can enter their email address and register an account using a passkey by clicking the “Register with passkey” button.
 
-![enter image description here](https://apidocs.lrcontent.com/images/unnamed-20_13650481126683de444e3635.58291809.png "enter image title here")
+![signup](https://apidocs.lrcontent.com/images/unnamed-20_13650481126683de444e3635.58291809.png "signup")
 
 ## Login 
 
 Users can select the passkey from the autofill configuration on the login page or click the "Sign In with Passkey" button. They can then use their registered passkey to log in to their account.
 
-![enter image description here](https://apidocs.lrcontent.com/images/unnamed-21_9601571206683de93d238b3.78109950.png "enter image title here")
+![login](https://apidocs.lrcontent.com/images/unnamed-21_9601571206683de93d238b3.78109950.png "login")

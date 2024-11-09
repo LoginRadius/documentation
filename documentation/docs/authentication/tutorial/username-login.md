@@ -18,7 +18,7 @@ The following are the key points that you need to keep in mind while implementin
 
 This guide will take you through the process to enable and configure Username Login flow. It covers everything you need to configure and deploy the Username Login feature using the LoginRadius Identity Platform.
 
-> **Pre-requisites: **
+> **Pre-requisites:**
 >
 > - Basic knowledge of HTML/JavaScript.
 > - Username Registration should be enabled on your account.
@@ -53,7 +53,7 @@ To make it mandatory, navigate to the **Advanced tab**, select the **Mandatory**
 ![Field Configuration](https://apidocs.lrcontent.com/images/4_150715e772057d50632.51998826.png "stad field Config")
 
 > **Case-sensitive Username**
-> Case-sensitive Username is an easy way to increase registration and login security. For example, Username, UserName, username, USERNAME will be considered as different users on the same site. Once this feature is enabled, then the** Username** will be sensitive to the capitalization of letters.
+> Case-sensitive Username is an easy way to increase registration and login security. For example, Username, UserName, username, USERNAME will be considered as different users on the same site. Once this feature is enabled, then the **Username** will be sensitive to the capitalization of letters.
 
 To verify if the Case-sensitive Username option is enabled, navigate to [Platform Configuration > Identity Workflow > Authentication Workflow > Advanced Workflow](https://adminconsole.loginradius.com/platform-configuration/identity-workflow/authentication-workflow/advanced-workflow). The following screen appears:
 

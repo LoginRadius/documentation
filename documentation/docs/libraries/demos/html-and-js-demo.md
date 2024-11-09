@@ -27,5 +27,5 @@ var LRObject= new LoginRadiusV2(commonOptions);
 - After configuring the above options, go to your web browser and type in the root directory URL that your server is hosting.
 - Now, you can start the demo and play with the available features in it.
 
->**Note:**You can edit the registration scheme from LoginRadius [Admin Console](https://adminconsole.loginradius.com/platform-configuration/authentication-configuration/standard-login/data-schema) and you can also configure social logins from [here](https://www.loginradius.com/docs/api/v2/customer-identity-api/social-login/getting-started/).
+>**Note:** You can edit the registration scheme from LoginRadius [Admin Console](https://adminconsole.loginradius.com/platform-configuration/authentication-configuration/standard-login/data-schema) and you can also configure social logins from [here](https://www.loginradius.com/docs/api/v2/customer-identity-api/social-login/getting-started/).
 
