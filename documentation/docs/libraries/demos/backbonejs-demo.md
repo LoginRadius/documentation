@@ -21,7 +21,7 @@ This document explains how to use the LoginRadius JavaScript library - available
 4. Now, you can start the demo and play with the available features in it.
 
 
-##Noted differences in Backbone.JS
+## Noted differences in Backbone.JS
 
 
 Deploying the preset interfaces on the DOM:

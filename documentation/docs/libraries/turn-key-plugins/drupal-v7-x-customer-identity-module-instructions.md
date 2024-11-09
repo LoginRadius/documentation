@@ -183,7 +183,7 @@ LoginRadius [Single Sign-On](https://www.loginradius.com/docs/api/v2/single-sign
 
 ### Configuration
 
-> ######Important Note: Make sure the same LoginRadius Site should be used in all websites in which you want to enable Single Sign-On.
+> ###### Important Note: Make sure the same LoginRadius Site should be used in all websites in which you want to enable Single Sign-On.
 
 - Navigate to Single Sign-On.
 - Select Yes to option under "Do you want to enable Single Sign-On (SSO)?".

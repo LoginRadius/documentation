@@ -50,9 +50,8 @@ In order to support the BigCommerce SSO flows you will need to handle the follow
    6. SCOPES: Enter a list of scopes you would like to have authorized for the customers separated by spaces. IE. `store_v2_customers store_v2_users_login store_v2_default store_v2_information_read_only customers_basic_information`
    7. CLIENT ID: Enter a valid BigCommerce Client ID for an API Account, see this doc on [creating API Accounts](https://support.bigcommerce.com/articles/Public/Store-API-Accounts)
    8. CLIENT SECRET: Enter a valid BigCommerce Client Secret for an API Account, see this doc on [creating API Accounts](https://support.bigcommerce.com/articles/Public/Store-API-Accounts)
-   9. MAPPING: Map any fields you would like to be passed into BigCommerce
-
-![BigCommerce](https://apidocs.lrcontent.com/images/Bigcommerce_31716202d1fe4ccc35.41176248.png "BigCommerce")
+   9. MAPPING: Map any fields you would like to be passed into BigCommerce 
+   ![BigCommerce](https://apidocs.lrcontent.com/images/Bigcommerce_31716202d1fe4ccc35.41176248.png "BigCommerce")
 
 ## Uninstall Process
 

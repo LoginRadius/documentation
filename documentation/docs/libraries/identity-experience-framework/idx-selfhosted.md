@@ -1,4 +1,4 @@
-# Identity Experience Framework
+# Idx-selfhosted
 
 The Identity Experience Framework (Self-Hosted) allows you to deploy LoginRadius directly onto your page quickly. It will enable you to customize some standard layout options to bring it in line with the branding of your sites while preserving the ability to leverage all of the functionality of the full LoginRadius JS deployment.
 
@@ -49,15 +49,15 @@ A) **apiKey** - Your API key, click here for details.
 
 B) **appName** - This property is your LoginRadius site/app name as shown in your LoginRadius Admin Console.
 
-C) **hashTemplate.**
+C) **hashTemplate.** - Use this when the interface template contains hash (#).
 
 D) **sott:** This property is for generating a one-time Token, click here to know more.
 
 E) **formValidationMessage** - This determines if the validation messages are generated in the page.
 
-F) **verificationUrl **- This URL is the page where your email got verified. It usually the page where Login Screen is displayed.
+F) **verificationUrl**- This URL is the page where your email got verified. It usually the page where Login Screen is displayed.
 
-G) **resetPasswordUrl **- This URL is the page where your password got reset after forgot your password. It usually the page where Login Screen is displayed. Sample:
+G) **resetPasswordUrl**- This URL is the page where your password got reset after forgot your password. It usually the page where Login Screen is displayed. Sample:
 
 
 >**Note:** Not all of the features of the LoginRadiusV2.js are included in the IDX Framework, if you're in doubt, you can reach out to LoginRadius Support. 

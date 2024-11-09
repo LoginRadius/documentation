@@ -1,7 +1,5 @@
 # Identity Orchestration (IO)
 
-## Overview
-
 The **Identity Orchestration** feature in LoginRadius empowers businesses to design and implement identity workflows tailored to their unique requirements. This capability enables the creation of user workflows, which can be tested and refined using IDX. 
 
 

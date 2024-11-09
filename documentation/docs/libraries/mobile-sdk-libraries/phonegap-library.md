@@ -2,11 +2,11 @@
 
 > **Disclaimer:** This is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
-##Download SDK
+## Download SDK
 
 The PhoneGap SDK and demo project can be found [here](https://github.com/LoginRadius/phonegap-sdk).
 
-##Configure your Account
+## Configure your Account
 
 Make the following changes in the LoginRadius Admin Console:
 

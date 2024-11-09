@@ -1,5 +1,4 @@
-## General CMS Integrations
-
+# General CMS Integrations
 
 This document will help you understand the general flow used for Social Login, Social Registration, Traditional Login, Traditional Registration and Forgot Password features when using a LoginRadius CMS Turn-key Plugin.
 

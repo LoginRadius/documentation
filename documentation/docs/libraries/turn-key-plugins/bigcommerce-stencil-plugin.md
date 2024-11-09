@@ -11,9 +11,7 @@ This document provides instructions for installing the LoginRadius Customer Iden
 ## BigCommerce Configuration
 
 1. Log into your BigCommerce admin panel
-2. Click on "Apps"
-
-   ![](https://apidocs.lrcontent.com/images/ST1_281765f1010ef99c037.29062063.png)
+2. Click on "Apps" ![image](https://apidocs.lrcontent.com/images/ST1_281765f1010ef99c037.29062063.png "app image")
 
 3. Click on Marketplace
 

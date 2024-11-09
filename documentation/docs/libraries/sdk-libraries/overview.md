@@ -1,5 +1,4 @@
 # SDK Libraries
-=====
 
 -----
 

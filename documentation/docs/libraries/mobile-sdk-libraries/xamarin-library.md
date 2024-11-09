@@ -980,7 +980,7 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-###Phone Authentication APIs
+### Phone Authentication APIs
 
 **List of APIs in this Section:**
 

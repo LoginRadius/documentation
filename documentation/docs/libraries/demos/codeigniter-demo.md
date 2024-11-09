@@ -1,7 +1,7 @@
 # LoginRadius CodeIgniter Demo
 
 ## Overview
-TThis demo is meant to help you with a quick implementation of the LoginRadius platform with the framework. It presumes you have basic knowledge of PHP.
+This demo is meant to help you with a quick implementation of the LoginRadius platform with the framework. It presumes you have basic knowledge of PHP.
 
 
 

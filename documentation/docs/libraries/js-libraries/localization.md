@@ -1,5 +1,4 @@
 # Localization
-=====
 
 -------
 This document takes you through the various ways in which LoginRadius can help you localize your website according to a country or region.

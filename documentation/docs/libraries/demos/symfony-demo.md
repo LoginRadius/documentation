@@ -1,6 +1,5 @@
 # LoginRadius Symfony Demo
 
-## Overview
 Symfony is a PHP based web application framework and also a set of re-usable PHP components/libraries. It was launched as free software on October 18, 2005.
 
 This document is meant to help you with a quick implementation of the LoginRadius platform with the Symfony framework. It presumes you have basic knowledge of PHP.

@@ -21,7 +21,7 @@ The following explains the working of above sequence diagram:
 
 This guide will take you through the process to set up and implement Smart Login. It covers everything you need to know on how to configure Smart Login in the LoginRadius Identity Platform and deploy it onto your web application. 
 
-> **Pre-requisites: **
+> **Pre-requisites:**
 >-  Smart Login should be enabled on your account.   
 >-  Basic knowledge of  HTML/JavaScript.                  
 
@@ -43,7 +43,7 @@ This section covers the required configurations that you need to perform in the 
 The following screen will appear:
 ![smart login](https://apidocs.lrcontent.com/images/image-42_4391167566687a6724c8944.81861570.png "smart login")
 
-**Step 2: **Click on **Smart Login with Email Settings**. **Enter Request Limit, Request disabled Period** and **Email Token Validity Limit** as highlighted in the following screen and click on the **Save **button.
+**Step 2:** Click on **Smart Login with Email Settings**. **Enter Request Limit, Request disabled Period** and **Email Token Validity Limit** as highlighted in the following screen and click on the **Save** button.
 
 ![smart login template"](https://apidocs.lrcontent.com/images/image-42_12345313666687a58e420c62.07581298.png "smart login template")
 
@@ -73,13 +73,13 @@ However, you can similarly accomplish the deployment with any of the implementat
 
 Make sure you have implemented the following redirects and callbacks from your web application
 
-**Step 1:** Locate the** Auth Page URL** as explained below:
+**Step 1:** Locate the **Auth Page URL** as explained below:
 Navigate to** Deployment > Identity Experience Framework(Hosted)** and the following screen appears:
 
 ![Auth New Page  ](https://apidocs.lrcontent.com/images/1_302836204086435b412.59992184.png "Auth New Page ")
 
 
-The** Auth Page URL** displays your unique hosted page domain in the following format:
+The **Auth Page URL** displays your unique hosted page domain in the following format:
 
 ``` <https://<sitename>.hub.loginradius.com/auth.aspx> ```
 
@@ -102,7 +102,7 @@ In the above URL replace the following:
   - Forgot Password
   - logout
  
-Example:
+**Example:**
 
 Login Page
 

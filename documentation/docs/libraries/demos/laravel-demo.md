@@ -1,6 +1,5 @@
 # LoginRadius Laravel Demo
 
-## Overview
 This demo is to help you with a quick implementation of the LoginRadius platform with Laravel. It presumes you have basic knowledge of PHP.
 
 ## Getting Started

@@ -1,4 +1,4 @@
-# Identity Experience Framework
+# Overview
 
 **Identity Experience Framework(IDX)** is a ready-to-use solution for all the necessary actions, based on the configuration under the LoginRadius Admin Console. It is a set of registration, authentication, and related web pages such as forgot password, profile. It allows you to customize the UI and UX elements as per your requirements
 
