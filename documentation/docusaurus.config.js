@@ -100,8 +100,9 @@ const config = {
         
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'DocsSidebar', // AdminConsoleSidebar
+            //type: 'docSidebar',
+            //sidebarId: 'DocsSidebar', // AdminConsoleSidebar
+            href: '/',
             position: 'left',
             label: 'Docs',
           },
