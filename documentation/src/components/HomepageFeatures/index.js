@@ -6,77 +6,72 @@ const FeatureList = [
   {
     title: 'Authentication',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <a href="/docs/authentication/overview" style={{ textDecoration: 'none', color: 'inherit' }}>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <span>
-            A quick run-through of authentication processes and features offered by the LoginRadius Identity Platform.
-          </span>
-        </div>
-      </a>
-    ),
-}
-,
+    description: 'A quick run-through of authentication processes and features offered by the LoginRadius Identity Platform.',
+    link: '/docs/authentication/overview'
+  },
   {
-    title: 'Academy',
+    title: 'Single Sign On',
     Svg: require('@site/static/img/undraw_docusaurus_academy.svg').default,
-    description: (
-      <>
-        Configure seamless authentication of your customers into your application and getting started with LoginRadius.
-      </>
-    ),
+    description: 'Configure seamless authentication of your customers into your application or third-party applications.',
+    link: '/docs/single-sign-on/overview'
+  },
+  {
+    title: 'Libraries',
+    Svg: require('@site/static/img/apihome-libraries.svg').default,
+    description: 'SDKs, Turnkey plugins, and JS Libraries that will help you to deploy your LoginRadius Identity Platform in no time.',
+    link: '/docs/libraries/overview'
   },
   {
     title: 'Security',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Understand and enable the different LoginRadius Identity Platform security features for your customers.
-      </>
-    ),
+    Svg: require('@site/static/img/apihome-security.svg').default,
+    description: 'Understand and enable the different LoginRadius Identity Platform security features for your customers.',
+    link: '/docs/security/overview'
   },
   {
-    title: 'SDK Libraries',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        SDKs, Turnkey plugins, and JS Libraries that will help you to deploy your LoginRadius Identity Platform in no time.
-        {/* <ul>
-          {[
-            { url: 'sdk-reference/dotnet', title: '.NET' },
-            { url: 'sdk-reference/android', title: 'Android (Java)' },
-            { url: 'sdk-reference/dart', title: 'Dart (Flutter)' },
-            { url: 'sdk-reference/go', title: 'Go' },
-            { url: 'sdk-reference/java', title: 'Java' },
-            { url: 'sdk-reference/js', title: 'JavaScript' },
-            { url: 'sdk-reference/node', title: 'Node.js' },
-            { url: 'sdk-reference/php', title: 'PHP' },
-            { url: 'sdk-reference/community/laravel', title: 'PHP (Laravel)' },
-            { url: 'sdk-reference/python', title: 'Python' },
-            { url: 'sdk-reference/ruby', title: 'Ruby' },
-            { url: 'sdk-reference/rust', title: 'Rust' },
-            { url: 'sdk-reference/ios', title: 'Swift (iOS)' },
-          ].map((link) => (
-            <li key={link.title}>
-              <a href={link.url}>{link.title}</a>
-            </li>
-          ))}
-        </ul> */}
-      </>
-    ),
+    title: 'Governance',
+    Svg: require('@site/static/img/apihome-governance.svg').default,
+    description: 'Discover data storage, security, and compliance features followed and offered by the LoginRadius Identity Platform.',
+    link: '/docs/governance/overview'
   },
+  {
+    title: 'Customer Management',
+    Svg: require('@site/static/img/apihome-customermanagement.svg').default,
+    description: 'Directly view and manage your customer data with these powerful Customer Management Systems.',
+    link: '/docs/customer-management/overview'
+  },
+  {
+    title: 'Customer Intelligence',
+    Svg: require('@site/static/img/apihome-customerintelligenece.svg').default,
+    description: 'Analyze your customer information to gain useful insights, build stronger customer relationship and support your decision-making process.',
+    link: '/docs/customer-intelligence/analytics-overview'
+  },
+  {
+    title: 'Integrations',
+    Svg: require('@site/static/img/apihome-integrations.svg').default,
+    description: 'Integrate LoginRadius Identity Platform with any third-party software to work seamlessly with your existing application and enhance your productivity.',
+    link: '/docs/integrations/overview'
+  },
+  {
+    title: 'Reference Docs',
+    Svg: require('@site/static/img/apihome-referencedocsapis.svg').default,
+    description: 'Find detailed technical documentation to successfully configure and deploy the LoginRadius Identity Platform to meet your business needs.',
+    link: ''
+  }
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, title, description, link}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+      <a href={link} className={clsx(styles.card, 'stretched-link')} style={{ textDecoration: 'none', color: 'inherit', position: 'relative' }}>
+        <div className="text--center">
+          <Svg className={styles.featureSvg} role="img" />
+        </div>
+
+        <div className={styles.cardContent}>
+          <Heading as="h3" style={{ textAlign: 'center'}}>{title}</Heading>
+          <p style={{ textAlign: 'center'}}>{description}</p>
+        </div>
+      </a>
     </div>
   );
 }
