@@ -202,7 +202,6 @@ p {
 
 /* Code block styles */
 pre {
-  background-color: #2e2e2e; /* Dark background color for code blocks */
   padding: 16px; /* Padding for inner space */
   border-radius: 4px; /* Slight rounding of the corners */
   font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace!important; /* Monospace font for code */
