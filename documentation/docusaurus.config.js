@@ -77,13 +77,14 @@ const config = {
       'docusaurus-plugin-openapi-docs',
       {
         id: "api", // plugin id
-        docsPluginId: "classic", // id of plugin-content-docs or preset for rendering docs
+        docsPluginId: "classic",
+        // id of plugin-content-docs or preset for rendering docs
         config: {
           lr: { // the <id> referenced when running CLI commands
             specPath: "src/OpenApi3.json", // path to OpenAPI spec, URLs supported
-            outputDir: "api", // output directory for generated files
+            outputDir: "docs/api", // output directory for generated files
             sidebarOptions: { // optional, instructs plugin to generate sidebar.js
-              groupPathsBy: "tag", // group sidebar items by operation "tag"
+            groupPathsBy: "tag", // group sidebar items by operation "tag"
             },
           },
         }
@@ -129,13 +130,9 @@ const config = {
             href: '/',
           },
 
-          {
-            to: '/api', // Path to your API Reference page
-            label: 'API Reference',
-            position: 'left', // Can also be 'right'
-          },
+        
 
-          {to: 'https://www.loginradius.com/engineering/', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://adminconsole.loginradius.com/dashboard',
             label: 'Admin Console',
