@@ -1,0 +1,71 @@
+---
+id: auth-setor-change-user-name
+title: "AuthSetorChangeUserName"
+description: ""
+sidebar_label: "AuthSetorChangeUserName"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVU1vm0AQ/StoTq1EQ5ojtyT1IVI/Uic+Ragaw9hsArub3cExQv7v1SzY4Mapcmu5MbydmX3vzdAB49pD+gBfzVrpORaq8dFlwyVpVjmyMjq6vL3xkMVQkM+dshKDFCAGY8kFyE0BKcipO2LjrkvUa1p4ct+xJojBosOamJxU6kBLNAW06olaiEFJuueGnLwcF5nPfi5u5rMvaTQrFEdcKh8pHbWmcRHpjXJG16QZYnD03ChHBaTsGorBc1tJlZVxNcRAW1uZgg5f85JqhLQDbq3APDul17DbxWN/eU7e/2LzRPp/6zLrU5HnK1O0gnglTm40S9G0A7S2GsRMHr0AuklurKofqyAMKw7dvKHkvK94dI0HaDy5wFgW79s0y0fKBWedWIQVeSl0QJ6iHWiLta2ot8gIhe3kgV0mAr0Xmh1Y+EaFwvu+5is2xuLHXf6RT5o81i8EvDXa9xe8OD8/KUVJWATzd7upLiFjQdZRjiw5V1h5iqEmLo1MlG0CicglpJAcGovBk9vsp6lxFaRQMlufJgladVbJKLswyme5qRNVyDBzm2wuEmy4hBg26BQuA4VdcJOnvHGK25BSkl0ROnKQPmTTz3fimv6yU9BBTwnCYFx5X/YAuahQPR89OzvJ+N4PMm4rExIPnvz7fhr8jjn3JAs7Pf2fz84lnTWeawzOH0q9va6O9OtGwUTK4Z5MW05shSq4J0jQDUIdT0RpPEus65boaeGq3U7C/R4RrgvlRYhR/Terf5gP5vsYvX/hnOxX1u5k/26wagQEMlv/sJ/jfTt2lY1+DX7cD1Tgrz973Xf1KYz4ePb1qGeT8bpd3EMMy2GB1mHxgsMXWXD4sv/FyeFg+BDroEK9bnAt2D6lPL8B86GJeQ==
+sidebar_class_name: "put api-method"
+info_path: docs/api/loginradius-authentication-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"AuthSetorChangeUserName"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/username"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"apikey","in":"query","description":"REQUIRED: Edit this in your environment","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"access_token","in":"query","description":"REQUIRED: Edit this in your environment","required":true,"style":"form","explode":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"","content":{"application/json":{"schema":{"allOf":[{"title":"AuthSetorChangeUserNameRequest","required":["username"],"type":"object","properties":{"username":{"type":"string"}},"examples":[{"username":"xxxxxxxxxxxx"}]},{"examples":[{"username":"xxxxxxxxxxxx"}]}],"contentMediaType":"application/json"},"example":{"username":"xxxxxxxxxxxx"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"","headers":{},"content":{}}}}
+>
+  
+</StatusCodes>
+
+
+      

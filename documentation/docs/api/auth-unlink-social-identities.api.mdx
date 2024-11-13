@@ -1,0 +1,71 @@
+---
+id: auth-unlink-social-identities
+title: "AuthUnlinkSocialIdentities"
+description: ""
+sidebar_label: "AuthUnlinkSocialIdentities"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVcFu2zAM/RWDpw3w6q5H39o1hwAdtqXtKTAGxWJitbKkSnSawMi/D5Td2m7aYgMGbL5Zoh4pvveoFkhsAuRLuLIbZRZCqiYk5w1VaEiVgpQ1yfn3eYAiBYmh9MrxGuQAKViHPobMJeTAp26NVub+2pZK6LlkDFIYIAUnvKiR0HOyFoyoEXIQTt3jHlJQjPjQoOefaZ7F7MftfDG7zJOZVJRQpUKiTLK3jU/QbJW3pkZDkILHh0Z5lJCTbzCFQHvNWdbW15AC7py2Ep93ywprAXkLtHccFsgrs4HDIR3qK0sM4SfZezT/W5VFB4WBLqzcc8QRP6U1xEnzFoRzuuczuwsc0I6whdbf1pEYUhSreZvMRZd0cpMlOG+3SqJXksnuf1g0fdl2dYcldXsOfVRF3o6PHV9xBPQaS4A7UTuNnaLGSLA7/sZlTQLgUDDjfw+seG78V5RK3HR1HxEwXOBlI/4wI7diKqq4EJw1oevy2enpq/qoUMjoyPYwFktElOg8loIYcy10wBRqpMpyfRI1EkZXUwU5ZGGsETZHQL998nrjNeRQEbmQZ5lw6kTzrPFx1pyUts5UfzDbnmWioQpS2AqvxCry0UatBywbz+AMyWAXKDw3Y1mMt69Z092tx0HP8uFF6G3F/6sugG/MrCwGR83eIKcX4ISPQbHKrG1M1/vo/bHae1SU1HHAPevY+XxyGg1gA9UiurUfSe9O2QnD7UApk903gHBHmdNCRQVGbtqexyW84LFIobKBeKdtVyLgrdeHAy93Q5CpkCowT4NK3qzhw6IX6cfk96flq1XzmzF6PLZCNxwE7ON/WM/0sRiqKgY5R7k+GS/2rzv7pavqUxwWw9njoVGMbHg5u5rdzCCFVf8A1PHhAC8eeTqLx6dXms9HS8S1FrQwm0ZsOLZD5e8XKOLUtg==
+sidebar_class_name: "delete api-method"
+info_path: docs/api/loginradius-authentication-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"AuthUnlinkSocialIdentities"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/socialIdentity"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"apikey","in":"query","description":"REQUIRED: Edit this in your environment","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"access_token","in":"query","description":"REQUIRED: Edit this in your environment","required":true,"style":"form","explode":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"","content":{"application/json":{"schema":{"allOf":[{"title":"AuthUnlinkSocialIdentitiesRequest","required":["providerid","provider"],"type":"object","properties":{"providerid":{"type":"string"},"provider":{"type":"string"}},"examples":[{"providerid":"xxxxxxxxxxxxxxxxxxx","provider":"xxxxxxxxxxx"}]},{"examples":[{"providerid":"xxxxxxxxxxxxxxxxxxx","provider":"xxxxxxxxxxx"}]}],"contentMediaType":"application/json"},"example":{"providerid":"xxxxxxxxxxxxxxxxxxx","provider":"xxxxxxxxxxx"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"","headers":{},"content":{}}}}
+>
+  
+</StatusCodes>
+
+
+      

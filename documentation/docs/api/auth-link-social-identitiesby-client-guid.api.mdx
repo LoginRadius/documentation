@@ -1,0 +1,71 @@
+---
+id: auth-link-social-identitiesby-client-guid
+title: "AuthLinkSocialIdentitiesbyClientGuid"
+description: ""
+sidebar_label: "AuthLinkSocialIdentitiesbyClientGuid"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VU1P3DAQ/StoTq1kCOWYG6CqQqICLfS0ymE2md0YnNjYzkIU5b9XYyebLMtWtFJzi/P85uO9mXTgceMgXcKt3sh6gYVs3Mll40uqvczRS12fXN7fOMgEFORyKw2fQQogQBuyAXJTQAp861bWzw86l6huCmbwktyqvVaSav+jkQUIMGixIk+Ww3ZQY0WQAhr5TC0IkMz90pDll4OIll4aaamA1NuGBDjfKr6+1rYCAfRmlC5o9zUvqUJIO/CtYZjzVtYb6HuxC3yNeUmn17r2VqsxfklYkP2bBJysjCI4HpOTQ8aEbtf6NOfAkPV9FlnJ+StdtHzzIGqua0+1529ojBqESZ4cA7pZTFTqbh366qUPiX1GlUUMv1feEvJJtUyM1ejVE+WMNJbVZyaOO8N+1O157ftgePv4gT5jkf7pXrZr2E8qJD7GbA4aN6X1voLj5FzLvgXCgTO6drETF+fnH0oYLcWQfq5nYCzIWMrRM+calSMBFflScypGB2EM+hJSSFyQUUYZ28REazmy23GgGqvYwd4blyYJGnmmeLRtGO2zXFfJ7vb2IsHGlyBgi1biKjS6C450lDdW+jZQMtkVoSUL6TKbf35g58XC56CdBfhwHAp+X0UAF80aLCbffz8ixWginsy1DtSDs/+8sYapwdzHlnN/ohjfzs6ZjhtbYZifYRV8coHtSdtNWrLKQ9me3nxiFMrgsqBIN0i4hH0JWVsuMBNQstTpErpuhY5+WdX3fByXIetQSMciTS45msqXxWDSryfHsuJ1O9u7W1QNg4DlHe0Q5B69+79SeL+Bp0xEN0Ii62kY5QlxONLZbHLu7x4eQcBqWKpV+DGAxVfec/g6/sL4djBwOOtAYb1pcMPYyMnPb7WygsI=
+sidebar_class_name: "post api-method"
+info_path: docs/api/loginradius-authentication-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"AuthLinkSocialIdentitiesbyClientGuid"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/socialidentity/ping"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"apikey","in":"query","description":"","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"Cache-Control","in":"header","description":"","required":true,"style":"simple","schema":{"type":"string","examples":["no-cache"]}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"","content":{"application/json":{"schema":{"allOf":[{"title":"AuthLinkSocialIdentitiesbyClientGuidRequest","required":["clientGuid"],"type":"object","properties":{"clientGuid":{"type":"string"}},"examples":[{"clientGuid":"xxxxxxxxxxxxxxxxxxxxxxx"}]},{"examples":[{"clientGuid":"xxxxxxxxxxxxxxxxxxxxxxx"}]}],"contentMediaType":"application/json"},"example":{"clientGuid":"xxxxxxxxxxxxxxxxxxxxxxx"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"","headers":{},"content":{}}}}
+>
+  
+</StatusCodes>
+
+
+      
