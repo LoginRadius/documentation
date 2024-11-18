@@ -1,0 +1,71 @@
+---
+id: auth-link-social-identities
+title: "AuthLinkSocialIdentities"
+description: ""
+sidebar_label: "AuthLinkSocialIdentities"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VU1P4zAQ/StoTrtSICzH3ADtAYkVqLCnKodpMm0Mjm3sSaGK8t9X4yRtSlukXWlzi/3m870Zt8C4CpDN4d6ulJlhqZpwdt1wRYZVgaysObt+vAuQJ1BSKLxycgYZQALWkY+QuxIyEKt7ZV6fbKFQ35XigRUFSMChx5qYvIRqwWBNkAE69UobSECJv7eGvPwcRPH01ihPJWTsG0og8EaL+dL6GhKgD6dtSdvboqIaIWuBN05ggb0yK+i6ZBv4FouKzm+tYW/1GL8iLMn/TQJB1U4TnI4pyaFgYoeNPS8kMORdl/deKfCNLTdieRC1sIbJsNyhc3ogI30JAmgnMVHrh2XsKyuOiZ1iYtaH3CtpDgWaUpXIxPaVjBA9VGEXL1QI2nlhOnKZtZ/xxzo9rfvQAD6Of9DlQtI/2+bbpv2iUuFzn9VB83bpHavmdACpa18K8SA4a0LfmavLy6NU9tISSDflNXosyXkqkMXnEnWgBGriyspEORvJcsgVZJCGSKfq6ZRRCeTX40w1XouImV3I0hSdutAy0T5O9EVh63Q0TNdXKTZcQQJr9AoXsddtFGWgovHiXFyKsxtCTx6yeT69fhLx9TVPQVslyOE4F/K/6AFSr1Aw20n/5xdMjHqSAV3a6H4Q+NfLahgeLLjvuPSo5+LHxaW4k77WGKU7bIQvdtcem+2OPiF2KJfpg1OnUUVxRSbagbU5fGItT6ASWrM5tO0CA/32uuvkuF+A0vhSBWFlp4iTOXybDYL8fnYqHVmxk127Rt0ICITPkf/I76jT/5XC5627yyRpR0jv9TyO7g5xOML5ZEoeH56eIYHFsEjr+BiAx3fZc/g+PlViHRUbz1rQaFYNrgTb+5TvD8G6esI=
+sidebar_class_name: "post api-method"
+info_path: docs/api/loginradius-authentication-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"AuthLinkSocialIdentities"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/socialidentity"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"apikey","in":"query","description":"","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"Cache-Control","in":"header","description":"","required":true,"style":"simple","schema":{"type":"string","examples":["no-cache"]}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"","content":{"application/json":{"schema":{"allOf":[{"title":"AuthLinkSocialIdentitiesRequest","required":["candidatetoken"],"type":"object","properties":{"candidatetoken":{"type":"string"}},"examples":[{"candidatetoken":"xxxxxxxxxxxxxxxxxxxxxxx"}]},{"examples":[{"candidatetoken":"xxxxxxxxxxxxxxxxxxxxxxx"}]}],"contentMediaType":"application/json"},"example":{"candidatetoken":"xxxxxxxxxxxxxxxxxxxxxxx"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"","headers":{},"content":{}}}}
+>
+  
+</StatusCodes>
+
+
+      

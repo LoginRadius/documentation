@@ -1,0 +1,71 @@
+---
+id: auth-add-email
+title: "AuthAddEmail"
+description: ""
+sidebar_label: "AuthAddEmail"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVsFO20AQ/RVrTq3kYsrRp0KbA1IraIBTFFUTexIv2N5ldx3iWvn3anY3sYMpokVV4cbuzOzzvDdv0oHFlYF0Bl/lStRTzEVjotPGFlRbkaEVso5OL88NzGPIyWRaKD6DFCAGqUi7kPMcUuCs0zyfVChKiEGhxoosaS7fQY0VQQrEt5YqVaIliEFwqfuGdAuPH5jkwka2ECYqSHOspvtGaMohtbqhGIxtS665lLqCGGijSpnT/jYrqEJIO7Ct4jBjtahXsN3GezSoxB21z8OYTr7fnE8nX9KoByTqqJWNjqheCy3rimr7b/BlGRnzw8o7qt8uyjVpsQxiaXT5n1id+1Jk7JnMW44Y6TWTteUmpB2gUmWAnNwaDugGtbEsL5ZOtlZYh2Yo7ql/5gD7zOOJvcB5WgI+ubiljGOV5nGxgkyPfvQVu/yn+g20wUqV5OcpXF9RJuscXaNDKmzan59C7FEmK9jOmaxXZM/3rftGucBrnzxqYQ9xgP9FT/DXHerAHRgla+P7dXJ8/CSlBWHuLKbbDvl1FXNSmjK0XHOJpaEYKrKFZLNS0hGo0BaQQkLBtAzp9c6xWMopFNYqkyYJKnFUskdq55GMOxE5u6Rtk/VJgo0tIIY1aoEL1+bOadJQ1mhhW1eSi50RatKQzubD6yvWnv/UYdC+jXwIQf78/8IH8Gdy76e98icjCoKE+v73ahP1UrrIIPPnt0AYIcys7ze3yjPx8eiYy3FXK3TDFLzh0VI44K/rCWMqA1pLG5uoEoUTlCOhCzzN+ukqmL90Bl23QEM3utxu+dh7Drc6F4Z56Kn/7dPvpkF576OROT2JiVfGeJOtsWw4FnjY/ur1l3v4M7D2K+2t4DlcYa9H9SccjTdT//68H1Y3jDsvcerx6Z/9+x+uvbXvcsfGNx84y+XF1TXEsAhLqHLLCzQ+8L7Ah90vJ8524+7OOiixXjW44lhfk/9+AfH/T8I=
+sidebar_class_name: "post api-method"
+info_path: docs/api/loginradius-authentication-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"AuthAddEmail"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/email"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"emailtemplate","in":"query","description":"Edit this here","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"apikey","in":"query","description":"REQUIRED: Edit this in your environment","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"access_token","in":"query","description":"REQUIRED: Edit this in your environment","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"verificationurl","in":"query","description":"Edit this here","required":true,"style":"form","explode":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"","content":{"application/json":{"schema":{"allOf":[{"title":"AuthAddEmailRequest","required":["type","email"],"type":"object","properties":{"type":{"type":"string"},"email":{"type":"string"}},"examples":[{"type":"Secondary","email":"xyz@example.com"}]},{"examples":[{"type":"Secondary","email":"xyz@example.com"}]}],"contentMediaType":"application/json"},"example":{"type":"Secondary","email":"xyz@example.com"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"","headers":{},"content":{}}}}
+>
+  
+</StatusCodes>
+
+
+      

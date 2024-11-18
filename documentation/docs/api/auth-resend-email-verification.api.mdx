@@ -1,0 +1,71 @@
+---
+id: auth-resend-email-verification
+title: "AuthResendEmailVerification"
+description: ""
+sidebar_label: "AuthResendEmailVerification"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVcFu00AQ/RVrTiCZuvToEy0EqRKIEloulQ8TexJvsb3b3XEaY+Xf0ew6cYpLVECI3rp+O/P2zZuXHhhXDtJb+KBXqpljoVoXnbdcUsMqR1a6ic6vLh1kMRTkcquMnEEKEIM2ZD3ksoAU5NacHDXFrEZVfSWrlkMJiMGgxZqYrHTrocGaIAUSJFNtKmSCGJRUvm/JdvBzv1mhOOJSuagkK1hL962yVEDKtqUYHHeV1FxqW0MMtDGVLmj/NS+pRkh74M4IzLFVzQq223jPBo36Rt1xGvPZ55vL+exdGo2EVBN1urURNWtldVNTw/+E3/pA0tZW/0mvLJQixxe66AQxMUauGxYR0h7QmGqgnNw5AfQHtbGqPi29IVixZyMueq/tSvMVOvegbTEPzR694DY4R1w50NOLO8oFZKzYkhU5aRBgT6kKtMHaVBT8OOBg031/M3w4yXUN20z0fy402z/9IxUKr0PPiQRj8wOK03pC8vHQ/IEzunHhdWenp0/qXxIWftP67eEwfMWCjKUcWWousXIUQ01callh03oFkUtIIbG0Uo7JQgyO7Hq3uuK8FEpm49IkQaNOKskO67NDmCeqkPTgLlmfJdhyCTGs0SpceAl7byFHeWsVd76kFLsgtGQhvc0OP38Rq4THHoL285RDGNwq/y8CQB4qUs9Ho86miu/MIHu01L7q4MLjaTg4HHMOCos0QfvXJ6dSzmjHNXqvD6t7PBwfDbAfJyazHB7KtOHEVKi8ffwM+mFSt7CfVBZDqR3LWd8v0NGNrbZbOQ4hIWIXyskkxvH/svuL+eC+l9EkTZ6kJek5DfU1Vq1gQVbpj7o/P3SP0Nqn+9/z+R01pqE99s/GxfDG322un1O4/jb0f+WzZLw7zZTsYI+vbq4hhsUQz7WPdbD4IBmKD7sfb7nsN8uf9VBhs2pxJdhQUv5+AOMn0aE=
+sidebar_class_name: "put api-method"
+info_path: docs/api/loginradius-authentication-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"AuthResendEmailVerification"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/register"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"emailtemplate","in":"query","description":"Edit this here","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"apikey","in":"query","description":"REQUIRED: Edit this in your environment","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"verificationurl","in":"query","description":"Edit this here","required":true,"style":"form","explode":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"","content":{"application/json":{"schema":{"allOf":[{"title":"AuthForgotPasswordRequest","required":["email"],"type":"object","properties":{"email":{"type":"string"}},"examples":[{"email":"xyz@example.com"}]},{"examples":[{"email":"xyz@example.com"}]}],"contentMediaType":"application/json"},"example":{"email":"xyz@example.com"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"","headers":{},"content":{}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -20,7 +20,7 @@ This section covers the required configurations that you need to perform in the 
 
 ### Configure Social Provider
 
-**Step 1:** Login to your [**Admin Console**](https://adminconsole.loginradius.com/) account and navigate to [**Platform Configuration > Authentication Configuration > Social Login > Social providers**](https://adminconsole.loginradius.com/platform-configuration/authentication-configuration/social-login/social-providers).
+**Step 1:** Login to your [**Admin Console**](https://adminconsole.loginradius.com/) account, and navigate to [**Platform Configuration > Authentication Configuration > Social Login > Social providers**](https://adminconsole.loginradius.com/platform-configuration/authentication-configuration/social-login/social-providers).
 
 The following screen will appear:
 

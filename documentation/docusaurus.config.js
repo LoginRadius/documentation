@@ -44,8 +44,11 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
+          
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            docRootComponent: "@theme/DocRoot",
+            docItemComponent: "@theme/ApiItem",
         },
         blog: {
           showReadingTime: true,
@@ -69,6 +72,25 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: "api", // plugin id
+        docsPluginId: "classic", // id of plugin-content-docs or preset for rendering docs
+        config: {
+          lr: { // the <id> referenced when running CLI commands
+            specPath: "src/OpenApi3.json", // path to OpenAPI spec, URLs supported
+            outputDir: "docs/api", // output directory for generated files
+            sidebarOptions: { // optional, instructs plugin to generate sidebar.js
+              groupPathsBy: "tag", // group sidebar items by operation "tag"
+            },
+          },
+        }
+      },
+    ]
+  ],
+  themes: ["docusaurus-theme-openapi-docs"],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
@@ -100,13 +122,21 @@ const config = {
         
         items: [
           {
-            //type: 'docSidebar',
-            //sidebarId: 'DocsSidebar', // AdminConsoleSidebar
-            href: '/',
+           type: 'docSidebar',
+           sidebarId: 'DocsSidebar', // AdminConsoleSidebar
             position: 'left',
             label: 'Docs',
+            href: '/',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+
+          {
+            to: 'docs/category/apis',
+            label: 'APIs',
+            position: 'left',
+            rel: '',
+          },
+
+          {to: 'https://www.loginradius.com/engineering/', label: 'Blog', position: 'left'},
           {
             href: 'https://adminconsole.loginradius.com/dashboard',
             label: 'Admin Console',

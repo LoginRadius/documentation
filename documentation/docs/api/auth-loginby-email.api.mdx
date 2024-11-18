@@ -1,0 +1,71 @@
+---
+id: auth-loginby-email
+title: "AuthLoginbyEmail"
+description: ""
+sidebar_label: "AuthLoginbyEmail"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV01z0zAQ/SuZPUHGbUphBvCthRw6AwOk5ZTJYWNvYoFtCWmd1uPJf2dWchOnDilQKORmabXvaT+eNg0wLh3EU3inl6qcYKoqNzirOKOSVYKsdDk4+3jhYBZBSi6xysgaxAARaEPWm1ykEIOc8l7m9bhAlUMEBi0WxGQFooESC4IYSHaZCpMjE0SgxN23imwNd0HGqeIBZ8oNMrJia+lbpSylELOtKALHdS4+F9oWEAHdmFyntNlNMioQ4ga4NmLm2KpyCet1tGGDRn2l+jCNyfjT54vJ+G082BJS5aDWlR1QuVJWlwWV/Ff4rciqRZuKyub/PF65pPh/ILI8spSg4STDI0vO6NL9+2pSbqVVQprNYSp/EHwWXJHjc53WYtGDSnTJUp9xA2hM3lbT6IsTg6bjG/P8w8L3Kiv2bO529SRA7fCfhpb2De/ctbYpROAoqaziGkt3TVb0oyWu518oEQfGioCwIifQwUX/fh2n+zbvwOy9w+WuzS71dP5yOBwOX+HL5/Ri6H/z9LVfSk5P7ud9z/l91QJ0g4XJKajifQ7gLNBez9ZRs571zreBg274/Vc/ND8N5bEeBWa2qc73lCq8CrHqVen20p1a+bNcJLC7PekXgrD4VJ+enOxtr4ww9W9cs+72mveYkhGZYvG5wNxRBAVxpoWw0b6RDHIGMYy8svpL2NXtkylCG0PGbFw8GqFRx97K+of6ONHFSKXyVHM9Wp2OsOIMIlihVTj3iWu8PtyGxbsUZ+eEVuIznXW3L0UHwlW7RpsKlkVopUi+58FArilJmmxVaNzPVVv+OxnbrP1G3jrtpMqF9jTbfj88y7R6iAmHhEmsQyqfHZ94vdGOC/TK2Kr6ntFmpwiabdalHtpwMd3wyOSofPn6TDZtsqfhGRV1yaQI4ik0zRwdfbb5ei3L4dnw+qCcJHNbPz+EfjJpy/fpoPfU7eUkg09/HlthXoktiAb8FvrPz0sHaG0Gs4fz+ZVo9Oetx8XvzFePC/yDeerhJA7D7kxMW7DZVsa8TN2qrG+JcPJNADvyb8b2bP/tmHU09+OHyyuIYN6OSoUfscDitYwFeH37x0ZOeyH0aw3kWC4rXIpt8Cm/79qBda0=
+sidebar_class_name: "post api-method"
+info_path: docs/api/loginradius-authentication-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"AuthLoginbyEmail"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/login"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"emailtemplate","in":"query","description":"Edit this here","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"apikey","in":"query","description":"REQUIRED: Edit this in your environment","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"verificationurl","in":"query","description":"Edit this here","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"loginurl","in":"query","description":"Edit this here","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"g-recaptcha-response","in":"query","description":"Edit this here","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"isvoiceotp","in":"query","description":"","required":true,"style":"form","explode":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"","content":{"application/json":{"schema":{"allOf":[{"title":"AuthLoginbyEmailRequest","required":["email","password","securityanswer"],"type":"object","properties":{"email":{"type":"string"},"password":{"type":"string"},"securityanswer":{"allOf":[{"title":"Securityanswer","required":["db7****8a73e4******bd9****8c20"],"type":"object","properties":{"db7****8a73e4******bd9****8c20":{"type":"string"}},"examples":[{"db7****8a73e4******bd9****8c20":"Answer"}]},{}]}},"examples":[{"email":"","password":"","securityanswer":{"db7****8a73e4******bd9****8c20":"Answer"}}]},{"examples":[{"email":"","password":"","securityanswer":{"db7****8a73e4******bd9****8c20":"Answer"}}]}],"contentMediaType":"application/json"},"example":{"email":"","password":"","securityanswer":{"db7****8a73e4******bd9****8c20":"Answer"}}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"","headers":{},"content":{}}}}
+>
+  
+</StatusCodes>
+
+
+      
