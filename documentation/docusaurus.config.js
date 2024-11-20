@@ -90,7 +90,7 @@ const config = {
       },
     ]
   ],
-  themes: ["docusaurus-theme-openapi-docs"],
+  themes: ["docusaurus-theme-openapi-docs","@inkeep/docusaurus/chatButton", "@inkeep/docusaurus/searchBar"],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
@@ -104,12 +104,49 @@ const config = {
         governanceSideBar,
       },
 
-      algolia: {
-        appId: 'Z5ZYP9YXTO', // Replace with your Algolia Application ID
-        apiKey: '57abca036fc42fdece204fd0cc114563', // Replace with your Search-Only API Key
-        indexName: 'loginradius', 
-        contextualSearch: true
+       //inkeep ai agent
+      inkeepConfig: {
+        baseSettings: {
+          apiKey: "344a9e90f7c8027140ebcede99cf6f8bd68491b5f33c6fff", // required
+          integrationId: "cm3o5azso000c29brptetjjbf", // required
+          organizationId: "org_7WE77CMkrySCsff3", // required
+          primaryBrandColor: "#26D6FF", // required -- your brand color, the widget color scheme is derived from this
+          organizationDisplayName: "Inkeep",
+          // ...optional settings
+          theme: {
+            // stylesheetUrls: ['/path/to/stylesheets'], // optional
+            syntaxHighlighter: {
+
+            },
+          }
+        },
+        modalSettings: {
+          // optional settings
+        },
+        searchSettings: {
+          // optional settings
+        },
+        aiChatSettings: {
+          chatSubjectName: "LoginRadius",
+          botAvatarSrcUrl: "https://www.loginradius.com/wp-content/uploads/fbrfg/apple-touch-icon.png",
+          getHelpCallToActions: [
+            {
+              name: "Contact",
+              url: "https://www.loginradius.com/contact-sales/",
+              icon: {
+                builtIn: "IoChatbubblesOutline"
+              }
+            }
+          ],
+          quickQuestions: [
+            "Get Started with LoginRadius",
+            "How does the LoginRadius User Registration System work?",
+            "Invalid Request URI Error?",
+            "Consumer Audit Logs?"
+          ]
+        },
       },
+    //end of inkeep ai agent
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
