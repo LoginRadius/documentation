@@ -107,8 +107,8 @@ const config = {
        //inkeep ai agent
       inkeepConfig: {
         baseSettings: {
-          apiKey: "344a9e90f7c8027140ebcede99cf6f8bd68491b5f33c6fff", // required
-          integrationId: "cm3o5azso000c29brptetjjbf", // required
+          apiKey: "0eddffabefd5e923b8e222beb495a2eaae6c35d0e82dd24b", // required
+          integrationId: "cm3qv5k4t0026ctns1w4ugr8s", // required
           organizationId: "org_7WE77CMkrySCsff3", // required
           primaryBrandColor: "#26D6FF", // required -- your brand color, the widget color scheme is derived from this
           organizationDisplayName: "Inkeep",
