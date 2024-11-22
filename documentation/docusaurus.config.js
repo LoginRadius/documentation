@@ -167,6 +167,12 @@ const config = {
           },
 
           {
+            to: 'docs/apidocs/getting-started/introduction',
+            label: 'API Reference',
+            position: 'left',
+          },
+
+          {
             to: 'docs/category/apis',
             label: 'APIs',
             position: 'left',

@@ -132,7 +132,7 @@ The following explains how you can configure the global email settings:
 
 - **Request Limit:** The number of times an email can be requested within a set timeframe, determined by the Request Disable Period (in minutes).
 
-- **Request Disable Period:** The duration (in minutes) a customer can request emails and the disabled duration after the request limit is reached. 
+- **Request Disable Period:** The duration (in minutes) a customer can request emails and the disabled duration after the request limit is reached.
 
 - **Email Token Validity Limit (Minutes)**: The amount of time (in minutes) for which the link included in the given email is valid.
 
@@ -185,7 +185,8 @@ The following displays the actions available for the default email templates:
 - **FROM NAME :** The Sender's name applicable to the Template
 
 - **FROM EMAIL :** The Sender's email applicable to the Template
-   > **Note:** If you want to customize the sender's name and email instead of utilizing the global values from your [configured SMTP](https://adminconsole.loginradius.com/platform-configuration/identity-workflow/communication-configuration/email-configuration), you can raise a request to [LoginRadius support](https://adminconsole.loginradius.com/support/tickets/open-a-new-ticket) to enable the **Multiple SMTP Domain** feature for your account. This will enable the **FROM NAME** and **FROM EMAIL** field for every email template available in your account. For more details, refer to [Multiple SMTP Domain](https://www.loginradius.com/docs/api/v2/admin-console/platform-configuration/standard-login/multiple-smtp-domain/) document.
+
+  > **Note:** If you want to customize the sender's name and email instead of utilizing the global values from your [configured SMTP](https://adminconsole.loginradius.com/platform-configuration/identity-workflow/communication-configuration/email-configuration), you can raise a request to [LoginRadius support](https://adminconsole.loginradius.com/support/tickets/open-a-new-ticket) to enable the **Multiple SMTP Domain** feature for your account. This will enable the **FROM NAME** and **FROM EMAIL** field for every email template available in your account. For more details, refer to [Multiple SMTP Domain](https://www.loginradius.com/docs/api/v2/admin-console/platform-configuration/standard-login/multiple-smtp-domain/) document.
 
 - **HTML BODY**: The HTML body of the template can be added here. The content added here will appear in the email client which supports HTML content in the email. Additional details on customizing the body of the template can be found in the [next](#email-template-customization) section.
 - **TEXT BODY**: A plain text version of the template can be added here. This template will appear in the email client which supports only plain text emails. You will be able to send a test email only if the required email configuration has been done as explained in the [SMTP Configuration](#part-1-smtp-configuration).
@@ -194,7 +195,7 @@ The following displays the actions available for the default email templates:
 > ![enter image description here](https://apidocs.lrcontent.com/images/new2_177505e77b3769c5548.36754384.png "enter image title here")
 
 > Click the **Delete** button and then confirm the action to delete the template.\
-**You can only delete the new template(s) that you created i.e. you are not allowed to delete the default templates**.
+> **You can only delete the new template(s) that you created i.e. you are not allowed to delete the default templates**.
 
 ### Email Template Customization
 
@@ -204,7 +205,7 @@ The following explains how you can customize the email templates:
 
 **Step 1**: Select the template that you would like to manage and the content of respective email template will appear as displayed in the screen below:
 
-   ![Verification Email Template](https://apidocs.lrcontent.com/images/7--Verification-Email-Template_262063025a2a213d55.89520677.png "Verification Email Template")
+![Verification Email Template](https://apidocs.lrcontent.com/images/7--Verification-Email-Template_262063025a2a213d55.89520677.png "Verification Email Template")
 
 **Step 2**: Update the **EMAIL BODY** with the HTML content and you can use the placeholder tags listed below to customize your email template.
 
@@ -258,40 +259,40 @@ The following are examples for the Email Verification and Forgot Password emails
 
 1. **Email Verification**
 
- ```
-   Hello #Name#, <br/>
-   To verify your email, please click on the following link and if your browser does not open it, please copy and paste it in your browser’s address bar. <br/><br/>
-   <Site_URL>?vtype=emailverification&vtoken=#GUID# <br/><br/>
-   Regards<br/>
- ```
+```
+  Hello #Name#,
+  To verify your email, please click on the following link and if your browser does not open it, please copy and paste it in your browser’s address bar.
+  <Site_URL>?vtype=emailverification&vtoken=#GUID#
+  Regards
+```
 
- > **Note**: If you pass commonOptions.verificationUrl option through customer Registration Getting Started than you should use `#Url#` tag instead of static URL `<Site_URL>`
+> **Note**: If you pass commonOptions.verificationUrl option through customer Registration Getting Started than you should use `#Url#` tag instead of static URL `<Site_URL>`
 
 2. **Reset Password**
 
- ```
-   Hello #Name#, 
+```
+  Hello #Name#,
 
-   Please reset your password by clicking on the link. 
-   
-   To Reset your password, please click on the following link and if your browser does not open it, please copy and paste it in your browser’s address bar. 
+  Please reset your password by clicking on the link.
+
+  To Reset your password, please click on the following link and if your browser does not open it, please copy and paste it in your browser’s address bar.
 
 
-   **#FPass**
-   <Site_URL>?vtype=reset&vtoken=#GUID# <br/><br/>
-   FPass#
+  **#FPass**
+  <Site_URL>?vtype=reset&vtoken=#GUID#
+  FPass#
 
-   **#FProv**
-   You are logging in through the following social provider: #Providers#
-   FProv#
+  **#FProv**
+  You are logging in through the following social provider: #Providers#
+  FProv#
 
-   **#FUName**
-   Your customername is #customerName#
-   FUName#
+  **#FUName**
+  Your customername is #customerName#
+  FUName#
 
-   Regards
- ```
- 
+  Regards
+```
+
 ### Email Template Deployment
 
 The LoginRadius Email Templates do not require additional deployment settings if you have implemented the solution using IDX or JavaScript Libraries.

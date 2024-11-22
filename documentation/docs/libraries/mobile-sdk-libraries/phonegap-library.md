@@ -107,29 +107,29 @@ $LR.init(options);
 
 The above initialization requires an `options` object with the following parameters:
 
-| Name                         | Description                                                                                                                                                                        | Required  |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| apiKey                       | Your LoginRadius [API Key](https://www.loginradius.com/docs/api/v2/admin-console/platform-security/api-key-and-secret/)                                                                                                         | Yes       |
-| appName                      | Your LoginRadius [App Name](https://www.loginradius.com/docs/api/v2/admin-console/deployment/get-site-app-name/)                                                                                                                                                          | Yes       |
-| sott                         | A [Secure One-Time Token](https://www.loginradius.com/docs/api/v2/customer-identity-api/sott-usage)                                                                                                                | Yes       |
-| verificationUrl              | A dynamic URL for email verification Default: https://auth.lrcontent.com/mobile/verification/index.html                                                                            | Yes       |
-| forgotPasswordUrl            | A dynamic URL for resetting a password                                                                                                                                             | Yes       |
-| formValidationMessage        | `true`: Shows form validation message just below the form elements  `false`: No form validation message                                                                         | Yes       |
+| Name                         | Description                                                                                                                                                                         | Required  |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| apiKey                       | Your LoginRadius [API Key](https://www.loginradius.com/docs/api/v2/admin-console/platform-security/api-key-and-secret/)                                                             | Yes       |
+| appName                      | Your LoginRadius [App Name](https://www.loginradius.com/docs/api/v2/admin-console/deployment/get-site-app-name/)                                                                    | Yes       |
+| sott                         | A [Secure One-Time Token](https://www.loginradius.com/docs/api/v2/customer-identity-api/sott-usage)                                                                                 | Yes       |
+| verificationUrl              | A dynamic URL for email verification Default: https://auth.lrcontent.com/mobile/verification/index.html                                                                             | Yes       |
+| forgotPasswordUrl            | A dynamic URL for resetting a password                                                                                                                                              | Yes       |
+| formValidationMessage        | `true`: Shows form validation message just below the form elements `false`: No form validation message                                                                              | Yes       |
 | callbackUrl                  | Your PhoneGap app name. For example: `ExampleApp://`. Whitelist your callbackUrl in the [LoginRadius Admin Console](https://adminconsole.loginradius.com/deployment/apps/web-apps). | Yes       |
-| passwordLength               | Your password length. For example: `{min : 10, max :32}`                                                                                                                           | Recommend |
-| promptPasswordOnSocialLogin  | `true:` Prompt a user to set a password after having already authenticated via Social Login. This creates 2 customer profiles.                                                     | No        |
-| usernameLogin                | `true`: Enables users to login with either username or email.                                                                                                                      | No        |
-| phoneLogin                   | `true`: Enables login by phone number. Contact LoginRadius Support to enable this feature                                                                                          | No        |
-| smsTemplate                  | SMS template name                                                                                                                                                                  | No        |
-| resetPasswordEmailTemplate   | Reset Password template name                                                                                                                                                       | No        |
-| forgotPasswordTemplate       | Forgot Password template name                                                                                                                                                      | No        |
-| smsTemplatePhoneVerification | Phone Number Verification template Name                                                                                                                                            | No        |
-| instantLinkLogin             | `true`: Enables Instant Link login                                                                                                                                                 | No        |
-| smartLoginPingCount          | `Number`:Ping count for Smart Login                                                                                                                                                | No        |
-| smartLoginPingInterval       | `Number`: Time interval between successive pings for Smart Login                                                                                                                   | No        |
-| smartLoginEmailTemplate      | Email template name for Smart Login                                                                                                                                                | No        |
-| smartLoginRedirectUrl        | Redirect URL for Smart Login                                                                                                                                                       | No        |
-| projectionFields             | Array of values for fetching selected fields, where key is action and value is array of fields                                                                                     | No        |
+| passwordLength               | Your password length. For example: `{min : 10, max :32}`                                                                                                                            | Recommend |
+| promptPasswordOnSocialLogin  | `true:` Prompt a user to set a password after having already authenticated via Social Login. This creates 2 customer profiles.                                                      | No        |
+| usernameLogin                | `true`: Enables users to login with either username or email.                                                                                                                       | No        |
+| phoneLogin                   | `true`: Enables login by phone number. Contact LoginRadius Support to enable this feature                                                                                           | No        |
+| smsTemplate                  | SMS template name                                                                                                                                                                   | No        |
+| resetPasswordEmailTemplate   | Reset Password template name                                                                                                                                                        | No        |
+| forgotPasswordTemplate       | Forgot Password template name                                                                                                                                                       | No        |
+| smsTemplatePhoneVerification | Phone Number Verification template Name                                                                                                                                             | No        |
+| instantLinkLogin             | `true`: Enables Instant Link login                                                                                                                                                  | No        |
+| smartLoginPingCount          | `Number`:Ping count for Smart Login                                                                                                                                                 | No        |
+| smartLoginPingInterval       | `Number`: Time interval between successive pings for Smart Login                                                                                                                    | No        |
+| smartLoginEmailTemplate      | Email template name for Smart Login                                                                                                                                                 | No        |
+| smartLoginRedirectUrl        | Redirect URL for Smart Login                                                                                                                                                        | No        |
+| projectionFields             | Array of values for fetching selected fields, where key is action and value is array of fields                                                                                      | No        |
 
 &nbsp;4. Initialize the LoginRadius PhoneGap SDK object:
 
@@ -141,14 +141,14 @@ $LR.init(options);
 
 The object passed to the callback function contains useful fields including the action triggering the callback.
 
-| Action Name    | Contents                                                                                                                     |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| login          | `token`: The LoginRadius Access Token   `status`: Boolean indicating whether login was successful                         |
-| sociallogin    | `token`: The LoginRadius Access Token   `status`: Boolean indicating whether login was successful                         |
-| registration   | `email`: The email used during registration.   `status`: Boolean indicating whether registration was successful           |
-| forgotpassword | `email`: The email used during password reset.   `status`: Boolean indicating whether the password was reset successfully |
+| Action Name    | Contents                                                                                                                |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| login          | `token`: The LoginRadius Access Token `status`: Boolean indicating whether login was successful                         |
+| sociallogin    | `token`: The LoginRadius Access Token `status`: Boolean indicating whether login was successful                         |
+| registration   | `email`: The email used during registration. `status`: Boolean indicating whether registration was successful           |
+| forgotpassword | `email`: The email used during password reset. `status`: Boolean indicating whether the password was reset successfully |
 
-###  ##Activation
+### ##Activation
 
 Finally, setup elements to trigger the functions that will direct your users to the relevant hosted interfaces.
 
@@ -167,7 +167,7 @@ To render the Traditional Login interface, add the following:
 For Social and Traditional Login interfaces on the same page, add the following:
 
 ```
-<div id="interfacecontainerdiv" class="interfacecontainerdiv" style="text-align: center;"></div>
+<div id="interfacecontainerdiv" class="interfacecontainerdiv"  style={{ text-align: ' center' }}></div>
 <div id="sociallogin-container"></div>
 <script type="text/html" id="loginradiuscustom_tmpl">
 <a class="lr-provider-label" href="javascript:void(0)" onclick="return <#=ObjectName#>.util.openWindow('<#= Endpoint #>');" title="<#= Name #>" alt="Sign in with <#=Name#>">
@@ -186,7 +186,7 @@ Description: Triggers the Social Login interface and returns a "sociallogin" act
 To render the Social Login interface, add the following:
 
 ```
-<div id="interfacecontainerdiv" class="interfacecontainerdiv" style="text-align: center;" ></div>
+<div id="interfacecontainerdiv" class="interfacecontainerdiv"  style={{ text-align: ' center' }} ></div>
 <div id="sociallogin-container"></div>
 <script type="text/html" id="loginradiuscustom_tmpl">
 <a class="lr-provider-label" href="javascript:void(0)" onclick="return <#=ObjectName#>.util.openWindow('<#= Endpoint #>');" title="<#= Name #>" alt="Sign in with <#=Name#>">
@@ -425,7 +425,7 @@ In the demo project, refer to `Profile.html` for how to render a user's profile 
     <table border="0">
       <tr>
         <td class="userprofile_label" colspan="2"><img id="userimage" height="150px;" alt="profile_image" />
-          <span style="text-align:right;float:right;vertical-align: top;border: 0;">
+          <span  style={{ text-align:right;float:right;vertical-align: top;border: ' 0' }}>
           <a class="" href="#" onclick="Logout();" style="border:0;color:#9095AA">Logout</a>
           </span>
         </td>
@@ -801,7 +801,7 @@ Running the demo project should display the following interfaces:
 
 ## APIs
 
-###  Social APIs
+### Social APIs
 
 A successful login or registration will generate an access token, which can be used to access LoginRadius' APIs. The Social APIs below are provider-specific. Further information on Data Points can be found [here](https://www.loginradius.com/docs/api/v2/getting-started/data-points-and-response-codes/data-points).
 
@@ -1088,6 +1088,7 @@ LoginRadiusSDK.postMessage(to , subject , message,  function( postmessage){
 ```
 
 ### ##Post API
+
 Load the user’s posts.
 
 ```
@@ -1110,6 +1111,7 @@ LoginRadiusSDK.getPosts( function ( data){
 ```
 
 ### ##Photo API
+
 Load the user’s photos from an album.
 
 ```
@@ -1132,6 +1134,7 @@ LoginRadiusSDK.getPhotos("put your albumID",function (data){
 ```
 
 ### ##Video API
+
 Load the user’s video files.
 
 ```
@@ -1205,11 +1208,12 @@ if(status == "" || status == null) {
 }
 ```
 
-###  Authentication API
+### Authentication API
 
 This API is used to perform operations on a user account after the user has authenticated himself for the changes to be made. Generally, it is used for front end API calls. Following is the list of methods covered under this API:
 
 ### ##Check Email Availability
+
 This API is used to check the email exists or not on your site.
 
 ```
@@ -1219,6 +1223,7 @@ LoginRadiusSDK.checkEmailAvailability("<email>",function(response){
 ```
 
 ### ##Check Username Availability
+
 This API is used to check the username exists or not on your site.
 
 ```
@@ -1228,6 +1233,7 @@ LoginRadiusSDK.checkUserNameAvailability("<username>",function(response){
 ```
 
 ### ##Check Phone Availability
+
 This API is used to check the phone exists or not on your site.
 
 ```
@@ -1237,6 +1243,7 @@ LoginRadiusSDK.checkPhoneNumberAvailability("<phone>",function(response){
 ```
 
 ### ##Validate Access Token
+
 This API is used to check the phone exists or not on your site.
 
 ```
@@ -1246,6 +1253,7 @@ LoginRadiusSDK.validateAccessToken("<access_token>",function(response){
 ```
 
 ### ##Invalidate Access Token
+
 This API is used to check the phone exists or not on your site.
 
 ```
@@ -1255,6 +1263,7 @@ LoginRadiusSDK.invalidateAccessToken("<access_token>",function(response){
 ```
 
 ### ##Resend Verification Email
+
 This API resends the verification email to the user.
 
 ```
@@ -1264,6 +1273,7 @@ LoginRadiusSDK.resendEmailVerification("<email>",function(response){
 ```
 
 ### ##Add Email
+
 This API is used to add additional emails to a user's account.
 
 ```
@@ -1273,6 +1283,7 @@ LoginRadiusSDK.addEmail("<email>","<type>",function(response){
 ```
 
 ### ##Remove Email
+
 This API is used to remove additional emails from a user's account.
 
 ```
@@ -1282,6 +1293,7 @@ LoginRadiusSDK.removeEmail("<email>",function(response){
 ```
 
 ### ##Update Phone
+
 This API is used to update the login Phone Number of users
 
 ```
@@ -1290,7 +1302,7 @@ LoginRadiusSDK.updatePhone("<phone>",function(response){
 });
 ```
 
-###  Custom Objects API
+### Custom Objects API
 
 These APIs are used to read/write/update/delete custom object information in JSON format for a specific account.
 

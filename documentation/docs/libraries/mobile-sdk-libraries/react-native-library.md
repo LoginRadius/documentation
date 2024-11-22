@@ -7,31 +7,34 @@
 > This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs
 
 ## Download SDK
+
 Get a copy of the React Native SDK and demo projects [here](https://github.com/LoginRadius/react-native-sdk).
 
 ## Configure your Account
+
 To get your app supported LoginRadius React Native SDK, you need to slightly configure your LoginRadius user account.
 
 1. Add another parameter to your User Registration Email template
    By default your email template should look like this:
-    
    ![enter image description here](https://apidocs.lrcontent.com/images/Standard-Login---LoginRadius-User-Dashboard-1_182075e91f53c054924.30640909.png "Email template")
-    
    Change the following URL
+
 ```
 #Url#?vtype=emailverification&vtoken=#GUID#
 ```
+
 to
+
 ```
 #Url#?vtype=emailverification&vtoken=#GUID#&apikey=<Your-LoginRadius-API-Key>
 ```
+
 And the same change should be also applied to your **Reset Password Email Template Configuration**.
 
 2. Generate SOTT:-
-   You need to pass the SOTT value at the time of registration in ionic SDK V2 and you can generate this by Admin Console. 
-   Open [Admin Console](https://adminconsole.loginradius.com/deployment/apps/web-apps), Click on SOTT available in the left panel. now set the time according to the requirement and generate SOTT. 
+   You need to pass the SOTT value at the time of registration in ionic SDK V2 and you can generate this by Admin Console.
+   Open [Admin Console](https://adminconsole.loginradius.com/deployment/apps/web-apps), Click on SOTT available in the left panel. now set the time according to the requirement and generate SOTT.
    Note: While generating SOTT from Loginradius Admin Console, enable Encode SOTT.
-     
    ![enter image description here](https://apidocs.lrcontent.com/images/Apps---LoginRadius-User-Dashboard_311005e91f625756406.03332066.png "Mobile Apps(SOTT)")
 
 ##Installation
@@ -54,13 +57,13 @@ In the app.json file, initialize the LoginRadius User registration Object.
 
 The above initialization requires options object with the following parameter:
 
-| Name             | Required                                                                                    | Description                                                                                                                                                                                 |
-| ---------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| apiKey           | `<i class="fa fa-check-circle" aria-hidden="true" style="color: #00A856; font-size: 1.5em;">` | Set to your LoginRadius API Key which you can get [here](https://www.loginradius.com/docs/api/v2/admin-console/platform-security/api-key-and-secret/#api-key-and-secret).                                                                             |
-| appName          | `<i class="fa fa-check-circle" aria-hidden="true" style="color: #00A856; font-size: 1.5em;">` | Set to your LoginRadius site name, this is required for User Registration to work with Single Sign On API.                                                                                  |
-| sott             | `<i class="fa fa-check-circle" aria-hidden="true" style="color: #00A856; font-size: 1.5em;">` | Secure One-time Token. Get token from [Admin Console](https://adminconsole.loginradius.com/deployment/apps/mobile-apps) Note: While generating SOTT from Loginradius Admin Console, enable Encode SOTT. |
-| verificationUrl  | `<i class="fa fa-check-circle" aria-hidden="true" style="color: #00A856; font-size: 1.5em;">` | Set dynamic URL for email verification (Default URL: https://auth.lrcontent.com/mobile/verification/index.html)                                                                             |
-| resetPasswordUrl | `<i class="fa fa-check-circle" aria-hidden="true" style="color: #00A856; font-size: 1.5em;">` | Set dynamic URL for reset password.                                                                                                                                                         |
+| Name             | Required                                                                                             | Description                                                                                                                                                                                             |
+| ---------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| apiKey           | `<i class="fa fa-check-circle" aria-hidden="true"  style={{ color: #00A856; font-size: ' 1.5em' }}>` | Set to your LoginRadius API Key which you can get [here](https://www.loginradius.com/docs/api/v2/admin-console/platform-security/api-key-and-secret/#api-key-and-secret).                               |
+| appName          | `<i class="fa fa-check-circle" aria-hidden="true"  style={{ color: #00A856; font-size: ' 1.5em' }}>` | Set to your LoginRadius site name, this is required for User Registration to work with Single Sign On API.                                                                                              |
+| sott             | `<i class="fa fa-check-circle" aria-hidden="true"  style={{ color: #00A856; font-size: ' 1.5em' }}>` | Secure One-time Token. Get token from [Admin Console](https://adminconsole.loginradius.com/deployment/apps/mobile-apps) Note: While generating SOTT from Loginradius Admin Console, enable Encode SOTT. |
+| verificationUrl  | `<i class="fa fa-check-circle" aria-hidden="true"  style={{ color: #00A856; font-size: ' 1.5em' }}>` | Set dynamic URL for email verification (Default URL: https://auth.lrcontent.com/mobile/verification/index.html)                                                                                         |
+| resetPasswordUrl | `<i class="fa fa-check-circle" aria-hidden="true"  style={{ color: #00A856; font-size: ' 1.5em' }}>` | Set dynamic URL for reset password.                                                                                                                                                                     |
 
 your must be add in your .js file some dependency injection wheare you want use lgoinradius SDK.
 
@@ -69,17 +72,20 @@ import LoginRadiusSDK from './LoginRadiusSDK.js';
 ```
 
 ## Native Social Login
+
 ### ##Supported Devices
+
 Currently, only Facebook And Google is supported for native login with our SDK for Android and iOS.
 
-###  Facebook Native Login
+### Facebook Native Login
+
 Before you can implement native login, you should have a look at the necessary instructions. The following link will help you regarding the same:
 
 [React-Native Facebook Login](https://developers.facebook.com/docs/react-native/getting-started).
 
-**Installation/Build Errors:** 
+**Installation/Build Errors:**
 
-**Failed to resolve: com.android.support:appcompat-v7:27.0.2 :** 
+**Failed to resolve: com.android.support:appcompat-v7:27.0.2 :**
 
 If you're getting the above error in Android, then add the following dependencies in Project's build.gradle:
 
@@ -116,7 +122,7 @@ compile('com.facebook.android:facebook-android-sdk:4.28.0')  // From node_module
 }
 ```
 
-**The SDK has not been initialized :** 
+**The SDK has not been initialized :**
 
 If you're getting the above error in Android,then add the following code in MainApplication.java
 
@@ -127,7 +133,7 @@ public void onCreate() {
 }
 ```
 
-**Sample Code:** 
+**Sample Code:**
 
 The simplest way to add Facebook login functionality to your application is to use the LoginButton object from the SDK. When using the LoginButton, all of the complexity of creating a login user interface is handled for you. You specify the permissions that your application needs and the object notifies you about user actions through attribute-bound functions.
 
@@ -183,17 +189,15 @@ export default class App extends Component<Props> {
 
 The above code snippet helps you to get token from Facebook. Then, this token can be used to get the LoginRadius access_token which can be used to authenticate user.
 
- 
-* Facebook Configuration for Facebook Native Login 
+- Facebook Configuration for Facebook Native Login
 
 Create a new Facebook App on the Facebook Developer site. You will need to create an Android application and get a Facebook Application ID: https://developers.facebook.com/
 
-**Android** 
+**Android**
 
-- Create a Development Key Hash 
-  Facebook uses the key hash to authenticate interactions between your app and the Facebook app. If you run apps that use Facebook Login, you need to add your Android development key hash to your Facebook developer profile. 
+- Create a Development Key Hash
+  Facebook uses the key hash to authenticate interactions between your app and the Facebook app. If you run apps that use Facebook Login, you need to add your Android development key hash to your Facebook developer profile.
   You need to add this code under activity onCreate method.Put your activity package name in this code. After that run the below code and you'll get KeyHash in logs.
-   
 
 ```
 try {
@@ -215,23 +219,22 @@ try {
 - After the creation of App, Click on setting into left panel, Select Add Plateform and choose Android
 
 - After generating KeyHash successfully, you need to setup below setting and fill the required fields e.g. Package Name & Class Name.
-    
   ![enter image description here](https://apidocs.lrcontent.com/images/facebook_2670358e72c19acad92.91822294.png)
 
-**iOS** 
+**iOS**
 
 - After the creation of App, Click on setting into left panel, Select Add Plateform and choose iOS.
 - Pass your project bundle ID, iPhone store ID and iPad store ID.
 
 ![enter image description here](https://apidocs.lrcontent.com/images/Capture-1_3102158e788489b8bf2.24336866.png)
 
-###  Google Native Login
+### Google Native Login
 
 Before you can implement native login, you must install the [react-native-google-signin](https://github.com/devfd/react-native-google-signin) into your current project for google native login.
 
-**Installation/Build Errors:** 
+**Installation/Build Errors:**
 
-**Failed to install react-native-google-signin** 
+**Failed to install react-native-google-signin**
 If you're getting the above error,then you need to specify version of the react-native-google-signin:
 
 ```
@@ -239,13 +242,12 @@ npm install react-native-google-signin@0.12 --save
 react-native link react-native-google-signin
 ```
 
-\*Google Configuration for Google Native Login 
+\*Google Configuration for Google Native Login
 
-**Android:-** 
+**Android:-**
 
 - To configure Android, generate a configuration file [here](https://developers.google.com/mobile/add?platform=android&cntapi=signin). Once Google Sign-In is enabled Google will automatically create necessary credentials in Developer Console. There is no need to add the generated google-services.json file into your react-native project.
 - After generating the configuration file, move to [Google Credentials Manager](https://console.developers.google.com/apis/credentials) and select your project name (Which you have created) in the header section. Now Select Credentials from the left panel and copy the Client ID available under project's **web application**.
-    
   ![enter image description here](https://apidocs.lrcontent.com/images/Capture_758058e5ed837de044.65917717.png)
 - Now pass the webClientId as
 
@@ -269,11 +271,10 @@ react-native link react-native-google-signin
   }
 ```
 
-**iOS:-** 
+**iOS:-**
 
 - To get your iOS REVERSED_CLIENT_ID, generate a configuration file [here](https://developers.google.com/mobile/add?platform=ios&cntapi=signin). This GoogleService-Info.plist and just drag & drop in your project's "Resources" folder.
 - The file contains the REVERSED_CLIENT_ID you'll need during installation and also copy CLIENT_ID from "GoogleService-Info.plist" and pass this on lroptions
-   
 
 Once you've followed the instructions in the above link and implemented Google Login successfully, then we'll fetch the ID token from Google to exchange with LoginRadius access_token.
 
@@ -297,11 +298,10 @@ _signIn() {
   }
 ```
 
-- Common Error messages: 
-  **12501 :** 
+- Common Error messages:
+  **12501 :**
   This is more commonly caused by an incorrect SHA1 being used to set up your project with Google. Make sure that the SHA1 of the build you are testing matches what you used in the Developer's Console.
-   
-  **10 :** 
+  **10 :**
   Make sure that the client id you're passing in to the plugin (for webClientId) is of type Web Application, not of type Android, iOS, or other.
 
 Make sure that you're Android SDK is completely up to date (see the list posted in my initial response above).
@@ -312,51 +312,53 @@ Finally, make sure that the SHA1 you used to set up in the developer's console i
 This section helps you to explore various API methods of LoginRadius react-native SDK. They can be used to fulfill your identity based needs related to traditional login, registration and many more.
 
 ### Authentication API
+
 This API is used to perform operations on a user account after the user has authenticated himself for the changes to be made. Generally, it is used for front end API calls. Following is the list of methods covered under this API:
 
-- [Registration By Email](#registration-by-email) 
-- [Registration By Phone](#registration-by-phone) 
-- [Login By Email](#login-by-email) 
-- [Login By Phone](#login-by-phone) 
-- [Login By Username](#login-by-username) 
-- [Read Complete User Profile](#read-complete-user-profile) 
-- [Auth Social Identity](#auth-social-identity) 
-- [Link Social Account](#link-social-account) 
-- [Unlink Social Account](#unlink-social-account) 
-- [Update User Profile](#update-user-profile) 
-- [Check Email Availability](#check-email-availability) 
-- [Add Email](#add-email) 
-- [Verify Email](#verify-email) 
-- [Remove Email](#remove-email) 
-- [Resend Verification Email](#resend-verification-email) 
-- [Change Password](#change-password) 
-- [Forgot Password By Email](#forgot-password-by-email) 
-- [Forgot Password By Phone](#forgot-password-by-phone) 
-- [Phone Reset Password by OTP](#phone-reset-password-by-otp) 
-- [Validate Access Token](#validate-access-token) 
-- [Invalidate Access Token](#invalidate-access-token) 
-- [Check Phone Availability](#check-phone-availability) 
-- [Send OTP](#send-otp) 
-- [Resend OTP](#resend-otp) 
-- [Resend OTP By Access Token](#resend-otp-by-access-token) 
-- [Verify OTP](#verify-otp) 
-- [Verify OTP By Token](#verify-otp-by-token) 
-- [Get Security Questions By Email](#get-security-questions-by-email) 
-- [Get Security Questions By Phone](#get-security-questions-by-phone) 
-- [Get Security Questions By Username](#get-security-questions-by-username) 
-- [Get Security Questions By Access Token](#get-security-questions-by-access-token) 
-- [Update Security Questions By Access Token](#update-security-questions-by-access-token) 
-- [Update Phone](#update-phone) 
-- [Check Username Availability](#check-username-availability) 
-- [Set or Change Username](#set-or-change-username) 
-- [Reset Password By Reset Token](#reset-password-by-reset-token) 
-- [Reset Password By Security Questions using Email](#reset-password-by-security-questions-using-email) 
-- [Reset Password By Security Questions using Phone](#reset-password-by-security-questions-using-phone) 
-- [Reset Password By Security Questions using Username](#reset-password-by-security-questions-using-username) 
-- [Delete Account](#delete-account) 
-- [Delete Account with Email confirmation](#delete-account-with-email-confirmation)  
+- [Registration By Email](#registration-by-email)
+- [Registration By Phone](#registration-by-phone)
+- [Login By Email](#login-by-email)
+- [Login By Phone](#login-by-phone)
+- [Login By Username](#login-by-username)
+- [Read Complete User Profile](#read-complete-user-profile)
+- [Auth Social Identity](#auth-social-identity)
+- [Link Social Account](#link-social-account)
+- [Unlink Social Account](#unlink-social-account)
+- [Update User Profile](#update-user-profile)
+- [Check Email Availability](#check-email-availability)
+- [Add Email](#add-email)
+- [Verify Email](#verify-email)
+- [Remove Email](#remove-email)
+- [Resend Verification Email](#resend-verification-email)
+- [Change Password](#change-password)
+- [Forgot Password By Email](#forgot-password-by-email)
+- [Forgot Password By Phone](#forgot-password-by-phone)
+- [Phone Reset Password by OTP](#phone-reset-password-by-otp)
+- [Validate Access Token](#validate-access-token)
+- [Invalidate Access Token](#invalidate-access-token)
+- [Check Phone Availability](#check-phone-availability)
+- [Send OTP](#send-otp)
+- [Resend OTP](#resend-otp)
+- [Resend OTP By Access Token](#resend-otp-by-access-token)
+- [Verify OTP](#verify-otp)
+- [Verify OTP By Token](#verify-otp-by-token)
+- [Get Security Questions By Email](#get-security-questions-by-email)
+- [Get Security Questions By Phone](#get-security-questions-by-phone)
+- [Get Security Questions By Username](#get-security-questions-by-username)
+- [Get Security Questions By Access Token](#get-security-questions-by-access-token)
+- [Update Security Questions By Access Token](#update-security-questions-by-access-token)
+- [Update Phone](#update-phone)
+- [Check Username Availability](#check-username-availability)
+- [Set or Change Username](#set-or-change-username)
+- [Reset Password By Reset Token](#reset-password-by-reset-token)
+- [Reset Password By Security Questions using Email](#reset-password-by-security-questions-using-email)
+- [Reset Password By Security Questions using Phone](#reset-password-by-security-questions-using-phone)
+- [Reset Password By Security Questions using Username](#reset-password-by-security-questions-using-username)
+- [Delete Account](#delete-account)
+- [Delete Account with Email confirmation](#delete-account-with-email-confirmation)
 
 ### ##Registration By Email
+
 This API creates a user in the database as well as sends a verification email to the user.
 
 In the following example, we've provided limited user attributes as payload. To view the complete list of user attributes, please have a look at the body parameters of the user registration API [here](https://www.loginradius.com/docs/api/v2/user-registration/auth-user-registration-by-email).
@@ -392,6 +394,7 @@ LoginRadiusSDK.userRegistrationByEmail(emailtemplate, payload, function (handle)
 ```
 
 ### ##Registration By Phone
+
 This API registers the new users into your Cloud Directory and triggers the phone verification process.
 
 ```
@@ -420,6 +423,7 @@ LoginRadiusSDK.userRegistrationByPhone(smstemplate, payload, function (handle) {
 ```
 
 ### ##Login By Email
+
 This API retrieves a copy of the user data based on the Email.
 
 ```
@@ -438,6 +442,7 @@ LoginRadiusSDK.loginByEmail(emailtemplate, grecaptcha_response, payload, functio
 ```
 
 ### ##Login By Phone
+
 This API retrieves a copy of the user data based on the Phone.
 
 ```
@@ -456,6 +461,7 @@ LoginRadiusSDK.loginByPhone(smstemplate, grecaptcha_response, payload, function 
 ```
 
 ### ##Login By Username
+
 This API retrieves a copy of the user data based on the Username.
 
 ```
@@ -474,6 +480,7 @@ LoginRadiusSDK.loginByEmail(emailtemplate, grecaptcha_response, payload, functio
 ```
 
 ### ##Read Complete User Profile
+
 This API retrieves a copy of the user data based on the access token.
 
 ```
@@ -486,6 +493,7 @@ LoginRadiusSDK.readAllProfilesByToken(access_token, function (handle) {
 ```
 
 ### ##Auth Social Identity
+
 This API is called just after account linking API and it prevents the raas profile of the second account from getting created.
 
 ```
@@ -498,6 +506,7 @@ LoginRadiusSDK.socialIdentity(access_token, function (handle) {
 ```
 
 ### ##Link Social Account
+
 This API is used to link up a social provider account with the specified account based on the access token and the social providers user access token.
 
 ```
@@ -511,6 +520,7 @@ LoginRadiusSDK.linkSocialIdentities(access_token,candidatetoken, function (handl
 ```
 
 ### ##Unlink Social Account
+
 This API is used to unlink up a social provider account with the specified account based on the access token and the social providers user access token. The unlinked account will automatically get removed from your database.
 
 ```
@@ -525,6 +535,7 @@ LoginRadiusSDK.unlinkSocialIdentities(access_token,provider,providerid, function
 ```
 
 ### ##Update User Profile
+
 This API is used to update the user profile by the access token.
 
 In the following example, we've provided limited user attributes as payload. To view the complete list of user attributes, please have a look at the body parameters of the Update Profile by Token API [here](https://www.loginradius.com/docs/api/v2/user-registration/auth-update-profile-by-token).
@@ -555,6 +566,7 @@ LoginRadiusSDK.updateProfileByToken(access_token, emailtemplate, smstemplate, pa
 ```
 
 ### ##Check Email Availability
+
 This API is used to check the email exists or not on your site.
 
 ```
@@ -566,6 +578,7 @@ LoginRadiusSDK.checkEmailAvailability(email, function (handle) {
 ```
 
 ### ##Add Email
+
 This API is used to add additional emails to a user's account.
 
 ```
@@ -583,6 +596,7 @@ LoginRadiusSDK.addEmail(access_token, emailtemplate, payload, function (handle) 
 ```
 
 ### ##Verify Email
+
 This API is used to verify the email of user.
 
 ```
@@ -595,6 +609,7 @@ LoginRadiusSDK.verifyEmail(verificationtoken, url, welcomeemailtemplate, functio
 ```
 
 ### ##Remove Email
+
 This API is used to remove additional emails from a user's account.
 
 ```
@@ -607,6 +622,7 @@ LoginRadiusSDK.removeEmail(email, access_token, function (handle) {
 ```
 
 ### ##Resend Verification Email
+
 This API resends the verification email to the user.
 
 ```
@@ -619,6 +635,7 @@ LoginRadiusSDK.resendEmailVerification(email,emailtemplate, function (handle) {
 ```
 
 ### ##Change Password
+
 This API is used to change the accounts password based on the previous password.
 
 ```
@@ -634,6 +651,7 @@ LoginRadiusSDK.changePassword(access_token,payload, function (handle) {
 ```
 
 ### ##Forgot Password By Email
+
 This API is used to send the reset password url to a specified account.
 
 ```
@@ -646,6 +664,7 @@ LoginRadiusSDK.forgotPasswordByEmail(email,emailtemplate, function (handle) {
 ```
 
 ### ##Forgot Password By Phone
+
 This API is used to send the OTP to reset the account password.
 
 ```
@@ -658,6 +677,7 @@ LoginRadiusSDK.forgotPasswordByPhone(phone,smstemplate, function (handle) {
 ```
 
 ### ##Phone Reset Password by OTP
+
 This API is used to reset the password.
 
 ```
@@ -675,6 +695,7 @@ LoginRadiusSDK.restPasswordByOtp(payload, function (handle) {
 ```
 
 ### ##Validate Access Token
+
 This api validates access token, if valid then returns a response with its expiry otherwise error.
 
 ```
@@ -686,6 +707,7 @@ LoginRadiusSDK.validateAccessToken(access_token, function (handle) {
 ```
 
 ### ##Invalidate Access Token
+
 This api call invalidates the active access token or expires an access token's validity.
 
 ```
@@ -697,6 +719,7 @@ LoginRadiusSDK.accessTokenInvalidate(access_token, function (handle) {
 ```
 
 ### ##Check Phone Availability
+
 This API is used to check the Phone Number exists or not on your site.
 
 ```
@@ -708,6 +731,7 @@ LoginRadiusSDK.checkPhoneNumberAvailability(phone, function (handle) {
 ```
 
 ### ##Send OTP
+
 API can be used to send a One-time Passcode (OTP) provided that the account has a verified PhoneID.
 
 ```
@@ -720,6 +744,7 @@ LoginRadiusSDK.phoneSendOtp(phone,smstemplate, function (handle) {
 ```
 
 ### ##Resend OTP
+
 This API is used to resend a verification OTP to verify a user's Phone Number. The user will receive a verification code that they will need to input.
 
 ```
@@ -732,6 +757,7 @@ LoginRadiusSDK.phoneResndOtp(phone,smstemplate, function (handle) {
 ```
 
 ### ##Resend OTP By Access Token
+
 This API is used to resend a verification OTP to verify a user's Phone Number in cases in which an active token already exists.
 
 ```
@@ -745,6 +771,7 @@ LoginRadiusSDK.phoneResndOtpByToken(access_token,phone,smstemplate, function (ha
 ```
 
 ### ##Verify OTP
+
 This API is used to validate the verification code sent to verify a user's phone number.
 
 ```
@@ -758,6 +785,7 @@ LoginRadiusSDK.phoneVerificationByOtp(phone,otp,smstemplate, function (handle) {
 ```
 
 ### ##Verify OTP By Token
+
 This API is used to consume the verification code sent to verify a user's phone number. Use this call for front-end purposes in cases where the user is already logged in by passing the user's access token.
 
 ```
@@ -771,6 +799,7 @@ LoginRadiusSDK.phoneVerificationOtpByToken(access_token,otp,smstemplate, functio
 ```
 
 ### ##Get Security Questions By Email
+
 This API is used to retrieve the list of questions that are configured on the respective LoginRadius site.
 
 ```
@@ -782,6 +811,7 @@ LoginRadiusSDK.getSecurityQuestionsByEmail(email, function (handle) {
 ```
 
 ### ##Get Security Questions By Phone
+
 This API is used to retrieve the list of questions that are configured on the respective LoginRadius site.
 
 ```
@@ -793,6 +823,7 @@ LoginRadiusSDK.getSecurityQuestionsByPhone(phone, function (handle) {
 ```
 
 ### ##Get Security Questions By Username
+
 This API is used to retrieve the list of questions that are configured on the respective LoginRadius site.
 
 ```
@@ -804,6 +835,7 @@ LoginRadiusSDK.getSecurityQuestionsByUserName(username, function (handle) {
 ```
 
 ### ##Get Security Questions By Access Token
+
 This API is used to retrieve the list of questions that are configured on the respective LoginRadius site.
 
 ```
@@ -815,6 +847,7 @@ LoginRadiusSDK.getSecurityQuestionsByAccessToken(access_token, function (handle)
 ```
 
 ### ##Update Security Questions By Access Token
+
 This API is used to update security questions by the access token.
 
 ```
@@ -832,6 +865,7 @@ LoginRadiusSDK.updateSecurityQuestionByToken(access_token,payload, function (han
 ```
 
 ### ##Update Phone
+
 This API is used to update the login Phone Number of users
 
 ```
@@ -845,6 +879,7 @@ LoginRadiusSDK.updatePhoneNumber(access_token,phone,smstemplate, function (handl
 ```
 
 ### ##Check Username Availability
+
 This API is used to check the UserName exists or not on your site.
 
 ```
@@ -856,6 +891,7 @@ LoginRadiusSDK.checkUserNameAvailability(username, function (handle) {
 ```
 
 ### ##Set or Change Username
+
 This API is used to set or change UserName by access token.
 
 ```
@@ -868,6 +904,7 @@ LoginRadiusSDK.setUserName(access_token,username, function (handle) {
 ```
 
 ### ##Reset Password By Reset Token
+
 This API is used to set a new password for the specified account.
 
 ```
@@ -885,6 +922,7 @@ LoginRadiusSDK.resetPasswordByResetToken(payload, function (handle) {
 ```
 
 ### ##Reset Password By Security Questions using Email
+
 This API is used to reset password for the specified account by security question.
 
 ```
@@ -904,6 +942,7 @@ LoginRadiusSDK.resetPasswordBySecurityQuestion(payload, function (handle) {
 ```
 
 ### ##Reset Password By Security Questions using Phone
+
 This API is used to reset password for the specified account by security question.
 
 ```
@@ -923,6 +962,7 @@ LoginRadiusSDK.resetPasswordBySecurityQuestion(payload, function (handle) {
 ```
 
 ### ##Reset Password By Security Questions using Username
+
 This API is used to reset password for the specified account by security question.
 
 ```
@@ -942,6 +982,7 @@ LoginRadiusSDK.resetPasswordBySecurityQuestion(payload, function (handle) {
 ```
 
 ### ##Delete Account
+
 This API is used to delete account using delete token.
 
 ```
@@ -953,6 +994,7 @@ LoginRadiusSDK.deleteAccount(deletetoken, function (handle) {
 ```
 
 ### ##Delete Account with Email confirmation
+
 API deletes the user account by the access token.
 
 ```
@@ -964,28 +1006,30 @@ LoginRadiusSDK.deleteAccountWithEmailConfirmation(access_token, function (handle
 ```
 
 ### Social API
+
 This API is used to fetch information about the social accounts of the user. It helps to get several type of information such as social profile, status, likes, messages, posts and more. Following are the methods covered under this API:
 
-- [Social User Profile](#social-user-profile) 
-- [Get Status](#get-status) 
-- [Get Contacts](#get-contacts) 
-- [Get Album](#get-album) 
-- [Get Audio](#get-audio) 
-- [Get CheckIn](#get-checkin) 
-- [Get Company](#get-company) 
-- [Get Events](#get-events) 
-- [Get Following](#get-following) 
-- [Get Groups](#get-groups) 
-- [Get Likes](#get-likes) 
-- [Get Mention](#get-mention) 
-- [Get Photo](#get-photo) 
-- [Get Page](#get-page) 
-- [Get Video](#get-video) 
-- [Post Message](#post-message) 
-- [Get Posts](#get-posts) 
-- [Status Update](#status-update)  
+- [Social User Profile](#social-user-profile)
+- [Get Status](#get-status)
+- [Get Contacts](#get-contacts)
+- [Get Album](#get-album)
+- [Get Audio](#get-audio)
+- [Get CheckIn](#get-checkin)
+- [Get Company](#get-company)
+- [Get Events](#get-events)
+- [Get Following](#get-following)
+- [Get Groups](#get-groups)
+- [Get Likes](#get-likes)
+- [Get Mention](#get-mention)
+- [Get Photo](#get-photo)
+- [Get Page](#get-page)
+- [Get Video](#get-video)
+- [Post Message](#post-message)
+- [Get Posts](#get-posts)
+- [Status Update](#status-update)
 
 ### ##Social User Profile
+
 The User Profile API is used to get social profile data from the user’s social account after authentication.
 
 ```
@@ -997,6 +1041,7 @@ LoginRadiusSDK.getSocialProfile(access_token, function (handle) {
 ```
 
 ### ##Get Status
+
 The Status API is used to get the status messages from the user’s social account.  
 <b>Supported Providers:</b> Facebook, LinkedIn, Twitter, Vkontakte
 
@@ -1009,6 +1054,7 @@ LoginRadiusSDK.getStatus(access_token, function (handle) {
 ```
 
 ### ##Get Contacts
+
 The Contact API is used to get contacts/friends/connections data from the user’s social account.This is one of the APIs that makes up the LoginRadius Friend Invite System. The data will normalized into LoginRadius’ standard data format. This API requires setting permissions in your LoginRadius Admin Console.  
 <b>Note:</b> Facebook restricts access to the list of friends that is returned. When using the Contacts API with Facebook you will only receive friends that have accepted some permissions with your app.  
 <b>Supported Providers:</b> Facebook, Foursquare, Google, LinkedIn, Live, Twitter, Vkontakte, Yahoo
@@ -1023,6 +1069,7 @@ LoginRadiusSDK.getContacts(access_token,nextcursor, function (handle) {
 ```
 
 ### ##Get Album
+
 This API returns the photo albums associated with the passed in access tokens Social Profile.  
 <b>Supported Providers:</b> Facebook, Google, Live, Vkontakte.
 
@@ -1035,6 +1082,7 @@ LoginRadiusSDK.getAlbums(access_token, function (handle) {
 ```
 
 ### ##Get Audio
+
 The Audio API is used to get audio files data from the user’s social account.  
 <b>Supported Providers:</b> Live, Vkontakte
 
@@ -1047,6 +1095,7 @@ LoginRadiusSDK.getAudios(access_token, function (handle) {
 ```
 
 ### ##Get CheckIn
+
 The Check In API is used to get check Ins data from the user’s social account.  
 <b>Supported Providers:</b> Facebook, Foursquare, Vkontakte
 
@@ -1059,6 +1108,7 @@ LoginRadiusSDK.getCheckins(access_token, function (handle) {
 ```
 
 ### ##Get Company
+
 The Company API is used to get the followed companies data from the user’s social account.  
 <b>Supported Providers:</b> Facebook, LinkedIn
 
@@ -1071,6 +1121,7 @@ LoginRadiusSDK.getCompanies(access_token, function (handle) {
 ```
 
 ### ##Get Events
+
 The Event API is used to get the event data from the user’s social account.  
 <b>Supported Providers:</b> Facebook, Live
 
@@ -1083,6 +1134,7 @@ LoginRadiusSDK.getEvents(access_token, function (handle) {
 ```
 
 ### ##Get Following
+
 Get the following user list from the user’s social account.  
 <b>Supported Providers:</b> Twitter
 
@@ -1095,6 +1147,7 @@ LoginRadiusSDK.getFollowings(access_token, function (handle) {
 ```
 
 ### ##Get Groups
+
 The Group API is used to get group data from the user’s social account.  
 <b>Supported Providers:</b> Facebook, Vkontakte
 
@@ -1107,6 +1160,7 @@ LoginRadiusSDK.getGroups(access_token, function (handle) {
 ```
 
 ### ##Get Likes
+
 The Like API is used to get likes data from the user’s social account.  
 <b>Supported Providers:</b> Facebook
 
@@ -1119,6 +1173,7 @@ LoginRadiusSDK.getLikes(access_token, function (handle) {
 ```
 
 ### ##Get Mention
+
 The Mention API is used to get mentions data from the user’s social account.  
 <b>Supported Providers:</b> Twitter
 
@@ -1131,6 +1186,7 @@ LoginRadiusSDK.getMentions(access_token, function (handle) {
 ```
 
 ### ##Get Photo
+
 The Photo API is used to get photo data from the user’s social account.  
 <b>Supported Providers:</b> Facebook, Foursquare, Google, Live, Vkontakte
 
@@ -1144,6 +1200,7 @@ LoginRadiusSDK.getPhotos(access_token,albumid, function (handle) {
 ```
 
 ### ##Get Page
+
 The Page API is used to get the page data from the user’s social account.  
 <b>Supported Providers:</b> Facebook, LinkedIn
 
@@ -1157,6 +1214,7 @@ LoginRadiusSDK.getPage(access_token,pagename, function (handle) {
 ```
 
 ### ##Get Video
+
 The Video API is used to get video files data from the user’s social account.  
 <b>Supported Providers:</b> Facebook, Google, Live, Vkontakte
 
@@ -1169,6 +1227,7 @@ LoginRadiusSDK.getVideos(access_token, function (handle) {
 ```
 
 ### ##Post Message
+
 Post Message API is used to post messages to the user’s contacts.  
 <b>Supported Providers:</b> Twitter, LinkedIn  
 The Message API is used to post messages to the user’s contacts. This is one of the APIs that makes up the LoginRadius Friend Invite System. After using the Contact API, you can send messages to the retrieved contacts. This API requires setting permissions in your LoginRadius Admin Console.
@@ -1186,6 +1245,7 @@ LoginRadiusSDK.postMessage(to, subject, message,access_token, function (handle) 
 ```
 
 ### ##Get Posts
+
 The Post API is used to get post message data from the user’s social account.  
 <b>Supported Providers:</b> Facebook
 
@@ -1198,6 +1258,7 @@ LoginRadiusSDK.getPosts(access_token, function (handle) {
 ```
 
 ### ##Status Update
+
 The Status API is used to update the status on the user’s wall.  
 <b>Supported Providers:</b> Facebook, Twitter, LinkedIn
 
@@ -1216,15 +1277,17 @@ LoginRadiusSDK.postStatus(title, url, status, imageurl, caption, description,acc
 ```
 
 ### Custom Object API
+
 This API is used to create additional custom fields for user registration. It provides methods for creating, updating and deleting custom objects. Following is the list of methods covered under this API:
 
-- [Create Custom Object](#create-custom-object) 
-- [Read Custom Object By Token](#read-custom-object-by-token) 
-- [Read Custom Object by Record ID](#read-custom-object-by-record-id) 
-- [Update Custom Object](#update-custom-object) 
-- [Delete Custom Object](#delete-custom-object)  
+- [Create Custom Object](#create-custom-object)
+- [Read Custom Object By Token](#read-custom-object-by-token)
+- [Read Custom Object by Record ID](#read-custom-object-by-record-id)
+- [Update Custom Object](#update-custom-object)
+- [Delete Custom Object](#delete-custom-object)
 
 ### ##Create Custom Object
+
 This API is used to write information in JSON format to the custom object for the specified account.
 
 ```
@@ -1243,6 +1306,7 @@ LoginRadiusSDK.createCustomObjectByToken(access_token, objectname, emailtemplate
 ```
 
 ### ##Read Custom Object By Token
+
 This API is used to retrieve the specified Custom Object data for the specified account.
 
 ```
@@ -1255,6 +1319,7 @@ LoginRadiusSDK.getCustomObjectByToken(access_token, objectname, function (handle
 ```
 
 ### ##Read Custom Object by Record ID
+
 This API is used to retrieve the Custom Object data for the specified account.
 
 ```
@@ -1268,7 +1333,8 @@ LoginRadiusSDK.getCustomObjectByRecordIdAndToken(access_token, objectname, objec
 ```
 
 ### ##Update Custom Object
-This API is used to update the specified custom object data of the specified account. If the value of updatetype is 'replace' then it will fully replace custom object with the new custom object and if the value of updatetype is 'partialreplace' then it will perform an upsert type operation. 
+
+This API is used to update the specified custom object data of the specified account. If the value of updatetype is 'replace' then it will fully replace custom object with the new custom object and if the value of updatetype is 'partialreplace' then it will perform an upsert type operation.
 
 updatetype : Possible values: replace, partialreplace. Find more details [here](https://www.loginradius.com/docs/api/v2/user-registration/custom-object-update-by-objectrecordid-and-token)
 
@@ -1289,6 +1355,7 @@ LoginRadiusSDK.updateCustomObjectByObjectRecordIdAndToken(access_token,objectnam
 ```
 
 ### ##Delete Custom Object
+
 This API is used to remove the specified Custom Object data using ObjectRecordId of a specified account.
 
 ```

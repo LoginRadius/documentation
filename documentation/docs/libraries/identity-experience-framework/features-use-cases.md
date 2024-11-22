@@ -1,6 +1,6 @@
 # Features/Use Cases
 
-Features are basically a description of the product complete functionality. In general terms a feature is something you would like to share with your customers and prospective customers. While a use case is a way by which a customer achieves their  goal using our products feature. Use cases are a way to document a specific type of requirements.
+Features are basically a description of the product complete functionality. In general terms a feature is something you would like to share with your customers and prospective customers. While a use case is a way by which a customer achieves their goal using our products feature. Use cases are a way to document a specific type of requirements.
 
 ## Overview
 
@@ -30,7 +30,7 @@ Most of the settings for Phone Authentication are already configured by default.
 
 You may want to use a UserName as the unique identifier for your customers, for various reasons, for example, you may want customers to have a publicly visible identifier that doesn't associate to their personal information or you may want to allow a customer to have multiple accounts with the same email.
 
-To check if Username Registration is enabled for your account you need to login to your [**Admin Console**](https://adminconsole.loginradius.com/) account and navigate to **Platform Configuration > Identity Workflow > Auth Workflow**. Check if  the Username Registration box is in green with the **enabled** text. 
+To check if Username Registration is enabled for your account you need to login to your [**Admin Console**](https://adminconsole.loginradius.com/) account and navigate to **Platform Configuration > Identity Workflow > Auth Workflow**. Check if the Username Registration box is in green with the **enabled** text.
 
 As show in the following screen:
 
@@ -61,7 +61,7 @@ This will link your social accounts with the logged in account and upon login wi
 
 Providing your customers with two factors of authentication is one of the most powerful security tools you can provide your customers with, for usage details please see our [Multi-Factor Authentication Overview](https://www.loginradius.com/docs/api/v2/customer-identity-api/multi-factor-authentication/overview).
 
-To check if this feature is enabled or not for your app go to **Platform Security > Multi-Layered Security > Multi-Factor Authentication**. his feature is disabled by default in the LoginRadius Admin Console. An explicit request has to be made by contacting  [LoginRadius Support team](https://adminconsole.loginradius.com/support/tickets/open-a-new-ticket) to enable it.
+To check if this feature is enabled or not for your app go to **Platform Security > Multi-Layered Security > Multi-Factor Authentication**. his feature is disabled by default in the LoginRadius Admin Console. An explicit request has to be made by contacting [LoginRadius Support team](https://adminconsole.loginradius.com/support/tickets/open-a-new-ticket) to enable it.
 
 ##### WHERE YOU CAN CONFIGURE MFA
 
@@ -85,13 +85,13 @@ You will need to add HTML code for displaying Multi-Factor Authentication Interf
 <div id="edit-reset" class="form-item form-type-item">
    <div class="resetCode" id="resetCode" onclick="resetBackupCodes()">Reset Code</div>
 </div>
-<div id="resettable" class="" style="display: none;">
+<div id="resettable" class=""  style={{ display: ' none' }}>
    <p>The two factor authentication backup code is already generated, please reset your two factor authentication backup code. </p>
 </div>
-<div id="lr_ciam_reset_table" style="display: none;">
+<div id="lr_ciam_reset_table"  style={{ display: ' none' }}>
    <h5>If you lose your phone or can't receive codes via SMS, voice call or Google Authenticator, you can use backup codes to sign in. So please save these backup codes somewhere.</h5>
    <div class="form-item form-type-item">
-       <div class="copyMessage" style="display:none;">Copied!</div>
+       <div class="copyMessage"  style={{ display: 'none' }}>Copied!</div>
        <div title="Copy" class="mybackupcopy" onclick="changeIconColor()"></div>
    </div>
    <div id="backupcode-table-body"></div>
@@ -222,6 +222,7 @@ function changeIconColor() {
    jQuery('.code-list').find('span').css({'background-color': '#008ecf', 'color': '#fff'});
 }
 ```
+
 ![enter image description here](https://apidocs.lrcontent.com/images/bjs1_12905f0f5df95c8197.46252768.png "Custom JS")
 
 - **Add New Custom CSS**
@@ -289,14 +290,14 @@ div#backupcode-table-body {
     margin-bottom: -21px;
 }
 ```
-![enter image description here](https://apidocs.lrcontent.com/images/13_153665e9ca382897618.42145577.png "Custom CSS")
 
+![enter image description here](https://apidocs.lrcontent.com/images/13_153665e9ca382897618.42145577.png "Custom CSS")
 
 ## Passwordless Authentication
 
 Passwordless Authentication is a great way to remove all of the difficulties that come with password management, for more details please see our [Passwordless Login Overview](https://www.loginradius.com/docs/api/v2/customer-identity-api/passwordless-login/passwordless-login-overview).
 
-To check if this feature is enabled or not for your app go to **Platform Configuration -> Authentication Configuration -> PasswordLess Login** section. If this section is disabled for your site contact  [LoginRadius Support team](https://adminconsole.loginradius.com/support/tickets/open-a-new-ticket).
+To check if this feature is enabled or not for your app go to **Platform Configuration -> Authentication Configuration -> PasswordLess Login** section. If this section is disabled for your site contact [LoginRadius Support team](https://adminconsole.loginradius.com/support/tickets/open-a-new-ticket).
 
 Follow the [Passwordless Login Configuration](https://www.loginradius.com/docs/api/v2/admin-console/platform-configuration/passwordless-login-configuration) document to configure passwordless Login settings from the Admin Console.
 
@@ -310,7 +311,7 @@ This is a default flow and no customization is required after enabling the Passw
 
 One Touch Login is another method of authentication that does not require a password to login, what makes it unique is that it has a ping API that can be leveraged to see if a customer has logged in, this is useful if you're delegating the authentication to another safer device which is common practice with IoT Devices. You can learn more about One Touch Login in our [documentation]https://www.loginradius.com/docs/platform-features-overview/registration-services/overview#one-touch-login).
 
-To check if this feature is enabled or not for your app, navigate to **Platform configuration > Authentication Configuration > Advance Login Methods > One Touch Login Settings**. If this section is disabled for your site, contact  [LoginRadius Support team](https://adminconsole.loginradius.com/support/tickets/open-a-new-ticket).
+To check if this feature is enabled or not for your app, navigate to **Platform configuration > Authentication Configuration > Advance Login Methods > One Touch Login Settings**. If this section is disabled for your site, contact [LoginRadius Support team](https://adminconsole.loginradius.com/support/tickets/open-a-new-ticket).
 
 ##### IDX Page Customization Steps
 
@@ -367,7 +368,7 @@ LRObject.init("onetouchLogin", one_touch_options);
 
 This section will show you how to have an interface to allow customers to update their phone numbers should they be using Phone Authentication.
 
-To check if this feature is enabled or not for your app go to "Platform configuration" -> Authentication Configuration -> Phone Login. If this section is disabled for your site contact  [LoginRadius Support team](https://adminconsole.loginradius.com/support/tickets/open-a-new-ticket).
+To check if this feature is enabled or not for your app go to "Platform configuration" -> Authentication Configuration -> Phone Login. If this section is disabled for your site contact [LoginRadius Support team](https://adminconsole.loginradius.com/support/tickets/open-a-new-ticket).
 
 ##### IDX Page Customization steps
 
@@ -423,7 +424,6 @@ updatephoneonprofile();
 
 ![enter image description here](https://apidocs.lrcontent.com/images/bjs1_12905f0f5df95c8197.46252768.png "Custom JS")
 
-
 ## Privacy Policy
 
 LoginRadius provides you with the tools to assist you with your Privacy Policy Management, this is particularly useful if your business has regulatory/legal requirements for collecting consent from your end-customers, you can find additional details in our [Privacy Policy Versioning](https://www.loginradius.com/docs/api/v2/admin-console/data-governance/privacy-policy#overview0) document.
@@ -431,7 +431,6 @@ LoginRadius provides you with the tools to assist you with your Privacy Policy M
 ##### Identity Experience Framework Page Customization Steps
 
 Navigate to **Deployment -> Identity Experience Framework** and select Auth.aspx Page from left hand menu and follow the following steps:
-
 
 **Display Privacy Policy link on Registration page**
 
@@ -441,9 +440,9 @@ There are 2 ways to update the privacy policy link in the IDX page
 
    Go to **Deployment -> Identity Experience Framework -> Authentication Page** Page and download the Before-script.js From Auth.aspx > Before Script > Before-Script.js and add the following code after “**raasoption.hashTemplate=true;**”
 
-  ```
-  raasoption.termsAndConditionHtml = 'check <a href=”http://example.com/privacy” target=”_blank”>Privacy Policy</a>';
-  ```
+```
+raasoption.termsAndConditionHtml = 'check <a href=”http://example.com/privacy” target=”_blank”>Privacy Policy</a>';
+```
 
 2. **Using customizeFormLabel hooks**
 
@@ -524,5 +523,3 @@ raasoption.callbackUrl = window.location.href.split('?')[0];
 3. Now, click on the “save” button.
 
 ![enter image description here](https://apidocs.lrcontent.com/images/Deployment---LoginRadius-User-Dashboard-3_11500620c2ecde77e76.59996532.png "Before JS")
-
-
