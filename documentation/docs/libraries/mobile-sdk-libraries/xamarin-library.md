@@ -7,28 +7,32 @@
 > This library is meant to help you with a quick implementation of the LoginRadius platform and also to serve as a reference point for the LoginRadius API. Keep in mind that it is an open source library, which means you are free to download and customize the library functions based on your specific application needs.
 
 ## Download SDK
+
 You can download the SDK from [here](https://github.com/LoginRadius/xamarin-sdk)
 
 ## Configure your LoginRadius Account
+
 To get your app supported by LoginRadius Xamarin SDK, you need to slightly configure your LoginRadius user account.
 
 1. Add parameter to your User Registration Email template
-By default your email template should look like this: ![enter image description here](https://apidocs.lrcontent.com/images/Standard-Login---LoginRadius-User-Dashboard-1_182075e91f53c054924.30640909.png "Email template")
- 
+   By default your email template should look like this: ![enter image description here](https://apidocs.lrcontent.com/images/Standard-Login---LoginRadius-User-Dashboard-1_182075e91f53c054924.30640909.png "Email template")
+
 Change the following URL
+
 ```
 #Url#?vtype=emailverification&vtoken=#GUID#
 ```
-To 
+
+To
+
 ```
 #Url#?vtype=emailverification&vtoken=#GUID#&apikey=<Your-LoginRadius-API-Key>
 ```
-And the same change should be also applied to your **Reset Password Email Template Configuration** and **Add Email Template Configuration**.
-2. Generate SOTT:-
 
-You need to pass the SOTT value at the time of registration in Xamarin SDK V2 and you can generate this by Admin Console. 
+And the same change should be also applied to your **Reset Password Email Template Configuration** and **Add Email Template Configuration**. 2. Generate SOTT:-
+
+You need to pass the SOTT value at the time of registration in Xamarin SDK V2 and you can generate this by Admin Console.
 Open [Admin Console](https://adminconsole.loginradius.com/deployment/apps/web-apps), Click on SOTT available in the left panel. now set the time according to the requirement and generate SOTT.
-
 
 ![enter image description here](https://apidocs.lrcontent.com/images/Apps---LoginRadius-User-Dashboard_311005e91f625756406.03332066.png "Mobile Apps(SOTT)")
 
@@ -36,21 +40,21 @@ Open [Admin Console](https://adminconsole.loginradius.com/deployment/apps/web-ap
 
 Initialize the SDK with your API key and Sitename
 
-- Details on obtaining Site name [here](https://www.loginradius.com/docs/api/v2/admin-console/deployment/get-site-app-name/) and API key [here](https://www.loginradius.com/docs/api/v2/admin-console/platform-security/api-key-and-secret/#api-key-and-secret) 
+- Details on obtaining Site name [here](https://www.loginradius.com/docs/api/v2/admin-console/deployment/get-site-app-name/) and API key [here](https://www.loginradius.com/docs/api/v2/admin-console/platform-security/api-key-and-secret/#api-key-and-secret)
 
-- Details on verificationUrl for email verification we give default url(Default URL: https://auth.lrcontent.com/mobile/verification/index.html) 
+- Details on verificationUrl for email verification we give default url(Default URL: https://auth.lrcontent.com/mobile/verification/index.html)
 
-- Details on resetPasswordUrl for Reset Password we give default url(Default URL: https://auth.lrcontent.com/mobile/verification/index.html) 
+- Details on resetPasswordUrl for Reset Password we give default url(Default URL: https://auth.lrcontent.com/mobile/verification/index.html)
 
-- Details on verificationUrl for AddEmail API we give default url(Default URL: https://auth.lrcontent.com/mobile/verification/index.html) 
+- Details on verificationUrl for AddEmail API we give default url(Default URL: https://auth.lrcontent.com/mobile/verification/index.html)
 
-- Details on deleteurl for Delete Account with Email Confirmation API we give default url(Default URL: https://auth.lrcontent.com/mobile/verification/index.html) 
+- Details on deleteurl for Delete Account with Email Confirmation API we give default url(Default URL: https://auth.lrcontent.com/mobile/verification/index.html)
 
 ## Integrate Social Login
 
 **Web Social Login**: Web Social Login is done by using webview. You can set social login by two ways:
 
-1) Xamarin Native Application 
+1. Xamarin Native Application
 
 **Note:** For Xamarin Native Application First you need to enable No callback feature from LoginRadius Backend.So for this process you just need to create a support ticket.
 
@@ -78,7 +82,7 @@ LoadApplication(new HybridWeb(webview));
 }
 ```
 
-  b) ios:-
+b) ios:-
 
 ```
 public partial class ViewController : UIViewController
@@ -92,7 +96,7 @@ guid.GUIDTOKEN = Convert.ToString(obj);
 
 var appDelegate = (AppDelegate)UIApplication.SharedApplication.Delegate;
 // appDelegate.FinishedLaunching();
-Dictionary<string, string> webview = new Dictionary<string, string>();
+Dictionary` <string, string>` webview = new Dictionary` <string, string>`();
 webview.Add("appname", this.appName);
 webview.Add("callbackguid", guid.GUIDTOKEN);
 webview.Add("apikey", this.apiKey);
@@ -104,6 +108,7 @@ GetEmailPromptSmartLoginPing(this.apiKey, guid.GUIDTOKEN);
 }
 }
 ```
+
 After adding above code in your platform you must call the ping function for getting loginradius token.
 Note: Please don't do anything in case of Failure(error) event, this function calls itself in case of error.
 
@@ -119,7 +124,7 @@ GetEmailPromptSmartLoginPing(apikey, guid.GUIDTOKEN); // Failure event
 });
 ```
 
-2) Xamarin Forms Cross-Platform
+2. Xamarin Forms Cross-Platform
 
 a) Create a Webview
 
@@ -143,7 +148,7 @@ public LRWebview(string url)
             Navigation.InsertPageBefore(new MainPage(), this);
             Navigation.PopAsync();
         }
-        
+
         //hello
     };
 
@@ -165,11 +170,12 @@ private static string GetParams(string uri)
 
 }
 ```
-  b) Webview Navigation
+
+b) Webview Navigation
 
 ```
 WebViewUrl web = new WebViewUrl();
-Dictionary<string, string> webview = new Dictionary<string, string>();
+Dictionary` <string, string>` webview = new Dictionary` <string, string>`();
 webview.Add("appname", siteName);
 webview.Add("apikey", apikey);
 webview.Add("provider", "facebook");
@@ -177,17 +183,18 @@ await ((NavigationPage)Application.Current.MainPage).PushAsync(new LRWebview(web
 ```
 
 ## Integrate Registration Service
+
 Registration service supports traditional registration and login methods. Registration Service is done through Authentication API. Registration requires a parameter called SOTT.
 
-- You can generate SOTT by login into the [LoginRadius Admin Console](https://adminconsole.loginradius.com) 
-- Move to DEPLOYMENT -> MOBILE APP 
+- You can generate SOTT by login into the [LoginRadius Admin Console](https://adminconsole.loginradius.com)
+- Move to DEPLOYMENT -> MOBILE APP
 - Click on SOTT tab in the left panel.
 
 You need to pass the required parameters to the below function to enable registration service.
 
-**NOTE:** You can use Registration by two ways: 
+**NOTE:** You can use Registration by two ways:
 
-- Using Email- 
+- Using Email-
 
 ```
 public async void GetUserRegistrationbyEmail(string apikey, string sott, string verificationurl, string emailtemplate) {
@@ -209,7 +216,7 @@ string err= error.description;                     // Failure event
 }
 ```
 
-- Using Phone- 
+- Using Phone-
 
 ```
 public async void GetPhoneUserRegistration() {
@@ -233,14 +240,15 @@ await PhoneUserRegistrationAPI.GetPhoneUserRegistration(data, user, response => 
 ```
 
 ## Integrate Traditional Login
-You need to call the below function to integrate Traditional Login.
-**NOTE:** You can use Traditional Login by two ways: 
 
-- Using Email- 
+You need to call the below function to integrate Traditional Login.
+**NOTE:** You can use Traditional Login by two ways:
+
+- Using Email-
 
 ```
 public async void GetLoginbyEmail(){
-Dictionary<string, string> data = new Dictionary<string, string>();
+Dictionary` <string, string>` data = new Dictionary` <string, string>`();
 data.Add("apikey", "xxxxx");
 data.Add("email", "xx@xxxx.com");
 data.Add("password", "xxxxxx");
@@ -257,11 +265,11 @@ string err = error.description;                     // Failure event
 }
 ```
 
-- Using Phone- 
+- Using Phone-
 
 ```
 public async void GetPhoneLogin(){
-Dictionary<string, string> data = new Dictionary<string, string>();
+Dictionary` <string, string>` data = new Dictionary` <string, string>`();
 data.Add("apikey", "xxxxx");
 data.Add("phone", "xxxxxx");
 data.Add("password", "xxxxxx");
@@ -278,10 +286,11 @@ string err = error.description;                     // Failure event
 ```
 
 ## Integrate Forgot Password
-Call this function to send reset password link to the specified account. 
-**NOTE:** You can use forgot password by two ways: 
 
-- Using Email- 
+Call this function to send reset password link to the specified account.
+**NOTE:** You can use forgot password by two ways:
+
+- Using Email-
 
 ```
 public async void GetForgotPassword() {
@@ -299,7 +308,7 @@ await ForgotPasswordAPI.GetForgotPassword(data, response => {
 }
 ```
 
-- Using Phone- 
+- Using Phone-
 
 ```
 public async void GetPhoneForgotPasswordbyOtp() {
@@ -316,32 +325,33 @@ await PhoneForgotPasswordbyOtpAPI.GetPhoneForgotPasswordbyOtp(data, response => 
 }
 ```
 
-## APIs 
+## APIs
+
 ### Social APIs
 
 **List of APIs in this Section:**
 
-- [UserProfile API](#userprofile-api) 
-- [Video API](#video-api) 
-- [Status Posting API](#status-posting-api) 
-- [Status Fetching API](#status-fetching-api) 
-- [Post API](#post-api) 
-- [Photo API](#photo-api) 
-- [Page API](#page-api) 
-- [Post Message API](#post-message-api) 
-- [Mention API](#mention-api) 
-- [Like API](#like-api) 
-- [Group API](#group-api) 
-- [Following API](#following-api) 
-- [Event API](#event-api) 
-- [Contact API](#contact-api) 
-- [Company API](#company-api) 
-- [CheckIn API](#checkin-api) 
-- [Audio API](#audio-api) 
-- [Album API](#album-api) 
+- [UserProfile API](#userprofile-api)
+- [Video API](#video-api)
+- [Status Posting API](#status-posting-api)
+- [Status Fetching API](#status-fetching-api)
+- [Post API](#post-api)
+- [Photo API](#photo-api)
+- [Page API](#page-api)
+- [Post Message API](#post-message-api)
+- [Mention API](#mention-api)
+- [Like API](#like-api)
+- [Group API](#group-api)
+- [Following API](#following-api)
+- [Event API](#event-api)
+- [Contact API](#contact-api)
+- [Company API](#company-api)
+- [CheckIn API](#checkin-api)
+- [Audio API](#audio-api)
+- [Album API](#album-api)
 
+##### UserProfile API
 
-##### UserProfile API 
 The getUserData function uses the UserProfileAPI to pull available user data. In this example, we just pull all fields that are Strings and not null. The LoginRadiusUltimateUserProfile object contains a large number of fields, and they can be manually retrieved from any Java object.
 
 ```
@@ -354,7 +364,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Video API 
+##### Video API
+
 The Video API is used to get the users videos.
 
 ```
@@ -367,7 +378,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Status Posting API 
+##### Status Posting API
+
 The Status API is used to update the status on the userâ€™s wall.
 
 ```
@@ -387,7 +399,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Status Fetching API 
+##### Status Fetching API
+
 The Status API is used to get the status messages from the userâ€™s social account.
 
 ```
@@ -400,7 +413,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Post API 
+##### Post API
+
 The Post API is used to get post message data from the userâ€™s social account.
 
 ```
@@ -413,7 +427,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Photo API 
+##### Photo API
+
 The Photo API is used to get photo data from the userâ€™s social account.
 
 ```
@@ -426,7 +441,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Page API 
+##### Page API
+
 The Page API is used to get the page data from the userâ€™s social account.
 
 ```
@@ -439,7 +455,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Post Message API 
+##### Post Message API
+
 The Message API is used to post messages to the userâ€™s contacts.
 
 ```
@@ -452,7 +469,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Mention API 
+##### Mention API
+
 The Mention API is used to get mentions data from the userâ€™s social account.
 
 ```
@@ -465,7 +483,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Like API 
+##### Like API
+
 The Like API is used to get likes data from the userâ€™s social account.
 
 ```
@@ -478,7 +497,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Group API 
+##### Group API
+
 The Group API is used to get group data from the userâ€™s social account.
 
 ```
@@ -491,7 +511,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Following API 
+##### Following API
+
 Get the following user list from the userâ€™s social account.
 
 ```
@@ -504,7 +525,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Event API 
+##### Event API
+
 The Event API is used to get the event data from the userâ€™s social account.
 
 ```
@@ -517,7 +539,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Contact API 
+##### Contact API
+
 The Contact API is used to get contacts/friends/connections data from the userâ€™s social account.This is one of the APIs that makes up the LoginRadius Friend Invite System. The data will be normalized into LoginRadiusâ€™ standard data format. This API requires setting permissions in your LoginRadius Admin Console.
 
 ```
@@ -530,7 +553,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Company API 
+##### Company API
+
 The Company API is used to get the followed companies data from the userâ€™s social account.
 
 ```
@@ -543,7 +567,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### CheckIn API 
+##### CheckIn API
+
 The Check In API is used to get check Ins data from the userâ€™s social account.
 
 ```
@@ -556,7 +581,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Audio API 
+##### Audio API
+
 The Audio API is used to get audio files data from the userâ€™s social account.
 
 ```
@@ -569,7 +595,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Album API 
+##### Album API
+
 This API returns the photo albums associated with the passed in access tokens Social Profile.
 
 ```
@@ -586,10 +613,11 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 
 **List of APIs in this Section:**
 
-- [Access Token via Facebook Token API](#access-token-via-facebook-token-api) 
-- [Access Token via Google Token API](#access-token-via-google-token-api) 
+- [Access Token via Facebook Token API](#access-token-via-facebook-token-api)
+- [Access Token via Google Token API](#access-token-via-google-token-api)
 
-##### Access Token via Facebook Token API 
+##### Access Token via Facebook Token API
+
 The API is used to get LoginRadius access token by sending Facebookâ€™s access token. It will be valid for the specific duration of time specified in the response.
 
 ```
@@ -603,7 +631,8 @@ public async void FacebookNativeLogin(string apikey,string fb_access_token)
 }
 ```
 
-##### Access Token via Google Token API 
+##### Access Token via Google Token API
+
 The API is used to get LoginRadius access token by sending Googleâ€™s access token. It will be valid for the specific duration of time specified in the response.
 
 ```
@@ -621,29 +650,30 @@ public async void GoogleNativeLogin(string apikey,string google_access_token)
 
 **List of APIs in this Section:**
 
-- [Validate Access token API](#validate-access-token-api) 
-- [Access Token Invalidate API](#access-token-invalidate-api) 
-- [Check Email Availability API](#check-email-availability-api) 
-- [Status Fetching API](#status-fetching-api) 
-- [Check UserName Availability API](#check-username-availability-api) 
-- [Login by UserName API](#login-by-username-api) 
-- [Read all Profiles by Token API](#read-all-profiles-by-token-api) 
-- [Verify Email API](#verify-email-api) 
-- [Add Email API](#add-email-api) 
-- [Change Password API](#change-password-api) 
-- [Link Social Identities API](#link-social-identities-api) 
-- [Resend Email Verification API](#resend-email-verification-api) 
-- [Reset Password by Reset Token API](#reset-password-by-reset-token-api) 
-- [Reset Password by Security Question API](#reset-password-by-security-question-api) 
-- [Set or Change UserName API](#set-or-change-username-api) 
-- [Social Identity API](#social-identity-api) 
-- [Update Profile by Token API](#update-profile-by-token-api) 
-- [Update Security Question by Access token API](#update-security-question-by-access-token-api) 
-- [Delete Account with Email Confirmation API](#delete-account-with-email-confirmation-api) 
-- [Remove Email API](#remove-email-api) 
-- [Unlink Social Identities API](#unlink-social-identities-api) 
+- [Validate Access token API](#validate-access-token-api)
+- [Access Token Invalidate API](#access-token-invalidate-api)
+- [Check Email Availability API](#check-email-availability-api)
+- [Status Fetching API](#status-fetching-api)
+- [Check UserName Availability API](#check-username-availability-api)
+- [Login by UserName API](#login-by-username-api)
+- [Read all Profiles by Token API](#read-all-profiles-by-token-api)
+- [Verify Email API](#verify-email-api)
+- [Add Email API](#add-email-api)
+- [Change Password API](#change-password-api)
+- [Link Social Identities API](#link-social-identities-api)
+- [Resend Email Verification API](#resend-email-verification-api)
+- [Reset Password by Reset Token API](#reset-password-by-reset-token-api)
+- [Reset Password by Security Question API](#reset-password-by-security-question-api)
+- [Set or Change UserName API](#set-or-change-username-api)
+- [Social Identity API](#social-identity-api)
+- [Update Profile by Token API](#update-profile-by-token-api)
+- [Update Security Question by Access token API](#update-security-question-by-access-token-api)
+- [Delete Account with Email Confirmation API](#delete-account-with-email-confirmation-api)
+- [Remove Email API](#remove-email-api)
+- [Unlink Social Identities API](#unlink-social-identities-api)
 
-##### Validate Access token API 
+##### Validate Access token API
+
 This api validates access token if valid then returns a response with its expiry otherwise error.
 
 ```
@@ -656,7 +686,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Access Token Invalidate API 
+##### Access Token Invalidate API
+
 This API call invalidates the active access token or expires an access token's validity.
 
 ```
@@ -669,7 +700,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Check Email Availability API 
+##### Check Email Availability API
+
 This API is used to check the email exists or not on your site.
 
 ```
@@ -682,7 +714,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Check UserName Availability API 
+##### Check UserName Availability API
+
 This API is used to check the UserName exists or not on your site.
 
 ```
@@ -695,12 +728,13 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Login by UserName API 
+##### Login by UserName API
+
 This API retrieves a copy of the user data based on the UserName.
 
 ```
 public async void GetLoginbyUserName(){
-Dictionary<string, string> data = new Dictionary<string, string>();
+Dictionary` <string, string>` data = new Dictionary` <string, string>`();
 data.Add("apikey", "xxxxx");
 data.Add("username", "xxxx");
 data.Add("password", "xxxxxx");
@@ -717,7 +751,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Read all Profiles by Token API 
+##### Read all Profiles by Token API
+
 This API retrieves a copy of the user data based on the access_token.
 
 ```
@@ -730,7 +765,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Verify Email API 
+##### Verify Email API
+
 This API is used to verify the email of user.
 
 ```
@@ -747,7 +783,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Add Email API 
+##### Add Email API
+
 This API is used to add additional emails to a user's account.
 
 ```
@@ -767,7 +804,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Change Password API 
+##### Change Password API
+
 This API is used to change the account's password based on the previous password.
 
 ```
@@ -785,7 +823,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Link Social Identities API 
+##### Link Social Identities API
+
 This API is used to link up a social provider account with the specified account based on the access token and the social provider's user access token.
 
 ```
@@ -802,7 +841,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Resend Email Verification API 
+##### Resend Email Verification API
+
 This API resends the verification email to the user.
 
 ```
@@ -820,7 +860,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Reset Password by Reset Token API 
+##### Reset Password by Reset Token API
+
 This API is used to set a new password for the specified account.
 
 ```
@@ -837,7 +878,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Reset Password by Security Question API 
+##### Reset Password by Security Question API
+
 This API is used to reset password for the specified account by security question.
 
 ```
@@ -856,7 +898,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Set or Change UserName API 
+##### Set or Change UserName API
+
 This API is used to set or change UserName by access token.
 
 ```
@@ -873,7 +916,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Social Identity API 
+##### Social Identity API
+
 This API is called just after account linking API and it prevents the raas profile of the second account from getting created.
 
 ```
@@ -886,7 +930,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Update Profile by Token API 
+##### Update Profile by Token API
+
 This API is used to update the user profile by the access token.
 
 ```
@@ -909,7 +954,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Update Security Question by Access token API 
+##### Update Security Question by Access token API
+
 This API is used to update security questions by the access token.
 
 ```
@@ -926,13 +972,14 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Delete Account with Email Confirmation API 
+##### Delete Account with Email Confirmation API
+
 API deletes the user account by the access token.
 
 ```
 public async void GetDeleteAccount()
 {
-Dictionary<string, string> data = new Dictionary<string, string>();
+Dictionary` <string, string>` data = new Dictionary` <string, string>`();
 data.Add("apikey", "xxxxxxxxxxxxxxxxxxxx");
 data.Add("access_token", "xxxxxxxxxxxxxxxx");
 //data.Add("deleteurl", "xxxxxxxxxxxxxxxx");
@@ -945,7 +992,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Remove Email API 
+##### Remove Email API
+
 This API is used to remove additional emails from a user's account.
 
 ```
@@ -962,7 +1010,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Unlink Social Identities API 
+##### Unlink Social Identities API
+
 This API is used to unlink up a social provider account with the specified account based on the access token and the social provider's user access token. The unlinked account will automatically get removed from your database.
 
 ```
@@ -984,19 +1033,20 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 
 **List of APIs in this Section:**
 
-- [Phone Login API](#phone-login-api) 
-- [Login by OTP API](#login-by-otp-api) 
-- [Phone Number Availability API](#phone-number-availability-api) 
-- [Phone Send One time Passcode API](#phone-send-one-time-passcode-api) 
-- [Phone Number Update API](#phone-number-update-api) 
-- [Phone Reset Password by OTP API](#phone-reset-password-by-otp-api) 
-- [Phone Verification by OTP API](#phone-verification-by-otp-api) 
-- [Phone Verification OTP by Token API](#phone-verification-otp-by-token-api) 
-- [Phone Forgot Password by OTP API](#phone-forgot-password-by-otp-api) 
-- [Phone Resend Verification OTP API](#phone-resend-verification-otp-api) 
-- [Phone Resend Verification OTP by Token API](#phone-resend-verification-otp-by-token-api) 
+- [Phone Login API](#phone-login-api)
+- [Login by OTP API](#login-by-otp-api)
+- [Phone Number Availability API](#phone-number-availability-api)
+- [Phone Send One time Passcode API](#phone-send-one-time-passcode-api)
+- [Phone Number Update API](#phone-number-update-api)
+- [Phone Reset Password by OTP API](#phone-reset-password-by-otp-api)
+- [Phone Verification by OTP API](#phone-verification-by-otp-api)
+- [Phone Verification OTP by Token API](#phone-verification-otp-by-token-api)
+- [Phone Forgot Password by OTP API](#phone-forgot-password-by-otp-api)
+- [Phone Resend Verification OTP API](#phone-resend-verification-otp-api)
+- [Phone Resend Verification OTP by Token API](#phone-resend-verification-otp-by-token-api)
 
-##### Phone Login API 
+##### Phone Login API
+
 This API retrieves a copy of the user data based on the registered Phone Number.
 
 ```
@@ -1016,7 +1066,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Login by OTP API 
+##### Login by OTP API
+
 This API verifies an account by OTP and allows the user to login.
 
 ```
@@ -1034,7 +1085,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Phone Number Availability API 
+##### Phone Number Availability API
+
 This API is used to check the Phone Number exists or not on your site.
 
 ```
@@ -1047,7 +1099,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Phone Send One time Passcode API 
+##### Phone Send One time Passcode API
+
 API can be used to send a One-time Passcode (OTP).
 
 ```
@@ -1064,7 +1117,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Phone Number Update API 
+##### Phone Number Update API
+
 This API is used to update the login Phone Number of users
 
 ```
@@ -1082,7 +1136,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Phone Reset Password by OTP API 
+##### Phone Reset Password by OTP API
+
 This API is used to reset the password.
 
 ```
@@ -1101,7 +1156,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Phone Verification by OTP API 
+##### Phone Verification by OTP API
+
 This API is used to send a verification code to verify a user's phone number.
 
 ```
@@ -1119,7 +1175,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Phone Verification OTP by Token API 
+##### Phone Verification OTP by Token API
+
 This API is used to send a verification code to verify a user's phone number in cases in which an access token already exists.
 
 ```
@@ -1137,7 +1194,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Phone Forgot Password by OTP API 
+##### Phone Forgot Password by OTP API
+
 This API is used to send the OTP to reset the account password.
 
 ```
@@ -1154,7 +1212,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Phone Resend Verification OTP API 
+##### Phone Resend Verification OTP API
+
 This API is used to resend a verification OTP to verify a user's Phone Number. The user will receive a verification code that they will need to input.
 
 ```
@@ -1171,7 +1230,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Phone Resend Verification OTP by Token API 
+##### Phone Resend Verification OTP by Token API
+
 This API is used to resend a verification OTP to verify a user's Phone Number in cases in which an active token already exists.
 
 ```
@@ -1189,15 +1249,16 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-###One-Click Authentication APIs 
+###One-Click Authentication APIs
 
 **List of APIs in this Section:**
 
-- [One Click Sign in By Email API](#one-click-sign-in-by-email-api) 
-- [One Click Sign in By UserName API](#one-click-sign-in-by-username-api) 
-- [One Click Sign in Verification API](#one-click-sign-in-verification-api) 
+- [One Click Sign in By Email API](#one-click-sign-in-by-email-api)
+- [One Click Sign in By UserName API](#one-click-sign-in-by-username-api)
+- [One Click Sign in Verification API](#one-click-sign-in-verification-api)
 
-##### One Click Sign in By Email API 
+##### One Click Sign in By Email API
+
 This API is used to send oneclicksignin verification link by Email ID.
 
 ```
@@ -1215,7 +1276,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### One Click Sign in By UserName API 
+##### One Click Sign in By UserName API
+
 This API is used to send oneclicksignin verification link by UserName.
 
 ```
@@ -1233,7 +1295,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### One Click Sign in Verification API 
+##### One Click Sign in Verification API
+
 This API is used to verify oneclicksignin verification link.
 
 ```
@@ -1254,11 +1317,12 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 
 **List of APIs in this Section:**
 
-- [Email Prompt Smart Login By Email API](#email-prompt-smart-login-by-email-api) 
-- [Email Prompt Smart Login By Username API](#email-prompt-smart-login-by-username-api) 
-- [Email Prompt Smart Login Ping API](#email-prompt-smart-login-ping-api) 
+- [Email Prompt Smart Login By Email API](#email-prompt-smart-login-by-email-api)
+- [Email Prompt Smart Login By Username API](#email-prompt-smart-login-by-username-api)
+- [Email Prompt Smart Login Ping API](#email-prompt-smart-login-ping-api)
 
-##### Email Prompt Smart Login By Email API 
+##### Email Prompt Smart Login By Email API
+
 This API sends a Smart Login link to the user's Email Id.
 
 ```
@@ -1278,7 +1342,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Email Prompt Smart Login By Username API 
+##### Email Prompt Smart Login By Username API
+
 This API sends smart login link to the user's Email Id.
 
 ```
@@ -1298,7 +1363,8 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 }
 ```
 
-##### Email Prompt Smart Login Ping API 
+##### Email Prompt Smart Login Ping API
+
 This API is used to check that smartlogin link has been clicked or not on server.
 
 ```
@@ -1315,6 +1381,7 @@ Toast.MakeText(this, error.description, ToastLength.Long).Show();
 ```
 
 ## Demo
+
 Check the demo app in the downloaded SDK for social login and user registration in action by setting your API key and sitename as mentioned above in the initialization section.
 
 Link to [Github repo](https://github.com/LoginRadius/xamarin-sdk/)
