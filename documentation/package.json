@@ -21,7 +21,6 @@
     "clsx": "^2.0.0",
     "docusaurus-plugin-openapi-docs": "^4.2.0",
     "docusaurus-theme-openapi-docs": "^4.2.0",
-    "express-basic-auth": "^1.2.1",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
@@ -44,5 +43,6 @@
   },
   "engines": {
     "node": ">=18.0"
-  }
+  },
+  "proxy": "https://cloud-api.loginradius.com"
 }
