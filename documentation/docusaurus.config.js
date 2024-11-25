@@ -79,15 +79,23 @@ const config = {
         id: "api", // plugin id
         docsPluginId: "classic", // id of plugin-content-docs or preset for rendering docs
         config: {
-          lr: { // the <id> referenced when running CLI commands
-            specPath: "src/OpenApi3.json", // path to OpenAPI spec, URLs supported
-            outputDir: "docs/api", // output directory for generated files
-            sidebarOptions: { // optional, instructs plugin to generate sidebar.js
-              groupPathsBy: "tag", // group sidebar items by operation "tag"
+          lr: {
+            specPath: "src/OpenApi3.json",
+            outputDir: "docs/api",
+            sidebarOptions: {
+              groupPathsBy: "tag",
             },
           },
-        }
+          newApi: { // Add a new API specification
+            specPath: "src/api2.json", // Path to the new OpenAPI spec
+            outputDir: "docs/api2", // Output directory for the generated files
+            sidebarOptions: {
+              groupPathsBy: "tag", // Group sidebar items by operation "tag"
+            },
+          },
+        },
       },
+       
     ]
   ],
   themes: ["docusaurus-theme-openapi-docs","@inkeep/docusaurus/chatButton", "@inkeep/docusaurus/searchBar"],

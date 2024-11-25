@@ -1,0 +1,71 @@
+---
+id: get-user-identity
+title: "Get User Identity"
+description: "This API allows you to query your LoginRadius Cloud Directory."
+sidebar_label: "Get User Identity"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1WNFS2zoQ/RXNPrUzDoT0zW8ptIUpFzIk7QuTuaPYm1hFlowkB9yM/72zkhOcxAEu5fIC1krao93V0VlWkKJNjCic0ApimGTCsuHognEp9YNllS6Z0+y+RFPRh2GXeiHUDU9Fadmp1GXKzoTBxGlTHUEEFpPSCFdBfLuCYSG+YzUsXQbx7bSO/MgYE4NuMziNoOCG5+jQWL9KEBDvESJQPEeIgRfiDunb4H0pDKYQO1NiBDbJMOcQr8BVBc20zgi1gDraOVkbNx3wO1ZAiA54sx7lezoMOzK9HUKyjDHRKuWmWs95EC7bDa6fWaDJhbVCK4aKzySmQAEkjGjdZ51WBGwXcqKVQ+XIxItCioQTxONflnCu9k+kZ78w2T77LcyNziECpyGCe6CsGV2gcQItLfXmvaBEMNcm5w5iSLlD2I3RJENmHTeOkZnNtWEuQ2Yw0SYN1fegS5kyKe6QCtGgMwKXyD5UVVX18ryXph8hAnzkeSHJ86A/+NTrn/T6J5QSp98GClX6zpBOBr1PHtJ9V6T3EYQr5zLuOnwWpZSEjzOtaE8rfmNrW6EcLtBABLlQIi9ziE8iyPlj83e/3yeXc15KB/Gg3+VflfkMDdPzzdGdZjNkc3RJhimVImvqDmr/Q/ViC61sqIhBv0+/tncel0mC1s5LydaTIYIMeepv/wqG3t471coZLXtDoqHetREL0V2rh27f6fXNmIV9WS+wGaZM+40sTe909A+6TKf2HTydTyYjljfbtYthdD2eROx6NLm4vhofBHL+FJG/BNLkiK1j3MZyGoihN6kKjBhRsjbit2cHoHy+mTi2ucFpx2Vnee6UHc3bLzx/Uu7ajrgxnPhaOMztywCGM126LiJQpZREo4EpKRlpatA2Ffw6Z3XXNovu67g/sSiu/JvTkd3PwrjsjBjqRQqrI/iScyHfHqKJt3ag+Mll+TwC9J4DA3gUP9GIuaBnY7NqprVE7rnqqzDWHTz0JX/G+LWU8qDxG6oUTafp4qx72A4TJ5bYjXOUaYVXvhj/QzXsxrW1SycGbz8QfB/RsViosnhVGfScyH0thDWXevEyvnNtO24GBWfUOfzDohkuGlLYwxtBadH8y3cmHPCd4lIk+PI81Z1ycnfAFEFg+i3aaRlfkbh5KbsXH3S5RGNFYMYOpM9ZSagI5ymZ4jsyei4kegpW+NjJXNvMOeJ0WPpgTt+h2sgWWs4KvsDmja4jCI8SxFBQ6kl9kxKHY5GicqTcScSb5VqNl0ZCDJlzhY2PjxMSpT1eiCNJItZ4EXuUeGl4WP4GKTscXXi1um4RxvR8NATdahSebpofpKt2uCHwFLrVUrx6eaPwKST0oN08aegv6wdyLWvbojJoyramC5Juo8IG/Zp8zoPybNLajsZFE2gfkN2wkcqn5Hm8Qi2e67egVVVwctQ/6lM8KK05V08XB76hY1RXG8+7XldPL/3fd4BN+B0+uuNCcuHJ1FfRqqm1W9jU2jSCzDPQLaxWM27xh5F1TcMhYVSBqbCh1YnnXFp8BvuHm6Zh+bjXY4VS6MRGddTqMJfhwQPfHb6L7/+p83vpOJsW9ulEU/owIkgQ6sgb6e3jHBa2NWFr7Z7+o+iEFSRgC/fs3GmLdkgAQwSzplnNdUprDH+ghpM/EM4ItI+w5wY/tgLJ1aIkIosh7EkXl+9d+ZDD5g861dqkqi2EzcRwgrvmfwGdc1erwCR1vZkfTAdXrLkmTKasTOu6/gNcrPQt
+sidebar_class_name: "post api-method"
+info_path: docs/api2/loginradius-identity-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get User Identity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/identity"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API allows you to query your LoginRadius Cloud Directory.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"in":"query","name":"apikey","required":true,"schema":{"type":"string"},"description":"LoginRadius API Key"},{"in":"query","name":"apisecret","required":true,"schema":{"type":"string"},"description":"LoginRadius API secret or LoginRadius API Secondary secret with Cloud Directory API permission enabled"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["from","to","q"],"properties":{"from":{"type":"string","format":"date","description":"The start date for the records you would like to retrieve (yyyy-mm-dd)","example":"2023-01-01"},"to":{"type":"string","format":"date","description":"The end date for the records you would like to retrieve (yyyy-mm-dd)","example":"2023-12-31"},"q":{"type":"object","description":"The query that you would like to pull data on"},"size":{"type":"integer","minimum":1,"maximum":1000,"default":20,"description":"The number of records to be fetched per request"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","headers":{"Access-Control-Allow-Origin":{"schema":{"type":"string"},"description":"CORS header - allowed origins"},"Access-Control-Allow-Methods":{"schema":{"type":"string"},"description":"CORS header - allowed HTTP methods","example":"POST, OPTIONS"},"Access-Control-Allow-Headers":{"schema":{"type":"string"},"description":"CORS header - allowed request headers","example":"Content-Type, Authorization"}},"content":{"application/json":{"schema":{"type":"object","properties":{"total":{"type":"integer","description":"Total number of records"},"data":{"type":"array","items":{"type":"object","properties":{"About":{"type":"string","nullable":true},"Addresses":{"type":"array","items":{"type":"object"},"nullable":true},"Age":{"type":"integer","nullable":true},"AppName":{"type":"string"},"BirthDate":{"type":"string","format":"date"},"Email":{"type":"array","items":{"type":"object","properties":{"Type":{"type":"string"},"Value":{"type":"string","format":"email"}}}},"EmailVerified":{"type":"boolean"},"FirstName":{"type":"string"},"LastName":{"type":"string"},"FullName":{"type":"string"},"Gender":{"type":"string"},"ID":{"type":"string"},"IsActive":{"type":"boolean"},"PhoneNumbers":{"type":"array","items":{"type":"object","properties":{"PhoneNumber":{"type":"string"},"PhoneType":{"type":"string"}}}},"SignupDate":{"type":"string","format":"date-time"},"SignupLog":{"type":"object","properties":{"Host":{"type":"string"},"IP":{"type":"string"},"UserAgent":{"type":"string"}}},"user_agent":{"type":"object","properties":{"device":{"type":"object","properties":{"name":{"type":"string"}}},"name":{"type":"string"},"original":{"type":"string"},"os":{"type":"object","properties":{"full":{"type":"string"},"name":{"type":"string"},"version":{"type":"string"}}},"version":{"type":"string"}}}},"title":"UserProfile"}},"next":{"type":"string","description":"Pagination token for the next page"}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
