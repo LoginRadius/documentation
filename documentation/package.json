@@ -43,5 +43,6 @@
   },
   "engines": {
     "node": ">=18.0"
-  }
+  },
+  "proxy": "https://cloud-api.loginradius.com"
 }
