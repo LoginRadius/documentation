@@ -1,0 +1,141 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "LoginRadius Cloud Directory Insights API",
+    "version": "1.0",
+    "description": "This API allows you to query your LoginRadius Cloud Directory."
+  },
+  "servers": [
+    {
+      "url": "https://cloud-api.loginradius.com",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/insights/userprofiles": {
+      "post": {
+        "tags": [
+          "LoginRadius Insights APIs"
+        ],
+        "summary": "Get User Insights",
+        "description": "Retrieve user insights from the LoginRadius Cloud Directory based on the provided parameters.",
+        "operationId": "GetUserInsights",
+        "parameters": [
+          {
+            "name": "apikey",
+            "in": "query",
+            "description": "LoginRadius API Key",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "apisecret",
+            "in": "query",
+            "description": "LoginRadius API Secret with Analytics API permissions enabled",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Query parameters for user insights",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "from": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "The start date for the records you would like to retrieve (yyyy-mm-dd)"
+                  },
+                  "to": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "The end date for the records you would like to retrieve (yyyy-mm-dd)"
+                  },
+                  "q": {
+                    "type": "object",
+                    "description": "The query to filter data. Details on query format can be found in the documentation."
+                  }
+                },
+                "required": [
+                  "from",
+                  "to",
+                  "q"
+                ]
+              },
+              "example": {
+                "from": "2024-01-01",
+                "to": "2024-01-31",
+                "q": {}
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "A JSON object containing user insights data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "total": {
+                      "type": "integer",
+                      "example": 403,
+                      "description": "Total records retrieved"
+                    },
+                    "aggregations": {
+                      "type": "object",
+                      "properties": {
+                        "userperyear": {
+                          "type": "object",
+                          "additionalProperties": {
+                            "type": "integer"
+                          },
+                          "example": {
+                            "RAAS": 370,
+                            "google": 24,
+                            "twitter": 6,
+                            "facebook": 3
+                          },
+                          "description": "Aggregated user data by provider"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "total": 403,
+                  "aggregations": {
+                    "userperyear": {
+                      "RAAS": 370,
+                      "google": 24,
+                      "twitter": 6,
+                      "facebook": 3
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request. Check the query parameters and request body."
+          },
+          "401": {
+            "description": "Unauthorized. Ensure the API key and secret are valid."
+          }
+        }
+      }
+    }
+  }
+}

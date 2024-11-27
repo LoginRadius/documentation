@@ -1,0 +1,71 @@
+---
+id: get-user-identity
+title: "GetUserIdentity"
+description: ""
+sidebar_label: "GetUserIdentity"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVcFu2zAM/ZWBpw1wmrS7+bguGHooumXtKfBBsZhYnWwpEt3WM/zvAyUnduqu2IYN880S9fj49Ei1QGLnIV3DtfI5ZAlI9LlTlpSpIAVIwFh0gn+vJKTwCenOo7uSWJGiBhKwwokSCR3DtFCJEiEFYdU35G3FMPsaHf+cgq+WX+6uVsuPkIDDfa0cSkjJ1ZiAp0YzzNa4EhLAJ6uNxONuXmApIG2BGsthnpyqdiFQlFZjqKhtI4mug6zrkjE1j7lD+v/sIo/nBC9FXuDs0lTkjD6QLFBIdBOWr7DzipPBrxKqzCznxMwli6jo6YORDZ+cZM1NRVgR7wlrtcqDR+b3ngPaUU6h9c02WIMUBWJjAz0qKi5rT6a82dxjTquY9qSsNWydYaHJQAJ7rkh9RzZrX48JR9mLjt1Kiitq46lJ1V3AeWl5P1rtIbs+17ChKsJduIhegWWVG8kIYe/9BXTdibAHHtA0TTMry5mUsZRnK5z9mO58segytsTfAcqObK9RKnEbS5nc20B8kO+3s3H5p5YMC96aysd7uVgsXrRUtLiPgIO/AqJE6zAXxJhboT0mUCIVhmeSNcEwVlABKczVMJs8uofDYKqd5jYisj6dz3NtajkTVp1ps1OVE1LV/iwPNnsQTolNEL0NvcDirIZ+WE40OjZU0Of4d6LNouNO3kbr9Z0wGqNcr8gpnmDSUZbzswVfC5dYitBZ/ZCYDuITPdtBQJa2Ny/hE82tFircdVCk7XVbw1G3LIGCJQ1TaiM83jnNMyrpJyWrKZVniYbb+Gn2t6veDO/ejEbqi4T4xRg9HQ9C1xwE3Aj/NuHxQRhyZoMRIF1n3cGff17+6yyeT/2T6vuQiDoL/TtETPs4G3XH55uvt5DAph/kZXipwIlHnrHi8fDI8+nQnWGtBS2qXS12HBsx+fsBSujE2g==
+sidebar_class_name: "post api-method"
+info_path: docs/cloud-directory-api/identity/identity
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"GetUserIdentity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/identity"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"apikey","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string","examples":["{{apikey}}"]}},{"name":"apisecret","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string","examples":["{{apisecret}}"]}},{"name":"Cache-Control","in":"header","description":"","required":true,"style":"simple","schema":{"type":"string","examples":["no-cache"]}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"","content":{"application/json":{"schema":{"allOf":[{"title":"UserIdentitywithCustomObjectRequest","required":["from","to","q","size"],"type":"object","properties":{"from":{"type":"string"},"to":{"type":"string"},"q":{"type":"object"},"size":{"type":"integer","contentEncoding":"int32"}},"examples":[{"from":"yyyy-mm-dd","to":"yyyy-mm-dd","q":{},"size":100}]},{"examples":[{"from":"yyyy-mm-dd","to":"yyyy-mm-dd","q":{},"size":100}]}],"contentMediaType":"application/json"},"example":{"from":"yyyy-mm-dd","to":"yyyy-mm-dd","q":{},"size":100}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"","headers":{},"content":{}}}}
+>
+  
+</StatusCodes>
+
+
+      

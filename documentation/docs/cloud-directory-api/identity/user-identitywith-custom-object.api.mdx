@@ -1,0 +1,71 @@
+---
+id: user-identitywith-custom-object
+title: "UserIdentitywithCustomObject"
+description: ""
+sidebar_label: "UserIdentitywithCustomObject"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVk1z0zAQ/SvMnmDGadJy85GSQw9MIbSnjA+qtUlUZEuR1m2Nx/+dWcmxnaQECmXIzfrY9/bp7W4aILH2kC7hk/I5ZAlI9LlTlpQpIQVIwFh0gj+vJKRw69FdSSxJUf2oaHNZeTLF9d095gQJWOFEgYSOYzZQigIhBWHVN6whAcUxtxU6/thHWsy/3F4t5h8hAYfbSjmUkJKrMAFPteYwK+MKSACfrDYS+918g4WAtAGqLR/z5FS5DgdFYTWG9JomkmhbyNo2GVPzmDuk/88u8jgkmO8LfILjq3Ebw1+KfIOTS1OSM3qHv0Eh0b2EgFecK/yuHqWZ5AzMUmQxKnr6YGTNN49Qc1MSlsR7wlqt8uDX6b3nA80IU2h9vQrOJEWB2Ck/LyLsXlpLWDnDWpKBBLackfqOXDhdPqYvBceVQ4ozauKtY6VDnOeWt6PVLmTbYQ0bqiRch4foFJiXuZEcIey9v+CnHAu74wF1XdeTophIGVM5WGH0Hu58NmsztsTrBMp6tp9QKnETUzl6t4H4IN+L0Tj9fUuGBW9N6eO7XMxmz1oqWtzHgIO/QkSJ1mEuiGOuhPaYQIG0MdwfrfGxD9IGUpiqzlrTWMa9OTy6h12TrJzmmiKyPp1Oc20qORFWnWmzVqUTUlX+LA+eexBOibvwAk0oDFZqMRTH/EiwvrqCWP3XnlCzlst6FX3YlcWuJDpriZziDSYdNTo/m/Ebcb6FCGXWdYxfTIg9pZtBWha9szXhE02tFiq4IMjTdIouQY2YjTXNEtiw9qGb3gmPt05zL026bslKS+VZvuHZfkrm7aJzzbs3o9b/LD+ebKMR9yB0xYeAK+bfAvaD6+8xT2MdzKABLhs8Cekya3d18+dqnyZyOI32Eu+OxKiT0FeGE8f9JRtV7efrrzeQwF03YIowJMGJR+794nH3R4hvh64R1hrQolxXYs1nY0z+/QBZeis7
+sidebar_class_name: "post api-method"
+info_path: docs/cloud-directory-api/identity/identity
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"UserIdentitywithCustomObject"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/identity/customobject"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"apikey","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string","examples":["{{apikey}}"]}},{"name":"apisecret","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string","examples":["{{apisecret}}"]}},{"name":"customObject","in":"query","description":"","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"Cache-Control","in":"header","description":"","required":true,"style":"simple","schema":{"type":"string","examples":["no-cache"]}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"","content":{"application/json":{"schema":{"allOf":[{"title":"UserIdentitywithCustomObjectRequest","required":["from","to","q","size"],"type":"object","properties":{"from":{"type":"string"},"to":{"type":"string"},"q":{"type":"object"},"size":{"type":"integer","contentEncoding":"int32"}},"examples":[{"from":"yyyy-mm-dd","to":"yyyy-mm-dd","q":{},"size":100}]},{"examples":[{"from":"yyyy-mm-dd","to":"yyyy-mm-dd","q":{},"size":100}]}],"contentMediaType":"application/json"},"example":{"from":"yyyy-mm-dd","to":"yyyy-mm-dd","q":{},"size":100}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"","headers":{},"content":{}}}}
+>
+  
+</StatusCodes>
+
+
+      
