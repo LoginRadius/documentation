@@ -86,9 +86,23 @@ const config = {
               groupPathsBy: "tag",
             },
           },
-          newApi: { // Add a new API specification
-            specPath: "src/api2.json", // Path to the new OpenAPI spec
-            outputDir: "docs/api2", // Output directory for the generated files
+          identity: { // Add a new API specification
+            specPath: "src/identity.json", // Path to the new OpenAPI spec
+            outputDir: "docs/cloud-directory-api/identity", // Output directory for the generated files
+            sidebarOptions: {
+              groupPathsBy: "tag", // Group sidebar items by operation "tag"
+            },
+          },
+          custom_object: { // Add a new API specification
+            specPath: "src/custom-object.json", // Path to the new OpenAPI spec
+            outputDir: "docs/cloud-directory-api/custom-object", // Output directory for the generated files
+            sidebarOptions: {
+              groupPathsBy: "tag", // Group sidebar items by operation "tag"
+            },
+          },
+          insighst: { // Add a new API specification
+            specPath: "src/insights.json", // Path to the new OpenAPI spec
+            outputDir: "docs/cloud-directory-api/insights", // Output directory for the generated files
             sidebarOptions: {
               groupPathsBy: "tag", // Group sidebar items by operation "tag"
             },

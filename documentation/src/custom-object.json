@@ -1,0 +1,260 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Custom Object",
+    "contact": {},
+    "version": "1.0"
+  },
+  "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
+  "servers": [
+    {
+      "url": "https://cloud-api.loginradius.com",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/customobject": {
+      "post": {
+        "tags": [
+          "Custom Object Cloud Directory"
+        ],
+        "summary": "GetCustomObjects",
+        "description": "",
+        "operationId": "GetCustomObjects",
+        "parameters": [
+          {
+            "name": "apikey",
+            "in": "query",
+            "description": "REQUIRED",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "apisecret",
+            "in": "query",
+            "description": "REQUIRED",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "customObject",
+            "in": "query",
+            "description": "REQUIRED",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Cache-Control",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "examples": [
+                "no-cache"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/GetCustomObjectsRequest"
+                  },
+                  {
+                    "examples": [
+                      {
+                        "from": "yyyy-mm-dd",
+                        "to": "yyyy-mm-dd",
+                        "q": {},
+                        "size": 100
+                      }
+                    ]
+                  }
+                ],
+                "contentMediaType": "application/json"
+              },
+              "example": {
+                "from": "yyyy-mm-dd",
+                "to": "yyyy-mm-dd",
+                "q": {},
+                "size": 100
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {}
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "Custom Object Cloud Directory"
+        ],
+        "summary": "GetCustomObjectsbyPaginationID",
+        "description": "",
+        "operationId": "GetCustomObjectsbyPaginationID",
+        "parameters": [
+          {
+            "name": "apikey",
+            "in": "query",
+            "description": "REQUIRED",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "apisecret",
+            "in": "query",
+            "description": "REQUIRED",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "customObject",
+            "in": "query",
+            "description": "REQUIRED",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "next",
+            "in": "query",
+            "description": "REQUIRED",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Cache-Control",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "examples": [
+                "no-cache"
+              ]
+            }
+          },
+          {
+            "name": "content-Type",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/content-Type"
+                },
+                {
+                  "examples": [
+                    "application/json"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {}
+          }
+        },
+        "deprecated": false
+      },
+      "parameters": []
+    }
+  },
+  "components": {
+    "schemas": {
+      "GetCustomObjectsRequest": {
+        "title": "GetCustomObjectsRequest",
+        "required": [
+          "from",
+          "to",
+          "q",
+          "size"
+        ],
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "q": {
+            "type": "object"
+          },
+          "size": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          }
+        },
+        "examples": [
+          {
+            "from": "yyyy-mm-dd",
+            "to": "yyyy-mm-dd",
+            "q": {},
+            "size": 100
+          }
+        ]
+      },
+      "content-Type": {
+        "title": "content-Type",
+        "const": "application/json",
+        "type": "string",
+        "examples": [
+          "application/json"
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Custom Object Cloud Directory"
+    }
+  ]
+}
