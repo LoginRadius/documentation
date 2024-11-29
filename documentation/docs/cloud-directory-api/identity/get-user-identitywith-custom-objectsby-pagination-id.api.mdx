@@ -1,11 +1,11 @@
 ---
 id: get-user-identitywith-custom-objectsby-pagination-id
 title: "GetUserIdentitywithCustomObjectsbyPaginationID"
-description: ""
+description: "GetUserIdentitywithCustomObjectsbyPaginationID"
 sidebar_label: "GetUserIdentitywithCustomObjectsbyPaginationID"
 hide_title: true
 hide_table_of_contents: true
-api: eJzFVMtu2zAQ/JViTy0gP9qjrq4R+FCkNeKToQNNrS2mFMmQK9eGwH8vVg8/4sRBizY+CZSWmtnZ2amBxCZAuoRvKkjIEsgxSK8cKWsgBUjAOvSCj7McUrhDWgT0sxwNKdr/UlRMqkC2vF89oqSw2n8XG2XaC18hASe8KJHQM0oNRpQIKQinfuIeElCM8lSh58M59nz6YzGbT/knHp8q5TGHlHyFCQTaa/7N2voSEsCd0zbHw1dZYCkgrYH2jssCeWU2EGNySiCg9Eg35CBPhLshDYO7W8JPhCxwMLGGvNU9jwJFjv6CyBUCQZVOI7yOyeQE1zR2N3YgGRiys4lYQ2ho8MA3/yUVofX9ulkAUqRfgJLWBGp86bSSzfqMHoM1kFxt46I8427eqMhizJh9cNYErqrhy3jMj4sW2+a5JCY9ZT7EyHo4j1IQC7AWOmACJVJhOSY2zWI5QQWkMFJdWoxax9ve8QH9tg+GymsWm8iFdDSS2lb5QDg11HajjBe5qsJQWvbYVnglVk17ddOJMmvbzLuTtg+nVlYSklr+jNV29nk4hpiAs4FKYfhuZ4A/jrczxeqjRHAcHOGORk4LZRiz6bPupFmCOuF6Kk6WQGHZEUuo65UIuPA6Rn7drihLlqvAOhzlf5XMx3ln1U8fTnb5RX4cyyf5vBW64iJgX/1fwEMevxfms/x9L9gub49w2dHTkC6z2K/d3w/5OoHniXvG5LDCd9MHiPE3w0TDng==
+api: eJytVctu2zAQ/BViTy0gxWmPugVOEBht0dRJgBaGDjS1tphSJEOu0hiC/r1Yya+4tVO7ORmyOJyZfYwaIDmPkE3gi44K8gScxyBJOzsqIINrpPuIYVSgJU2LX5rKYR3JVV+nD6goThc3cq5tD7iEBLwMskLCwJc2YGWFkMH39LObazuWha5jeuH1J1xAAtpCBiXKAgMkUGBUQXu+CjIYX327H42vLkUqfrg6iIubkehRAR9rHbCAjEKNCURVYiUha4AWntkiBW3n0LbJfgG3qALSCRrWwFNkqK3a/Tv3XYmiRwrXQYXu+jHTHe4UIRafjxCw6bEYXYqZC4JKFHyHiEjCzUTAWBuKJ6oZSlViOnSWgjOvyDqCIgF8lpU32A24daliHshfdMRZQkvpHSMPMw/7o4JJ2DPXgKVgPDwOytlIkIH03mjVlXHwEJ3d0ffH67xtc743emcjn2ng4/k5/7zUdVsrhTHOaiNWhyFZmmBUm6xc8kPbsi8fUElitTNpIu5aPXrtK6TScWDMu93wkkrIYKCXFwz68XWrwY8YnlYRUQfDNSfyMRsMlHF1kUqvzwwvbOgW9ky5ChJ4kkHLaVeupquNtjPXtV2T4Wau9ELvWCrq7TNXb+zD2Tm0CXgXqZKWscs5ONrxi4KtJ4/wmQbeSG2ZprPWLKsxAb0lb7seeQKl4xGZQNNMZcT7YNqW/36sMSwgm+Qb8/zUrtrbFbDQkV/s6WWzaT68Gy+H9L3YH69/dfITF/tj/EmamiHAe/VmatZBe4ygNehNNb0SwAcE7gT+m6o6JpUPSFx+Cv5f2mGa3Yzf8OVb8XF9dQdt+xvxye+X
 sidebar_class_name: "get api-method"
 info_path: docs/cloud-directory-api/identity/identity
 custom_edit_url: null
@@ -36,7 +36,7 @@ import Heading from "@theme/Heading";
 
 
 
-
+GetUserIdentitywithCustomObjectsbyPaginationID
 
 <Heading
   id={"request"}
@@ -47,7 +47,7 @@ import Heading from "@theme/Heading";
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"apikey","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"apisecret","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"customObject","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"next","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"Cache-Control","in":"header","description":"","required":true,"style":"simple","schema":{"type":"string","examples":["no-cache"]}},{"name":"content-Type","in":"header","description":"","required":true,"style":"simple","schema":{"allOf":[{"title":"content-Type","const":"application/json","type":"string","examples":["application/json"]},{"examples":["application/json"]}]}}]}
+  parameters={[{"name":"X-LoginRadius-ApiKey","in":"header","description":"REQUIRED - Your API Key","required":true,"schema":{"type":"string"}},{"name":"X-LoginRadius-ApiSecret","in":"header","description":"REQUIRED - Your API Secret","required":true,"schema":{"type":"string"}},{"name":"customObject","in":"header","description":"REQUIRED - The custom object identifier","required":true,"schema":{"type":"string"}},{"name":"next","in":"header","description":"REQUIRED - Pagination ID for the next set of results","required":true,"schema":{"type":"string"}},{"name":"Cache-Control","in":"header","description":"","required":true,"schema":{"type":"string","examples":["no-cache"]}},{"name":"content-Type","in":"header","description":"Content type of the request","required":true,"schema":{"const":"application/json","examples":["application/json"]}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ import Heading from "@theme/Heading";
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"","headers":{},"content":{}}}}
+  responses={{"200":{"description":"Successful response","headers":{},"content":{}}}}
 >
   
 </StatusCodes>

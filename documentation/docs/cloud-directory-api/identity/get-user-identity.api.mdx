@@ -1,11 +1,11 @@
 ---
 id: get-user-identity
 title: "GetUserIdentity"
-description: ""
+description: "GetUserIdentity"
 sidebar_label: "GetUserIdentity"
 hide_title: true
 hide_table_of_contents: true
-api: eJzFVcFu2zAM/ZWBpw1wmrS7+bguGHooumXtKfBBsZhYnWwpEt3WM/zvAyUnduqu2IYN880S9fj49Ei1QGLnIV3DtfI5ZAlI9LlTlpSpIAVIwFh0gn+vJKTwCenOo7uSWJGiBhKwwokSCR3DtFCJEiEFYdU35G3FMPsaHf+cgq+WX+6uVsuPkIDDfa0cSkjJ1ZiAp0YzzNa4EhLAJ6uNxONuXmApIG2BGsthnpyqdiFQlFZjqKhtI4mug6zrkjE1j7lD+v/sIo/nBC9FXuDs0lTkjD6QLFBIdBOWr7DzipPBrxKqzCznxMwli6jo6YORDZ+cZM1NRVgR7wlrtcqDR+b3ngPaUU6h9c02WIMUBWJjAz0qKi5rT6a82dxjTquY9qSsNWydYaHJQAJ7rkh9RzZrX48JR9mLjt1Kiitq46lJ1V3AeWl5P1rtIbs+17ChKsJduIhegWWVG8kIYe/9BXTdibAHHtA0TTMry5mUsZRnK5z9mO58segytsTfAcqObK9RKnEbS5nc20B8kO+3s3H5p5YMC96aysd7uVgsXrRUtLiPgIO/AqJE6zAXxJhboT0mUCIVhmeSNcEwVlABKczVMJs8uofDYKqd5jYisj6dz3NtajkTVp1ps1OVE1LV/iwPNnsQTolNEL0NvcDirIZ+WE40OjZU0Of4d6LNouNO3kbr9Z0wGqNcr8gpnmDSUZbzswVfC5dYitBZ/ZCYDuITPdtBQJa2Ny/hE82tFircdVCk7XVbw1G3LIGCJQ1TaiM83jnNMyrpJyWrKZVniYbb+Gn2t6veDO/ejEbqi4T4xRg9HQ9C1xwE3Aj/NuHxQRhyZoMRIF1n3cGff17+6yyeT/2T6vuQiDoL/TtETPs4G3XH55uvt5DAph/kZXipwIlHnrHi8fDI8+nQnWGtBS2qXS12HBsx+fsBSujE2g==
+api: eJytVcFu2zAM/RWDpw1wmrS7+dZ1wRBsQ7u0BTYEOSgS46izJUWS23qG/32g5NhJ0wDb0NwskY9Pj49MA57lDrIFfJOOwzIFbdAyL7WaCcjgM/p7h3YmUHnpa0jBMMtK9GgpqwHFSoQMfoy+6lyqOROycqNLI78gBUsFGWyQCbSQgkDHrTQEDhnMp9/vZ/Ppp2SU/NSVTS5vZknMsritpEUBmbcVpuD4BksGWQO+NlTNeStVDm2bniZwi9yi/w8OfeLf01jGYHT+oxY1RbwoEy+TlRZ1wrXyTCqp8qRyaBPZaZs8Sb9JeOW8LhO9ekBOJCgalSdMZkwheejN+MERcLPHiRXF9Tq0xEtfEL39xhH2VYC+Dsgdo4NXLmBtdQkpeA0pbCEFJ38jeaJ7b0/KWHKJl+iocsg6ViXgvHa83TvtINuu1nAhlcc8dKxTYKq4FoQQ7j5cUPcBn1lpCoxWjDygrut6VJYjIeJTXpxQ9b7c+WTSLslFbwO0bInUoW/CgTNauajWxWRybJDbinN0bl0VyS4Y0s60LtYZjBCKCDQWOfNUZs0Khy+tfTy5JfqNpqE2OnTeML+BDMZyCHFoH3eTXdmCBsd747LxmBe6EiNm5FlBc2bDnJ3x4JdHZiVbBfWaMAzkzvkwENMo7uCVnRk6WfuvA0knLc3uOnqos/Tea8IYcR8ziHR89vnZhNxETyxZGJFuQRzrcaBXbzyPz35sCiYV4QQRmk6qBfRSLVPYkIrZAppmxRze26Jt6Xhboa0hWywHXeir3bUzaCuko4sTvWuGZsO7eeem98nphfkq9V9Yn17Mj6yoKAXI/G/Gpl+d/0KoTzrgFIOvYuXRHeENEUebkEzX2/vm+vYOUlh1q7jUgnIse6Jtx56oAv3NUXaYyHDWQMFUXrGcYiMm/f4ACUhrwg==
 sidebar_class_name: "post api-method"
 info_path: docs/cloud-directory-api/identity/identity
 custom_edit_url: null
@@ -36,7 +36,7 @@ import Heading from "@theme/Heading";
 
 
 
-
+GetUserIdentity
 
 <Heading
   id={"request"}
@@ -47,14 +47,14 @@ import Heading from "@theme/Heading";
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"apikey","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string","examples":["{{apikey}}"]}},{"name":"apisecret","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string","examples":["{{apisecret}}"]}},{"name":"Cache-Control","in":"header","description":"","required":true,"style":"simple","schema":{"type":"string","examples":["no-cache"]}}]}
+  parameters={[{"name":"X-LoginRadius-ApiKey","in":"header","description":"REQUIRED - Your API Key","required":true,"schema":{"type":"string"}},{"name":"X-LoginRadius-ApiSecret","in":"header","description":"REQUIRED - Your API Secret","required":true,"schema":{"type":"string"}}]}
 >
   
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
-  body={{"description":"","content":{"application/json":{"schema":{"allOf":[{"title":"UserIdentitywithCustomObjectRequest","required":["from","to","q","size"],"type":"object","properties":{"from":{"type":"string"},"to":{"type":"string"},"q":{"type":"object"},"size":{"type":"integer","contentEncoding":"int32"}},"examples":[{"from":"yyyy-mm-dd","to":"yyyy-mm-dd","q":{},"size":100}]},{"examples":[{"from":"yyyy-mm-dd","to":"yyyy-mm-dd","q":{},"size":100}]}],"contentMediaType":"application/json"},"example":{"from":"yyyy-mm-dd","to":"yyyy-mm-dd","q":{},"size":100}}},"required":true}}
+  body={{"description":"Request body containing user identity with custom object","content":{"application/json":{"schema":{"allOf":[{"title":"UserIdentitywithCustomObjectRequest","required":["from","to","q","size"],"type":"object","properties":{"from":{"type":"string"},"to":{"type":"string"},"q":{"type":"object"},"size":{"type":"integer","contentEncoding":"int32"}},"examples":[{"from":"yyyy-mm-dd","to":"yyyy-mm-dd","q":{},"size":100}]},{"examples":[{"from":"yyyy-mm-dd","to":"yyyy-mm-dd","q":{},"size":100}]}]}}},"required":true}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ import Heading from "@theme/Heading";
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"","headers":{},"content":{}}}}
+  responses={{"200":{"description":"Successful response","headers":{},"content":{}}}}
 >
   
 </StatusCodes>

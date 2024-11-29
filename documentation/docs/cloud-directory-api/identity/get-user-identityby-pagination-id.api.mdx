@@ -1,11 +1,11 @@
 ---
 id: get-user-identityby-pagination-id
 title: "GetUserIdentitybyPaginationID"
-description: ""
+description: "GetUserIdentitybyPaginationID"
 sidebar_label: "GetUserIdentitybyPaginationID"
 hide_title: true
 hide_table_of_contents: true
-api: eJzFVEuP2jAQ/ivVnFopPNpjrlu04lC1RcsJ5TA4A3Hr2F57gkCR/3s1IRDo7rJS1XZPkeOxv4e/mRYYtxHyFXzRUUGRQUlRBe1ZOws5QAbOU0BZzkvI4Z54GSnMS7Ks+bA+fMOttsf9z5CBx4A1MQW5tAWLNUEO6PVPOkAGWi59bCjI4hpqMfu+nC9mckmgx0YHKiHn0FAGkQ9Grtm4UEMGtPfGlXTeVRXVCHkLfPBSFjlou4WUsksCkVQgfkMOlvZvCX+HqqLRnbMcnDnxqAhLCk+I3CAQde0NwcuYQg6lpouVdSMlwFBcclHOMlkePcjJv0kFjfm66ZLHms0zUMrZyF0gvNGqy+3kR3QWspsynpQXouaViiKlQthH72yUqhY+TafyeSLxKF5KUnaiLIuUxA8fSCGLARs0kTKoiSsn7bjtEu2RK8hhovuuFEso7E5N2AQj/jL7mE8myrimHKHXY+O22gYsdRPHykmsdhg0rjtFbUde243rnrh3cz4gCEtUfKQsWEcxH8dTSBl4F7lGK2f7N39tclx50g4mwPA0THueeIPaCkQnq+3Fr+AsvsigcvLIK2jbNUZaBpOS/D52nVhS6ig6B0dfRH+/6NP34d1Fez5LSEbcxazboWmkCCQq/xbwPNv+F2Y/ywa4YggP5KsinSL9527fJvD7NLticm6P+9kDpPQLMEFVZA==
+api: eJytVE1v2zAM/SsCTxsgN92OvhVtUATbgC5tgQ2BD6rMxNpkSZXoooGh/z7Q+Wq7JUW6ngxZJN97fCJ7ILVIUM7gm0kaKgk+YFRkvJvUUMIl0m3COKnRkaHl3fJKLYxb3V+AhKCiapEwco0enGoRSvhRfPUL46aqNl0qzoL5gkuQYByU0KCqMYKEGpOOJnApKGE6/n47mY4vRCF++i6Ks6uJWGVFvO9MxBpKih1KSLrBVkHZAy0DoyWKxi0gZ7mfwDXqiPQGDtvEt9Bw+HgE5q61YnIh5j4KalBwDZGQhJ+LiKmzlN7I5lzpBotz7yh6+wqtIyAk4KNqg8XhGTlfaMaB6im09o7QUXHDmYeRz1ehgkFYM/eAqWA67IL2LhGUoEKwRg9tHP1K3r3g99d1lXPFdVPwLnFMD59PT/nznNd1pzWmNO+s2ASDXIvgrCw3KvmQM+sKEbUiZjtXNuFLqa8NV4vUeJ7CxfACg6IGShiZdTxISBgfNrPXRctdJQqpHI209V1dqGBOLE9CHCbhRPsWJDyoaNTd0JB+UG/c3A/GGrJs12SHwJqUppVAxlpR/3RyCllC8Ila5Th37fRrmp51YPuUCB9pFKwyjqsOSvq13hls9VYSGs8mz6Dv71TC22hz5t/3HcYllLNqJ45PeWPQ0KDaJL7Y40a/sw8+TNfP7KPYv5f+Sf03LvfvvwdlO04Bnox3Y7PdUMcQ2ia9K6djNtgBtuu1+f/UDsO83Ic7vOrJ7F2ObyDnPyKibhE=
 sidebar_class_name: "get api-method"
 info_path: docs/cloud-directory-api/identity/identity
 custom_edit_url: null
@@ -36,7 +36,7 @@ import Heading from "@theme/Heading";
 
 
 
-
+GetUserIdentitybyPaginationID
 
 <Heading
   id={"request"}
@@ -47,7 +47,7 @@ import Heading from "@theme/Heading";
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"apikey","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"apisecret","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"next","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"Cache-Control","in":"header","description":"","required":true,"style":"simple","schema":{"type":"string","examples":["no-cache"]}},{"name":"content-Type","in":"header","description":"","required":true,"style":"simple","schema":{"allOf":[{"title":"content-Type","const":"application/json","type":"string","examples":["application/json"]},{"examples":["application/json"]}]}}]}
+  parameters={[{"name":"X-LoginRadius-ApiKey","in":"header","description":"REQUIRED - Your API Key","required":true,"schema":{"type":"string"}},{"name":"X-LoginRadius-ApiSecret","in":"header","description":"REQUIRED - Your API Secret","required":true,"schema":{"type":"string"}},{"name":"next","in":"header","description":"REQUIRED - Pagination ID for the next set of results","required":true,"schema":{"type":"string"}},{"name":"Cache-Control","in":"header","description":"","required":true,"schema":{"type":"string","examples":["no-cache"]}},{"name":"content-Type","in":"header","description":"Content type of the request","required":true,"schema":{"const":"application/json","examples":["application/json"]}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ import Heading from "@theme/Heading";
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"","headers":{},"content":{}}}}
+  responses={{"200":{"description":"Successful response","headers":{},"content":{}}}}
 >
   
 </StatusCodes>
