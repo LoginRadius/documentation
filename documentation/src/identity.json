@@ -15,53 +15,42 @@
   "paths": {
     "/identity/customobject": {
       "get": {
-        "tags": [
-          "Misc"
-        ],
+        "tags": ["Misc"],
         "summary": "GetUserIdentitywithCustomObjectsbyPaginationID",
-        "description": "",
         "operationId": "GetUserIdentitywithCustomObjectsbyPaginationID",
         "parameters": [
           {
-            "name": "apikey",
-            "in": "query",
-            "description": "REQUIRED",
+            "name": "X-LoginRadius-ApiKey",
+            "in": "header",
+            "description": "REQUIRED - Your API Key",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "apisecret",
-            "in": "query",
-            "description": "REQUIRED",
+            "name": "X-LoginRadius-ApiSecret",
+            "in": "header",
+            "description": "REQUIRED - Your API Secret",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
               "type": "string"
             }
           },
           {
             "name": "customObject",
-            "in": "query",
-            "description": "REQUIRED",
+            "in": "header",
+            "description": "REQUIRED - The custom object identifier",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
               "type": "string"
             }
           },
           {
             "name": "next",
-            "in": "query",
-            "description": "REQUIRED",
+            "in": "header",
+            "description": "REQUIRED - Pagination ID for the next set of results",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
               "type": "string"
             }
@@ -71,37 +60,25 @@
             "in": "header",
             "description": "",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "no-cache"
-              ]
+              "examples": ["no-cache"]
             }
           },
           {
             "name": "content-Type",
             "in": "header",
-            "description": "",
+            "description": "Content type of the request",
             "required": true,
-            "style": "simple",
             "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/content-Type"
-                },
-                {
-                  "examples": [
-                    "application/json"
-                  ]
-                }
-              ]
+              "const": "application/json",
+              "examples": ["application/json"]
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Successful response",
             "headers": {},
             "content": {}
           }
@@ -109,48 +86,33 @@
         "deprecated": false
       },
       "post": {
-        "tags": [
-          "Misc"
-        ],
+        "tags": ["Misc"],
         "summary": "UserIdentitywithCustomObject",
-        "description": "",
         "operationId": "UserIdentitywithCustomObject",
         "parameters": [
           {
-            "name": "apikey",
-            "in": "query",
-            "description": "REQUIRED",
+            "name": "X-LoginRadius-ApiKey",
+            "in": "header",
+            "description": "REQUIRED - Your API Key",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
-              "type": "string",
-              "examples": [
-                "{{apikey}}"
-              ]
+              "type": "string"
             }
           },
           {
-            "name": "apisecret",
-            "in": "query",
-            "description": "REQUIRED",
+            "name": "X-LoginRadius-ApiSecret",
+            "in": "header",
+            "description": "REQUIRED - Your API Secret",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
-              "type": "string",
-              "examples": [
-                "{{apisecret}}"
-              ]
+              "type": "string"
             }
           },
           {
             "name": "customObject",
-            "in": "query",
-            "description": "",
+            "in": "header",
+            "description": "REQUIRED - The custom object identifier",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
               "type": "string"
             }
@@ -160,17 +122,14 @@
             "in": "header",
             "description": "",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "no-cache"
-              ]
+              "examples": ["no-cache"]
             }
           }
         ],
         "requestBody": {
-          "description": "",
+          "description": "Request body containing user identity with custom object",
           "content": {
             "application/json": {
               "schema": {
@@ -188,14 +147,7 @@
                       }
                     ]
                   }
-                ],
-                "contentMediaType": "application/json"
-              },
-              "example": {
-                "from": "yyyy-mm-dd",
-                "to": "yyyy-mm-dd",
-                "q": {},
-                "size": 100
+                ]
               }
             }
           },
@@ -203,53 +155,43 @@
         },
         "responses": {
           "200": {
-            "description": "",
+            "description": "Successful response",
             "headers": {},
             "content": {}
           }
         },
         "deprecated": false
-      },
-      "parameters": []
+      }
     },
     "/identity": {
       "get": {
-        "tags": [
-          "Misc"
-        ],
+        "tags": ["Misc"],
         "summary": "GetUserIdentitybyPaginationID",
-        "description": "",
         "operationId": "GetUserIdentitybyPaginationID",
         "parameters": [
           {
-            "name": "apikey",
-            "in": "query",
-            "description": "REQUIRED",
+            "name": "X-LoginRadius-ApiKey",
+            "in": "header",
+            "description": "REQUIRED - Your API Key",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "apisecret",
-            "in": "query",
-            "description": "REQUIRED",
+            "name": "X-LoginRadius-ApiSecret",
+            "in": "header",
+            "description": "REQUIRED - Your API Secret",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
               "type": "string"
             }
           },
           {
             "name": "next",
-            "in": "query",
-            "description": "REQUIRED",
+            "in": "header",
+            "description": "REQUIRED - Pagination ID for the next set of results",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
               "type": "string"
             }
@@ -259,37 +201,25 @@
             "in": "header",
             "description": "",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "no-cache"
-              ]
+              "examples": ["no-cache"]
             }
           },
           {
             "name": "content-Type",
             "in": "header",
-            "description": "",
+            "description": "Content type of the request",
             "required": true,
-            "style": "simple",
             "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/content-Type"
-                },
-                {
-                  "examples": [
-                    "application/json"
-                  ]
-                }
-              ]
+              "const": "application/json",
+              "examples": ["application/json"]
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Successful response",
             "headers": {},
             "content": {}
           }
@@ -297,57 +227,31 @@
         "deprecated": false
       },
       "post": {
-        "tags": [
-          "Misc"
-        ],
+        "tags": ["Misc"],
         "summary": "GetUserIdentity",
-        "description": "",
         "operationId": "GetUserIdentity",
         "parameters": [
           {
-            "name": "apikey",
-            "in": "query",
-            "description": "REQUIRED",
-            "required": true,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "string",
-              "examples": [
-                "{{apikey}}"
-              ]
-            }
-          },
-          {
-            "name": "apisecret",
-            "in": "query",
-            "description": "REQUIRED",
-            "required": true,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "string",
-              "examples": [
-                "{{apisecret}}"
-              ]
-            }
-          },
-          {
-            "name": "Cache-Control",
+            "name": "X-LoginRadius-ApiKey",
             "in": "header",
-            "description": "",
+            "description": "REQUIRED - Your API Key",
             "required": true,
-            "style": "simple",
             "schema": {
-              "type": "string",
-              "examples": [
-                "no-cache"
-              ]
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-LoginRadius-ApiSecret",
+            "in": "header",
+            "description": "REQUIRED - Your API Secret",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],
         "requestBody": {
-          "description": "",
+          "description": "Request body containing user identity with custom object",
           "content": {
             "application/json": {
               "schema": {
@@ -365,14 +269,7 @@
                       }
                     ]
                   }
-                ],
-                "contentMediaType": "application/json"
-              },
-              "example": {
-                "from": "yyyy-mm-dd",
-                "to": "yyyy-mm-dd",
-                "q": {},
-                "size": 100
+                ]
               }
             }
           },
@@ -380,59 +277,20 @@
         },
         "responses": {
           "200": {
-            "description": "",
+            "description": "Successful response",
             "headers": {},
             "content": {}
           }
         },
         "deprecated": false
-      },
-      "parameters": []
+      }
     }
   },
   "components": {
     "schemas": {
       "UserIdentitywithCustomObjectRequest": {
         "title": "UserIdentitywithCustomObjectRequest",
-        "required": [
-          "from",
-          "to",
-          "q",
-          "size"
-        ],
-        "type": "object",
-        "properties": {
-          "from": {
-            "type": "string"
-          },
-          "to": {
-            "type": "string"
-          },
-          "q": {
-            "type": "object"
-          },
-          "size": {
-            "type": "integer",
-            "contentEncoding": "int32"
-          }
-        },
-        "examples": [
-          {
-            "from": "yyyy-mm-dd",
-            "to": "yyyy-mm-dd",
-            "q": {},
-            "size": 100
-          }
-        ]
-      },
-      "GetUserIdentityRequest": {
-        "title": "GetUserIdentityRequest",
-        "required": [
-          "from",
-          "to",
-          "q",
-          "size"
-        ],
+        "required": ["from", "to", "q", "size"],
         "type": "object",
         "properties": {
           "from": {
@@ -462,9 +320,7 @@
         "title": "content-Type",
         "const": "application/json",
         "type": "string",
-        "examples": [
-          "application/json"
-        ]
+        "examples": ["application/json"]
       }
     }
   },

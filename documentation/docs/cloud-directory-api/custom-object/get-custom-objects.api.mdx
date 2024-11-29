@@ -5,7 +5,7 @@ description: ""
 sidebar_label: "GetCustomObjects"
 hide_title: true
 hide_table_of_contents: true
-api: eJzFVk1v2zAM/SsBTxvgNGl383FpMPQwdMvaU+CDIjGJOtlSJLmtZ/i/D5Sc2E7SAh22NTfr4/Hx6ZFMDZ5tHKRLmJXO63x0u3pA7kczpUsxupYWude2giwBgY5babzUBaQACWiDltHnjYAUvqCPEBHBQQKGWZajR0sBaihYjpACM/InVpCAJJxdiZY+huiL+ff7m8X8GhKwuCulRQGptyUm4HylCGatbQ4J4LNRWuBhl28xZ5DW4CtDx5y3sthA0yR9Ag65Rf+OHHhPqnekMWN8i+OZLrzVas9ji0ygPSHyCgEnc6MQXo5J5BidCVYr9JhTYMiaJouo6PxnLSq6eRKV68Jj4WmPGaMkD6abPDg6UPdiMqVu18FqXvpA7NiUixhqkMoS1laTfl5DAjvKQv5Ccnybg96/krFkeS8pizreOlU34Jxb3vVWW8imjdVtyMLjJojfZj0vuBaEEPY+XdHz9cXc84Cqqqpxno+FiKkcrVD0Q7jL6bTJyAZ/Byg7sP2KQrK7mMrJW3XEO/neHI3SH9owLDijCxff5Wo6PWujaGsXATtPBUSBxiJnnjDXTDlMIEe/1dTYjA6GMcxvIYVJrNyDJxzax32DK62i8vHeuHQy4dRCx8zIC6U3srBMyNJd8GC1R2YlWwXh61ADJNCiq4P5iU6HQgoaHb4G+kwbquB1tF9bAYO23tqKcR+vEfOoz+XFlN6Hcs1ZKKu2Q5xp6wNl605KErm1scdnPzGKyfDqQZe6VXAJAwWzBLYkcLqEul4xh/dWNQ0tx3ZIugrpSKzubV5k8GHRWuPjqNc3z5KiGdQbRo9MlXQIqCz+bcDD8PlfMY+GTRc265wI6TJr9kXy56q/TuR43AwEaI9E1HFoIt2J02aS9Ur02+2PO0hg1U6QPExBsOyJGj172v9doduhRYS1GhQrNiXb0NmISb/fQhcQIQ==
+api: eJy1VlFP2zAQ/ivWPW1SSsseI4TEumpCTIO1TBqq+uAm19aQxMa+FLIo/306JykNLYUx7THu3efP33131xJILh2EUxjmjnQqLue3GJEYJjqPxRdlMSJtC5gFEKOLrDKkdAYhQADaoJX8eR5DCF+RaogawUEARlqZIqHlC0rIZIoQQqQzwox614VBCEAx2gpljBaeX3K9QtGECyoMCr0QtEJh8T5HR4GQyYMsnJDGJCryXPq3TmcQAIcoizGEZHMMwEUrTCWEJTAQhODIqmwJAeCjTE3CRzswVRVsaP/qfdNLlY1lrHLXOzPqAos30D+7Ohd3WIiFtkLmtMKMmiveSfLk5Oby59jjXoxuTk8Pk5xgZJHeyNP54P9CdTIajkfXnu2sBkNHn3VcMMIuGyOLRMvYU+GCR7U5dW3OJh2C1ksMslO8sNwlWQOwNS27lxQ6/nVhdbrvKV1iE5KWRCwJN7zuc7QFVAGQfj1/lMUvZN/vo9hN/sGxrQAMsFAJob+nCsCp37iFoTLC5Z5Cf8/TOVruIouRtrETpIVFsgrXyEbaKvO0VsU/jRk2l8wCIEW+vM87ftyUpdryQKstFEVR9NK0F8c15LMTVmDzjuPBoOqSYc/5A2d05uqifRoM9pvH5VGEzi3yRLQJ77dKVXkqKdJK85gz2hvPSFpBCP3amJuaObTrdtzlNuGWIzIu7PcjHqg9adRRwh1qfYceRV7htbRKzhP/LN8fTGr81COjHTU3DvNKbr46Kg4q7vpFbcymZJ0h34giI6rTmHmt4vHRgKvIb02ll6eZL3uGfEf/8klm3hCNlISP1DeJVBmjel3KRsEpdBScBbBigcMplOVcOvxpk6ri47pXwunsSS7+qoJ2qLHksXL8QwzhQiYOD5D7MG689VG8OqX3vuIOi5eXwlomOacAj+Z/InVoJP8Nr80e6FCrg4fdhdxG7G7DTcZZFKGhg7GzrZ65upxcQwDzZtynOuYcKx94r8iH9t8EZ/vO9mclJDJb5nLJsc02rqrqDyWa+/A=
 sidebar_class_name: "post api-method"
 info_path: docs/cloud-directory-api/custom-object/custom-object
 custom_edit_url: null
@@ -47,14 +47,14 @@ import Heading from "@theme/Heading";
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"apikey","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"apisecret","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"customObject","in":"query","description":"REQUIRED","required":true,"style":"form","explode":true,"schema":{"type":"string"}},{"name":"Cache-Control","in":"header","description":"","required":true,"style":"simple","schema":{"type":"string","examples":["no-cache"]}}]}
+  parameters={[{"name":"content-Type","in":"header","description":"The content type of the request, always application/json","required":true,"schema":{"type":"string","example":"application/json"}},{"name":"X-LoginRadius-ApiKey","in":"header","description":"The API key for authentication","required":true,"schema":{"type":"string","example":"<<YOUR API KEY>>"}},{"name":"X-LoginRadius-ApiSecret","in":"header","description":"The API secret for authentication","required":true,"schema":{"type":"string","example":"<<YOUR API SECRET>>"}}]}
 >
   
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
-  body={{"description":"","content":{"application/json":{"schema":{"allOf":[{"title":"GetCustomObjectsRequest","required":["from","to","q","size"],"type":"object","properties":{"from":{"type":"string"},"to":{"type":"string"},"q":{"type":"object"},"size":{"type":"integer","contentEncoding":"int32"}},"examples":[{"from":"yyyy-mm-dd","to":"yyyy-mm-dd","q":{},"size":100}]},{"examples":[{"from":"yyyy-mm-dd","to":"yyyy-mm-dd","q":{},"size":100}]}],"contentMediaType":"application/json"},"example":{"from":"yyyy-mm-dd","to":"yyyy-mm-dd","q":{},"size":100}}},"required":true}}
+  body={{"description":"The payload for the custom object request","content":{"application/json":{"schema":{"type":"object","properties":{"from":{"type":"string","description":"Start date for the query"},"to":{"type":"string","description":"End date for the query"},"q":{"type":"object","description":"Query object for filtering"},"size":{"type":"integer","description":"Number of records to retrieve"}},"required":["from","to","q","size"],"title":"GetCustomObjectsRequest"},"example":{"from":"yyyy-mm-dd","to":"yyyy-mm-dd","q":{},"size":100}}},"required":true}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ import Heading from "@theme/Heading";
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"","headers":{},"content":{}}}}
+  responses={{"200":{"description":"The successful response","content":{"application/json":{"schema":{"type":"object"}}}}}}
 >
   
 </StatusCodes>

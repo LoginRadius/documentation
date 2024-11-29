@@ -22,25 +22,34 @@
         "operationId": "GetUserInsights",
         "parameters": [
           {
-            "name": "apikey",
-            "in": "query",
-            "description": "LoginRadius API Key",
+            "name": "content-Type",
+            "in": "header",
+            "description": "Content type of the request",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "enum": ["application/json"],
+              "default": "application/json"
             }
           },
           {
-            "name": "apisecret",
-            "in": "query",
-            "description": "LoginRadius API Secret with Analytics API permissions enabled",
+            "name": "X-LoginRadius-ApiKey",
+            "in": "header",
+            "description": "Your LoginRadius API Key",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "example": "<<YOUR API KEY>>"
+            }
+          },
+          {
+            "name": "X-LoginRadius-ApiSecret",
+            "in": "header",
+            "description": "Your LoginRadius API Secret",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "<<YOUR API SECRET>>"
             }
           }
         ],

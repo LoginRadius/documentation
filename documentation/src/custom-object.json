@@ -23,73 +23,42 @@
         "operationId": "GetCustomObjects",
         "parameters": [
           {
-            "name": "apikey",
-            "in": "query",
-            "description": "REQUIRED",
-            "required": true,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "apisecret",
-            "in": "query",
-            "description": "REQUIRED",
-            "required": true,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "customObject",
-            "in": "query",
-            "description": "REQUIRED",
-            "required": true,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Cache-Control",
+            "name": "content-Type",
             "in": "header",
-            "description": "",
+            "description": "The content type of the request, always application/json",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "no-cache"
-              ]
+              "example": "application/json"
+            }
+          },
+          {
+            "name": "X-LoginRadius-ApiKey",
+            "in": "header",
+            "description": "The API key for authentication",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "<<YOUR API KEY>>"
+            }
+          },
+          {
+            "name": "X-LoginRadius-ApiSecret",
+            "in": "header",
+            "description": "The API secret for authentication",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "<<YOUR API SECRET>>"
             }
           }
         ],
         "requestBody": {
-          "description": "",
+          "description": "The payload for the custom object request",
           "content": {
             "application/json": {
               "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/GetCustomObjectsRequest"
-                  },
-                  {
-                    "examples": [
-                      {
-                        "from": "yyyy-mm-dd",
-                        "to": "yyyy-mm-dd",
-                        "q": {},
-                        "size": 100
-                      }
-                    ]
-                  }
-                ],
-                "contentMediaType": "application/json"
+                "$ref": "#/components/schemas/GetCustomObjectsRequest"
               },
               "example": {
                 "from": "yyyy-mm-dd",
@@ -103,12 +72,16 @@
         },
         "responses": {
           "200": {
-            "description": "",
-            "headers": {},
-            "content": {}
+            "description": "The successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
           }
-        },
-        "deprecated": false
+        }
       },
       "get": {
         "tags": [
@@ -119,135 +92,87 @@
         "operationId": "GetCustomObjectsbyPaginationID",
         "parameters": [
           {
-            "name": "apikey",
-            "in": "query",
-            "description": "REQUIRED",
+            "name": "content-Type",
+            "in": "header",
+            "description": "The content type of the request, always application/json",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "example": "application/json"
             }
           },
           {
-            "name": "apisecret",
-            "in": "query",
-            "description": "REQUIRED",
+            "name": "X-LoginRadius-ApiKey",
+            "in": "header",
+            "description": "The API key for authentication",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "example": "<<YOUR API KEY>>"
             }
           },
           {
-            "name": "customObject",
-            "in": "query",
-            "description": "REQUIRED",
+            "name": "X-LoginRadius-ApiSecret",
+            "in": "header",
+            "description": "The API secret for authentication",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "example": "<<YOUR API SECRET>>"
             }
           },
           {
             "name": "next",
             "in": "query",
-            "description": "REQUIRED",
+            "description": "Pagination token for the next set of results",
             "required": true,
-            "style": "form",
-            "explode": true,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "Cache-Control",
-            "in": "header",
-            "description": "",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string",
-              "examples": [
-                "no-cache"
-              ]
-            }
-          },
-          {
-            "name": "content-Type",
-            "in": "header",
-            "description": "",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/content-Type"
-                },
-                {
-                  "examples": [
-                    "application/json"
-                  ]
-                }
-              ]
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "",
-            "headers": {},
-            "content": {}
+            "description": "The successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
           }
-        },
-        "deprecated": false
-      },
-      "parameters": []
+        }
+      }
     }
   },
   "components": {
     "schemas": {
       "GetCustomObjectsRequest": {
-        "title": "GetCustomObjectsRequest",
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string",
+            "description": "Start date for the query"
+          },
+          "to": {
+            "type": "string",
+            "description": "End date for the query"
+          },
+          "q": {
+            "type": "object",
+            "description": "Query object for filtering"
+          },
+          "size": {
+            "type": "integer",
+            "description": "Number of records to retrieve"
+          }
+        },
         "required": [
           "from",
           "to",
           "q",
           "size"
-        ],
-        "type": "object",
-        "properties": {
-          "from": {
-            "type": "string"
-          },
-          "to": {
-            "type": "string"
-          },
-          "q": {
-            "type": "object"
-          },
-          "size": {
-            "type": "integer",
-            "contentEncoding": "int32"
-          }
-        },
-        "examples": [
-          {
-            "from": "yyyy-mm-dd",
-            "to": "yyyy-mm-dd",
-            "q": {},
-            "size": 100
-          }
-        ]
-      },
-      "content-Type": {
-        "title": "content-Type",
-        "const": "application/json",
-        "type": "string",
-        "examples": [
-          "application/json"
         ]
       }
     }
