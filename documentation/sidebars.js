@@ -748,6 +748,92 @@ const sidebars = {
         },
       ]
     },
+    {
+      type: "category",
+      label: "Admin Console",
+      items: [
+        // Admin Console >
+        "apidocs/admin-console/overview",
+
+        // Admin Console > Platform Configuration >
+        {
+          type: "category",
+          label: "Platform Configuration",
+          items: [
+            "apidocs/admin-console/platform-configuration/overview",
+            "apidocs/admin-console/platform-configuration/custom-field-configuration",
+            "apidocs/admin-console/platform-configuration/passwordless-login-configuration",
+            "apidocs/admin-console/platform-configuration/phone-login-configuration",
+
+            // Admin Console > Platform Configuration > Communication Configuration
+            {
+              type: "category",
+              label: "Communication Configuration",
+              items: [
+                // Admin Console > Platform Configuration > Communication Configuration > Email
+                {
+                  type: "category",
+                  label: "Email",
+                  items: [
+                    // Admin Console > Platform Configuration > Communication Configuration > Email > Providers
+                    {
+                      type: "category",
+                      label: "Providers",
+                      items: [
+                        "apidocs/admin-console/platform-configuration/communication-configuration/email/providers/aws",
+                        "apidocs/admin-console/platform-configuration/communication-configuration/email/providers/gmail",
+                        "apidocs/admin-console/platform-configuration/communication-configuration/email/providers/mailazy",
+                        "apidocs/admin-console/platform-configuration/communication-configuration/email/providers/mailgun",
+                        "apidocs/admin-console/platform-configuration/communication-configuration/email/providers/mandrill",
+                        "apidocs/admin-console/platform-configuration/communication-configuration/email/providers/salesforce-marketing-cloud",
+                        "apidocs/admin-console/platform-configuration/communication-configuration/email/providers/sendgrid",
+                        "apidocs/admin-console/platform-configuration/communication-configuration/email/providers/yahoo",
+                      ],
+                    },
+                    "apidocs/admin-console/platform-configuration/communication-configuration/email/overview",
+                    "apidocs/admin-console/platform-configuration/communication-configuration/email/email-configuration",
+                    "apidocs/admin-console/platform-configuration/communication-configuration/email/global-email-settings",
+                  ],
+                },
+
+                // Admin Console > Platform Configuration > Communication Configuration > SMS
+                {
+                  type: "category",
+                  label: "SMS",
+                  items: [
+                    // Admin Console > Platform Configuration > Communication Configuration > SMS > Providers
+                    {
+                      type: "category",
+                      label: "Providers",
+                      items: [
+                        "apidocs/admin-console/platform-configuration/communication-configuration/sms/providers/custom-sms-provider",
+                        "apidocs/admin-console/platform-configuration/communication-configuration/sms/providers/instaalerts-configuration",
+                        "apidocs/admin-console/platform-configuration/communication-configuration/sms/providers/messagebird-configuration",
+                        "apidocs/admin-console/platform-configuration/communication-configuration/sms/providers/textlocal-configuration",
+                        "apidocs/admin-console/platform-configuration/communication-configuration/sms/providers/twilio-configuration",
+                      ],
+                    },
+                    "apidocs/admin-console/platform-configuration/communication-configuration/sms/overview",
+                    "apidocs/admin-console/platform-configuration/communication-configuration/sms/sms-configuration",
+                    "apidocs/admin-console/platform-configuration/communication-configuration/sms/global-sms-settings",
+                  ],
+                },
+              ],
+            },
+            // Admin Console > Platform Configuration > Standard Login
+            {
+              type: "category",
+              label: "Standard Login",
+              items: [
+                "apidocs/admin-console/platform-configuration/standard-login/overview",
+                "apidocs/admin-console/platform-configuration/standard-login/email-templates",
+                "apidocs/admin-console/platform-configuration/standard-login/multiple-smtp-domain",
+              ],
+            },
+          ],
+        },
+      ]
+    }
   ],
 };
 
