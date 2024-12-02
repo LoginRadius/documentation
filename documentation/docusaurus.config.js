@@ -110,9 +110,19 @@ const config = {
         },
       },
        
-    ]
+    ],
+    [
+      "@orama/plugin-docusaurus-v3",
+      {
+        cloud: {
+          indexId: "z6ji7q9h38h8yrdd4pmg5kw0", // This is your index ID
+          oramaCloudAPIKey: "GCTg59dSHq1574qzLUAVeYdGGiykaHGV", // Your Private API key
+          deploy: false, // true or false for deployment
+        },
+      },
+    ],
   ],
-  themes: ["docusaurus-theme-openapi-docs","@inkeep/docusaurus/chatButton", "@inkeep/docusaurus/searchBar"],
+  themes: ["docusaurus-theme-openapi-docs"],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
@@ -126,49 +136,6 @@ const config = {
         governanceSideBar,
       },
 
-       //inkeep ai agent
-      inkeepConfig: {
-        baseSettings: {
-          apiKey: "0eddffabefd5e923b8e222beb495a2eaae6c35d0e82dd24b", // required
-          integrationId: "cm3qv5k4t0026ctns1w4ugr8s", // required
-          organizationId: "org_7WE77CMkrySCsff3", // required
-          primaryBrandColor: "#26D6FF", // required -- your brand color, the widget color scheme is derived from this
-          organizationDisplayName: "Inkeep",
-          // ...optional settings
-          theme: {
-            // stylesheetUrls: ['/path/to/stylesheets'], // optional
-            syntaxHighlighter: {
-
-            },
-          }
-        },
-        modalSettings: {
-          // optional settings
-        },
-        searchSettings: {
-          // optional settings
-        },
-        aiChatSettings: {
-          chatSubjectName: "LoginRadius",
-          botAvatarSrcUrl: "https://www.loginradius.com/wp-content/uploads/fbrfg/apple-touch-icon.png",
-          getHelpCallToActions: [
-            {
-              name: "Contact",
-              url: "https://www.loginradius.com/contact-sales/",
-              icon: {
-                builtIn: "IoChatbubblesOutline"
-              }
-            }
-          ],
-          quickQuestions: [
-            "Get Started with LoginRadius",
-            "How does the LoginRadius User Registration System work?",
-            "Invalid Request URI Error?",
-            "Consumer Audit Logs?"
-          ]
-        },
-      },
-    //end of inkeep ai agent
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
