@@ -117,7 +117,7 @@ const config = {
         cloud: {
           indexId: "z6ji7q9h38h8yrdd4pmg5kw0", // This is your index ID
           oramaCloudAPIKey: "GCTg59dSHq1574qzLUAVeYdGGiykaHGV", // Your Private API key
-          deploy: 'snapshot-only'
+          deploy: false
         },
       },
     ],
