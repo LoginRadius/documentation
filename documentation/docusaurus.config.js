@@ -71,7 +71,22 @@ const config = {
       }),
     ],
   ],
+  //Orama AI chatbot script
 
+  scripts: [
+    {
+      src: 'https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/orama-ui/orama-ui.esm.js',
+      type: 'module',
+    },
+    {
+      src: 'https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/cjs/orama-ui.cjs.js',
+      nomodule: true,
+    },
+  ],
+  stylesheets: [
+    'https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/orama-ui/orama-ui.css',
+  ],
+  //End of Orama script and stylesheet
   plugins: [
     [
       'docusaurus-plugin-openapi-docs',
@@ -111,16 +126,7 @@ const config = {
       },
        
     ],
-    [
-      "@orama/plugin-docusaurus-v3",
-      {
-        cloud: {
-          indexId: "z6ji7q9h38h8yrdd4pmg5kw0", // This is your index ID
-          oramaCloudAPIKey: "GCTg59dSHq1574qzLUAVeYdGGiykaHGV", // Your Private API key
-          deploy: false
-        },
-      },
-    ],
+   "./src/plugins/orama-search"
   ],
   themes: ["docusaurus-theme-openapi-docs"],
   themeConfig:
