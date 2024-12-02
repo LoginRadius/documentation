@@ -27,7 +27,7 @@ curl 'https://api.twilio.com/2010-04-01/Accounts/[username]/Messages.json' -X PO
 --data-urlencode 'To=whatsapp:[Receiver Phone number]' \
 --data-urlencode 'From=whatsapp:[Sender’s Phone number]' \
 --data-urlencode 'Body=[BODY]' \
--u ACxxxxx76c6cb4247xxxxxe7fbaxxxxx46:[AuthToken(Password)]
+-u xxxxx:[AuthToken(Password)]
 ```
 
 ### Bearer
