@@ -832,6 +832,58 @@ const sidebars = {
             },
           ],
         },
+
+        // Admin Console > Deployment >
+        {
+          type: "category",
+          label: "Deployment",
+          items: [
+            "apidocs/admin-console/deployment/production-environments",
+            "apidocs/admin-console/deployment/custom-domain-and-ssl-configuration",
+            "apidocs/admin-console/deployment/get-site-app-name",
+            "apidocs/admin-console/deployment/progressive-profiling",
+            "apidocs/admin-console/deployment/site-configurations-sync",
+            "apidocs/admin-console/deployment/js-widgets",
+          ]
+        },
+        // Admin Console > Platform Security >
+        {
+          type: "category",
+          label: "Platform Security",
+          items: [
+            "apidocs/admin-console/platform-security/platform-security-overview",
+            "apidocs/admin-console/platform-security/api-key-and-secret",
+            "apidocs/admin-console/platform-security/api-security",
+            "apidocs/admin-console/platform-security/auth-security-configuration",
+            "apidocs/admin-console/platform-security/password-policy",
+            "apidocs/admin-console/platform-security/security-question",
+            "apidocs/admin-console/platform-security/multi-factor-auth",
+            "apidocs/admin-console/platform-security/risk-based-auth",
+            "apidocs/admin-console/platform-security/session-management",
+            "apidocs/admin-console/platform-security/regulations",
+
+            // Admin Console > Platform Security > Captcha Providers
+            {
+              type: "category",
+              label: "Captcha Providers",
+              items: [
+                "apidocs/admin-console/platform-security/captcha-providers/google-recaptcha-configuration",
+                "apidocs/admin-console/platform-security/captcha-providers/hcaptcha-configuration",
+                "apidocs/admin-console/platform-security/captcha-providers/tencent-captcha-configuration",
+              ]
+            },
+          ],
+        },
+        // Admin Console > My Account >
+        {
+          type: "category",
+          label: "My Account",
+          items: [
+            "apidocs/admin-console/my-account/profile",
+            "apidocs/admin-console/my-account/login-session",
+            "apidocs/admin-console/my-account/security",
+          ]
+        },
       ]
     }
   ],
