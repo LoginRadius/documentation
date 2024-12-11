@@ -4,69 +4,70 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
-import governanceSideBar from "./docs/governance/sidebars.js"
+import { themes as prismThemes } from "prism-react-renderer";
+import governanceSideBar from "./docs/governance/sidebars.js";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Identity Platform Documentation',
-  tagline: 'Explore the LoginRadius Identity Platform documentation to seamlessly integrate identity management into your application. Access quick start guides, implementation tutorials, and example code. Find SDKs, APIs, and sample demos to simplify your identity management journey.',
-  favicon: 'img/favicon-lr.ico',
+  title: "Identity Platform Documentation",
+  tagline:
+    "Explore the LoginRadius Identity Platform documentation to seamlessly integrate identity management into your application. Access quick start guides, implementation tutorials, and example code. Find SDKs, APIs, and sample demos to simplify your identity management journey.",
+  favicon: "img/favicon-lr.ico",
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: "https://your-docusaurus-site.example.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'LoginRadius', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: "LoginRadius", // Usually your GitHub org/user name.
+  projectName: "docusaurus", // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          
+
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-            docRootComponent: "@theme/DocRoot",
-            docItemComponent: "@theme/ApiItem",
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          docRootComponent: "@theme/DocRoot",
+          docItemComponent: "@theme/ApiItem",
         },
         blog: {
           showReadingTime: true,
           feedOptions: {
-            type: ['rss', 'atom'],
+            type: ["rss", "atom"],
             xslt: true,
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       }),
     ],
@@ -75,21 +76,21 @@ const config = {
 
   scripts: [
     {
-      src: 'https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/orama-ui/orama-ui.esm.js',
-      type: 'module',
+      src: "https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/orama-ui/orama-ui.esm.js",
+      type: "module",
     },
     {
-      src: 'https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/cjs/orama-ui.cjs.js',
+      src: "https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/cjs/orama-ui.cjs.js",
       nomodule: true,
     },
   ],
   stylesheets: [
-    'https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/orama-ui/orama-ui.css',
+    "https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/orama-ui/orama-ui.css",
   ],
   //End of Orama script and stylesheet
   plugins: [
     [
-      'docusaurus-plugin-openapi-docs',
+      "docusaurus-plugin-openapi-docs",
       {
         id: "api", // plugin id
         docsPluginId: "classic", // id of plugin-content-docs or preset for rendering docs
@@ -101,21 +102,24 @@ const config = {
               groupPathsBy: "tag",
             },
           },
-          identity: { // Add a new API specification
+          identity: {
+            // Add a new API specification
             specPath: "src/identity.json", // Path to the new OpenAPI spec
             outputDir: "docs/cloud-directory-api/identity", // Output directory for the generated files
             sidebarOptions: {
               groupPathsBy: "tag", // Group sidebar items by operation "tag"
             },
           },
-          custom_object: { // Add a new API specification
+          custom_object: {
+            // Add a new API specification
             specPath: "src/custom-object.json", // Path to the new OpenAPI spec
             outputDir: "docs/cloud-directory-api/custom-object", // Output directory for the generated files
             sidebarOptions: {
               groupPathsBy: "tag", // Group sidebar items by operation "tag"
             },
           },
-          insighst: { // Add a new API specification
+          insighst: {
+            // Add a new API specification
             specPath: "src/insights.json", // Path to the new OpenAPI spec
             outputDir: "docs/cloud-directory-api/insights", // Output directory for the generated files
             sidebarOptions: {
@@ -123,7 +127,7 @@ const config = {
             },
           },
         },
-      }
+      },
     ],
     async function myCustomCSSPlugin(context, options) {
       return {
@@ -135,10 +139,8 @@ const config = {
           return postcssOptions;
         },
       };
-    }
-    ,
-   "./src/plugins/orama-search",
-
+    },
+    "./src/plugins/orama-search",
   ],
   themes: ["docusaurus-theme-openapi-docs"],
   themeConfig:
@@ -155,100 +157,87 @@ const config = {
       },
 
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: '',  // LoginRadius
+        title: "", // LoginRadius
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: "My Site Logo",
+          src: "img/logo.svg",
         },
 
-        
         items: [
           {
-           type: 'docSidebar',
-           sidebarId: 'DocsSidebar', // AdminConsoleSidebar
-            position: 'left',
-            label: 'Docs',
-            href: '/',
+            type: "docSidebar",
+            sidebarId: "DocsSidebar", // AdminConsoleSidebar
+            position: "left",
+            label: "Docs",
+            href: "/",
           },
 
           {
-            to: 'docs/apidocs/getting-started/introduction',
-            label: 'API Reference',
-            position: 'left',
+            to: "docs/apidocs/getting-started/introduction",
+            label: "API Reference",
+            position: "left",
           },
 
           {
-            to: 'docs/category/apis',
-            label: 'APIs',
-            position: 'left',
-            rel: '',
+            to: "docs/category/apis",
+            label: "APIs",
+            position: "left",
+            rel: "",
           },
 
-          {to: 'https://www.loginradius.com/engineering/', label: 'Blog', position: 'left'},
           {
-            href: 'https://adminconsole.loginradius.com/dashboard',
-            label: 'Admin Console',
-            position: 'right',
+            to: "https://www.loginradius.com/engineering/",
+            label: "Blog",
+            position: "left",
           },
           {
-            type: 'search',
-            position: 'right',
+            href: "https://adminconsole.loginradius.com/dashboard",
+            label: "Admin Console",
+            position: "right",
+            class: "nav-round-item flex justify-center m-2 gap-2",
+          },
+          {
+            href: "https://adminconsole.loginradius.com/signin",
+            label: "Signin",
+            position: "right",
+            class: "nav-round-item flex justify-center gap-2",
+          },
+
+          {
+            type: "search",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "light",
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/authentication/overview',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Terms',
-                href: 'https://www.loginradius.com/terms/',
-              },
-              {
-                label: 'Privacy',
-                href: 'https://www.loginradius.com/privacy-policy/',
-              },
-              {
-                label: 'Contact',
-                href: 'https://www.loginradius.com/contact-sales/',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Engineering Blog',
-                to: 'https://www.loginradius.com/engineering/',
-              },
-              {
-                label: 'Status Page',
-                href: 'https://status.loginradius.com/',
-              },
-            ],
+            html: `
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+  <div style="flex: 1; text-align: left;">
+    Help us Improve our docs
+  </div>
+  <div style="flex: 1; text-align: center;">
+Copyright © ${new Date().getFullYear()} LoginRadius Inc.  </div>
+  <div style="flex: 1; text-align: right;">
+    <a href="/terms" style="margin-left: 10px;">Terms</a>
+    <a href="/privacy" style="margin-left: 10px;">Privacy</a>
+    <a href="/more" style="margin-left: 10px;">More</a>
+  </div>
+</div>
+              `,
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} LoginRadius Inc.`,
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
       colorMode: {
-        defaultMode: 'light',
+        defaultMode: "light",
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },

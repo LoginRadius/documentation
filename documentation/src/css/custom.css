@@ -36,11 +36,11 @@
 /* custom css by Nikhil */
 
 .navbar {
-  background-color: #020b13;
+  background-color: #ffffff;
 }
 
 .navbar__link {
-  color: #ffffff;
+  color: #000000;
 }
 
 .hero--primary {
@@ -257,4 +257,51 @@ pre::-webkit-scrollbar-thumb {
 
 pre::-webkit-scrollbar-thumb:hover {
   background: #555; /* Hover state of scrollbar */
+}
+
+.theme-doc-sidebar-container .menu {
+
+background-color: #ffffff;
+}
+
+.menu__list-item>ul>li{
+  color: black;
+}
+
+.navbar__items{
+  display: flex;
+  gap: 20px;
+} 
+
+.nav-round-item{
+ border: solid black 2px;
+border-radius: 15px;
+padding:5px;
+ cursor: pointer;
+}
+
+.nav-round-item:hover{
+background-color: #00b8e6;
+color: #000000;
+}
+
+.nav-round-item>svg{
+display: none;
+ } 
+
+
+.menu{
+  background-color: #ffffff;
+}
+
+.menu__list-item-collapsible>a{
+color: #000000;
+}
+
+.footer{
+  padding: 1px;
+
+}
+.footer>div{
+  padding: 1px;
 }
