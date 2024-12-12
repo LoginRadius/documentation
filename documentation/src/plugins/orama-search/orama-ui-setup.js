@@ -15,11 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
         searchContainer.style.marginLeft = 'auto';
         searchContainer.style.display = 'flex';
         searchContainer.style.alignItems = 'center';
+        searchContainer.className = 'gap-2 pl-3';
   
         searchContainer.innerHTML = `
           <div id="orama-ui">
             <orama-search-button onClick="open = !open">Ask Ai..</orama-search-button>
-            <orama-search-box style="width: 500px;"></orama-search-box>
+            <orama-search-box style="width: 1000px;"></orama-search-box>
           </div>
         `;
   
