@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         searchContainer.innerHTML = `
           <div id="orama-ui">
             <orama-search-button onClick="open = !open">Ask Ai..</orama-search-button>
-            <orama-search-box style="width: 500px;"></orama-search-box>
+            <orama-search-box style="width: 1000px;"></orama-search-box>
           </div>
         `;
   
