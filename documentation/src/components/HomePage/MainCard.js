@@ -2,7 +2,10 @@ import React from "react";
 
 function MainCard() {
   return (
-    <div className=" bg-gradient-to-r from-slate-900 to-blue-950 rounded-lg shadow-md m-3 flex flex-col justify-between md:flex-row items-center">
+    <div
+      className="bg-black bg-[url('/img/bgimage.png')] bg-center
+ rounded-lg shadow-md m-3 flex flex-col justify-between md:flex-row items-center"
+    >
       <div className="text-section p-4">
         <h2 className="text-white font-extrabold text-xl">
           Empower your apps with LoginRadius

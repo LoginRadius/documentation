@@ -297,3 +297,19 @@ pre::-webkit-scrollbar-thumb {
 [data-theme='dark'] .footer {
   background-color: var(--ifm-navbar-background-color);
 }
+
+.navbar__brand{
+  margin-right:0%
+}
+
+@media (max-width: 996px) {
+  .navfullcontainer-right{
+    display: none;
+}
+}
+
+@media (max-width: 757px) {
+  .navfullcontainer-left{
+    display: none;
+}
+}
