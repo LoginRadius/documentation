@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useRef, useEffect } from "react";
 import { useThemeConfig, ErrorCauseBoundary } from "@docusaurus/theme-common";
 import {
   splitNavbarItems,
@@ -39,6 +39,16 @@ ${JSON.stringify(item, null, 2)}`,
 function NavbarContentLayout({ LogoContainer, right }) {
   const [isAPIDropdownOpen, setisAPIDropdownOpen] = useState(false);
   const [isSDKDropdownOpen, setisSDKDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  
+  
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setisAPIDropdownOpen(false);
+      setisSDKDropdownOpen(false);
+
+    }
+  };
 
   const toggleAPIDropdown = () => {
     setisAPIDropdownOpen(!isAPIDropdownOpen);
@@ -48,6 +58,23 @@ function NavbarContentLayout({ LogoContainer, right }) {
     setisSDKDropdownOpen(!isSDKDropdownOpen);
     setisAPIDropdownOpen(false);
   };
+
+
+
+  useEffect(() => {
+    const handleDocumentClick = (event) => {
+      // Close the dropdown when clicking outside
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setisSDKDropdownOpen(false);
+        setisAPIDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleDocumentClick);
+    return () => {
+      document.removeEventListener("mousedown", handleDocumentClick);
+    };
+  }, []);
 
   return (
     <div className="navbar__inner items-center">
@@ -101,10 +128,10 @@ function NavbarContentLayout({ LogoContainer, right }) {
             </button>
 
             {isSDKDropdownOpen && (
-              <div className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <div ref={dropdownRef} className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div className="py-1">
                   <a
-                    href="docs/apidocs/getting-started/introduction"
+                    href="/docs/apidocs/getting-started/introduction"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     API Reference
@@ -113,7 +140,7 @@ function NavbarContentLayout({ LogoContainer, right }) {
               </div>
             )}
           </div>
-          <div className="relative inline-block text-left self-center">
+          <div  className="relative inline-block text-left self-center">
             <button
               onClick={toggleAPIDropdown}
               className="inline-flex w-full justify-center rounded-md  px-4 py-2 text-sm font-medium  shadow-sm hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-100"
@@ -139,10 +166,10 @@ function NavbarContentLayout({ LogoContainer, right }) {
             </button>
 
             {isAPIDropdownOpen && (
-              <div className="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <div ref={dropdownRef} className="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div className="py-1">
                   <a
-                    href="docs/category/apis"
+                    href="/docs/category/apis"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     API Reference
