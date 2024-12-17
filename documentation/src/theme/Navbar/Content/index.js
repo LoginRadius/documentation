@@ -11,6 +11,8 @@ import NavbarMobileSidebarToggle from "@theme/Navbar/MobileSidebar/Toggle";
 import NavbarLogo from "@theme/Navbar/Logo";
 import NavbarSearch from "@theme/Navbar/Search";
 import styles from "./styles.module.css";
+import RightNavButtons from "../../../components/Navbar/RightNavButtons";
+import { MenuItems } from "../../../components/Navbar/MenuItems";
 function useNavbarItems() {
   // TODO temporary casting until ThemeConfig type is improved
   return useThemeConfig().navbar.items;
@@ -40,13 +42,11 @@ function NavbarContentLayout({ LogoContainer, right }) {
   const [isAPIDropdownOpen, setisAPIDropdownOpen] = useState(false);
   const [isSDKDropdownOpen, setisSDKDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
-  
-  
+
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setisAPIDropdownOpen(false);
       setisSDKDropdownOpen(false);
-
     }
   };
 
@@ -58,8 +58,6 @@ function NavbarContentLayout({ LogoContainer, right }) {
     setisSDKDropdownOpen(!isSDKDropdownOpen);
     setisAPIDropdownOpen(false);
   };
-
-
 
   useEffect(() => {
     const handleDocumentClick = (event) => {
@@ -79,7 +77,7 @@ function NavbarContentLayout({ LogoContainer, right }) {
   return (
     <div className="navbar__inner items-center">
       <div className="flex justify-between align-middle w-full">
-        <div className="flex px-3">
+        <div className="flex px-3 w-[300px]">
           {" "}
           {LogoContainer}
           {/* <a href="#" class=" text-xs font-semibold  rounded   border  inline-flex items-center ">Docs</a> */}
@@ -128,19 +126,26 @@ function NavbarContentLayout({ LogoContainer, right }) {
             </button>
 
             {isSDKDropdownOpen && (
-              <div ref={dropdownRef} className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                <div className="py-1">
-                  <a
-                    href="/docs/apidocs/getting-started/introduction"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    API Reference
-                  </a>
-                </div>
+              <div
+                ref={dropdownRef}
+                className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              >
+                {MenuItems.filter((menu) => menu.Titel === "API")[0].Data.map(
+                  (item, idx) => (
+                    <div className="py-1" key={idx}>
+                      <a
+                        href={item.link} // Use item.link to dynamically set the link
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        {item.name} {/* Dynamically set the name */}
+                      </a>
+                    </div>
+                  )
+                )}
               </div>
             )}
           </div>
-          <div  className="relative inline-block text-left self-center">
+          <div className="relative inline-block text-left self-center">
             <button
               onClick={toggleAPIDropdown}
               className="inline-flex w-full justify-center rounded-md  px-4 py-2 text-sm font-medium  shadow-sm hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-100"
@@ -166,51 +171,29 @@ function NavbarContentLayout({ LogoContainer, right }) {
             </button>
 
             {isAPIDropdownOpen && (
-              <div ref={dropdownRef} className="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                <div className="py-1">
-                  <a
-                    href="/docs/category/apis"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    API Reference
-                  </a>
-                </div>
+              <div
+                ref={dropdownRef}
+                className="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              >
+                {MenuItems.filter((menu) => menu.Titel === "SDK")[0].Data.map(
+                  (item, idx) => (
+                    <div className="py-1" key={idx}>
+                      <a
+                        href={item.link} // Use item.link to dynamically set the link
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        {item.name} {/* Dynamically set the name */}
+                      </a>
+                    </div>
+                  )
+                )}
               </div>
             )}
           </div>
         </div>
         <div className="navfullcontainer-right flex gap-2 content-around">
           {" "}
-          <button
-            type="button"
-            class="gap-2 focus:ring-4 focus:outline-none border border-gray-600 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center hover:bg-[#4FBB61FF]/30 m-2"
-          >
-            <svg
-              className="w-6 h-6  dark:text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M16 10.5h.01m-4.01 0h.01M8 10.5h.01M5 5h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-6.6a1 1 0 0 0-.69.275l-2.866 2.723A.5.5 0 0 1 8 18.635V17a1 1 0 0 0-1-1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"
-              />
-            </svg>
-            Chat With Us
-            <span class="flex w-2 h-2 me-2 bg-green-500 rounded-full"></span>
-          </button>
-          <button
-            type="button"
-            class="gap-2 focus:ring-4 focus:outline-none border border-gray-600 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center hover:bg-[#F0F0F0FF]/30 m-2"
-          >
-            Signin
-          </button>
+          <RightNavButtons />
           <NavbarColorModeToggle className={styles.colorModeToggle} />
         </div>
       </div>
