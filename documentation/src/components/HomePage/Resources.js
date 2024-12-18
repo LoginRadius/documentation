@@ -25,7 +25,7 @@ const Resources = () => {
             key={index}
             href={card.link}
 
-            className="flex flex-row items-center space-x-4 p-4  shadow shadow-gray-500 rounded-md no-underline	 "
+            className="flex flex-row items-center space-x-4 p-4  shadow shadow-gray-500 rounded-md !no-underline hover:scale-105 cursor-pointer"
             target={card.target}
 >
             

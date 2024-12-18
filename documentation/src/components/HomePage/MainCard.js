@@ -14,7 +14,7 @@ function MainCard() {
           Find all the guides and resources you need to develop with
           LoginRadius.
         </h4>
-        <button className="flex w-fit gap-3 rounded-lg p-3 bg-white text-black mt-4">
+        <a className="flex w-fit gap-3 rounded-lg p-3 bg-white text-black mt-4 hover:scale-105 cursor-pointer font-semibold">
           Try for Free
           <svg
             className="w-6 h-6 text-gray-800 dark:text-white"
@@ -27,13 +27,13 @@ function MainCard() {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M19 12H5m14 0-4 4m4-4-4-4"
             />
           </svg>
-        </button>
+        </a>
       </div>
       <div className="image-section relative m-4 flex items-center justify-center overflow-clip">
         <img

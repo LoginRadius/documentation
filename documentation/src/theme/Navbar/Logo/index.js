@@ -8,10 +8,11 @@ export default function NavbarLogo() {
         imageClassName="navbar__logo"
         titleClassName="navbar__title text--truncate"
       />
-
-      <span className="my-3 border-2 font-semibold border-blue-950 dark:border-white rounded-full px-4 py-1 text-sm sm:text-base ">
-        DOCS
-      </span>
+      <a href="/" className="self-center !no-underline	">
+        <span className="my-3 no-underline border-2 font-semibold border-blue-950 dark:border-white rounded-full px-4 py-1 text-sm sm:text-base ">
+          DOCS
+        </span>
+      </a>
     </>
   );
 }

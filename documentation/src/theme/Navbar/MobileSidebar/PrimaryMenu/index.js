@@ -77,7 +77,7 @@ export default function NavbarMobilePrimaryMenu() {
             Getting Started
           </a>
         </li>
-        <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
+        <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
 
         <div className="w-full ">
           <ul>
@@ -115,7 +115,7 @@ export default function NavbarMobilePrimaryMenu() {
                   }`}
                 >
                   {menu.Data.map((item, idx) => (
-                    <li key={idx} className="pl-4">
+                    <li key={idx} className="pl-4 !no-underline">
                       <a
                         href={item.link}
                         className="block "
@@ -129,7 +129,7 @@ export default function NavbarMobilePrimaryMenu() {
             ))}
           </ul>
         </div>
-        <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
+        <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
       </ul>
 
       <div className="flex flex-wrap gap-2 ">

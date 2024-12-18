@@ -76,11 +76,11 @@ function NavbarContentLayout({ LogoContainer, right }) {
 
   return (
     <div className="navbar__inner items-center">
-      <div className="flex justify-between align-middle w-full">
-        <div className="flex px-3 w-[300px]">
+      <div className="flex gap-2 justify-between align-middle w-full">
+        <div className="flex px-3 w-[300px] md:border-r-2">
           {" "}
           {LogoContainer}
-          {/* <a href="#" class=" text-xs font-semibold  rounded   border  inline-flex items-center ">Docs</a> */}
+          {/* <a href="#" className=" text-xs font-semibold  rounded   border  inline-flex items-center ">Docs</a> */}
         </div>
         <div className="navfullcontainer-left flex gap-3  flex-1">
           <div
@@ -94,7 +94,7 @@ function NavbarContentLayout({ LogoContainer, right }) {
             />
 
             <div className="absolute inset-y-0 right-2 flex items-center">
-              <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+              <kbd className="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
                 Ctrl+K
               </kbd>
             </div> */}
@@ -135,7 +135,7 @@ function NavbarContentLayout({ LogoContainer, right }) {
                     <div className="py-1" key={idx}>
                       <a
                         href={item.link} // Use item.link to dynamically set the link
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 !no-underline"
                       >
                         {item.name} {/* Dynamically set the name */}
                       </a>
@@ -180,7 +180,7 @@ function NavbarContentLayout({ LogoContainer, right }) {
                     <div className="py-1" key={idx}>
                       <a
                         href={item.link} // Use item.link to dynamically set the link
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 !no-underline"
                       >
                         {item.name} {/* Dynamically set the name */}
                       </a>

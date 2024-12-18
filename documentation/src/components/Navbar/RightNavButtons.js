@@ -5,7 +5,7 @@ const RightNavButtons = () => {
     <>
       <button
         type="button"
-        class="gap-2 focus:ring-4 focus:outline-none border border-gray-600 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center hover:bg-[#4FBB61FF]/30 m-2"
+        className="gap-2 focus:ring-4 focus:outline-none border border-gray-600 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center hover:bg-[#4FBB61FF]/30 m-2"
       >
         <svg
           className="w-6 h-6  "
@@ -25,11 +25,11 @@ const RightNavButtons = () => {
           />
         </svg>
         Chat With Us
-        <span class="flex w-2 h-2 me-2 bg-green-500 rounded-full"></span>
+        <span className="flex w-2 h-2 me-2 bg-green-500 rounded-full"></span>
       </button>
       <button
         type="button"
-        class="gap-2 focus:ring-4 focus:outline-none border border-gray-600 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center hover:bg-[#F0F0F0FF]/30 m-2"
+        className="gap-2 focus:ring-4 focus:outline-none border border-gray-600 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center hover:bg-[#F0F0F0FF]/30 m-2"
       >
         Signin
       </button>
