@@ -14,7 +14,7 @@ function MainCard() {
           Find all the guides and resources you need to develop with
           LoginRadius.
         </h4>
-        <a className="flex w-fit gap-3 rounded-lg p-3 bg-white text-black mt-4 hover:scale-105 cursor-pointer font-semibold">
+        <a href="https://console.loginradius.com/" target="_blank" className="flex w-fit gap-3 rounded-lg p-3 bg-white text-black mt-4 hover:scale-105 cursor-pointer font-semibold">
           Try for Free
           <svg
             className="w-6 h-6 text-gray-800 dark:text-white"
@@ -37,7 +37,7 @@ function MainCard() {
       </div>
       <div className="image-section relative m-4 flex items-center justify-center overflow-clip">
         <img
-          src="/img/dashboard.png"
+          src="/img/dashboard1.png"
           alt="Resource Preview"
           className="rounded-lg w-full"
           style={{ maxHeight: "300px", maxWidth: "400px" }}

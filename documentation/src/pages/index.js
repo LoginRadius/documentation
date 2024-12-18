@@ -14,7 +14,7 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <main className="container">
+      <main className="container !mt-3">
         <MainCard />
         <QuickStart />
         <ExploreByFeature />
