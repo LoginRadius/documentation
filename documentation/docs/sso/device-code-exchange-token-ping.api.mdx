@@ -1,0 +1,71 @@
+---
+id: device-code-exchange-token-ping
+title: "Device Code Exchange Token Ping"
+description: "Device Code Exchange Token Ping"
+sidebar_label: "Device Code Exchange Token Ping"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVM1u2zAMfhWDpw1Q4mxHHwZsWQfslKLpToFRMBJrq5UlVZLbBobffaDtpEnbtdgwX6JIJMXvh+ogYRWh2MAPUhQwkcrW61X2JVt50vanypbOWpIJSgGB7lqK6ZtTOyg6kM4msomX6L3REpN2Nr+JzvJelDU1yKu08wQFuO0NFxJAj9h4Q0MNo8mmK62gAOAbonc20tWUAgIU3WtJV0unpo0qoE2HgJ4/AR4DNpQoMJYOLDZ8ukRZ02zpbArOgABtoYCaUFEA8bLBmIK2FfRHHYJ1M8lVoBeHshPw2SWn/VPVF3wdVXdaSfR++DcV95jqt0uzNDqQgiKFlvryicrI8Z8XC/5RFGXQnq+FAtatlBTjdWuyfTCId1Qd2T6t831QKGOFsrNHWaOtKLt0t2Szc25PQEOpdiyxd5ENMOApIEevc4abd0eg+zxxLuOlcL9XtA2GWU7JxyLPuy7qRG0wfT9Q9+x0f/jKmTSuVTP0em5cpW1Apds4l64BJo1RXjy5/Ox/GpW1vHaDejoNLlhrWxnK1rqysxUDZrQjp5/mi/mCc5ixBoeBmvzxPt0n8hzMkugx5d6gZreNrHSTEhtAr0EM1gMBxakFRzlKATWrV2yg67YY6dfAfingrqWwg2JTCrjHoHHL4DYdKB15raC4RhPpRV8Hp8GHi8m+HzO+77V+p020O+YJTTuRfEu7ZzPTl73Yj+PftfGnu8c7nj8mhybYZFPI6cOwj3h12seMr1KST2/Glkfzc75aX4KA7fQCN6PXAj6wJfFhxOAGaMPcD3sdGLRVixXHjjX5+w0Lzgid
+sidebar_class_name: "post api-method"
+info_path: docs/sso/single-sign-on
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Device Code Exchange Token Ping"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/oidc/{oidcappname}/token"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Device Code Exchange Token Ping
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"Cache-Control","in":"header","schema":{"type":"string"},"example":"no-cache"},{"name":"content-Type","in":"header","schema":{"type":"string"},"example":"application/json"},{"name":"oidcappname","in":"path","schema":{"type":"string"},"required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"client_id":"","response_type":"","device_Code":"","grant_type":""}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

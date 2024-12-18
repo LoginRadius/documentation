@@ -1,0 +1,71 @@
+---
+id: oidc-discovery-endpoint
+title: "OIDC Discovery Endpoint"
+description: "OIDC Discovery Endpoint"
+sidebar_label: "OIDC Discovery Endpoint"
+hide_title: true
+hide_table_of_contents: true
+api: eJydlE1v2zAMhv+KwdMGyHG2ow4DirQbelmApTsFPqgS43CVJVWS0waG/vvAfCFNswHbyZZIv3r5kPIIWXUJ5BK+osGoMppqsZhXX6p5QHL3ppp551BnaAUEFVWPGSN/MIJTPYKEmdJrrGfe5egtCCAHEtaoDEYQkPQaewVyhLwNnJ5yJNdBEYCvqg+W95yvNatAESdZ7V1Gl+sH/uy/VFUIlrTK5F3zK3l3rj6/v53dhPCdVwfxoPL679IRnweKaEDmOGBpeScF7xImzv88nfLDYNKRAh8LEhaD1pjSarDVMRnEsThOf+dSjqWUIi502HB1S0n7DcZtdedM8OQyCOgxr70BCR3ycleGhCZh3JDGxpPRzXhWb2kmL2ht/eT8i2t8QEem1t6tqBvizgdTwLg59nmIltnnHJJsmnFMlHGItpQd0IvoMXglpq0fTK0CTazvyEVlaEgT7XtglORWfked8q57C3KdxWpBnavnbIn97Fl8mkwnU25I8Cn3ipGd9/U6pjc4T83N+JqbYBXxdOz9jgeESzggBAEMEQTIt2NzxpFzrpFsBax9yqw2jo8q4c8duFbA84BxC3LZCtioSOqRq16OYCjxuwG5UjbhO+On0YEPPw7z+LECcb2gw6ZyWwao7MArEPCE24tLUNoijvfr32z86ez9GZd/h5MJno99yo3WGPJZ7P3Fbc/G/NvdA5TyG1HdmtM=
+sidebar_class_name: "get api-method"
+info_path: docs/sso/single-sign-on
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"OIDC Discovery Endpoint"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/service/oidc/{OIDCAppName}/.well-known/openid-configuration"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+OIDC Discovery Endpoint
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"Cache-Control","in":"header","schema":{"type":"string"},"example":"no-cache"},{"name":"content-Type","in":"header","schema":{"type":"string"},"example":"application/json"},{"name":"OIDCAppName","in":"path","schema":{"type":"string"},"required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

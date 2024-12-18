@@ -1,19 +1,24 @@
 export const MenuItems = [
+
   {
-    Titel: "SDK",
+    Title: "API",
     Data: [
-      { name: "Home", link: "#" },
-      { name: "Mobile SDK", link: "#" },
-      { name: "Web SDKs", link: "#" },
+      { name: "Getting Started", link: "/docs/apidocs/getting-started/introduction" },
+      { name: "Authentication API", link: "/docs/category/apis" },
+      { name: "Account API", link: "/docs/category/account" },
+      { name: "Cloud API", link: "/docs/category/cloud-directory-api" },
+      { name: "SSO API", link: "/docs/category/sso" },
+
     ],
   },
+
   {
-    Titel: "API",
+    Title: "SDKs",
     Data: [
-      { name: "Getting Started", link: "#" },
-      { name: "Authentication API", link: "#" },
-      { name: "Account API", link: "#" },
-      { name: "Cloud API", link: "#" },
+      { name: "Home", link: "/docs/libraries/overview" },
+      { name: "Mobile SDK", link: "/docs/libraries/mobile-sdk-libraries/overview" },
+      { name: "Web SDKs", link: "/docs/libraries/sdk-libraries/overview" },
     ],
   },
+  
 ];

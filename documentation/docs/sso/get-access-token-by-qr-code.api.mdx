@@ -1,0 +1,71 @@
+---
+id: get-access-token-by-qr-code
+title: "Get Access Token by QR Code"
+description: "Get Access Token by QR Code"
+sidebar_label: "Get Access Token by QR Code"
+hide_title: true
+hide_table_of_contents: true
+api: eJytlMFuozAQhl8FzdkJ2T36VqVRtaeqSXqKODgwAW+N7XpM1Ajx7quBkCVNFWlXPSGY8f/PfDOmhahKArmDZXBEySMedY7JZvMMmQCvgqoxYuCMFqyqESQsVV7hbOlsDM6AAG1BQoWqwAACKK+wViBbiCfP6RSDtiV0AvBD1d7wN+tmOatAJy6yubMRbZxt+dh/qSrvjc5V1M6mv8nZqbry+g1Po+57g+F0X7ZAyoP2LAYS1quX11/r1SNM/dp2UO266z4K/G4f1mSXTEBA8s4SEqv9XCz4ca2xafIciQ6NScZkECNeTr/hJNuu625qecKYPPRSyda9oU32p+RlnSyH/mqMlStAQokReFViBRJSIpfWbq8NppEPcfMYjuMKNcHwWGP0JNO0bUlHbII5E/wUHYNfxHLjmmKmvJ4bV2obVKEbmueu7hlpe3A9bB17gBttS4PJRpd29swlcT1Dkz/mi/mC5+AdxVoxi3GQ9/u/YnWZa8SPmHqjNC/fUHN7ZrMDIsfgejogYOCTCagcRY637V4RvvY4MnFeHqZWaFJ7gwXIgzKEN+aX2U7358uK+A5MLsNRmYaTesLf7XK+CH89Mn4Jmk1A7rJOjPf733q87/r573TV4pDCQ/VxErv9cWSTBX9abaHr/gB0Grzl
+sidebar_class_name: "get api-method"
+info_path: docs/sso/single-sign-on
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Access Token by QR Code"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/sso/mobile/token"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get Access Token by QR Code
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"Cache-Control","in":"header","schema":{"type":"string"},"example":"no-cache"},{"name":"content-Type","in":"header","schema":{"type":"string"},"example":"application/json"},{"name":"apikey","in":"query","schema":{"type":"string"},"description":"REQUIRED","example":"{{apikey}}"},{"name":"code","in":"query","schema":{"type":"string"},"description":"REQUIRED","example":"{{code}}"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

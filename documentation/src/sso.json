@@ -1,0 +1,842 @@
+openapi: 3.0.0
+info:
+  title: Single Sign-On
+  version: 1.0.0
+servers:
+  - url: https://{{siteurl}}
+  - url: https://{siteurl}
+  - url: https://cloud-api.loginradius.com
+tags:
+  - name: Federated SSO
+  - name: Federated SSO > oauth2.0
+  - name: Federated SSO > JWT Login
+  - name: Federated SSO > OpeinId Connect
+  - name: Federated SSO > SAML
+  - name: Machine To Machine
+  - name: SSO Connector
+  - name: Cross Device SSO
+paths:
+  /api/oauth/{OAuthAPPName}/token:
+    post:
+      tags:
+        - Federated SSO > oauth2.0
+      summary: Access token by OAuth 2 token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                client_id: ''
+                client_secret: ''
+                redirect_uri: ''
+                grant_type: authorization_code
+                response_type: token
+                code: ''
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: OAuthAPPName
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/oauth/{OauthAppName}/token:
+    post:
+      tags:
+        - Federated SSO > oauth2.0
+      summary: Refresh Access Token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                client_id: ''
+                client_secret: ''
+                grant_type: refresh_token
+                refresh_token: ''
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: OauthAppName
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/oauth/{OauthAppName}/revoke:
+    post:
+      tags:
+        - Federated SSO > oauth2.0
+      summary: Revoke Refresh Token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                client_id: ''
+                client_secret: ''
+                refresh_token: ''
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: OauthAppName
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/jwt/{jwtappname}/token:
+    get:
+      tags:
+        - Federated SSO > JWT Login
+      summary: JWT token by Access Token
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/x-www-form-urlencoded
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          example: '{{apikey}}'
+        - name: access_token
+          in: query
+          schema:
+            type: string
+          example: '{{accesstoken}}'
+        - name: jwtappname
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/jwt/{jwtappname}/login:
+    post:
+      tags:
+        - Federated SSO > JWT Login
+      summary: JWT token by Phone and Password
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                phone: ''
+                password: ''
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          example: '{{apikey}}'
+        - name: verificationurl
+          in: query
+          schema:
+            type: string
+        - name: loginurl
+          in: query
+          schema:
+            type: string
+        - name: emailtemplate
+          in: query
+          schema:
+            type: string
+        - name: jwtappname
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/oidc/{OIDCAppName}/token:
+    post:
+      tags:
+        - Federated SSO > OpeinId Connect
+      summary: Refresh Access Token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                grant_type: refresh_token
+                client_id: ''
+                client_secret: ''
+                refresh_token: ''
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: OIDCAppName
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/oidc/{OIDCAppName}/revoke:
+    post:
+      tags:
+        - Federated SSO > OpeinId Connect
+      summary: Revoke Refresh Token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                client_id: ''
+                client_secret: ''
+                token: ''
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: OIDCAppName
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /service/oidc/{OIDCAppName}/userinfo:
+    get:
+      tags:
+        - Federated SSO > OpeinId Connect
+      summary: UserInfo by Access Token
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: 'Bearer '
+        - name: OIDCAppName
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /service/oidc/{OIDCAppName}/JWKS:
+    get:
+      tags:
+        - Federated SSO > OpeinId Connect
+      summary: JSON Web Key Set
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: OIDCAppName
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /service/oidc/{OIDCAppName}/.well-known/openid-configuration:
+    get:
+      tags:
+        - Federated SSO > OpeinId Connect
+      summary: OIDC Discovery Endpoint
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: OIDCAppName
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/oidc/{oidcappname}/device/code:
+    post:
+      tags:
+        - Federated SSO > OpeinId Connect
+      summary: Request Device Code
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                client_id: ''
+                Scope: ''
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: oidcappname
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/oidc/{oidcappname}/token:
+    post:
+      tags:
+        - Federated SSO > OpeinId Connect
+      summary: Device Code Exchange Token Ping
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                client_id: ''
+                response_type: ''
+                device_Code: ''
+                grant_type: ''
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: oidcappname
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /service/saml/idp/metadata:
+    get:
+      tags:
+        - Federated SSO > SAML
+      summary: Get SAML Metadata
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/x-www-form-urlencoded
+        - name: appName
+          in: query
+          schema:
+            type: string
+          example: '{{appname}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /service/oauth/jwks:
+    get:
+      tags:
+        - Machine To Machine
+      summary: To Validate the JWT
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /service/oauth/introspect:
+    post:
+      tags:
+        - Machine To Machine
+      summary: Check the validity and content of the Access Token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                token: <AccessToken>
+                token_type_hint: access_token
+                client_id: ''
+                client_secret: ''
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /service/oauth/token:
+    post:
+      tags:
+        - Machine To Machine
+      summary: Generate Access Token Using Client Credential Flow
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                audience: https://api.loginradius.com/identity/v2/manage
+                grant_type: client_credentials
+                client_id: ''
+                client_secret: ''
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /service/oauth/revoke:
+    post:
+      tags:
+        - Machine To Machine
+      summary: Revoke Access Token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                token: ''
+                client_id: ''
+                client_secret: ''
+                token_type_hint: access_token
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /sso/bigcommerce/api/token:
+    get:
+      tags:
+        - SSO Connector
+      summary: Bigcommerce Login URL by Access Token
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/x-www-form-urlencoded
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Bearer
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: REQUIRED
+          example: '{{apikey}}'
+        - name: store
+          in: query
+          schema:
+            type: string
+          description: REQUIRED
+          example: '{{store}}'
+        - name: password
+          in: query
+          schema:
+            type: string
+        - name: return_url
+          in: query
+          schema:
+            type: string
+        - name: callback
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /sso/shopify/api/token:
+    get:
+      tags:
+        - SSO Connector
+      summary: Shopify Login URL by Access Token
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/x-www-form-urlencoded
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Bearer
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: REQUIRED
+          example: '{{apikey}}'
+        - name: store
+          in: query
+          schema:
+            type: string
+          description: REQUIRED
+          example: '{{store}}'
+        - name: password
+          in: query
+          schema:
+            type: string
+        - name: return_url
+          in: query
+          schema:
+            type: string
+        - name: callback
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /sso/perfectmind/session:
+    get:
+      tags:
+        - SSO Connector
+      summary: PerfectMind
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/x-www-form-urlencoded
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Bearer
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: REQUIRED
+          example: '{{apikey}}'
+        - name: perfectMindSiteName
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /sso/perfectmind/contact:
+    get:
+      tags:
+        - SSO Connector
+      summary: Perfectmind Contact
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/x-www-form-urlencoded
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: REQUIRED
+          example: '{{apikey}}'
+        - name: perfectMindSiteName
+          in: query
+          schema:
+            type: string
+        - name: access_token
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /sso/mobile/generate:
+    get:
+      tags:
+        - Cross Device SSO
+      summary: Generate QR Code String
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: REQUIRED
+          example: '{{apikey}}'
+        - name: expiry (TTL in seconds)
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /sso/mobile/token:
+    get:
+      tags:
+        - Cross Device SSO
+      summary: Get Access Token by QR Code
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: REQUIRED
+          example: '{{apikey}}'
+        - name: code
+          in: query
+          schema:
+            type: string
+          description: REQUIRED
+          example: '{{code}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - Cross Device SSO
+      summary: Add QR Token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                access_token: ''
+                code: ''
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: REQUIRED
+          example: '{{apikey}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}

@@ -30,8 +30,8 @@ function ExploreByFeature() {
         </svg>
       ),
       title: "Authentication",
-      text: "Explore our end-to-end tutorial guide for application stacks using LoginRadius",
-      link: "#",
+      text: "A quick run-through of authentication processes and features offered by the LoginRadius Identity Platform.",
+      link: "/docs/authentication/overview",
     },
     {
       icon: (
@@ -51,8 +51,8 @@ function ExploreByFeature() {
         </svg>
       ),
       title: "Single Sign on",
-      text: "Explore our end-to-end tutorial guide for application stacks using LoginRadius",
-      link: "#",
+      text: "Configure seamless authentication of your customers into your application or third-party applications.",
+      link: "docs/single-sign-on/overview",
     },
     {
       icon: (
@@ -82,8 +82,8 @@ function ExploreByFeature() {
         </svg>
       ),
       title: "Orchestration",
-      text: "Explore our end-to-end tutorial guide for application stacks using LoginRadius",
-      link: "#",
+      text: "Effortlessly tailor workflows, implement custom scripts, and personalize themes to align with your unique business requirements.",
+      link: "/docs/libraries/identity-orchestration/overview",
     },
     {
       icon: (
@@ -113,8 +113,8 @@ function ExploreByFeature() {
         </svg>
       ),
       title: "Branding",
-      text: "Explore our end-to-end tutorial guide for application stacks using LoginRadius",
-      link: "#",
+      text: "Streamline your outreach and user interaction with configurable Email/SMS providers, hosted pages, customizable email/SMS templates, and dynamic forms.",
+      link: "/docs/authentication/concepts/email-communications",
     },
     {
       icon: (
@@ -139,8 +139,8 @@ function ExploreByFeature() {
         </svg>
       ),
       title: "Security",
-      text: "Explore our end-to-end tutorial guide for application stacks using LoginRadius",
-      link: "#",
+      text: "Understand and enable the different LoginRadius Identity Platform security features for your customers.",
+      link: "/docs/security/overview",
     },
     {
       icon: (
@@ -165,8 +165,8 @@ function ExploreByFeature() {
         </svg>
       ),
       title: "Team Management",
-      text: "Explore our end-to-end tutorial guide for application stacks using LoginRadius",
-      link: "#",
+      text: "Efficiently manage teams with robust tools for collaboration, role assignments, and access control.",
+      link: "/docs/apidocs/admin-console/overview",
     },
   ];
 
@@ -174,9 +174,12 @@ function ExploreByFeature() {
     <div className=" mx-auto p-6">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-xl font-bold">Explore by Feature</h1>
-        <button className="text-blue-500  border-2 border-blue-500 rounded-md p-1">
-          View all
-        </button>
+        <button 
+  className="text-blue-500 border-2 border-blue-500 rounded-md p-1" 
+  onClick={() => window.location.href = '/docs/authentication/overview'} 
+>
+  View all
+</button>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

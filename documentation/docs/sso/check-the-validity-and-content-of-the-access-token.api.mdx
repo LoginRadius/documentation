@@ -1,0 +1,71 @@
+---
+id: check-the-validity-and-content-of-the-access-token
+title: "Check the validity and content of the Access Token"
+description: "Check the validity and content of the Access Token"
+sidebar_label: "Check the validity and content of the Access Token"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VE2P2jAQ/SvRnA2hPUZVpRb1WG1V6AkhNDhD4sWxvbZDF0X579U4CbssaA97aA6J7fnwzHtv0kHEKkCxgZ8oa2UoW9tsXMJWgKenlkL8bsszFB1IayKZyEt0TiuJUVmTPwZr+CzImhrkVTw7ggLs/pFkBAH0jI3TlEz2SAYK+PJNSgphzduvIIbzHQfuasV3ACaH3RAgQGpFJu5UCQW8bANJT+wNPT8CHHpsKJLntjow2HAlS5Q1zZbWRG81CFBcQk1YkgdxW3iIXpkK+leVg7EzyVmgF5e0IyCzNYd9KOsNjn2CPThrAgUO/rxY8KekIL1y7AgFrNoEzqHV2eTMmLzLz4DPdZ5lTfKYxZqyE2pVqnjO0JTZmCizh2QbqMrWIxMNxdoyDc4GZtdhrKGAPJA/KUm5xTbWuWKsgxsEwKaJktZrhilGF4o877qgIrVe931C9o11Mt6xSW3bcoZOzbWtlPFYqjbMpW0Shtz07xf5/vgfCmQFHGy6Q8VE70qZSlO2UpWZPXAORmGA/tN8MV9wDKPYYJqgSa0fYeWK2IvmIj3H3GlUhq9KAHYjYRsYCQMBibKk4AtpWwE181tsoOv2GOhP4mgr4Kklf4ZisxVwQq9wz61utr2YtM8slyqwoYTigDrQTX0XrTKUd4s90vnO5J5QtzSg3U0u11M4edyO1iWCoXPxXd/tK53/elitQcB+/A02tuQYj39BpHfqwabW0simsw40mqrFin2HnPz8Axez4DE=
+sidebar_class_name: "post api-method"
+info_path: docs/sso/single-sign-on
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the validity and content of the Access Token"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/service/oauth/introspect"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Check the validity and content of the Access Token
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"Cache-Control","in":"header","schema":{"type":"string"},"example":"no-cache"},{"name":"content-Type","in":"header","schema":{"type":"string"},"example":"application/json"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"token":"<AccessToken>","token_type_hint":"access_token","client_id":"","client_secret":""}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

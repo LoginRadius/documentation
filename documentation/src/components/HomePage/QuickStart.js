@@ -27,8 +27,7 @@ function QuickStart() {
           </div>
           <h2 className="text-base font-semibold mb-2">Setup Guide</h2>
           <p className="text-gray-600 text-sm">
-            Explore our end-to-end tutorial guide for application stacks using
-            LoginRadius{" "}
+          Step-by-step tutorials to seamlessly integrate and configure LoginRadius with your application stacks.
           </p>
         </div>
 
@@ -54,9 +53,12 @@ function QuickStart() {
           </div>
           <h2 className="text-base font-semibold mb-2">SDK's</h2>
           <p className="text-gray-600 text-sm">
-            Explore our end-to-end tutorial guide for application stacks using
-            LoginRadius
-          </p>
+  <a href="/docs/libraries/sdk-libraries/overview" rel="noopener noreferrer" >
+    Seamlessly integrate LoginRadius features using detailed SDK guides tailored for various programming languages and platforms.
+  </a>
+</p>
+
+
         </div>
 
         <div className=" shadow shadow-gray-500 rounded-lg p-6 text-center">
@@ -81,9 +83,10 @@ function QuickStart() {
           </div>
           <h2 className="text-base font-semibold mb-2">API References</h2>
           <p className="text-gray-600 text-sm">
-            Explore our end-to-end tutorial guide for application stacks using
-            LoginRadius
-          </p>
+          <a href="/docs/apidocs/getting-started/introduction" rel="noopener noreferrer" >
+
+          Explore detailed documentation for APIs to seamlessly integrate and extend platform functionality.
+</a>          </p>
         </div>
       </div>
     </div>

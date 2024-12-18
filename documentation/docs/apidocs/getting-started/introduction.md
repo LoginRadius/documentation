@@ -26,7 +26,7 @@ Here is a brief summary for each section:
 - [**Announcements**](https://www.loginradius.com/docs/api/v2/announcements/linkedin-profile-deprecation)
   post updates from LoginRadius and various other third-party platforms on changes that may affect your applications.
 
-##API Documents
+## API Documents
 
 The API documents are organized according to the HTTP methods: **POST** , **GET** , **DEL** ,and **PUT**. The layouts for each API document of these methods are similar, intuitive and easy-to-use for making API calls.
 
@@ -34,7 +34,7 @@ The API documents are organized according to the HTTP methods: **POST** , **GET*
 
 Every API document shows a header and a body section with three tabs: **Definitions** , **Try it Out** and **Code**. The header section displays the API title and API end-point for each request.
 
-#### Definitions
+### Definitions
 
 The Definitions tab is divided into two sections: Request and Response.
 
@@ -44,7 +44,7 @@ The Definitions tab is divided into two sections: Request and Response.
 
 ![Definitions Tab](https://apidocs.lrcontent.com/images/gs1_117255e930d8e8860a0.31225374.png "Definitions Tab")
 
-#### Try It Out
+### Try It Out
 
 Try It Out provides a testing tool to make HTTP calls to LoginRadius APIs for your application. It is broken into request and response to match the Definitions tab.
 
@@ -58,7 +58,7 @@ You can also manage and test LoginRadius APIs in Postman. To export LoginRadius 
 
 ![TryItOut](https://apidocs.lrcontent.com/images/gs2_6235e930dc2498e36.73382061.png)
 
-#### Code
+### Code
 
 You may want to make the same HTTP request to LoginRadius API from your own application. Code tab generate snippets of code in various languages and frameworks. Click the **Select Language** dropdown menu to select your programming language. Some languages have multiple frameworks options.
 Click &#39;Copy to Clipboard&#39; icon on the right top corner to copy the code.

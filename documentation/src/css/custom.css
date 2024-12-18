@@ -61,6 +61,13 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+
+
+h2 {
+  font-size: 18px;
 }
 
 h1 {

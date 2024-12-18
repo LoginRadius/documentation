@@ -88,7 +88,7 @@ export default function NavbarMobilePrimaryMenu() {
                   onClick={() => toggleMenu(index)}
                 >
                   <span className="text-lg font-medium">
-                    {menu.Titel}
+                    {menu.Title}
                   </span>
                   <svg
                     className={`w-6 h-6 transform ${
