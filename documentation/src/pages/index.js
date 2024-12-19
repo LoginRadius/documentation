@@ -6,15 +6,6 @@ import {
   ExploreByFeature,
   Resources,
 } from "../components/HomePage";
-import { DocsSidebarProvider } from "@docusaurus/plugin-content-docs/client";
-import DocRootLayout from "@theme/DocRoot/Layout";
-import clsx from "clsx";
-import {
-  HtmlClassNameProvider,
-  ThemeClassNames,
-} from "@docusaurus/theme-common";
-import { mainpageSideBar } from "./mainpageSideBar";
-import sidebars from "../../sidebars"; // Import your sidebar configuration
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -23,19 +14,12 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <HtmlClassNameProvider className={clsx(ThemeClassNames.page.docsDocPage)}>
-        <DocsSidebarProvider
-          name={mainpageSideBar.sidebarName}
-          items={mainpageSideBar.sidebarItems}
-        >
-          <DocRootLayout>
-            <MainCard />
-            <QuickStart />
-            <ExploreByFeature />
-            <Resources />
-          </DocRootLayout>
-        </DocsSidebarProvider>
-      </HtmlClassNameProvider>
+      <main className="container !mt-3">
+        <MainCard />
+        <QuickStart />
+        <ExploreByFeature />
+        <Resources />
+      </main>
     </Layout>
   );
 }
