@@ -1,0 +1,71 @@
+---
+id: add-qr-token
+title: "Add QR Token"
+description: "Add QR Token"
+sidebar_label: "Add QR Token"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFy2jAQ/RVmzwLTHn1LCYecaICcGKYj5MUokSVFK9MwHv97Z2VMIDBMWx9s2dp9q33vrRuIsiTIVzAJjmjwiHutcLBYzGAtIOB7jRR/uOIAeQPK2Yg28lJ6b7SSUTubvZKz/I3UDivJq3jwCDm4zSuqCALwQ1beYEpUCol+RfeGFnIAAcoVHAwtXwK8DLLCiIFP1YCVFe9OpNrhcOJsDM6AAM3JO5QFBhDXlSkGbUtoz0qDdUPFKNCKE+yxo+GS0/4L9YqIM3Tp9Rseetz3GsPhPmyBpIL2DAY5zKfPL0/z6eM5gdA0HWrbQpsUIu8sITHe9/GYH5coizoxvq3NoA9OpN+TslPiEuehKAbP88EyCSegwrhzBeTgHbHEXsYd5JARuaxyG20wi8dQwrDv5ayDYYpj9JRnWdOQjlgHw92Iq91+88aeMq4uhtLrkXGltkEWuqaRclVihduYf3p3+lf2Y5m2LumiY+J6oW1pcLDQpR3OuBNuo2Pj22g8GnMOt1/J5P+j6l+IumDxpHnEj5h5IzUbpuutOXK4AiLHDCcWQUB32LWAHVOdr6BpNpLwJdG2FkdjMbuFJrkxWEC+lYbwqvhJ9XNv3TwR+/bMwHtp6o6lNb8EzWUgX61b0c/Lv9W/X/frtH+WF00fcjm5fcTNcewyHpRCH+/Grs98/XO2WIKAzfHfV3U2CfI3iHRPPbjUWhq+9K0BI21Zy5JjO0y+/gCusNQA
+sidebar_class_name: "post api-method"
+info_path: docs/sso/single-sign-on
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add QR Token"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/sso/mobile/token"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Add QR Token
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"Cache-Control","in":"header","schema":{"type":"string"},"example":"no-cache"},{"name":"content-Type","in":"header","schema":{"type":"string"},"example":"application/json"},{"name":"apikey","in":"query","schema":{"type":"string"},"description":"REQUIRED","example":"{{apikey}}"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"access_token":"","code":""}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

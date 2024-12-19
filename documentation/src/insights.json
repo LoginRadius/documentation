@@ -51,6 +51,35 @@
               "type": "string",
               "example": "<<YOUR API SECRET>>"
             }
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "The start date for the records you would like to retrieve (yyyy-mm-dd)",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "description": "The end date for the records you would like to retrieve (yyyy-mm-dd)",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "description": "The query to filter data. For detailed format, refer to the documentation.",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
           }
         ],
         "requestBody": {

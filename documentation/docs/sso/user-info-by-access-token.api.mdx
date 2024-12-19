@@ -1,0 +1,71 @@
+---
+id: user-info-by-access-token
+title: "UserInfo by Access Token"
+description: "UserInfo by Access Token"
+sidebar_label: "UserInfo by Access Token"
+hide_title: true
+hide_table_of_contents: true
+api: eJydk02P2jAQhv9KNKdWMoT26EMlSj/EpUhl94Q4GHtI3HVsrz/Q0sj/vZoAEctuV2pPiT3j1zPPvO4hiSYC38A3VBhEQlWt16vqU7XyqO1SVQtnLcoEWwZeBNFhwkAHerCiQ+CwELLFycLZFJwBBtoChxaFwgAMomyxE8B7SEdP6TEFbRsoDPBJdN7QnnUTSSpQ2Cg7z6l1Qf8WSTv7f7KfUQQM1bXqavllMff+B63Oml6k9m3FgI9ZB1TAU8hYtrQTvbMRI+V/nM3oozDKoP1QLod1lhJj3GdTXZKBgXQ2oU2ULrw3Wg7d1b8inelLKYXd6NxHDEu7d9XuWM0HyerOPSAR6TC1TgGHBhOwUx8c6ojhoCXWTitZ91cNlzpHDNruHbWL4XAZZA6G2KbkI6/rvo86YQ6mlIHcTfQSfCUmjctqIryeGtdoG4TSOU6l64CYDRcTXp2G6ay1bQxWa93YyYr6oXpOTX+YzqYzIu9dTJ0gNpcBvsHjGbhxjAmfUu2N0JYEh4L7M6sNnFkBA6IFDPhzg4zAtgxaFxOd6fudiHg/8NkyeMwYjsA3WwYHEbTYUXObHpSO9K+A74WJ+KK80Qrw7ufZX+8rYK+Xfd4U9kichMm0AgYPeLwxddkWdnkm/1bG3+4+3XH7ysciyAanFBqHT1exFxYnG4yu/f71Dkr5A+VThac=
+sidebar_class_name: "get api-method"
+info_path: docs/sso/single-sign-on
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"UserInfo by Access Token"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/service/oidc/{OIDCAppName}/userinfo"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+UserInfo by Access Token
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"Cache-Control","in":"header","schema":{"type":"string"},"example":"no-cache"},{"name":"Authorization","in":"header","schema":{"type":"string"},"example":"Bearer "},{"name":"OIDCAppName","in":"path","schema":{"type":"string"},"required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

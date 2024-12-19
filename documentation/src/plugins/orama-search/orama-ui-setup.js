@@ -3,7 +3,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 document.addEventListener('DOMContentLoaded', () => {
   
     const observer = new MutationObserver(() => {
-      const header = document.querySelector('.navbar__inner') || document.querySelector('.navbar');
+      const header = document.querySelector('#oramaContainer');
       
       if (header) {
   
@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const searchContainer = document.createElement('div');
         searchContainer.setAttribute('id', 'orama-ui-container');
         searchContainer.style.marginLeft = 'auto';
-        searchContainer.style.display = 'flex';
-        searchContainer.style.alignItems = 'center';
   
         searchContainer.innerHTML = `
           <div id="orama-ui">

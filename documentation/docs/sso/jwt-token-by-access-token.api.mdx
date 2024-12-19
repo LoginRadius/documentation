@@ -1,0 +1,71 @@
+---
+id: jwt-token-by-access-token
+title: "JWT token by Access Token"
+description: "JWT token by Access Token"
+sidebar_label: "JWT token by Access Token"
+hide_title: true
+hide_table_of_contents: true
+api: eJydlE2L2zAQhv+KmVMLcpz26EOhLNtCKSw0KT0soSj2JFZWlrTSeJNg9N/L+CMbp9ml3ZORNHpn5plXboHkNkB+D1+wRC8Jy2SxuEs+Jd9+LZPvdqsMrAQ46WWNhJ5DWzCyRsjhRhYVpjfWkLcaBCgDOVQoS/QgIBQV1hLyFujoODyQV2YLUQAeZO007xmbFqwCUZxkC2sIDaVLvvYmVemcVoUkZU12SPf7fbqxvk4br9EUtsTyPJ106gGPY6LHBv3xX/O0bX85xolgUWAIv8k+oHmrbCfRKUy1d3uSznWLQdlJql4X9vjYKI8l5OQbjCveCc6agIHjP87n/CkxFF45ZgY5LJqugk2jkzEYxDgZDj9HvAt8p40xRnGhwy7q2kjWx+Rzp5ksBzA1UmVLyGGLBKJvJIdMOpXt9pS1z73GbIQZ0D+NLmy8ZmcQuZBnWdsGRdh4PQC7OB0Pr5wV2jZlKp2aafa7l6VqwqywNTArZTa2w6qoG85Cma3GZKG2Jr3jkrievtkPs/lszsSdDVRLZjLO7TUOE2Kn+REeKHNaKsOKXcXtwOiePQuCzQAC8oknelArAZUNxKFtu5YBf3ZcVmIwIuMrVZBrzbbYSB1QAL+Cs+fwJHXDhXTEXgqeWv35yooXXvGd68kumj45C979GOz6PuF2rsEYNqWZlDnWdIYjrqIYfx3/V8VLqfsUlz++Cao+hGfs6OzsrwfDjE5P4OvtEmL8A2Z543k=
+sidebar_class_name: "get api-method"
+info_path: docs/sso/single-sign-on
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"JWT token by Access Token"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/jwt/{jwtappname}/token"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+JWT token by Access Token
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"Cache-Control","in":"header","schema":{"type":"string"},"example":"no-cache"},{"name":"content-Type","in":"header","schema":{"type":"string"},"example":"application/x-www-form-urlencoded"},{"name":"apikey","in":"query","schema":{"type":"string"},"example":"{{apikey}}"},{"name":"access_token","in":"query","schema":{"type":"string"},"example":"{{accesstoken}}"},{"name":"jwtappname","in":"path","schema":{"type":"string"},"required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

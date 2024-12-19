@@ -1,0 +1,71 @@
+---
+id: update-phone-id-by-uid
+title: "Update PhoneID by UID"
+description: "Update PhoneID by UID"
+sidebar_label: "Update PhoneID by UID"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SsGT9ugxlmPvnXtDgV2KLLmVOfAyEyszpZUfXQNDP/3gbKdJm3abfUhsQm+R/LxSR0E3Hoo7qCiDcYmwEqAo4dIPnwz1Q6KDqTRgXTgV7S2URKDMjq/90ZzzMuaWuS3sLMEBZj1PckAAugJW9twqCtLnWUl3NRGUwlFVsKX4SmhLHUPfd/3Aiw6bCmQ44460Ngy+BJlTWeXRgdnGhCgNBRQE1bkQLwu74NTegv9YX1tziSzQC/2tONYZ7cM+xDrKzUO2NGqX7SbeB8iud17tMdIT9JR+Ag4qmqCWQz1+5PwnpWjCorgIvVp894a7clz/vl8zn8VeemU5SmhgJ9RSvJ+E5tsSgbxF4sMyz3mWdoKA2XJENdX2XqXLa+vQEBLoTYVtx9ZgDREAbmqSAcVdvnjed6ixi3lKKWJOuRdVFWfWyZKw3tyj5ODomt4qyFYX+Q5WjVrzFZph5WKfiZNCzw1t7l49vz3f7ctS70xSVwVEuQH8y8Sf3YxdJhd3FyDAG5qmP3rbD6b8wKs8aHFdIrG/b0ly5F4+1UGegq5bVCx9YZhu1GyO5gk49LnrGySDQSMwoGAYrDLpN1KQG18YHDXrdHT0jV9z+HBgqxopTyuG/bMBhtPAtjlB3Z/xCZya+ksvJ28d/hz/oo/nGLA6UovNNh7Dj4tRiN/zkCc1mYMoj7qcWqIZehXvZjO//+Vf6vmwP3y9joSaEw5vommjJPXy4C4kJJseDd3dXCWbpa3IGA93uetqRji8DeI9JtGMGmydPBTrIMG9TayZQoYKPn5A2ZyExY=
+sidebar_class_name: "put api-method"
+info_path: docs/account/loginradius-account-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update PhoneID by UID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/identity/v2/manage/account/{uid}/phoneid"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update PhoneID by UID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"Cache-Control","in":"header","schema":{"type":"string"},"example":"no-cache"},{"name":"content-Type","in":"header","schema":{"type":"string"},"example":"application/json"},{"name":"apikey","in":"query","schema":{"type":"string"}},{"name":"apisecret","in":"query","schema":{"type":"string"}},{"name":"uid","in":"path","schema":{"type":"string"},"required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":"{\\n  \"Phone\": \"*******\"\\n}"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

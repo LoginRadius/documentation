@@ -1,0 +1,71 @@
+---
+id: account-update-security-question-configuration
+title: "Account Update Security Question Configuration"
+description: "Account Update Security Question Configuration"
+sidebar_label: "Account Update Security Question Configuration"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9lcFu2zAMhl/F4GkDtDjt0beuy6HANrRpcypyUCwmUWdLqkSlDQy/+0DZTuOl61BgqA+2I0vUp58/mQZIbgIU96BwLWNFsBTg8TFioK9W7aFooLSG0BC/SucqXUrS1uQPwRoeC+UWa8lvtHcIBdjVA5YEAvBZ1q7CNAnL6DXtU2BtjTThCT1/+aGVqvCnrHnpTlYRz0DANdJ4qE2XACe9rJHQM3QDppvUI365YwIB2kABW5QKPYhTwEBemw20R4SnJ2vFIbp0+hfuh7iPEf3+7bAKQ+m142BQwHx2s7iaz74V2UxpymirQ6ZNtrfRZ2h22ltTs77HOE3Tbdq2f4AELD3Sx7N0+45xolYDiJO0fZuDTaU9KijIR2yTzYKzJmDg+efTKT/GtLexLDGEdayyYTKIf/ixs8k4zkVZ2mgoWzglCbPb3ozZTe/G7NKatd5EnyKBgBppaxWfK7IW6XQF5FqhIU37fHee19LIDeayC503UauWFUC/G8wZfcU+JHKhyHPp9KSyG228VDqGSWlrYBmYe/5ScbP/WjScnrVNCdGUsvmdEeYJIRt0ubi+AgHM3el1NplOppw0ZwPVMpV5n/N3SznKxMEXhM+Uu0pqLrROqKaX+R4GmZnpnLORpAYBvdggoGDvLQVsbSBe0jQrGXDhq7bl4a4uOAdKB7mq2HZrWQU84TmY6R2l8eoZuEMctYqUASgg1cvHQxzaxAvHkn94zSDvVObTvK/dz9nfNu4HpRmdfQDiZLXLVgw9mbfvvlyOG/ew8tVu3K24KEt09Obc5VEBXy/uQMCq/yurreIlXj6BSPcEadOZUxtKYw1U0mwie66ALiRfvwGAnXhf
+sidebar_class_name: "put api-method"
+info_path: docs/account/loginradius-account-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Account Update Security Question Configuration"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/identity/v2/manage/account/{uid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Account Update Security Question Configuration
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"content-Type","in":"header","schema":{"type":"string"},"example":"application/json"},{"name":"apikey","in":"query","schema":{"type":"string"},"description":"REQUIRED: Edit this in your environment","example":"{{apikey}}"},{"name":"apisecret","in":"query","schema":{"type":"string"},"description":"REQUIRED: Edit this in your environment","example":"{{apisecret}}"},{"name":"uid","in":"path","schema":{"type":"string"},"required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"securityquestionanswer":{"MiddleName":"value1","PetName":"value1"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      

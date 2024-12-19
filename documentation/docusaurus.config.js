@@ -101,6 +101,15 @@ const config = {
               groupPathsBy: "tag",
             },
           },
+
+          account: { // Add a new API specification
+            specPath: "src/account.json", // Path to the new OpenAPI spec
+            outputDir: "docs/account", // Output directory for the generated files
+            sidebarOptions: {
+              groupPathsBy: "tag", // Group sidebar items by operation "tag"
+            },
+          },
+
           identity: { // Add a new API specification
             specPath: "src/identity.json", // Path to the new OpenAPI spec
             outputDir: "docs/cloud-directory-api/identity", // Output directory for the generated files
@@ -115,9 +124,16 @@ const config = {
               groupPathsBy: "tag", // Group sidebar items by operation "tag"
             },
           },
-          insighst: { // Add a new API specification
+          insights: { // Add a new API specification
             specPath: "src/insights.json", // Path to the new OpenAPI spec
             outputDir: "docs/cloud-directory-api/insights", // Output directory for the generated files
+            sidebarOptions: {
+              groupPathsBy: "tag", // Group sidebar items by operation "tag"
+            },
+          },
+          sso: { // Add a new API specification
+            specPath: "src/sso.json", // Path to the new OpenAPI spec
+            outputDir: "docs/sso", // Output directory for the generated files
             sidebarOptions: {
               groupPathsBy: "tag", // Group sidebar items by operation "tag"
             },
@@ -126,6 +142,17 @@ const config = {
       },
        
     ],
+    async function myCustomCSSPlugin(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          // Appends TailwindCSS and AutoPrefixer.
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
+        },
+      };
+    },
    "./src/plugins/orama-search"
   ],
   themes: ["docusaurus-theme-openapi-docs"],
@@ -149,6 +176,7 @@ const config = {
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
+          srcDark:'img/logo-dark.svg'
         },
 
         
@@ -175,10 +203,18 @@ const config = {
           },
 
           {to: 'https://www.loginradius.com/engineering/', label: 'Blog', position: 'left'},
+        
           {
-            href: 'https://adminconsole.loginradius.com/dashboard',
-            label: 'Admin Console',
-            position: 'right',
+            href: "https://adminconsole.loginradius.com/dashboard",
+            label: "Admin Console",
+            position: "right",
+            class: "nav-round-item flex justify-center m-2 gap-2",
+          },
+          {
+            href: "https://adminconsole.loginradius.com/signin",
+            label: "Signin",
+            position: "right",
+            class: "nav-round-item flex justify-center gap-2",
           },
           {
             type: 'search',
@@ -187,57 +223,31 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/authentication/overview',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Terms',
-                href: 'https://www.loginradius.com/terms/',
-              },
-              {
-                label: 'Privacy',
-                href: 'https://www.loginradius.com/privacy-policy/',
-              },
-              {
-                label: 'Contact',
-                href: 'https://www.loginradius.com/contact-sales/',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Engineering Blog',
-                to: 'https://www.loginradius.com/engineering/',
-              },
-              {
-                label: 'Status Page',
-                href: 'https://status.loginradius.com/',
-              },
-            ],
-          },
+            html: `
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+  <div style="flex: 1; text-align: left;">
+    Help us Improve our docs
+  </div>
+  <div style="flex: 1; text-align: center;">
+Copyright © ${new Date().getFullYear()} LoginRadius Inc.  </div>
+  <div style="flex: 1; text-align: right;">
+    <a href="/privacy" style="margin-left: 10px;">Privacy</a>
+    <a href="/more" style="margin-left: 10px;">More</a>
+  </div>
+</div>
+              `,
+          },        
+         
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} LoginRadius Inc.`,
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
       colorMode: {
-        defaultMode: 'light',
-        disableSwitch: true,
+        disableSwitch: false,
         respectPrefersColorScheme: false,
       },
     },

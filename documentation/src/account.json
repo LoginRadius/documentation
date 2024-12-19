@@ -1,0 +1,872 @@
+openapi: 3.0.0
+info:
+  title: LoginRadius Account API
+  version: 1.0.0
+servers:
+  - url: https://api.loginradius.com
+tags:
+  - name: Multipurpose Token and SMS OTP Generation API
+paths:
+  /identity/v2/manage/account/emailtoken/{tokentype}:
+    post:
+      tags:
+        - Multipurpose Token and SMS OTP Generation API
+      summary: Email Token API
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                Email: example@exaple.com
+                Type: primary
+                Username: name
+                Uid: 0538851e716346538679ff92541631cb
+                ClientGuid: '1450'
+                Name: Name
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: REQUIRED
+          example: '{{apikey}}'
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+          description: REQUIRED
+          example: '{{apisecret}}'
+        - name: tokentype
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /identity/v2/manage/account/smsotp/{smsotptype}:
+    post:
+      tags:
+        - Multipurpose Token and SMS OTP Generation API
+      summary: SMS OTP API
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                Phone: xxxxxxxxxx
+                Uid: a388v51e716346538679ff92541631cb
+                Name: name
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: REQUIRED
+          example: '{{apikey}}'
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+          description: REQUIRED
+          example: '{{apisecret}}'
+        - name: smsotptype
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /identity/v2/manage/account:
+    post:
+      tags:
+        - default
+      summary: Account Create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                Prefix: ''
+                FirstName: Test
+                MiddleName: null
+                LastName: Account
+                Suffix: null
+                FullName: Test Account
+                NickName: null
+                ProfileName: null
+                BirthDate: 10-12-1985
+                Gender: M
+                Website: null
+                Email:
+                  - Type: Primary
+                    Value: example@example.com
+                Country:
+                  Code: ''
+                  Name: India
+                ThumbnailImageUrl: null
+                ImageUrl: null
+                Favicon: null
+                ProfileUrl: null
+                HomeTown: null
+                State: Alberta
+                City: Edmonton
+                Industry: null
+                About: null
+                TimeZone: null
+                LocalLanguage: null
+                CoverPhoto: null
+                TagLine: null
+                Positions:
+                  - Positions: astronaut
+                    Summary: An astronaut.
+                    StartDate: ''
+                    EndDate: ''
+                    IsCurrent: ''
+                    Location: ''
+                    Company:
+                      Name: ''
+                      Type: ''
+                      Industry: ''
+                Educations:
+                  - School: null
+                    year: null
+                    type: null
+                    notes: null
+                    activities: null
+                    degree: null
+                    fieldofstudy: null
+                    StartDate: null
+                    EndDate: null
+                PhoneNumbers:
+                  - PhoneType: Mobile
+                    PhoneNumber: '18882052816'
+                IMAccounts:
+                  - AccountType: null
+                    AccountName: null
+                Addresses:
+                  - Type: Primary
+                    Address1: null
+                    Address2: null
+                    City: Edmonton
+                    State: Alberta
+                    PostalCode: null
+                    Region: null
+                    Country: Canada
+                MainAddress: null
+                LocalCity: null
+                ProfileCity: Edmonton
+                LocalCountry: null
+                ProfileCountry: Canada
+                IsProtected: false
+                RelationshipStatus: null
+                Quota: null
+                Quote: null
+                InterestedIn:
+                  - blah
+                  - blah
+                Interests:
+                  - InterestedType: null
+                    InterestedName: null
+                Religion: null
+                Political: null
+                Sports:
+                  - Id: null
+                    Name: null
+                InspirationalPeople:
+                  - Id: null
+                    Name: null
+                HttpsImageUrl: null
+                FollowersCount: 0
+                FriendsCount: 0
+                IsGeoEnabled: null
+                TotalStatusesCount: 0
+                Associations: null
+                NumRecommenders: 0
+                Honors: null
+                Awards: null
+                Skills: null
+                CurrentStatus: null
+                Certifications: null
+                Courses: null
+                Volunteer: null
+                RecommendationsReceived: null
+                Languages: null
+                Projects: null
+                Games: null
+                Family: null
+                TeleVisionShow: null
+                MutualFriends: null
+                Movies: null
+                Books: null
+                AgeRange: null
+                PublicRepository: null
+                Hireable: false
+                RepositoryUrl: null
+                Age: null
+                Patents: null
+                FavoriteThings: null
+                ProfessionalHeadline: null
+                ProviderAccessCredential: null
+                RelatedProfileViews: null
+                KloutScore: null
+                LRUserID: null
+                PlacesLived: null
+                Publications: null
+                JobBookmarks: null
+                Suggestions: null
+                Badges: null
+                MemberUrlResources: null
+                TotalPrivateRepository: 0
+                Currency: null
+                StarredUrl: null
+                GistsUrl: null
+                PublicGists: 0
+                PrivateGists: 0
+                Subscription: null
+                Company: null
+                GravatarImageUrl: null
+                ProfileImageUrls: null
+                WebProfiles:
+                  Small: https://graph.facebook.com/*****/picture?type=small
+                  Square: https://graph.Profile.com/*****/picture?type=square
+                  Large: https://graph.facebook.com/*****/picture?type=large
+                  Profile: https://graph.facebook.com/******/picture?type=normal
+                Password: xxxxxxxxxxxx
+                CustomFields: null
+                IsEmailSubscribed: false
+                UserName: null
+                PhoneId: xxxxxxxxxxxxxxx
+      parameters:
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apikey}}'
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apisecret}}'
+        - name: isvoiceotp
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    get:
+      tags:
+        - default
+      summary: Account Profile by Phone ID
+      parameters:
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/x-www-form-urlencoded
+        - name: phone
+          in: query
+          schema:
+            type: string
+          description: REQUIRED
+          example: '{{phone}}'
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apikey}}'
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apisecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - default
+      summary: Account Delete by Email
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/x-www-form-urlencoded
+        - name: apikey
+          in: query
+          schema:
+            type: string
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+        - name: email
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /identity/v2/manage/account/verify/token:
+    post:
+      tags:
+        - default
+      summary: Email Verification token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: example@example.com
+      parameters:
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apikey}}'
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apisecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /identity/v2/manage/account/forgot/token:
+    post:
+      tags:
+        - default
+      summary: Forgot Password token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: example@example.com
+      parameters:
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apikey}}'
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apisecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /identity/v2/manage/account/identities:
+    get:
+      tags:
+        - default
+      summary: Account Identities by Email
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: apikey
+          in: query
+          schema:
+            type: string
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+        - name: email
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /identity/v2/manage/account/access_token:
+    get:
+      tags:
+        - default
+      summary: Access Token based on UID or User impersonation API
+      parameters:
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/x-www-form-urlencoded
+        - name: uid
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this here'
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apikey}}'
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apisecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /identity/v2/manage/account/{uid}/password:
+    get:
+      tags:
+        - default
+      summary: Account Password
+      parameters:
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/x-www-form-urlencoded
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apikey}}'
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apisecret}}'
+        - name: uid
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    put:
+      tags:
+        - default
+      summary: Account Set Password
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                password: xxxxxxxxxxxxxx
+      parameters:
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apikey}}'
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apisecret}}'
+        - name: uid
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /identity/v2/manage/account/{uid}:
+    get:
+      tags:
+        - default
+      summary: Account Profiles by UID
+      parameters:
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/x-www-form-urlencoded
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apikey}}'
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apisecret}}'
+        - name: uid
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    put:
+      tags:
+        - default
+      summary: Account Update Security Question Configuration
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                securityquestionanswer:
+                  MiddleName: value1
+                  PetName: value1
+      parameters:
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apikey}}'
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apisecret}}'
+        - name: uid
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - default
+      summary: Account Delete
+      parameters:
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/x-www-form-urlencoded
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apikey}}'
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apisecret}}'
+        - name: uid
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /identity/v2/manage/account/{uid}/privacypolicy/history:
+    get:
+      tags:
+        - default
+      summary: Privacy Policy History by UID
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/x-www-form-urlencoded
+        - name: apikey
+          in: query
+          schema:
+            type: string
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+        - name: uid
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /identity/v2/manage/account/{uid}/email:
+    put:
+      tags:
+        - default
+      summary: Upsert Email
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: >-
+                {\n  "Email": [\n    {\n      "type": "Secondary",\n     
+                "value": "xxxx01@example.com"\n    },\n    {\n      "type":
+                "Business",\n      "value": "xxxx02@example.com"\n    }\n  ]\n}
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: apikey
+          in: query
+          schema:
+            type: string
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+        - name: uid
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - default
+      summary: Account Email Delete
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: apikey
+          in: query
+          schema:
+            type: string
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+        - name: uid
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /identity/v2/manage/account/{uid}/phoneid:
+    put:
+      tags:
+        - default
+      summary: Update PhoneID by UID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{\n  "Phone": "*******"\n}'
+      parameters:
+        - name: Cache-Control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: apikey
+          in: query
+          schema:
+            type: string
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+        - name: uid
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /identity/v2/manage/account/{uid}/invalidateemail:
+    put:
+      tags:
+        - default
+      summary: Account Invalidate Verification Email
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: ''
+      parameters:
+        - name: content-Type
+          in: header
+          schema:
+            type: string
+          example: application/x-www-form-urlencoded
+        - name: emailtemplate
+          in: query
+          schema:
+            type: string
+          description: Edit this here
+        - name: apikey
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apikey}}'
+        - name: verificationurl
+          in: query
+          schema:
+            type: string
+          description: Edit this here
+        - name: apisecret
+          in: query
+          schema:
+            type: string
+          description: 'REQUIRED: Edit this in your environment'
+          example: '{{apisecret}}'
+        - name: uid
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}

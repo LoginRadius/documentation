@@ -1,0 +1,71 @@
+---
+id: json-web-key-set
+title: "JSON Web Key Set"
+description: "JSON Web Key Set"
+sidebar_label: "JSON Web Key Set"
+hide_title: true
+hide_table_of_contents: true
+api: eJydk02L2zAQhv+KmVMLSpz2qENhST/YXdhAvWUPwQdFmthqZUkrycsGo/9exolDNkkL7cmWZvTqnWdGAyTRROBr+IoKg0ioiqpaFZ+KlUdtb1WxdNaiTFAz8CKIDhMGOjCAFR0Ch6WQLc6WzqbgDDDQFji0KBQGYBBli50APkDaeUqPKWjbQGaAr6Lzhvasm0lSgcyOstLZhDbNHunYf6kK742WImlny5/R2VP11e3n5Y33D7Q6iHuR2r9LB3zudUAFPIUec0070TsbMVL+x8WCPgqjDNrTtcCh6qXEGLe9KaZkYFNxlH7hkg8558zOdO6q1UPxhJviHndFhQkYdJhap4BDMy5H/xzKiOFFSyydVrIcTgrN5d3TfUUlYniZmtgHQ2BT8pGX5TBEnbAPJueR1ll0Cl6JSeN6NRNez41rtA1C6T7OpeuAOGm7dSNSncbWVNo2BotKN3a2ssCA/OwL/TBfzBdE27uYOkE8pqZdYfAG0rFlCV9T6Y3Q1PO90eHAZw0HPsCACAED/nYYRkg1g9bFRPnDsBERf4xMagbPPYYd8HXN4EUELTZU0HoApSP9K+BbYSJeWDu2HN59P8zR+wLYdcuHTWF3xEaYnlbA4BfuzoY315lN7+LfbPzp7v0d56/6aIJav0+5kRJ9OoldPrj6ZEq/fXmEnH8DZFl9XA==
+sidebar_class_name: "get api-method"
+info_path: docs/sso/single-sign-on
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"JSON Web Key Set"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/service/oidc/{OIDCAppName}/JWKS"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+JSON Web Key Set
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"Cache-Control","in":"header","schema":{"type":"string"},"example":"no-cache"},{"name":"content-Type","in":"header","schema":{"type":"string"},"example":"application/json"},{"name":"OIDCAppName","in":"path","schema":{"type":"string"},"required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
+      
