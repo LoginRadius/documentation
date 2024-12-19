@@ -87,9 +87,7 @@ export default function NavbarMobilePrimaryMenu() {
                   className="flex justify-between  cursor-pointer"
                   onClick={() => toggleMenu(index)}
                 >
-                  <span className="text-lg font-medium">
-                    {menu.Title}
-                  </span>
+                  <span className="text-lg font-medium">{menu.Title}</span>
                   <svg
                     className={`w-6 h-6 transform ${
                       openIndex === index ? "rotate-180" : "rotate-0"
@@ -116,10 +114,7 @@ export default function NavbarMobilePrimaryMenu() {
                 >
                   {menu.Data.map((item, idx) => (
                     <li key={idx} className="pl-4 !no-underline">
-                      <a
-                        href={item.link}
-                        className="block "
-                      >
+                      <a href={item.link} className="block ">
                         {item.name}
                       </a>
                     </li>
