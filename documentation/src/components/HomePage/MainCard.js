@@ -3,7 +3,7 @@ import React from "react";
 function MainCard() {
   return (
     <div
-    className="w-full bg-black bg-[url('/img/bgimage.png')] bg-center bg-no-repeat bg-cover 
+    className="w-full bg-black custom-bg-gradient bg-center bg-no-repeat bg-cover 
     rounded-lg shadow-md flex flex-col justify-between md:flex-row items-center"
   >
       <div className="text-section p-4">

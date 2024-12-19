@@ -309,6 +309,11 @@ pre::-webkit-scrollbar-thumb {
   margin-right:0%
 }
 
+.custom-bg-gradient {
+  background: rgb(1,139,167);
+background: linear-gradient(153deg, rgba(1,139,167,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 68%, rgba(154,12,12,1) 100%);
+}
+
 @media (max-width: 996px) {
   .navfullcontainer-right{
     display: none;
