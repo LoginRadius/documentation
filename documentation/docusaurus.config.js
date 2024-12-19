@@ -71,22 +71,7 @@ const config = {
       }),
     ],
   ],
-  //Orama AI chatbot script
-
-  scripts: [
-    {
-      src: 'https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/orama-ui/orama-ui.esm.js',
-      type: 'module',
-    },
-    {
-      src: 'https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/cjs/orama-ui.cjs.js',
-      nomodule: true,
-    },
-  ],
-  stylesheets: [
-    'https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/orama-ui/orama-ui.css',
-  ],
-  //End of Orama script and stylesheet
+ 
   plugins: [
     [
       'docusaurus-plugin-openapi-docs',
@@ -153,7 +138,6 @@ const config = {
         },
       };
     },
-   "./src/plugins/orama-search"
   ],
   themes: ["docusaurus-theme-openapi-docs"],
   themeConfig:
