@@ -3,7 +3,6 @@
 // (when paired with `@ts-check`).
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
-require('dotenv').config();
 
 import {themes as prismThemes} from 'prism-react-renderer';
 import governanceSideBar from "./docs/governance/sidebars.js"
@@ -72,6 +71,21 @@ const config = {
       }),
     ],
   ],
+  //Orama AI chatbot script
+
+  scripts: [
+    {
+      src: 'https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/orama-ui/orama-ui.esm.js',
+      type: 'module',
+    },
+    {
+      src: 'https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/cjs/orama-ui.cjs.js',
+      nomodule: true,
+    },
+  ],
+  stylesheets: [
+    'https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/orama-ui/orama-ui.css',
+  ],
   //End of Orama script and stylesheet
   plugins: [
     [
@@ -112,8 +126,9 @@ const config = {
       },
        
     ],
+   "./src/plugins/orama-search"
   ],
-  themes: ["docusaurus-theme-openapi-docs","@inkeep/docusaurus/chatButton", "@inkeep/docusaurus/searchBar"],
+  themes: ["docusaurus-theme-openapi-docs"],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
@@ -125,47 +140,6 @@ const config = {
       },
       sidebar: {
         governanceSideBar,
-      },
-      inkeepConfig: {
-        baseSettings: {
-          apiKey: process.env.API_KEY, // required
-          integrationId: process.env.INTEGRATION_ID, // required
-          organizationId: process.env.ORGANIZATION_ID, // required
-          primaryBrandColor: "#26D6FF", // required -- your brand color, the widget color scheme is derived from this
-          organizationDisplayName: "Inkeep",
-          // ...optional settings
-          theme: {
-            // stylesheetUrls: ['/path/to/stylesheets'], // optional
-            syntaxHighlighter: {
-
-            },
-          }
-        },
-        modalSettings: {
-          // optional settings
-        },
-        searchSettings: {
-          // optional settings
-        },
-        aiChatSettings: {
-          chatSubjectName: "LoginRadius",
-          botAvatarSrcUrl: "https://www.loginradius.com/wp-content/uploads/fbrfg/apple-touch-icon.png",
-          getHelpCallToActions: [
-            {
-              name: "Contact",
-              url: "https://www.loginradius.com/contact-sales/",
-              icon: {
-                builtIn: "IoChatbubblesOutline"
-              }
-            }
-          ],
-          quickQuestions: [
-            "Get Started with LoginRadius",
-            "How does the LoginRadius User Registration System work?",
-            "Invalid Request URI Error?",
-            "Consumer Audit Logs?"
-          ]
-        },
       },
 
       // Replace with your project's social card
