@@ -14,7 +14,7 @@ export default function MobileSidebarToggle() {
           'The ARIA label for hamburger menu button of mobile navigation',
       })}
       aria-expanded={shown}
-      className="navbar__toggle clean-btn self-center"
+      className="navbar__toggle clean-btn"
       type="button">
       <IconMenu />
     </button>
