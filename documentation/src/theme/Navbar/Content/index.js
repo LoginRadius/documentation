@@ -13,6 +13,8 @@ import NavbarSearch from "@theme/Navbar/Search";
 import styles from "./styles.module.css";
 import RightNavButtons from "../../../components/Navbar/RightNavButtons";
 import { MenuItems } from "../../../components/Navbar/MenuItems";
+import { InKeepSearchBar} from "../../../components/Navbar/Inkeep";
+
 function useNavbarItems() {
   // TODO temporary casting until ThemeConfig type is improved
   return useThemeConfig().navbar.items;
@@ -83,10 +85,7 @@ function NavbarContentLayout({ LogoContainer, right }) {
           {/* <a href="#" className=" text-xs font-semibold  rounded   border  inline-flex items-center ">Docs</a> */}
         </div>
         <div className="navfullcontainer-left flex gap-3  flex-1">
-          <div
-            id="oramaContainer"
-            className="relative w-full max-w-sm self-center"
-          >
+        <InKeepSearchBar />
             {/* <input
               type="text"
               placeholder="Search or Ask AI what CIAM is?"
@@ -98,7 +97,6 @@ function NavbarContentLayout({ LogoContainer, right }) {
                 Ctrl+K
               </kbd>
             </div> */}
-          </div>
 
           <div className="relative inline-block text-left self-center">
             <button

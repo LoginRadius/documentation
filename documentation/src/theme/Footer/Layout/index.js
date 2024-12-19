@@ -1,5 +1,8 @@
 import React from "react";
 import clsx from "clsx";
+
+import { InKeepChatButton } from "../../../components/Navbar/Inkeep";
+
 export default function FooterLayout({ style, links, logo, copyright }) {
   return (
     <footer
@@ -28,6 +31,7 @@ export default function FooterLayout({ style, links, logo, copyright }) {
           <a href="/more">More</a>
         </div>
       </div>
+      <InKeepChatButton />
     </footer>
   );
 }
