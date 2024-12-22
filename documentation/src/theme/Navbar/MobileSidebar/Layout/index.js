@@ -12,8 +12,8 @@ export default function NavbarMobileSidebarLayout({
       {header}
       <div
         className={clsx('navbar-sidebar__items', {
-          'navbar-sidebar__items--show-secondary': secondaryMenuShown,
-        })}>
+          // 'navbar-sidebar__items--show-secondary': secondaryMenuShown,
+        })+'flex'}>
         <div className="navbar-sidebar__item menu">{primaryMenu}</div>
         <div className="navbar-sidebar__item menu">{secondaryMenu}</div>
       </div>

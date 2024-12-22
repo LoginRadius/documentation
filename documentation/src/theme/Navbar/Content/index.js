@@ -77,7 +77,7 @@ function NavbarContentLayout({ LogoContainer, left, right }) {
   return (
     <div className="navbar__inner items-center">
       <div className="flex gap-2 justify-between align-middle w-full">
-        <div className="flex px-3 w-[300px] md:border-r-2">
+        <div className="flex px-3 w-[300px] ">
           {" "}
           {LogoContainer}
         </div>

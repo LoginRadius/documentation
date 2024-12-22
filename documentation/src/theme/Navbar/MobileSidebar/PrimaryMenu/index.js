@@ -4,6 +4,8 @@ import { useNavbarMobileSidebar } from "@docusaurus/theme-common/internal";
 import NavbarItem from "@theme/NavbarItem";
 import { MenuItems } from "../../../../components/Navbar/MenuItems";
 import RightNavButtons from "../../../../components/Navbar/RightNavButtons";
+import NavbarSearch from "@theme/Navbar/Search";
+import SearchBar from "@theme/SearchBar";
 
 function useNavbarItems() {
   // TODO temporary casting until ThemeConfig type is improved
@@ -20,6 +22,7 @@ export default function NavbarMobilePrimaryMenu() {
   const mobileSidebar = useNavbarMobileSidebar();
 
   const items = useNavbarItems();
+  const searchBarItem = items.find((item) => item.type === "search");
   return (
     <>
       <ul className="menu__list">
@@ -127,8 +130,13 @@ export default function NavbarMobilePrimaryMenu() {
         <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
       </ul>
 
-      <div className="flex flex-wrap gap-2 ">
+      <div className="flex flex-wrap gap-2 h-16">
         {" "}
+        {!searchBarItem && (
+            <NavbarSearch>
+              <SearchBar />
+            </NavbarSearch>
+          )}
         <RightNavButtons />
       </div>
     </>

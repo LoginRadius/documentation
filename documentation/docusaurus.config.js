@@ -192,7 +192,7 @@ const config = {
       navbar: {
         title: '',  // LoginRadius
         logo: {
-          alt: 'My Site Logo',
+          alt: 'LoginRadius Logo',
           src: 'img/logo.svg',
           srcDark:'img/logo-dark.svg'
         },
