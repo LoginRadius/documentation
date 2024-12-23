@@ -71,22 +71,7 @@ const config = {
       }),
     ],
   ],
-  //Orama AI chatbot script
-
-  scripts: [
-    {
-      src: 'https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/orama-ui/orama-ui.esm.js',
-      type: 'module',
-    },
-    {
-      src: 'https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/cjs/orama-ui.cjs.js',
-      nomodule: true,
-    },
-  ],
-  stylesheets: [
-    'https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/orama-ui/orama-ui.css',
-  ],
-  //End of Orama script and stylesheet
+ 
   plugins: [
     [
       'docusaurus-plugin-openapi-docs',
@@ -153,9 +138,8 @@ const config = {
         },
       };
     },
-   "./src/plugins/orama-search"
   ],
-  themes: ["docusaurus-theme-openapi-docs"],
+  themes: ["docusaurus-theme-openapi-docs","@inkeep/docusaurus/chatButton", "@inkeep/docusaurus/searchBar"],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
@@ -168,58 +152,53 @@ const config = {
       sidebar: {
         governanceSideBar,
       },
-
+        inkeepConfig: {
+          baseSettings: {
+            // see https://docusaurus.io/docs/deployment#using-environment-variables to use docusaurus environment variables
+            apiKey: "0eddffabefd5e923b8e222beb495a2eaae6c35d0e82dd24b", // required
+            integrationId: "cm3qv5k4t0026ctns1w4ugr8s", // required
+            organizationId: "org_7WE77CMkrySCsff3", // required
+            primaryBrandColor: "#26D6FF", // required -- your brand color, the widget color scheme is derived from this
+            organizationDisplayName: "Inkeep",
+            // ...optional settings
+            theme: {
+              // stylesheetUrls: ['/path/to/stylesheets'], // optional
+              // syntaxHighlighter: {
+              //   lightTheme: lightCodeTheme, // optional -- pass in the Prism theme you're using
+              //   darkTheme: darkCodeTheme, // optional -- pass in the Prism theme you're using
+              // },
+            }
+          },
+          modalSettings: {
+            // optional settings
+          },
+          searchSettings: {
+            // optional settings
+          },
+          aiChatSettings: {
+            // optional settings
+            botAvatarSrcUrl: "/img/logoonly.png", // use your own bot avatar
+            quickQuestions: [
+              "Get Started with LoginRadius",
+              "How does the LoginRadius User Registration System work?",
+              "Invalid Request URI Error?",
+              "Consumer Audit Logs?",
+            ],
+          },
+        },
+    
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: '',  // LoginRadius
         logo: {
-          alt: 'My Site Logo',
+          alt: 'LoginRadius Logo',
           src: 'img/logo.svg',
           srcDark:'img/logo-dark.svg'
         },
 
-        
         items: [
-          {
-           type: 'docSidebar',
-           sidebarId: 'DocsSidebar', // AdminConsoleSidebar
-            position: 'left',
-            label: 'Docs',
-            href: '/',
-          },
-
-          {
-            to: 'docs/apidocs/getting-started/introduction',
-            label: 'API Reference',
-            position: 'left',
-          },
-
-          {
-            to: 'docs/category/apis',
-            label: 'APIs',
-            position: 'left',
-            rel: '',
-          },
-
-          {to: 'https://www.loginradius.com/engineering/', label: 'Blog', position: 'left'},
-        
-          {
-            href: "https://adminconsole.loginradius.com/dashboard",
-            label: "Admin Console",
-            position: "right",
-            class: "nav-round-item flex justify-center m-2 gap-2",
-          },
-          {
-            href: "https://adminconsole.loginradius.com/signin",
-            label: "Signin",
-            position: "right",
-            class: "nav-round-item flex justify-center gap-2",
-          },
-          {
-            type: 'search',
-            position: 'right',
-          },
+       
         ],
       },
       footer: {
