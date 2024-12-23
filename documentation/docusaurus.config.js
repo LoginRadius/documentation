@@ -162,7 +162,7 @@ const config = {
             organizationDisplayName: "Inkeep",
             // ...optional settings
             theme: {
-              // stylesheetUrls: ['/path/to/stylesheets'], // optional
+              stylesheetUrls: ['/inkeep-overrides.css'], // optional
               // syntaxHighlighter: {
               //   lightTheme: lightCodeTheme, // optional -- pass in the Prism theme you're using
               //   darkTheme: darkCodeTheme, // optional -- pass in the Prism theme you're using
