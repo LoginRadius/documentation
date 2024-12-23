@@ -24,8 +24,8 @@ export default function FooterLayout({ style, links, logo, copyright }) {
           Copyright © {new Date().getFullYear()} LoginRadius Inc.{" "}
         </div>
         <div className="flex flex-wrap gap-4">
-          <a href="/privacy">Privacy</a>
-          <a href="/more">More</a>
+        <a href="https://www.loginradius.com/privacy-policy/">Privacy Policy</a>
+        <a href="https://www.loginradius.com/terms/">Terms</a>
         </div>
       </div>
     </footer>
