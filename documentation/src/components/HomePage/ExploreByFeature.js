@@ -187,8 +187,8 @@ function ExploreByFeature() {
           <a
             key={index}
             href={card.link}
-            className="flex flex-row items-center space-x-4 p-4  shadow shadow-gray-500 rounded-md !no-underline	 hover:scale-105 cursor-pointer "
-          >
+            className="flex flex-row items-center space-x-4 p-4  rounded-md !no-underline	 hover:scale-105 cursor-pointer "
+          > 
             <div className="text-blue-500 text-3xl ">{card.icon}</div>
             <div className="flex flex-col items-left">
               <h3 className="text-sm font-bold">{card.title}</h3>

@@ -212,8 +212,8 @@ const config = {
   <div style="flex: 1; text-align: center;">
 Copyright © ${new Date().getFullYear()} LoginRadius Inc.  </div>
   <div style="flex: 1; text-align: right;">
-    <a href="/privacy" style="margin-left: 10px;">Privacy</a>
-    <a href="/more" style="margin-left: 10px;">More</a>
+    <a href="https://www.loginradius.com/privacy-policy/" style="margin-left: 10px;">Privacy Policy</a>
+    <a href="https://www.loginradius.com/terms/" style="margin-left: 10px;">Terms</a>
   </div>
 </div>
               `,
