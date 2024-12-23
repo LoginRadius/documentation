@@ -1,6 +1,54 @@
-import React from "react";
+import {useEffect, useState, React} from "react";
 
 const RightNavButtons = () => {
+  const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  const getAdminUserData = () => {
+    setLoading(true);
+    fetch("https://accounts.loginradius.com/ssologin/login") // Replace with your API endpoint
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("User not Logged into Admin console");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (data.isauthenticated) {
+          return data.token;
+        } else {
+          return null;
+        }
+      })
+      .then((accesstoken) => {
+        if (accesstoken) {
+          fetch(
+            `https://api.loginradius.com/identity/v2/auth/account?apiKey=83952b6c-61de-43fd-93bf-b88d90c76489&access_token=${accesstoken}&verificationUrl=&emailTemplate=&welcomeEmailTemplate=`
+          )
+            .then((response) => {
+              if (response.error) {
+                console.log(response);
+              } else {
+                setUserData(response);
+              }
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        setUserData(null); // No user found
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
+  useEffect(() => {
+    getAdminUserData(); // Fetch data when the component mounts
+  }, []);
   return (
     <>
       <button
@@ -27,12 +75,26 @@ const RightNavButtons = () => {
         Chat With Us
         <span className="flex w-2 h-2 me-2 bg-green-500 rounded-full"></span>
       </button>
-      <button
-        type="button"
-        className="gap-2 focus:ring-4 focus:outline-none border border-gray-600 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center hover:bg-[#F0F0F0FF]/30 m-2"
-      >
-        Signin
-      </button>
+      {loading ? (
+        <div className="flex items-center justify-center">
+          <div className="w-8 h-8 border-4 border-blue-500 border-dotted rounded-full animate-spin"></div>
+        </div>
+      ) : userData ? (
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-green-500">
+            {userData.FirstName}!
+          </h1>
+        </div>
+      ) : (
+        <button
+          type="button"
+          className="gap-2 focus:ring-4 focus:outline-none border border-gray-600 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center hover:bg-[#F0F0F0FF]/30 m-2"
+        >
+          <a href="https://accounts.loginradius.com/auth.aspx?action=login&amp;return_url=https%3A%2F%2Fwww.loginradius.com%2Fdocs%2Flibraries%2Fjs-libraries%2Fjs-form-library%2F%3Fallowlogin%3D1&amp;return_url=https%3A%2F%2Fwww.loginradius.com%2Fdocs%2Flibraries%2Fjs-libraries%2Fjs-form-library%2F%3Fallowlogin%3D1">
+            Signin
+          </a>
+        </button>
+      )}
     </>
   );
 };
