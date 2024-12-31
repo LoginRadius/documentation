@@ -7,6 +7,8 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import governanceSideBar from "./docs/governance/sidebars.js"
 
+
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Identity Platform Documentation',
