@@ -51,7 +51,7 @@ const Changelog = () => {
               <div className="flex flex-row justify-between">
                 <h2 className="text-xl font-semibold mb-2">{entry.name}</h2>
                 <button
-                  className="underline mt-2 self-center"
+                  className="underline mt-2 self-center border  border-white rounded-full bg-slate-400"
                   onClick={() => toggleExpanded(index)}
                 >
                   {expanded[index] ? (
@@ -93,7 +93,7 @@ const Changelog = () => {
                   )}
                 </button>
               </div>
-              <p className="text-gray-700 mb-4 inline-flex">
+              <p className="mb-4 inline-flex">
                 {entry.description}
               </p>
               <div className="flex flex-row gap-2">
@@ -152,7 +152,7 @@ const Changelog = () => {
                           {changes.map((change, changeIndex) => (
                             <li
                               key={changeIndex}
-                              className="text-gray-600"
+                              className=""
                               dangerouslySetInnerHTML={{
                                 __html: parseLinks(change.text),
                               }}
@@ -174,13 +174,13 @@ const Changelog = () => {
             disabled={currentPage === 1}
             className={`px-4 py-2 rounded-lg ${
               currentPage === 1
-                ? "bg-gray-300 cursor-not-allowed"
+                ? "bg-gray-500 cursor-not-allowed"
                 : "gap-2 focus:ring-4 focus:outline-none border border-gray-600 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center hover:bg-[#4FBB61FF]/30 m-2"
             }`}
           >
             Previous
           </button>
-          <span className="text-gray-700">
+          <span>
             Page {currentPage} of {totalPages}
           </span>
           <button
@@ -188,7 +188,7 @@ const Changelog = () => {
             disabled={currentPage === totalPages}
             className={`px-4 py-2 rounded-lg ${
               currentPage === totalPages
-                ? "bg-gray-300 cursor-not-allowed"
+                ? "bg-gray-500 cursor-not-allowed"
                 : "gap-2 focus:ring-4 focus:outline-none border border-gray-600 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center hover:bg-[#4FBB61FF]/30 m-2"
             }`}
           >

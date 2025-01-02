@@ -142,7 +142,7 @@ export default function DocSidebarItemCategory({
           className={clsx('menu__link', {
             'menu__link--sublist': collapsible,
             'menu__link--sublist-caret': !href && collapsible,
-            'bg-gray-200 dark:bg-gray-600 font-bold': isActive,
+            'bg-gray-400 text-black font-bold': isActive,
           })}
           onClick={
             collapsible
