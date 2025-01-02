@@ -27,7 +27,7 @@ const RightNavButtons = () => {
         );
 
         if (!response.ok) {
-          console.loog("userprofile data fetch failes",response)
+          console.log("userprofile data fetch failes",response)
 
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -40,7 +40,7 @@ const RightNavButtons = () => {
         setLoading(false)
       } catch (error) {
         setLoading(false)
-        console.log("werr", response);
+        console.log("werr", error);
       }
 
     };
