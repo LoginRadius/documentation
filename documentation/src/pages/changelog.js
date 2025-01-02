@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Layout from "@theme/Layout";
 import changelog from "../../changelog";
+
 const Changelog = () => {
-  const itemsPerPage = 10;
+  const itemsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
   const [expanded, setExpanded] = useState({}); // For toggling expanded state
   const totalPages = Math.ceil(changelog.length / itemsPerPage);
@@ -41,14 +42,16 @@ const Changelog = () => {
         {currentData.map((entry, index) => (
           <div
             key={index}
-            className="border border-gray-300 rounded-lg p-4 mb-4 shadow-sm flex flex-col gap-3"
+            className={`border border-gray-300 rounded-lg p-4 mb-4 shadow-sm flex flex-col gap-3 ${
+              index % 2 === 0 ? "alternate-row" : ""
+            }`}
           >
             {/* Minimized View */}
-            <div className="flex flex-col ">
-              <div className="flex flex-row justify-between ">
+            <div className="flex flex-col">
+              <div className="flex flex-row justify-between">
                 <h2 className="text-xl font-semibold mb-2">{entry.name}</h2>
                 <button
-                  className=" underline mt-2 self-center"
+                  className="underline mt-2 self-center"
                   onClick={() => toggleExpanded(index)}
                 >
                   {expanded[index] ? (
@@ -96,7 +99,7 @@ const Changelog = () => {
               <div className="flex flex-row gap-2">
                 <span className="my-1 no-underline border-2 inline-flex gap-2 rounded-full px-4 py-1 text-sm sm:text-base ">
                   <svg
-                    className="w-6 h-6  dark:text-white"
+                    className="w-6 h-6 dark:text-white"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -115,9 +118,9 @@ const Changelog = () => {
 
                   {entry.auther}
                 </span>
-                <span className="my-1 no-underline border-2 inline-flex gap-2  rounded-full px-4 py-1 text-sm sm:text-base ">
+                <span className="my-1 no-underline border-2 inline-flex gap-2 rounded-full px-4 py-1 text-sm sm:text-base ">
                   <svg
-                    className="w-6 h-6  dark:text-white"
+                    className="w-6 h-6 dark:text-white"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"

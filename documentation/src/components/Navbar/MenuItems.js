@@ -20,5 +20,12 @@ export const MenuItems = [
       { name: "Web SDKs", link: "/docs/libraries/sdk-libraries/overview" },
     ],
   },
-  
+
+  {
+    Title: "Changelog",
+    Data: [
+      { name: "Changelog", link: "/changelog" },
+
+    ],
+  },
 ];
