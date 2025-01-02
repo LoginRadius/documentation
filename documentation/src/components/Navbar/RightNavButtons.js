@@ -7,7 +7,7 @@ const RightNavButtons = () => {
   const dropdownRef = useRef(null);
 
   // Initialize LRObject only once
-  const LRObject = useRef(null);
+  let LRObject = useRef(null);
   useEffect(() => {
     const commonOptions = {
       apiKey: "83952b6c-61de-43fd-93bf-b88d90c76489", // Use environment variable for API key
