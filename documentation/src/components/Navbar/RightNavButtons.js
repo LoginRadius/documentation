@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, React } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const RightNavButtons = () => {
   const [userData, setUserData] = useState(null);
@@ -6,20 +6,28 @@ const RightNavButtons = () => {
   const [isUserDropdown, setisUserDropdown] = useState(false);
   const dropdownRef = useRef(null);
 
+  // Initialize LRObject only once
+  const LRObject = useRef(null);
+  useEffect(() => {
+    const commonOptions = {
+      apiKey: "83952b6c-61de-43fd-93bf-b88d90c76489", // Use environment variable for API key
+      appName: "lr",
+    };
+    LRObject.current = new LoginRadiusV2(commonOptions);
+  }, []);
+
   const handleLogout = async () => {
     try {
-      const currentUrl = encodeURIComponent(window.location.href); // Encode the current URL
+      const currentUrl = encodeURIComponent(window.location.href);
       const logoutUrl = `https://accounts.loginradius.com/auth.aspx?action=logout&return_url=${currentUrl}`;
 
-      // Send the logout request
       const response = await fetch(logoutUrl, {
         method: "GET",
-        credentials: "include", // Include cookies if necessary
+        credentials: "include",
       });
 
       if (response.ok) {
         console.log("Logged out successfully");
-        // Optionally clear local data or inform the user
       } else {
         console.error("Failed to log out");
       }
@@ -31,64 +39,70 @@ const RightNavButtons = () => {
   const toggleUserDropdown = () => {
     setisUserDropdown(!isUserDropdown);
   };
-  const getAdminUserData = () => {
-    setLoading(true);
 
-    var commonOptions = {};
-    commonOptions.apiKey = "83952b6c-61de-43fd-93bf-b88d90c76489";
-    commonOptions.appName = "lr";
-    var LRObject = new LoginRadiusV2(commonOptions);
-    // If found activated session, go to the callback/onsuccess function
-    var ssologin_options = {};
-
-    ssologin_options.onSuccess = async function (accesstoken) {
-      try {
-        const response = await fetch(
-          `https://api.loginradius.com/identity/v2/auth/account?apikey=${commonOptions.apiKey}&welcomeemailtemplate=`,
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-              Authorization: "Bearer " + accesstoken,
-            },
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+  const getUserData = async (accessToken) => {
+    try {
+      const response = await fetch(
+        `https://api.loginradius.com/identity/v2/auth/account?apikey=${"83952b6c-61de-43fd-93bf-b88d90c76489"}&welcomeemailtemplate=`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            Authorization: `Bearer ${accessToken}`,
+          },
         }
+      );
 
-        const data = await response.json();
-        setUserData(data);
-
+      if (!response.ok) {
+        console.error("Error fetching user data", response);
         setLoading(false);
-      } catch (error) {
-        setLoading(false);
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
-      setLoading(false);
-    };
-    ssologin_options.onError = function (response) {
-      // On Success
-      setLoading(false);
-    };
 
-    LRObject.init("ssoLogin", ssologin_options);
+      const data = await response.json();
+      setUserData(data);
+      setLoading(false);
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
+    const ssologinOptions = {
+      onSuccess: async (accessToken) => {
+        if (accessToken) {
+          await getUserData(accessToken);
+        }
+        setLoading(false);
+      },
+      onError: () => {
+        setLoading(false);
+      },
+    };
+
+    if (LRObject.current) {
+      LRObject.current.init("ssoLogin", ssologinOptions);
+      const sessionToken = LRObject.current.sessionData.getToken();
+      if (sessionToken) {
+        getUserData(sessionToken);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
     const handleDocumentClick = (event) => {
-      // Close the dropdown when clicking outside
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setisUserDropdown(false);
       }
     };
-    getAdminUserData(); // Fetch data when the component mounts
 
     document.addEventListener("mousedown", handleDocumentClick);
     return () => {
       document.removeEventListener("mousedown", handleDocumentClick);
     };
   }, []);
+
   return (
     <>
       <button
@@ -96,7 +110,7 @@ const RightNavButtons = () => {
         className="gap-2 focus:ring-4 focus:outline-none border border-gray-600 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center hover:bg-[#4FBB61FF]/30 m-2"
       >
         <svg
-          className="w-6 h-6  "
+          className="w-6 h-6"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -115,6 +129,7 @@ const RightNavButtons = () => {
         Chat With Us
         <span className="flex w-2 h-2 me-2 bg-green-500 rounded-full"></span>
       </button>
+
       {loading ? (
         <div className="flex items-center justify-center">
           <div className="w-8 h-8 border-4 border-blue-500 border-dotted rounded-full animate-spin"></div>
@@ -127,7 +142,7 @@ const RightNavButtons = () => {
             className="gap-2 focus:ring-4 focus:outline-none self-center font-medium rounded-lg text-sm text-center inline-flex items-center hover:bg-[#4FBB61FF]/30 m-2"
           >
             <svg
-              class="w-8 h-8  dark:text-white"
+              className="w-8 h-8 dark:text-white"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -137,9 +152,9 @@ const RightNavButtons = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
               />
             </svg>
@@ -148,19 +163,19 @@ const RightNavButtons = () => {
           {isUserDropdown && (
             <div
               ref={dropdownRef}
-              className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md  bg-white  darK:bg-primary-dark  shadow-lg "
+              className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white dark:bg-primary-dark shadow-lg"
             >
               <div className="px-4 py-2 font-semibold text-gray-700">
                 Hi {userData.FirstName}!
               </div>
-              <hr className="h-px border-0 " />
+              <hr className="h-px border-0" />
 
               <div className="py-1">
                 <a
-                  href="https://console.loginradius.com/my-account" // Use item.link to dynamically set the link
-                  className=" block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 !no-underline"
+                  href="https://console.loginradius.com/my-account"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 !no-underline"
                 >
-                  Account{/* Dynamically set the name */}
+                  Account
                 </a>
               </div>
               <div className="py-1">
@@ -179,7 +194,9 @@ const RightNavButtons = () => {
           type="button"
           className="gap-2 focus:ring-4 focus:outline-none border border-gray-600 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center hover:bg-[#F0F0F0FF]/30 m-2"
         >
-          <a href="https://accounts.loginradius.com/auth.aspx?action=login&amp;return_url=https%3A%2F%2Fwww.loginradius.com%2Fdocs%2Flibraries%2Fjs-libraries%2Fjs-form-library%2F%3Fallowlogin%3D1&amp;return_url=https%3A%2F%2Fwww.loginradius.com%2Fdocs%2Flibraries%2Fjs-libraries%2Fjs-form-library%2F%3Fallowlogin%3D1">
+          <a
+            href="https://accounts.loginradius.com/auth.aspx?action=login&return_url=https%3A%2F%2Fwww.loginradius.com%2Fdocs%2Flibraries%2Fjs-libraries%2Fjs-form-library%2F%3Fallowlogin%3D1"
+          >
             Signin
           </a>
         </button>
