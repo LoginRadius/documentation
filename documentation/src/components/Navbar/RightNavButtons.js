@@ -12,20 +12,44 @@ const RightNavButtons = () => {
     // If found activated session, go to the callback/onsuccess function
     var ssologin_options = {};
 
-    ssologin_options.onSuccess = function (response) {
+    ssologin_options.onSuccess = async function (accesstoken) {
       setLoading(true);
-      console.log("Fds");
+      try {
+        const response = await fetch(
+          `https://api.loginradius.com/identity/v2/auth/account?apikey=${commonOptions.apiKey}&welcomeemailtemplate=`,
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+              Authorization: "Bearer "+accesstoken,
+            },
+          }
+        );
 
-      // On Success
-      //Write your custom code here
-      console.log("success", response);
+        if (!response.ok) {
+          console.loog("userprofile data fetch failes",response)
+
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.loog("userprofile",data)
+        setUserData(data);
+        console.loog("setprofile",userData)
+
+        setLoading(false)
+      } catch (error) {
+        setLoading(false)
+        console.log("werr", response);
+      }
+
     };
     ssologin_options.onError = function (response) {
       // On Success    console.log("Fds")
-      console.log("Fds");
+      setLoading(false)
 
       //Write your custom code here
-      console.log("werr", response);
+      console.log("swerr", response);
     };
 
     LRObject.init("ssoLogin", ssologin_options);
