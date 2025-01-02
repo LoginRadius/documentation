@@ -39,31 +39,40 @@ const RightNavButtons = () => {
   const toggleUserDropdown = () => {
     setisUserDropdown(!isUserDropdown);
   };
+  const getAdminUserData = () => {
+    setLoading(true);
 
-  const getUserData = async (accessToken) => {
-    try {
-      const response = await fetch(
-        `https://api.loginradius.com/identity/v2/auth/account?apikey=${"83952b6c-61de-43fd-93bf-b88d90c76489"}&welcomeemailtemplate=`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-            Authorization: `Bearer ${accessToken}`,
-          },
+    var commonOptions = {};
+    commonOptions.apiKey = "83952b6c-61de-43fd-93bf-b88d90c76489";
+    commonOptions.appName = "lr";
+    var LRObject = new LoginRadiusV2(commonOptions);
+    // If found activated session, go to the callback/onsuccess function
+    var ssologin_options = {};
+
+    ssologin_options.onSuccess = async function (accesstoken) {
+      try {
+        const response = await fetch(
+          `https://api.loginradius.com/identity/v2/auth/account?apikey=${commonOptions.apiKey}&welcomeemailtemplate=`,
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+              Authorization: "Bearer " + accesstoken,
+            },
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
         }
-      );
 
-      if (!response.ok) {
-        console.error("Error fetching user data", response);
+        const data = await response.json();
+        setUserData(data);
+
         setLoading(false);
-        throw new Error(`HTTP error! status: ${response.status}`);
+      } catch (error) {
+        setLoading(false);
       }
-
-      const data = await response.json();
-      setUserData(data);
-      setLoading(false);
-    } catch (error) {
-      console.error("Error fetching user data:", error);
       setLoading(false);
     }
   };
@@ -96,6 +105,7 @@ const RightNavButtons = () => {
         setisUserDropdown(false);
       }
     };
+    getAdminUserData(); // Fetch data when the component mounts
 
     document.addEventListener("mousedown", handleDocumentClick);
     return () => {
