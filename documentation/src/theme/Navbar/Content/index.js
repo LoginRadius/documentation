@@ -179,7 +179,7 @@ function NavbarContentLayout({ LogoContainer, left, right }) {
   type="button"
   className="transition-all duration-300 ease-in-out gap-2 focus:ring-4 focus:outline-none border border-gray-600 font-medium rounded-lg text-sm px-5 py-3 text-center inline-flex items-center hover:bg-[#F0F0F0FF]/30 m-2"
   onClick={() => {
-    document.body.classList.add('opacity-50'); // Optional: to add a fade-out effect
+  //  document.body.classList.add('opacity-50');  Optional: to add a fade-out effect
     setTimeout(() => {
       window.location.href = '/changelog'; // Redirect after 300ms
     }, 300); // Duration matching transition
