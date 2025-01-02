@@ -230,6 +230,12 @@ Copyright © ${new Date().getFullYear()} LoginRadius Inc.  </div>
         respectPrefersColorScheme: false,
       },
     },
+    scripts: [
+      {
+        src: 'https://auth.lrcontent.com/v2/js/LoginRadiusV2.js',
+        async: true,
+      },
+    ],
 };
 
 export default config;

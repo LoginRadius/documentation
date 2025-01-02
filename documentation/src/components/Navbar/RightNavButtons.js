@@ -1,49 +1,73 @@
-import {useEffect, useState, React} from "react";
+import { useEffect, useState, React } from "react";
 
 const RightNavButtons = () => {
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   const getAdminUserData = () => {
-    setLoading(true);
-    fetch("https://accounts.loginradius.com/ssologin/login") // Replace with your API endpoint
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("User not Logged into Admin console");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        if (data.isauthenticated) {
-          return data.token;
-        } else {
-          return null;
-        }
-      })
-      .then((accesstoken) => {
-        if (accesstoken) {
-          fetch(
-            `https://api.loginradius.com/identity/v2/auth/account?apiKey=83952b6c-61de-43fd-93bf-b88d90c76489&access_token=${accesstoken}&verificationUrl=&emailTemplate=&welcomeEmailTemplate=`
-          )
-            .then((response) => {
-              if (response.error) {
-                console.log(response);
-              } else {
-                setUserData(response);
-              }
-            })
-            .catch((error) => {
-              console.log(error);
-            });
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-        setUserData(null); // No user found
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    var commonOptions = {};
+    commonOptions.apiKey = "83952b6c-61de-43fd-93bf-b88d90c76489";
+    commonOptions.appName = "lr";
+    var LRObject = new LoginRadiusV2(commonOptions);
+    // If found activated session, go to the callback/onsuccess function
+    var ssologin_options = {};
+
+    ssologin_options.onSuccess = function (response) {
+      setLoading(true);
+      console.log("Fds");
+
+      // On Success
+      //Write your custom code here
+      console.log("success", response);
+    };
+    ssologin_options.onError = function (response) {
+      // On Success    console.log("Fds")
+      console.log("Fds");
+
+      //Write your custom code here
+      console.log("werr", response);
+    };
+
+    LRObject.init("ssoLogin", ssologin_options);
+
+    // fetch("https://accounts.loginradius.com/ssologin/login") // Replace with your API endpoint
+    //   .then((response) => {
+    //     if (!response.ok) {
+    //       throw new Error("User not Logged into Admin console");
+    //     }
+    //     return response.json();
+    //   })
+    //   .then((data) => {
+    //     if (data.isauthenticated) {
+    //       return data.token;
+    //     } else {
+    //       return null;
+    //     }
+    //   })
+    //   .then((accesstoken) => {
+    //     if (accesstoken) {
+    //       fetch(
+    //         `https://api.loginradius.com/identity/v2/auth/account?apiKey=83952b6c-61de-43fd-93bf-b88d90c76489&access_token=${accesstoken}&verificationUrl=&emailTemplate=&welcomeEmailTemplate=`
+    //       )
+    //         .then((response) => {
+    //           if (response.error) {
+    //             console.log(response);
+    //           } else {
+    //             setUserData(response);
+    //           }
+    //         })
+    //         .catch((error) => {
+    //           console.log(error);
+    //         });
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.error(error);
+    //     setUserData(null); // No user found
+    //   })
+    //   .finally(() => {
+    //     setLoading(false);
+    //   });
   };
 
   useEffect(() => {
