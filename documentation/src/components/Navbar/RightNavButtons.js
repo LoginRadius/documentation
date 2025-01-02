@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 
 const RightNavButtons = () => {
   const [userData, setUserData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false); // loading is initially false
   const [isUserDropdown, setisUserDropdown] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -17,6 +17,7 @@ const RightNavButtons = () => {
   }, []);
 
   const handleLogout = async () => {
+    setLoading(true); // Set loading to true when logging out
     try {
       const currentUrl = encodeURIComponent(window.location.href);
       const logoutUrl = `https://accounts.loginradius.com/auth.aspx?action=logout&return_url=${currentUrl}`;
@@ -28,11 +29,14 @@ const RightNavButtons = () => {
 
       if (response.ok) {
         console.log("Logged out successfully");
+        setLoading(false); // Set loading to false after successful logout
       } else {
         console.error("Failed to log out");
+        setLoading(false); // Set loading to false if logout fails
       }
     } catch (error) {
       console.error("Error during logout:", error);
+      setLoading(false); // Ensure loading is set to false on error
     }
   };
 
@@ -41,6 +45,7 @@ const RightNavButtons = () => {
   };
 
   const getUserData = async (accessToken) => {
+    setLoading(true); // Set loading to true before making the API request
     try {
       const response = await fetch(
         `https://api.loginradius.com/identity/v2/auth/account?apikey=${"83952b6c-61de-43fd-93bf-b88d90c76489"}&welcomeemailtemplate=`,
@@ -55,31 +60,31 @@ const RightNavButtons = () => {
 
       if (!response.ok) {
         console.error("Error fetching user data", response);
-        setLoading(false);
+        setLoading(false); // Set loading to false on error
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json();
       setUserData(data);
-      setLoading(false);
+      setLoading(false); // Set loading to false after successful data fetch
     } catch (error) {
       console.error("Error fetching user data:", error);
-      setLoading(false);
+      setLoading(false); // Ensure loading is set to false on error
     }
   };
 
   useEffect(() => {
     const ssologinOptions = {
       onSuccess: async (accessToken) => {
-        console.log("sspfound",accessToken)
+        console.log("sspfound", accessToken);
         if (accessToken) {
           await getUserData(accessToken);
         }
-        setLoading(false);
+        setLoading(false); // Ensure loading is set to false after successful login
       },
       onError: () => {
-        console.log("ssso error")
-        setLoading(false);
+        console.log("ssso error");
+        setLoading(false); // Ensure loading is set to false if there's an error
       },
     };
 
@@ -87,7 +92,7 @@ const RightNavButtons = () => {
       LRObject.init("ssoLogin", ssologinOptions);
       const sessionToken = LRObject.sessionData.getToken();
       if (sessionToken) {
-        console.log("session token present",sessionToken)
+        console.log("session token present", sessionToken);
         getUserData(sessionToken);
       }
     }
@@ -95,7 +100,7 @@ const RightNavButtons = () => {
 
   useEffect(() => {
     const handleDocumentClick = (event) => {
-      if (dropdownRef && !dropdownRef.contains(event.target)) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setisUserDropdown(false);
       }
     };
