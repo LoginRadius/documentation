@@ -13,7 +13,7 @@ const RightNavButtons = () => {
       apiKey: "83952b6c-61de-43fd-93bf-b88d90c76489", // Use environment variable for API key
       appName: "lr",
     };
-    LRObject.current = new LoginRadiusV2(commonOptions);
+    LRObject = new LoginRadiusV2(commonOptions);
   }, []);
 
   const handleLogout = async () => {
@@ -39,40 +39,31 @@ const RightNavButtons = () => {
   const toggleUserDropdown = () => {
     setisUserDropdown(!isUserDropdown);
   };
-  const getAdminUserData = () => {
-    setLoading(true);
 
-    var commonOptions = {};
-    commonOptions.apiKey = "83952b6c-61de-43fd-93bf-b88d90c76489";
-    commonOptions.appName = "lr";
-    var LRObject = new LoginRadiusV2(commonOptions);
-    // If found activated session, go to the callback/onsuccess function
-    var ssologin_options = {};
-
-    ssologin_options.onSuccess = async function (accesstoken) {
-      try {
-        const response = await fetch(
-          `https://api.loginradius.com/identity/v2/auth/account?apikey=${commonOptions.apiKey}&welcomeemailtemplate=`,
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-              Authorization: "Bearer " + accesstoken,
-            },
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+  const getUserData = async (accessToken) => {
+    try {
+      const response = await fetch(
+        `https://api.loginradius.com/identity/v2/auth/account?apikey=${"83952b6c-61de-43fd-93bf-b88d90c76489"}&welcomeemailtemplate=`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            Authorization: `Bearer ${accessToken}`,
+          },
         }
+      );
 
-        const data = await response.json();
-        setUserData(data);
-
+      if (!response.ok) {
+        console.error("Error fetching user data", response);
         setLoading(false);
-      } catch (error) {
-        setLoading(false);
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
+
+      const data = await response.json();
+      setUserData(data);
+      setLoading(false);
+    } catch (error) {
+      console.error("Error fetching user data:", error);
       setLoading(false);
     }
   };
@@ -80,20 +71,23 @@ const RightNavButtons = () => {
   useEffect(() => {
     const ssologinOptions = {
       onSuccess: async (accessToken) => {
+        console.log("sspfound",accessToken)
         if (accessToken) {
           await getUserData(accessToken);
         }
         setLoading(false);
       },
       onError: () => {
+        console.log("ssso error")
         setLoading(false);
       },
     };
 
-    if (LRObject.current) {
-      LRObject.current.init("ssoLogin", ssologinOptions);
-      const sessionToken = LRObject.current.sessionData.getToken();
+    if (LRObject) {
+      LRObject.init("ssoLogin", ssologinOptions);
+      const sessionToken = LRObject.sessionData.getToken();
       if (sessionToken) {
+        console.log("session token present",sessionToken)
         getUserData(sessionToken);
       }
     }
@@ -101,11 +95,10 @@ const RightNavButtons = () => {
 
   useEffect(() => {
     const handleDocumentClick = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      if (dropdownRef && !dropdownRef.contains(event.target)) {
         setisUserDropdown(false);
       }
     };
-    getAdminUserData(); // Fetch data when the component mounts
 
     document.addEventListener("mousedown", handleDocumentClick);
     return () => {
