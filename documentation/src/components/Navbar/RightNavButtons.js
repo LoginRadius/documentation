@@ -5,7 +5,12 @@ const RightNavButtons = () => {
   const [loading, setLoading] = useState(true);
   const [isUserDropdown, setisUserDropdown] = useState(false);
   const dropdownRef = useRef(null);
-
+  var commonOptions = {};
+  commonOptions.apiKey = "83952b6c-61de-43fd-93bf-b88d90c76489";
+  commonOptions.appName = "lr";
+  var LRObject = new LoginRadiusV2(commonOptions);
+  // If found activated session, go to the callback/onsuccess function
+  var ssologin_options = {};
   const handleLogout = async () => {
     try {
       const currentUrl = encodeURIComponent(window.location.href); // Encode the current URL
@@ -31,40 +36,41 @@ const RightNavButtons = () => {
   const toggleUserDropdown = () => {
     setisUserDropdown(!isUserDropdown);
   };
-  const getAdminUserData = () => {
-    setLoading(true);
-
-    var commonOptions = {};
-    commonOptions.apiKey = "83952b6c-61de-43fd-93bf-b88d90c76489";
-    commonOptions.appName = "lr";
-    var LRObject = new LoginRadiusV2(commonOptions);
-    // If found activated session, go to the callback/onsuccess function
-    var ssologin_options = {};
-
-    ssologin_options.onSuccess = async function (accesstoken) {
-      try {
-        const response = await fetch(
-          `https://api.loginradius.com/identity/v2/auth/account?apikey=${commonOptions.apiKey}&welcomeemailtemplate=`,
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-              Authorization: "Bearer " + accesstoken,
-            },
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+  async function getUserData (accesstoken){
+    try {
+ 
+      const response = await fetch(
+        `https://api.loginradius.com/identity/v2/auth/account?apikey=${commonOptions.apiKey}&welcomeemailtemplate=`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            Authorization: "Bearer " + accesstoken,
+          },
         }
+      );
 
-        const data = await response.json();
-        setUserData(data);
-
+      if (!response.ok) {
+        console.log("get userdata error",response)
         setLoading(false);
-      } catch (error) {
-        setLoading(false);
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
+
+      const data = await response.json();
+      setUserData(data);
+
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+    }
+  
+  }
+  const checkSSO = () => {
+    setLoading(true);
+    ssologin_options.onSuccess = async function (accesstoken) {
+      if(accesstoken) {
+        getUserData(accesstoken)
+    }
       setLoading(false);
     };
     ssologin_options.onError = function (response) {
@@ -82,7 +88,13 @@ const RightNavButtons = () => {
         setisUserDropdown(false);
       }
     };
-    getAdminUserData(); // Fetch data when the component mounts
+    if(LRObject.sessionData.getToken()){
+      getUserData(LRObject.sessionData.getToken())
+    }
+    {
+      checkSSO();
+    }
+     // Fetch data when the component mounts
 
     document.addEventListener("mousedown", handleDocumentClick);
     return () => {
