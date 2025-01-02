@@ -89,11 +89,12 @@ const RightNavButtons = () => {
     };
 
     if (LRObject) {
-      LRObject.init("ssoLogin", ssologinOptions);
       const sessionToken = LRObject.sessionData.getToken();
       if (sessionToken) {
         console.log("session token present", sessionToken);
         getUserData(sessionToken);
+      }else{
+        LRObject.init("ssoLogin", ssologinOptions);
       }
     }
   }, []);
