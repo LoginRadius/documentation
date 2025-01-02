@@ -1,10 +1,39 @@
-import { useEffect, useState, React } from "react";
+import { useEffect, useState, useRef, React } from "react";
 
 const RightNavButtons = () => {
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isUserDropdown, setisUserDropdown] = useState(false);
+  const dropdownRef = useRef(null);
 
+  const handleLogout = async () => {
+    try {
+      const currentUrl = encodeURIComponent(window.location.href); // Encode the current URL
+      const logoutUrl = `https://accounts.loginradius.com/auth.aspx?action=logout&return_url=${currentUrl}`;
+
+      // Send the logout request
+      const response = await fetch(logoutUrl, {
+        method: "GET",
+        credentials: "include", // Include cookies if necessary
+      });
+
+      if (response.ok) {
+        console.log("Logged out successfully");
+        // Optionally clear local data or inform the user
+      } else {
+        console.error("Failed to log out");
+      }
+    } catch (error) {
+      console.error("Error during logout:", error);
+    }
+  };
+
+  const toggleUserDropdown = () => {
+    setisUserDropdown(!isUserDropdown);
+  };
   const getAdminUserData = () => {
+    setLoading(true);
+
     var commonOptions = {};
     commonOptions.apiKey = "83952b6c-61de-43fd-93bf-b88d90c76489";
     commonOptions.appName = "lr";
@@ -13,7 +42,6 @@ const RightNavButtons = () => {
     var ssologin_options = {};
 
     ssologin_options.onSuccess = async function (accesstoken) {
-      setLoading(true);
       try {
         const response = await fetch(
           `https://api.loginradius.com/identity/v2/auth/account?apikey=${commonOptions.apiKey}&welcomeemailtemplate=`,
@@ -21,81 +49,45 @@ const RightNavButtons = () => {
             method: "GET",
             headers: {
               "Content-Type": "application/x-www-form-urlencoded",
-              Authorization: "Bearer "+accesstoken,
+              Authorization: "Bearer " + accesstoken,
             },
           }
         );
 
         if (!response.ok) {
-          console.log("userprofile data fetch failes",response)
-
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
-        console.log("userprofile",data)
         setUserData(data);
-        console.log("setprofile",userData)
 
-        setLoading(false)
+        setLoading(false);
       } catch (error) {
-        setLoading(false)
-        console.log("werr", error);
+        setLoading(false);
       }
-
+      setLoading(false);
     };
     ssologin_options.onError = function (response) {
-      // On Success    console.log("Fds")
-      setLoading(false)
-
-      //Write your custom code here
-      console.log("swerr", response);
+      // On Success
+      setLoading(false);
     };
 
     LRObject.init("ssoLogin", ssologin_options);
-
-    // fetch("https://accounts.loginradius.com/ssologin/login") // Replace with your API endpoint
-    //   .then((response) => {
-    //     if (!response.ok) {
-    //       throw new Error("User not Logged into Admin console");
-    //     }
-    //     return response.json();
-    //   })
-    //   .then((data) => {
-    //     if (data.isauthenticated) {
-    //       return data.token;
-    //     } else {
-    //       return null;
-    //     }
-    //   })
-    //   .then((accesstoken) => {
-    //     if (accesstoken) {
-    //       fetch(
-    //         `https://api.loginradius.com/identity/v2/auth/account?apiKey=83952b6c-61de-43fd-93bf-b88d90c76489&access_token=${accesstoken}&verificationUrl=&emailTemplate=&welcomeEmailTemplate=`
-    //       )
-    //         .then((response) => {
-    //           if (response.error) {
-    //             console.log(response);
-    //           } else {
-    //             setUserData(response);
-    //           }
-    //         })
-    //         .catch((error) => {
-    //           console.log(error);
-    //         });
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //     setUserData(null); // No user found
-    //   })
-    //   .finally(() => {
-    //     setLoading(false);
-    //   });
   };
 
   useEffect(() => {
+    const handleDocumentClick = (event) => {
+      // Close the dropdown when clicking outside
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setisUserDropdown(false);
+      }
+    };
     getAdminUserData(); // Fetch data when the component mounts
+
+    document.addEventListener("mousedown", handleDocumentClick);
+    return () => {
+      document.removeEventListener("mousedown", handleDocumentClick);
+    };
   }, []);
   return (
     <>
@@ -128,10 +120,59 @@ const RightNavButtons = () => {
           <div className="w-8 h-8 border-4 border-blue-500 border-dotted rounded-full animate-spin"></div>
         </div>
       ) : userData ? (
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-green-500">
-            {userData.FirstName}!
-          </h1>
+        <div className="self-center">
+          <button
+            onClick={toggleUserDropdown}
+            type="button"
+            className="gap-2 focus:ring-4 focus:outline-none self-center font-medium rounded-lg text-sm text-center inline-flex items-center hover:bg-[#4FBB61FF]/30 m-2"
+          >
+            <svg
+              class="w-8 h-8  dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+            </svg>
+          </button>
+
+          {isUserDropdown && (
+            <div
+              ref={dropdownRef}
+              className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md  bg-white  darK:bg-primary-dark  shadow-lg "
+            >
+              <div className="px-4 py-2 font-semibold text-gray-700">
+                Hi {userData.FirstName}!
+              </div>
+              <hr className="h-px border-0 " />
+
+              <div className="py-1">
+                <a
+                  href="https://console.loginradius.com/my-account" // Use item.link to dynamically set the link
+                  className=" block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 !no-underline"
+                >
+                  Account{/* Dynamically set the name */}
+                </a>
+              </div>
+              <div className="py-1">
+                <button
+                  onClick={handleLogout}
+                  className="w-full px-4 py-2 text-sm text-gray-700 hover:text-red-600 !no-underline"
+                >
+                  Logout
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       ) : (
         <button

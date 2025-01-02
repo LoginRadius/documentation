@@ -44,12 +44,7 @@ function NavbarContentLayout({ LogoContainer, left, right }) {
   const [isSDKDropdownOpen, setisSDKDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setisAPIDropdownOpen(false);
-      setisSDKDropdownOpen(false);
-    }
-  };
+
 
   const toggleAPIDropdown = () => {
     setisAPIDropdownOpen(!isAPIDropdownOpen);
