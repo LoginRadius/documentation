@@ -326,10 +326,8 @@ background: linear-gradient(153deg, rgba(1,139,167,1) 0%, rgba(0,0,0,1) 35%, rgb
 }
 }
 
-.alternate-row {
-  background-color: white; /* First row */
-}
 .alternate-row:nth-child(even) {
+  color: #073857;
   background-color: #f8f8f8; /* Alternate rows with light gray */
 }
 
