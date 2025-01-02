@@ -27,20 +27,20 @@ const RightNavButtons = () => {
         );
 
         if (!response.ok) {
-          console.loog("userprofile data fetch failes",response)
+          console.log("userprofile data fetch failes",response)
 
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
-        console.loog("userprofile",data)
+        console.log("userprofile",data)
         setUserData(data);
-        console.loog("setprofile",userData)
+        console.log("setprofile",userData)
 
         setLoading(false)
       } catch (error) {
         setLoading(false)
-        console.log("werr", response);
+        console.log("werr", error);
       }
 
     };
