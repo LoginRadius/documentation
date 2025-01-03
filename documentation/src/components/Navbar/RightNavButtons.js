@@ -140,7 +140,6 @@ const RightNavButtons = () => {
           />
         </svg>
         Chat With Us
-        <span className="flex w-2 h-2 me-2 bg-green-500 rounded-full"></span>
       </button>
 
       {loading ? (
