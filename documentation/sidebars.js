@@ -16,51 +16,81 @@ import apisidebar from "./docs/api/sidebar";
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   DocsSidebar: [
+    
+    // Authentication > (Finalized)
     {
       type: "category",
       label: "Authentication",
       items: [
-        // Authentication >
         "authentication/overview",
+        "authentication/sso-implementation", 
+        "authentication/phone-login",
+        "authentication/one-touch-login",
+        "authentication/passkey-authentication",
+        "authentication/passwordless-login",
+        "authentication/smart-login",
+        "authentication/username-login",
 
-        // Authentication > Quick Start >
+        // Authentication > Standard Login > (Finalized)
+        {
+          type: "category",
+          label: "Standard Login",
+          items: [
+            "authentication/standard-login/standard-login",
+            "authentication/standard-login/email-verification-workflow",
+            "authentication/standard-login/account-verification-overview",
+            "authentication/standard-login/data-schema",
+            "authentication/standard-login/custom-field-configuration"
+          ],
+        },
+
+        // Authentication > Social Login > (Finalized)
+        {
+          type: "category",
+          label: "Standard Login",
+          items: [
+            "authentication/social-login/social-login",
+            "authentication/social-login/social-data-compliance"
+          ],
+        },
+
+        /* Authentication > Quick Start >
         {
           type: "category",
           label: "Quick Start",
           items: [
-            "authentication/quick-start/standard-login",
-            "authentication/quick-start/social-login",
-            "authentication/quick-start/sso-implementation",
+            //"authentication/quick-start/standard-login", (Moved)
+            //"authentication/quick-start/social-login", (Moved)
+            //"authentication/quick-start/sso-implementation", (Moved)
           ],
         },
-
         // Authentication > Tutorial >
         {
           type: "category",
           label: "Tutorial",
           items: [
-            "authentication/tutorial/phone-login",
-            "authentication/tutorial/one-touch-login",
-            "authentication/tutorial/passkey-authentication",
-            "authentication/tutorial/passwordless-login",
-            "authentication/tutorial/smart-login",
-            "authentication/tutorial/username-login",
+            //"authentication/tutorial/phone-login", (Moved)
+            //"authentication/tutorial/one-touch-login", (Moved)
+            //"authentication/tutorial/passkey-authentication", (Moved)
+            //"authentication/tutorial/passwordless-login", (Moved)
+            //"authentication/tutorial/smart-login", (Moved)
+            //"authentication/tutorial/username-login", (Moved)
           ],
         },
-
+        */
         // Authentication > Concepts >
         {
           type: "category",
           label: "Concepts",
           items: [
-            "authentication/concepts/password-policy",
-            "authentication/concepts/email-communications",
-            "authentication/concepts/roles-and-membership",
-            "authentication/concepts/email-verification-workflow",
+            //"authentication/concepts/password-policy", (Moved)
+            //"authentication/concepts/email-communications", (Moved)
+            //"authentication/concepts/roles-and-membership", (Moved)
+            //"authentication/concepts/email-verification-workflow", (Moved)
             "authentication/concepts/advanced-workflow",
             "authentication/concepts/session-management",
-            "authentication/concepts/sms-communication",
-            "authentication/concepts/customer-security",
+            //"authentication/concepts/sms-communication", (Moved)
+            //"authentication/concepts/customer-security", (Moved)
             "authentication/concepts/progressive-profiling",
             {
               type: "category",
@@ -74,18 +104,494 @@ const sidebars = {
           ],
         },
 
-        // Authentication > FAQ >
+        /* Authentication > FAQ >
         {
           type: "category",
           label: "FAQ",
           items: [
-            "authentication/faq/troubleshooting",
-            "authentication/faq/account-linking",
-            "authentication/faq/age-verification",
-            "authentication/faq/billing-faq",
-            "authentication/faq/identity-provider-apps",
-            "authentication/faq/support-faq",
-            "authentication/faq/supported-browsers",
+            //"authentication/faq/troubleshooting", (Moved)
+            //"authentication/faq/account-linking", (Moved)
+            //"authentication/faq/age-verification", (Moved)
+            //"authentication/faq/billing-faq", (Moved)
+            //"authentication/faq/identity-provider-apps", (Moved)
+            //"authentication/faq/support-faq", (Moved)
+            //"authentication/faq/supported-browsers", (Moved)
+          ],
+        },
+        */
+      ],
+    },
+    {
+      type: "category",
+      label: "Security",
+      items: [
+        // Security > (Finalized)
+        "security/overview",
+
+        // Security > Customer Security > (Finalized)
+        {
+          type: "category",
+          label: "Customer Security",
+          items: [
+            "security/customer-security/customer-security",
+            "security/customer-security/fraud-prevention",
+            "security/customer-security/registration-security",
+            "security/customer-security/login-security",
+            "security/customer-security/multi-factor-auth",
+            "security/customer-security/risk-based-auth",
+            "security/customer-security/session-management",
+            "security/customer-security/password-management",
+            "security/customer-security/password-policy",
+          ],
+        },
+
+        // Security > Infrastructure >
+        {
+          type: "category",
+          label: "Infrastructure",
+          items: [
+            "security/infrastructure/loginradius-cdn",
+            //"security/infrastructure/multiple-environment", (Moved)
+            //"security/infrastructure/smtp-overview", (Moved)
+            //"security/infrastructure/ip-addresses-list", (Moved)
+            //"security/infrastructure/loginradius-data-regions", (Moved)
+          ],
+        },
+
+        /* Security > Platform Security >
+        {
+          type: "category",
+          label: "Platform Security",
+          items: [
+            //"security/platform-security/account-verification-overview", (Moved)
+            //"security/platform-security/threat-prevention", (Moved)
+            //"security/platform-security/identity-data-compliance", (Moved)
+            //"security/platform-security/social-data-compliance", (Moved)
+            //"security/platform-security/password-security", (Moved)
+            //"security/platform-security/cryptographic-hashing-algorithms", (Moved)
+            //"security/platform-security/data-migration-security", (Moved)
+          ],
+        },
+        // Security > Data Management >
+        {
+          type: "category",
+          label: "Data Management",
+          items: [
+            //"security/data-management/user-data-overview", (Moved)
+            //"security/data-management/confidentiality-integrity-and-availability", (Moved)
+            //"security/data-management/loginradius-tokens", (Moved)
+            //"security/data-management/data-auditing-andlogging", (Moved)
+            //"security/data-management/consumer-audit-logs", (Moved)
+            //"security/data-management/browser-information-storage-cookies", (Moved)
+          ],
+        },
+        */
+        /* Security > Customer Security >
+        {
+          type: "category",
+          label: "Customer Security",
+          items: [
+            //"security/user-security/fraud-prevention", (Moved)
+            "security/user-security/registration-security", (Moved)
+            "security/user-security/login-security", (Moved)
+            "security/user-security/password-management", (Moved)
+          ],
+        },
+        */
+      ],
+    },
+    {
+      type: "category",
+      label: "Teanant Management/Configuration",
+      items: [
+        // Teanant Management > (Finalized)
+        "tenant-management/smtp-overview",
+        "tenant-management/loginradius-data-regions",
+
+        // Teanant Management > Platform Security > (Finalized)
+        {
+          type: "category",
+          label: "Platform Security",
+          items: [
+            "tenant-management/platform-security/multiple-environment",
+            "tenant-management/platform-security/threat-prevention",
+            "tenant-management/platform-security/identity-data-compliance",
+            "tenant-management/platform-security/ip-addresses-list",
+            "tenant-management/platform-security/password-security",
+            "tenant-management/platform-security/cryptographic-hashing-algorithms",
+            "tenant-management/platform-security/data-migration-security",
+          ],
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Single Sign-on",
+      items: [
+        // Single Sign-on > (Finalized)
+        //"single-sign-on/federated-sso/",
+
+        {
+          type: "category",
+          label: "Single Sign-on",
+          items: [
+            // Single Sign-on > Federated SSO > (Finalized)
+
+            //"single-sign-on/federated-sso/overview", MISSING #123Destination
+            "single-sign-on/federated-sso/pre-built-connections",
+            "single-sign-on/federated-sso/oauth-2-0-overview",
+            
+            {
+              type: "category",
+              label: "OpenID Connect",
+              items: [
+                // Single Sign-on > Federated SSO > OpenID Connect > (Finalized)
+                "single-sign-on/federated-sso/openid-connect/openid-connect-overview",
+                "single-sign-on/federated-sso/openid-connect/azure-ad-b2c",
+              ],
+            },
+
+            {
+              type: "category",
+              label: "SAML",
+              items: [
+                // Single Sign-on > Federated SSO > SAML > (Finalized)
+                "single-sign-on/federated-sso/saml/overview",
+                "single-sign-on/federated-sso/saml/idp-initiated",
+                "single-sign-on/federated-sso/saml/sp-initiated",
+                {
+                  type: "category",
+                  label: "SAML",
+                  items: [
+                    // Single Sign-on > Federated SSO > SAML > SAML Providers  (Finalized)
+                    "single-sign-on/federated-sso/saml/saml-providers/domo",
+                    "single-sign-on/federated-sso/saml/saml-providers/jira",
+                    "single-sign-on/federated-sso/saml/saml-providers/salesforce",
+                    "single-sign-on/federated-sso/saml/saml-providers/office365",
+                    "single-sign-on/federated-sso/saml/saml-providers/sharepoint",
+                  ],
+                },
+
+              ],
+            },
+
+            {
+              type: "category",
+              label: "JWT Login",
+              items: [
+                // Single Sign-on > Federated SSO > JWT Login > (Finalized)
+                "single-sign-on/federated-sso/jwt-login/jwt-login-overview",
+                "single-sign-on/federated-sso/jwt-login/jwt-implementation-guide",
+                "single-sign-on/federated-sso/jwt-login/jwt-generate-algos",
+              ],
+            },
+
+          ],
+        },
+
+        {
+          type: "category",
+          label: "Custom IDPs",
+          items: [
+            // Single Sign-on > Custom IDPs > (Finalized)
+
+            "single-sign-on/custom-idps/overview",
+            "single-sign-on/custom-idps/pre-built-connections",
+
+            {
+              type: "category",
+              label: "Custom Integrations",
+              items: [
+                // Single Sign-on > Custom IDPs > Custom Integrations > (Finalized)
+                "single-sign-on/custom-idps/custom-integrations/custom-oauth-provider",
+                "single-sign-on/custom-idps/custom-integrations/custom-jwt-provider",
+                "single-sign-on/custom-idps/custom-integrations/custom-saml-provider",
+                "single-sign-on/custom-idps/custom-integrations/custom-adfs-provider",
+              ],
+            },
+
+            {
+              type: "category",
+              label: "Custom Identity Providers",
+              items: [
+                // Single Sign-on > Custom IDPs > Custom Identity Providers > (Finalized)
+                "single-sign-on/custom-idps/custom-identity-providers/azure-ad",
+                "single-sign-on/custom-idps/custom-identity-providers/doximity",
+                "single-sign-on/custom-idps/custom-identity-providers/alipay",
+                "single-sign-on/custom-idps/custom-identity-providers/aws-cognito",
+                "single-sign-on/custom-idps/custom-identity-providers/autho",
+                "single-sign-on/custom-idps/custom-identity-providers/lr-as-custom-idp-into-another-lr-app",
+                "single-sign-on/custom-idps/custom-identity-providers/wechat",
+              ],
+            },
+          ],
+        },
+
+        {
+          type: "category",
+          label: "FAQ",
+          items: [
+            // Single Sign-on > FAQ > (Finalized)
+
+            "single-sign-on/faq/chrome-blocking-third-party-cookies",
+            "single-sign-on/faq/proof-of-key-for-code-exchange",
+            {
+              type: "category",
+              label: "FAQ",
+              items: [
+                // Single Sign-on > FAQ > SAML Miscellaneous > (Finalized)
+    
+                "single-sign-on/faq/saml-miscellaneous/samlfaq",
+                "single-sign-on/faq/saml-miscellaneous/usage",
+                "single-sign-on/faq/saml-miscellaneous/certificate",
+              ],
+            },
+          ],
+        },
+
+        /* Single Sign-on > Tutorial >
+        {
+          type: "category",
+          label: "Tutorial",
+          items: [
+            //"single-sign-on/tutorial/web-sso/overview", (Moved)
+            //"single-sign-on/tutorial/mobile-sso/overview", (Moved)
+
+            // Single Sign-on > Tutorial > Federated SSO >
+            {
+              type: "category",
+              label: "Federated SSO",
+              items: [
+                //"single-sign-on/tutorial/federated-sso/overview", MISSING #123Source
+                //"single-sign-on/tutorial/federated-sso/pre-built-connections", (Moved)
+                //"single-sign-on/tutorial/federated-sso/oauth-2-0/oauth-2-0-overview", (Moved)
+                //"single-sign-on/tutorial/federated-sso/openid-connect/openid-connect-overview", (Moved)
+
+                // Single Sign-on > Tutorial > Federated SSO > JWT Login >
+                {
+                  type: "category",
+                  label: "JWT Login",
+                  items: [
+                    //"single-sign-on/tutorial/federated-sso/jwt-login/jwt-login-overview", (Moved)
+                    //"single-sign-on/tutorial/federated-sso/jwt-login/jwt-implementation-guide", (Moved)
+                    //"single-sign-on/tutorial/federated-sso/jwt-login/jwt-generate-algos", (Moved)
+                  ],
+                },
+
+                // Single Sign-on > Tutorial > Federated SSO > SAML >
+                {
+                  type: "category",
+                  label: "SAML",
+                  items: [
+                    //"single-sign-on/tutorial/federated-sso/saml/overview", (Moved)
+                    //"single-sign-on/tutorial/federated-sso/saml/idp-initiated", (Moved)
+                    //"single-sign-on/tutorial/federated-sso/saml/sp-initiated", (Moved)
+                  ],
+                },
+              ],
+            },
+
+            // Single Sign-on > Tutorial > Cross Device SSO >
+            {
+              type: "category",
+              label: "Cross Device SSO",
+              items: [
+                //"single-sign-on/tutorial/cross-device-sso/overview", (Moved)
+              ],
+            },
+
+            // Single Sign-on > Tutorial > Custom IDPs >
+            {
+              type: "category",
+              label: "Custom IDPs",
+              items: [
+                //"single-sign-on/tutorial/custom-identity-providers/overview", (Moved)
+                //"single-sign-on/tutorial/custom-identity-providers/pre-built-connections", (Moved)
+                //"single-sign-on/tutorial/custom-identity-providers/custom-oauth-provider", (Moved)
+                //"single-sign-on/tutorial/custom-identity-providers/custom-jwt-provider", (Moved)
+                //"single-sign-on/tutorial/custom-identity-providers/custom-saml-provider", (Moved)
+                //"single-sign-on/tutorial/custom-identity-providers/custom-adfs-provider", (Moved)
+              ],
+            },
+          ],
+        },
+        // Single Sign-on > Concept >
+        {
+          type: "category",
+          label: "Concept",
+          items: [
+            // Single Sign-on > Concept > Custom IDP Providers >
+            {
+              type: "category",
+              label: "Custom IDP Providers",
+              items: [
+                //"single-sign-on/concept/custom-idp-provider/azure-ad", (Moved)
+                //"single-sign-on/concept/custom-idp-provider/doximity", (Moved)
+                //"single-sign-on/concept/custom-idp-provider/alipay", (Moved)
+                //"single-sign-on/concept/custom-idp-provider/aws-cognito", (Moved)
+                //"single-sign-on/concept/custom-idp-provider/autho", (Moved)
+                //"single-sign-on/concept/custom-idp-provider/lr-as-custom-idp-into-another-lr-app", (Moved)
+                //"single-sign-on/concept/custom-idp-provider/wechat", (Moved)
+              ],
+            },
+
+            // Single Sign-on > Concept > SAML Providers >
+            {
+              type: "category",
+              label: "SAML Providers",
+              items: [
+                //"single-sign-on/concept/saml-providers/domo", (Moved)
+                //"single-sign-on/concept/saml-providers/jira", (Moved)
+                //"single-sign-on/concept/saml-providers/salesforce", (Moved)
+                //"single-sign-on/concept/saml-providers/office365", (Moved)
+                //"single-sign-on/concept/saml-providers/sharepoint", (Moved)
+              ],
+            },
+
+            // Single Sign-on > Concept > OIDC Providers >
+            {
+              type: "category",
+              label: "OIDC Providers",
+              items: [
+                //"single-sign-on/concept/oidc-providers/azure-ad-b2c", (Moved)
+              ],
+            },
+
+            // Single Sign-on > Concept > SAML Miscellaneous >
+            {
+              type: "category",
+              label: "SAML Miscellaneous",
+              items: [
+                //"single-sign-on/concept/saml-miscellaneous/samlfaq", (Moved)
+                //"single-sign-on/concept/saml-miscellaneous/usage", (Moved)
+                //"single-sign-on/concept/saml-miscellaneous/certificate", (Moved)
+              ],
+            },
+
+            // Single Sign-on > Concept > FAQ > (Acutally FAQ is in same directory as Concept)
+            {
+              type: "category",
+              label: "FAQ",
+              items: [
+                //"single-sign-on/faq/chrome-blocking-third-party-cookies", (Moved)
+                //"single-sign-on/faq/proof-of-key-for-code-exchange", (Moved)
+              ],
+            },
+          ],
+        },
+        */
+      ],
+    },
+    
+    // Branding & Customization (Finalized)
+    {
+      type: "category",
+      label: "Branding & Customization",
+      items: [
+        "branding-and-customization/overview", // #Duplicate123
+        // Branding & Customization > Email Communication & Configuration > (Finalized)
+        {
+          type: "category",
+          label: "Email Communication & Configuration",
+          items: [
+            "branding-and-customization/email-communication-and-configuration/email-communications",
+            "branding-and-customization/email-communication-and-configuration/email-templates",
+
+            // Branding & Customization > Email Communication & Configuration > Email Providers (Finalized)
+            {
+              type: "category",
+              label: "Email Providers",
+              items: [
+                "branding-and-customization/email-communication-and-configuration/email-providers/aws",
+                "branding-and-customization/email-communication-and-configuration/email-providers/gmail",
+                "branding-and-customization/email-communication-and-configuration/email-providers/mailazy",
+                "branding-and-customization/email-communication-and-configuration/email-providers/mailgun",
+                "branding-and-customization/email-communication-and-configuration/email-providers/mandrill",
+                "branding-and-customization/email-communication-and-configuration/email-providers/salesforce-marketing-cloud",
+                "branding-and-customization/email-communication-and-configuration/email-providers/sendgrid",
+                "branding-and-customization/email-communication-and-configuration/email-providers/yahoo",
+              ],
+            },
+          ],
+        },
+        // Branding & Customization > SMS Communication & Configuration > (Finalized)
+        {
+          type: "category",
+          label: "SMS Communication & Configuration",
+          items: [
+            "branding-and-customization/sms-communication-and-configuration/sms-communication",
+            
+            // Branding & Customization > SMS Communication & Configuration > SMS Providers (Finalized)
+            {
+              type: "category",
+              label: "SMS Providers",
+              items: [
+                "branding-and-customization/sms-communication-and-configuration/sms-providers/twilio-configuration",
+                "branding-and-customization/sms-communication-and-configuration/sms-providers/custom-sms-provider",
+              ],
+            },
+          ],
+        },
+        // Branding & Customization > Hosted pages > (Finalized)
+        {
+          type: "category",
+          label: "Hosted pages",
+          items: [
+            //"branding-and-customization/hosted-pages/", #Duplicate123
+            "branding-and-customization/hosted-pages/usage",
+            "branding-and-customization/hosted-pages/customization",
+          ],
+        },
+      ],
+    },
+    // User Management > (Finalized)
+    {
+      type: "category",
+      label: "User Management",
+      items: [
+        // User Management > User Management > (Finalized)
+        {
+          type: "category",
+          label: "User Management",
+          items: [
+            "user-management/user-management/overview",
+            "user-management/user-management/add-a-new-customer",
+            "user-management/user-management/profile-view",
+            "user-management/user-management/blocked-customer",
+          ],
+        },
+        // User Management > Privacy and Consent > (Finalized)
+        {
+          type: "category",
+          label: "Privacy and Consent",
+          items: [
+            "user-management/privacy-and-consent/consent-management",
+            "user-management/privacy-and-consent/privacy-policy",
+          ],
+        },
+        // User Management > Roles and Permissions > (Finalized)
+        {
+          type: "category",
+          label: "Roles and Permissions",
+          items: [
+            "user-management/roles-and-permissions/roles-and-membership",
+          ],
+        },
+        // User Management > Data Management > (Finalized)
+        {
+          type: "category",
+          label: "Data Management",
+          items: [
+            "user-management/data-management/user-data-overview",
+            "user-management/data-management/confidentiality-integrity-and-availability",
+            "user-management/data-management/loginradius-tokens",
+            "user-management/data-management/data-auditing-andlogging",
+            "user-management/data-management/consumer-audit-logs",
+            "user-management/data-management/browser-information-storage-cookies",
+            "user-management/data-management/custom-object-overview",
+            "user-management/data-management/custom-fields-and-custom-objects",
+            "user-management/data-management/user-profile-scopes",
+            "user-management/data-management/data-security",
           ],
         },
       ],
@@ -112,20 +618,20 @@ const sidebars = {
       label: "Customer Management",
       items: [
         // Customer Management >
-        "customer-management/overview",
-        "customer-management/add-a-new-customer",
-        "customer-management/profile-view",
-        "customer-management/blocked-customer",
+        //"customer-management/overview", (Moved)
+        //"customer-management/add-a-new-customer", (Moved)
+        //"customer-management/profile-view", (Moved)
+        //"customer-management/blocked-customer", (Moved)
 
-        // Customer Management > Customer Segmentation >
+        /* Customer Management > Customer Segmentation >
         {
           type: "category",
           label: "Customer Segmentation",
           items: [
-            "customer-management/customer-segmentation/customer-segmentation",
-            "customer-management/customer-segmentation/basic-segmentation",
-            "customer-management/customer-segmentation/advanced-segmentation",
-            "customer-management/customer-segmentation/save-segmentation",
+            //"customer-management/customer-segmentation/customer-segmentation", (Moved)
+            //"customer-management/customer-segmentation/basic-segmentation", (Moved)
+            //"customer-management/customer-segmentation/advanced-segmentation", (Moved)
+            //"customer-management/customer-segmentation/save-segmentation", (Moved)
           ],
         },
 
@@ -134,12 +640,12 @@ const sidebars = {
           type: "category",
           label: "Data Query",
           items: [
-            "customer-management/data-query/data-query-overview",
-            "customer-management/data-query/customer-query",
-            "customer-management/data-query/custom-object-query",
+            //"customer-management/data-query/data-query-overview", (Moved)
+            //"customer-management/data-query/customer-query", (Moved)
+            //"customer-management/data-query/custom-object-query", (Moved)
           ],
         },
-
+        */
         // Customer Management > User Data Export >
         {
           type: "category",
@@ -159,40 +665,44 @@ const sidebars = {
       items: [
         // Governance >
         "governance/overview",
-        "governance/data-schema",
-        "governance/custom-field-configuration",
+        //"governance/data-schema", (Moved)
+        //"governance/custom-field-configuration", (Moved)
         "governance/configure-social-data-settings",
         "governance/advanced-social-data-points",
 
-        // Governance > Customer Profiling
+        /* Governance > Customer Profiling
         {
           type: "category",
           label: "Customer Profiling",
           items: [
-            "governance/customer-profiling/custom-fields-and-custom-objects",
-            "governance/customer-profiling/custom-object-overview",
-            "governance/customer-profiling/user-profile-scopes",
-            "governance/customer-profiling/consent-management",
-            "governance/customer-profiling/privacy-policy",
-            "governance/customer-profiling/data-security",
+            //"governance/customer-profiling/custom-fields-and-custom-objects", (Moved)
+            //"governance/customer-profiling/custom-object-overview", (Moved)
+            //"governance/customer-profiling/user-profile-scopes", (Moved)
+            //"governance/customer-profiling/consent-management", (Moved)
+            //"governance/customer-profiling/privacy-policy", (Moved)
+            //"governance/customer-profiling/data-security", (Moved)
           ],
         },
+        */
       ],
     },
+    // Integrations > (Finalized)
     {
       type: "category",
       label: "Integrations",
       items: [
-        // Integrations >
         "integrations/overview",
         "integrations/available-integrations",
+        "integrations/webhook",
+        "integrations/audit-log-overview",
+        "integrations/cloud-connector-overview",
 
-        // Integrations > Audit Log Integration >
+        /* Integrations > Audit Log Integration >
         {
           type: "category",
           label: "Audit Log Integration",
           items: [
-            "integrations/audit-log/overview",
+            //"integrations/audit-log/overview", (Renamed to "audit-log-overview" and Moved)
           ],
         },
 
@@ -201,11 +711,11 @@ const sidebars = {
           type: "category",
           label: "Cloud Connectors",
           items: [
-            "integrations/server-side-cloud-connectors/overview",
+            //"integrations/server-side-cloud-connectors/overview", (Renamed to "cloud-connector-overview" and Moved)
           ],
         },
-
-        // Integrations > Client Side Connectors >
+        */
+        // Integrations > Client Side Connectors > (Finalized)
         {
           type: "category",
           label: "Client Side Connectors",
@@ -231,7 +741,7 @@ const sidebars = {
           ],
         },
 
-        // Integrations > Third Party Integration Platforms >
+        // Integrations > Third Party Integration Platforms > (Finalized)
         {
           type: "category",
           label: "Third Party Integration Platforms",
@@ -242,7 +752,7 @@ const sidebars = {
           ],
         },
 
-        // Integrations > Internet of Things (IoT) >
+        // Integrations > Internet of Things (IoT) > (Finalized)
         {
           type: "category",
           label: "Internet of Things (IoT)",
@@ -252,7 +762,7 @@ const sidebars = {
           ],
         },
 
-        // Integrations > Marketplace >
+        // Integrations > Marketplace > (Finalized)
         {
           type: "category",
           label: "Marketplace",
@@ -264,6 +774,168 @@ const sidebars = {
         },
       ],
     },
+    // Data Insights > (Finalized)
+    {
+      type: "category",
+      label: "Data Insights",
+      items: [
+        // Data Insights > Customer Segmentation > (Finalized)
+        {
+          type: "category",
+          label: "Customer Segmentation",
+          items: [
+            "data-insights/customer-segmentation/customer-segmentation",
+            "data-insights/customer-segmentation/basic-segmentation",
+            "data-insights/customer-segmentation/advanced-segmentation",
+            "data-insights/customer-segmentation/save-segmentation",
+          ],
+        },
+        // Data Insights > Data Query > (Finalized)
+        {
+          type: "category",
+          label: "Data Query",
+          items: [
+            "data-insights/data-query/data-query-overview",
+            "data-insights/data-query/customer-query",
+            "data-insights/data-query/custom-object-query",
+          ],
+        },
+      ],
+    },
+    // Deployment and Testings > (Finalized)
+    {
+      type: "category",
+      label: "Deployment and Testing",
+      items: [
+        // Deployment and Testings > Hosted Pages > (Finalized)
+        {
+          type: "category",
+          label: "Hosted Pages",
+          items: [
+            "deployment-and-testing/hosted-pages/features-use-cases",
+            "deployment-and-testing/hosted-pages/multi-branding-configuration",
+            "deployment-and-testing/hosted-pages/idx-selfhosted",
+          ],
+        }, 
+        // Deployment and Testings > Identity Orchestration > (Finalized)
+        {
+          type: "category",
+          label: "Identity Orchestration",
+          items: [
+            "deployment-and-testing/identity-orchestration/overview"
+          ],
+        },
+        // Deployment and Testings > CLI > (Finalized)
+        {
+          type: "category",
+          label: "Command Line Interface",
+          items: [
+            "deployment-and-testing/command-line-interface/cli"
+          ],
+        },
+        // Deployment and Testings > SDK > (Finalized)
+        {
+          type: "category",
+          label: "SDK",
+          items: [
+            // Deployment and Testings > SDK > Mobile SDK Libraries > (Finalized)
+            {
+              type: "category",
+              label: "Mobile SDK Libraries",
+              items: [
+                "deployment-and-testing/sdk/mobile-sdk-libraries/overview",
+                "deployment-and-testing/sdk/mobile-sdk-libraries/ios-library",
+                "deployment-and-testing/sdk/mobile-sdk-libraries/android-library",
+                "deployment-and-testing/sdk/mobile-sdk-libraries/ionic-library",
+                "deployment-and-testing/sdk/mobile-sdk-libraries/ionic-2-library",
+                "deployment-and-testing/sdk/mobile-sdk-libraries/phonegap-library",
+                "deployment-and-testing/sdk/mobile-sdk-libraries/xamarin-library",
+                "deployment-and-testing/sdk/mobile-sdk-libraries/react-native-library",
+              ],
+            },
+            // Deployment and Testings > SDK > Turn-Key Plugins > (Finalized)
+            {
+              type: "category",
+              label: "Turn-Key Plugins",
+              items: [
+                "deployment-and-testing/sdk/turn-key-plugins/overview",
+                "deployment-and-testing/sdk/turn-key-plugins/general-cms-integrations",
+                "deployment-and-testing/sdk/turn-key-plugins/perfectmind",
+                "deployment-and-testing/sdk/turn-key-plugins/drupal-v7-x-customer-identity-module-instructions",
+                "deployment-and-testing/sdk/turn-key-plugins/drupal-v8-x-customer-identity-module-instructions",
+                "deployment-and-testing/sdk/turn-key-plugins/joomla-v2-x-and-v3-x-customer-identity-module-instructions",
+                "deployment-and-testing/sdk/turn-key-plugins/magento-1-x-extension",
+                "deployment-and-testing/sdk/turn-key-plugins/magento-2-x-extension",
+                "deployment-and-testing/sdk/turn-key-plugins/sitecore-integration",
+                "deployment-and-testing/sdk/turn-key-plugins/wordpress-2-x-plugin",
+                "deployment-and-testing/sdk/turn-key-plugins/bigcommerce-blueprint-plugin",
+                "deployment-and-testing/sdk/turn-key-plugins/bigcommerce-stencil-plugin",
+                "deployment-and-testing/sdk/turn-key-plugins/shopify-multipass-integration",
+                "deployment-and-testing/sdk/turn-key-plugins/salesforce-commerce-cloud-cartridge",
+                "deployment-and-testing/sdk/turn-key-plugins/aem-Integration",
+                "deployment-and-testing/sdk/turn-key-plugins/hybris-Integration",
+              ],
+            },
+            // Deployment and Testings > SDK > Use Cases/Demos > (Finalized)
+            {
+              type: "category",
+              label: "Use Cases/Demos",
+              items: [
+                "deployment-and-testing/sdk/demos/overview",
+                "deployment-and-testing/sdk/demos/html-and-js-demo",
+                "deployment-and-testing/sdk/demos/html-themed-demo",
+                "deployment-and-testing/sdk/demos/iframe-implementation-demo",
+                "deployment-and-testing/sdk/demos/amp-demo",
+                "deployment-and-testing/sdk/demos/angularjs-demo",
+                "deployment-and-testing/sdk/demos/angular-6-demo",
+                "deployment-and-testing/sdk/demos/emberjs-demo",
+                "deployment-and-testing/sdk/demos/google-assistant-demo",
+                "deployment-and-testing/sdk/demos/polymer-demo",
+                "deployment-and-testing/sdk/demos/react-demo",
+                "deployment-and-testing/sdk/demos/vue-demo",
+                "deployment-and-testing/sdk/demos/preact-demo",
+                "deployment-and-testing/sdk/demos/aurelia-demo",
+                "deployment-and-testing/sdk/demos/meteor-demo",
+                "deployment-and-testing/sdk/demos/backbonejs-demo",
+                "deployment-and-testing/sdk/demos/cakephp-demo",
+                "deployment-and-testing/sdk/demos/codeigniter-demo",
+                "deployment-and-testing/sdk/demos/laravel-demo",
+                "deployment-and-testing/sdk/demos/symfony-demo",
+                "deployment-and-testing/sdk/demos/yii-demo",
+                "deployment-and-testing/sdk/demos/alexa-demo",
+              ],
+            },
+          ],
+        },
+        // Deployment and Testings > JS Libraries > (Finalized)
+        {
+          type: "category",
+          label: "JS Libraries",
+          items: [
+            "deployment-and-testing/js-libraries/getting-started",
+            "deployment-and-testing/js-libraries/javascript-hooks",
+            "deployment-and-testing/js-libraries/advanced-js-customizations",
+            "deployment-and-testing/js-libraries/js-form-library",
+            "deployment-and-testing/js-libraries/localization",
+            "deployment-and-testing/js-libraries/customization-by-context",
+          ],
+        },
+        // Deployment and Testings > Errors and Troubleshooting > (Finalized)
+        {
+          type: "category",
+          label: "Errors and Troubleshooting",
+          items: [
+            "deployment-and-testing/errors-and-troubleshooting/troubleshooting",
+            "deployment-and-testing/errors-and-troubleshooting/account-linking",
+            "deployment-and-testing/errors-and-troubleshooting/age-verification",
+            "deployment-and-testing/errors-and-troubleshooting/billing-faq",
+            "deployment-and-testing/errors-and-troubleshooting/identity-provider-apps",
+            "deployment-and-testing/errors-and-troubleshooting/support-faq",
+            "deployment-and-testing/errors-and-troubleshooting/supported-browsers",
+          ],
+        },
+      ],
+    },
     {
       type: "category",
       label: "Libraries",
@@ -271,7 +943,7 @@ const sidebars = {
         // Libraries >
         "libraries/overview",
 
-        // Libraries > JS Libraries >
+        /* Libraries > JS Libraries >
         {
           type: "category",
           label: "JS Libraries",
@@ -284,21 +956,21 @@ const sidebars = {
             "libraries/js-libraries/customization-by-context",
           ],
         },
-
-        // Libraries > Identity Experience Framework >
+        */
+        /* Libraries > Identity Experience Framework >
         {
           type: "category",
           label: "Identity Experience Framework",
           items: [
-            "libraries/identity-experience-framework/overview",
-            "libraries/identity-experience-framework/usage",
-            "libraries/identity-experience-framework/customization",
-            "libraries/identity-experience-framework/features-use-cases",
-            "libraries/identity-experience-framework/multi-branding-configuration",
-            "libraries/identity-experience-framework/idx-selfhosted",
+            //"libraries/identity-experience-framework/overview", (Moved)
+            //"libraries/identity-experience-framework/usage", (Moved)
+            //"libraries/identity-experience-framework/customization", (Moved)
+            //"libraries/identity-experience-framework/features-use-cases", (Moved)
+            //"libraries/identity-experience-framework/multi-branding-configuration", (Moved)
+            //"libraries/identity-experience-framework/idx-selfhosted", (Moved)
           ],
         },
-
+        */
         // Libraries > SDK Libraries >
         {
           type: "category",
@@ -308,19 +980,19 @@ const sidebars = {
           ],
         },
 
-        // Libraries > Mobile SDK Libraries >
+        /* Libraries > Mobile SDK Libraries >
         {
           type: "category",
           label: "Mobile SDK Libraries",
           items: [
-            "libraries/mobile-sdk-libraries/overview",
-            "libraries/mobile-sdk-libraries/ios-library",
-            "libraries/mobile-sdk-libraries/android-library",
-            "libraries/mobile-sdk-libraries/ionic-library",
-            "libraries/mobile-sdk-libraries/ionic-2-library",
-            "libraries/mobile-sdk-libraries/phonegap-library",
-            "libraries/mobile-sdk-libraries/xamarin-library",
-            "libraries/mobile-sdk-libraries/react-native-library",
+            //"libraries/mobile-sdk-libraries/overview", (Moved)
+            //"libraries/mobile-sdk-libraries/ios-library", (Moved)
+            //"libraries/mobile-sdk-libraries/android-library", (Moved)
+            //"libraries/mobile-sdk-libraries/ionic-library", (Moved)
+            //"libraries/mobile-sdk-libraries/ionic-2-library", (Moved)
+            //"libraries/mobile-sdk-libraries/phonegap-library", (Moved)
+            //"libraries/mobile-sdk-libraries/xamarin-library", (Moved)
+            //"libraries/mobile-sdk-libraries/react-native-library", (Moved)
           ],
         },
 
@@ -329,22 +1001,22 @@ const sidebars = {
           type: "category",
           label: "Turn-Key Plugins",
           items: [
-            "libraries/turn-key-plugins/overview",
-            "libraries/turn-key-plugins/general-cms-integrations",
-            "libraries/turn-key-plugins/perfectmind",
-            "libraries/turn-key-plugins/drupal-v7-x-customer-identity-module-instructions",
-            "libraries/turn-key-plugins/drupal-v8-x-customer-identity-module-instructions",
-            "libraries/turn-key-plugins/joomla-v2-x-and-v3-x-customer-identity-module-instructions",
-            "libraries/turn-key-plugins/magento-1-x-extension",
-            "libraries/turn-key-plugins/magento-2-x-extension",
-            "libraries/turn-key-plugins/sitecore-integration",
-            "libraries/turn-key-plugins/wordpress-2-x-plugin",
-            "libraries/turn-key-plugins/bigcommerce-blueprint-plugin",
-            "libraries/turn-key-plugins/bigcommerce-stencil-plugin",
-            "libraries/turn-key-plugins/shopify-multipass-integration",
-            "libraries/turn-key-plugins/salesforce-commerce-cloud-cartridge",
-            "libraries/turn-key-plugins/aem-Integration",
-            "libraries/turn-key-plugins/hybris-Integration",
+            //"libraries/turn-key-plugins/overview", (Moved)
+            //"libraries/turn-key-plugins/general-cms-integrations", (Moved)
+            //"libraries/turn-key-plugins/perfectmind", (Moved)
+            //"libraries/turn-key-plugins/drupal-v7-x-customer-identity-module-instructions", (Moved)
+            //"libraries/turn-key-plugins/drupal-v8-x-customer-identity-module-instructions", (Moved)
+            //"libraries/turn-key-plugins/joomla-v2-x-and-v3-x-customer-identity-module-instructions", (Moved)
+            //"libraries/turn-key-plugins/magento-1-x-extension", (Moved)
+            //"libraries/turn-key-plugins/magento-2-x-extension", (Moved)
+            //"libraries/turn-key-plugins/sitecore-integration", (Moved)
+            //"libraries/turn-key-plugins/wordpress-2-x-plugin", (Moved)
+            //"libraries/turn-key-plugins/bigcommerce-blueprint-plugin", (Moved)
+            //"libraries/turn-key-plugins/bigcommerce-stencil-plugin", (Moved)
+            //"libraries/turn-key-plugins/shopify-multipass-integration", (Moved)
+            //"libraries/turn-key-plugins/salesforce-commerce-cloud-cartridge", (Moved)
+            //"libraries/turn-key-plugins/aem-Integration", (Moved)
+            //"libraries/turn-key-plugins/hybris-Integration", (Moved)
           ],
         },
 
@@ -353,28 +1025,28 @@ const sidebars = {
           type: "category",
           label: "Use Cases/Demos",
           items: [
-            "libraries/demos/overview",
-            "libraries/demos/html-and-js-demo",
-            "libraries/demos/html-themed-demo",
-            "libraries/demos/iframe-implementation-demo",
-            "libraries/demos/amp-demo",
-            "libraries/demos/angularjs-demo",
-            "libraries/demos/angular-6-demo",
-            "libraries/demos/emberjs-demo",
-            "libraries/demos/google-assistant-demo",
-            "libraries/demos/polymer-demo",
-            "libraries/demos/react-demo",
-            "libraries/demos/vue-demo",
-            "libraries/demos/preact-demo",
-            "libraries/demos/aurelia-demo",
-            "libraries/demos/meteor-demo",
-            "libraries/demos/backbonejs-demo",
-            "libraries/demos/cakephp-demo",
-            "libraries/demos/codeigniter-demo",
-            "libraries/demos/laravel-demo",
-            "libraries/demos/symfony-demo",
-            "libraries/demos/yii-demo",
-            "libraries/demos/alexa-demo",
+            //"libraries/demos/overview", (Moved)
+            //"libraries/demos/html-and-js-demo", (Moved)
+            //"libraries/demos/html-themed-demo", (Moved)
+            //"libraries/demos/iframe-implementation-demo", (Moved)
+            //"libraries/demos/amp-demo", (Moved)
+            //"libraries/demos/angularjs-demo", (Moved)
+            //"libraries/demos/angular-6-demo", (Moved)
+            //"libraries/demos/emberjs-demo", (Moved)
+            //"libraries/demos/google-assistant-demo", (Moved)
+            //"libraries/demos/polymer-demo", (Moved)
+            //"libraries/demos/react-demo", (Moved)
+            //"libraries/demos/vue-demo", (Moved)
+            //"libraries/demos/preact-demo", (Moved)
+            //"libraries/demos/aurelia-demo", (Moved)
+            //"libraries/demos/meteor-demo", (Moved)
+            //"libraries/demos/backbonejs-demo", (Moved)
+            //"libraries/demos/cakephp-demo", (Moved)
+            //"libraries/demos/codeigniter-demo", (Moved)
+            //"libraries/demos/laravel-demo", (Moved)
+            //"libraries/demos/symfony-demo", (Moved)
+            //"libraries/demos/yii-demo", (Moved)
+            //"libraries/demos/alexa-demo", (Moved)
           ],
         },
 
@@ -383,7 +1055,7 @@ const sidebars = {
           type: "category",
           label: "Identity Orchestration",
           items: [
-            "libraries/identity-orchestration/overview",
+            //"libraries/identity-orchestration/overview", (Moved)
           ],
         },
 
@@ -392,211 +1064,10 @@ const sidebars = {
           type: "category",
           label: "Command Line Interface",
           items: [
-            "libraries/command-line-interface/cli",
+            //"libraries/command-line-interface/cli", (Moved)
           ],
         },
-      ],
-    },
-    {
-      type: "category",
-      label: "Security",
-      items: [
-        // Security >
-        "security/overview",
-
-        // Security > Infrastructure >
-        {
-          type: "category",
-          label: "Infrastructure",
-          items: [
-            "security/infrastructure/loginradius-cdn",
-            "security/infrastructure/multiple-environment",
-            "security/infrastructure/smtp-overview",
-            "security/infrastructure/ip-addresses-list",
-            "security/infrastructure/loginradius-data-regions",
-          ],
-        },
-
-        // Security > Platform Security >
-        {
-          type: "category",
-          label: "Platform Security",
-          items: [
-            "security/platform-security/account-verification-overview",
-            "security/platform-security/threat-prevention",
-            "security/platform-security/identity-data-compliance",
-            "security/platform-security/social-data-compliance",
-            "security/platform-security/password-security",
-            "security/platform-security/cryptographic-hashing-algorithms",
-            "security/platform-security/data-migration-security",
-          ],
-        },
-
-        // Security > Data Management >
-        {
-          type: "category",
-          label: "Data Management",
-          items: [
-            "security/data-management/user-data-overview",
-            "security/data-management/confidentiality-integrity-and-availability",
-            "security/data-management/loginradius-tokens",
-            "security/data-management/data-auditing-andlogging",
-            "security/data-management/consumer-audit-logs",
-            "security/data-management/browser-information-storage-cookies",
-          ],
-        },
-
-        // Security > Customer Security >
-        {
-          type: "category",
-          label: "Customer Security",
-          items: [
-            "security/user-security/fraud-prevention",
-            "security/user-security/registration-security",
-            "security/user-security/login-security",
-            "security/user-security/password-management",
-          ],
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Single Sign-on",
-      items: [
-        // Single Sign-on >
-        "single-sign-on/overview",
-
-        // Single Sign-on > Tutorial >
-        {
-          type: "category",
-          label: "Tutorial",
-          items: [
-            "single-sign-on/tutorial/web-sso/overview",
-            "single-sign-on/tutorial/mobile-sso/overview",
-
-            // Single Sign-on > Tutorial > Federated SSO >
-            {
-              type: "category",
-              label: "Federated SSO",
-              items: [
-                // "single-sign-on/tutorial/federated-sso/overview", MISSING
-                "single-sign-on/tutorial/federated-sso/pre-built-connections",
-                "single-sign-on/tutorial/federated-sso/oauth-2-0/oauth-2-0-overview",
-                "single-sign-on/tutorial/federated-sso/openid-connect/openid-connect-overview",
-
-                // Single Sign-on > Tutorial > Federated SSO > JWT Login >
-                {
-                  type: "category",
-                  label: "JWT Login",
-                  items: [
-                    "single-sign-on/tutorial/federated-sso/jwt-login/jwt-login-overview",
-                    "single-sign-on/tutorial/federated-sso/jwt-login/jwt-implementation-guide",
-                    "single-sign-on/tutorial/federated-sso/jwt-login/jwt-generate-algos",
-                  ],
-                },
-
-                // Single Sign-on > Tutorial > Federated SSO > SAML >
-                {
-                  type: "category",
-                  label: "SAML",
-                  items: [
-                    "single-sign-on/tutorial/federated-sso/saml/overview",
-                    "single-sign-on/tutorial/federated-sso/saml/idp-initiated",
-                    "single-sign-on/tutorial/federated-sso/saml/sp-initiated",
-                  ],
-                },
-              ],
-            },
-
-            // Single Sign-on > Tutorial > Cross Device SSO >
-            {
-              type: "category",
-              label: "Cross Device SSO",
-              items: [
-                "single-sign-on/tutorial/cross-device-sso/overview",
-              ],
-            },
-
-            // Single Sign-on > Tutorial > Custom IDPs >
-            {
-              type: "category",
-              label: "Custom IDPs",
-              items: [
-                "single-sign-on/tutorial/custom-identity-providers/overview",
-                "single-sign-on/tutorial/custom-identity-providers/pre-built-connections",
-                "single-sign-on/tutorial/custom-identity-providers/custom-oauth-provider",
-                "single-sign-on/tutorial/custom-identity-providers/custom-jwt-provider",
-                "single-sign-on/tutorial/custom-identity-providers/custom-saml-provider",
-                "single-sign-on/tutorial/custom-identity-providers/custom-adfs-provider",
-              ],
-            },
-          ],
-        },
-
-        // Single Sign-on > Concept >
-        {
-          type: "category",
-          label: "Concept",
-          items: [
-            // Single Sign-on > Concept > Custom IDP Providers >
-            {
-              type: "category",
-              label: "Custom IDP Providers",
-              items: [
-                "single-sign-on/concept/custom-idp-provider/azure-ad",
-                "single-sign-on/concept/custom-idp-provider/doximity",
-                "single-sign-on/concept/custom-idp-provider/alipay",
-                "single-sign-on/concept/custom-idp-provider/aws-cognito",
-                "single-sign-on/concept/custom-idp-provider/autho",
-                "single-sign-on/concept/custom-idp-provider/lr-as-custom-idp-into-another-lr-app",
-                "single-sign-on/concept/custom-idp-provider/wechat",
-              ],
-            },
-
-            // Single Sign-on > Concept > SAML Providers >
-            {
-              type: "category",
-              label: "SAML Providers",
-              items: [
-                "single-sign-on/concept/saml-providers/domo",
-                "single-sign-on/concept/saml-providers/jira",
-                "single-sign-on/concept/saml-providers/salesforce",
-                "single-sign-on/concept/saml-providers/office365",
-                "single-sign-on/concept/saml-providers/sharepoint",
-              ],
-            },
-
-            // Single Sign-on > Concept > OIDC Providers >
-            {
-              type: "category",
-              label: "OIDC Providers",
-              items: [
-                "single-sign-on/concept/oidc-providers/azure-ad-b2c",
-              ],
-            },
-
-            // Single Sign-on > Concept > SAML Miscellaneous >
-            {
-              type: "category",
-              label: "SAML Miscellaneous",
-              items: [
-                "single-sign-on/concept/saml-miscellaneous/samlfaq",
-                "single-sign-on/concept/saml-miscellaneous/usage",
-                "single-sign-on/concept/saml-miscellaneous/certificate",
-              ],
-            },
-
-            // Single Sign-on > Concept > FAQ > (Acutally FAQ is in same directory as Concept)
-            {
-              type: "category",
-              label: "FAQ",
-              items: [
-                "single-sign-on/faq/chrome-blocking-third-party-cookies",
-                "single-sign-on/faq/proof-of-key-for-code-exchange",
-              ],
-            },
-          ],
-        },
+        */
       ],
     }, 
   ],
@@ -810,7 +1281,7 @@ const sidebars = {
                   type: "category",
                   label: "Email",
                   items: [
-                    // Admin Console > Platform Configuration > Communication Configuration > Email > Providers
+                    /* Admin Console > Platform Configuration > Communication Configuration > Email > Providers > (Moved)
                     {
                       type: "category",
                       label: "Providers",
@@ -825,6 +1296,7 @@ const sidebars = {
                         "apidocs/admin-console/platform-configuration/communication-configuration/email/providers/yahoo",
                       ],
                     },
+                    */
                     "apidocs/admin-console/platform-configuration/communication-configuration/email/overview",
                     "apidocs/admin-console/platform-configuration/communication-configuration/email/email-configuration",
                     "apidocs/admin-console/platform-configuration/communication-configuration/email/global-email-settings",
@@ -841,11 +1313,11 @@ const sidebars = {
                       type: "category",
                       label: "Providers",
                       items: [
-                        "apidocs/admin-console/platform-configuration/communication-configuration/sms/providers/custom-sms-provider",
+                        //"apidocs/admin-console/platform-configuration/communication-configuration/sms/providers/custom-sms-provider", (Moved)
                         "apidocs/admin-console/platform-configuration/communication-configuration/sms/providers/instaalerts-configuration",
                         "apidocs/admin-console/platform-configuration/communication-configuration/sms/providers/messagebird-configuration",
                         "apidocs/admin-console/platform-configuration/communication-configuration/sms/providers/textlocal-configuration",
-                        "apidocs/admin-console/platform-configuration/communication-configuration/sms/providers/twilio-configuration",
+                        //"apidocs/admin-console/platform-configuration/communication-configuration/sms/providers/twilio-configuration", (Moved)
                       ],
                     },
                     "apidocs/admin-console/platform-configuration/communication-configuration/sms/overview",
@@ -861,7 +1333,7 @@ const sidebars = {
               label: "Standard Login",
               items: [
                 "apidocs/admin-console/platform-configuration/standard-login/overview",
-                "apidocs/admin-console/platform-configuration/standard-login/email-templates",
+                //"apidocs/admin-console/platform-configuration/standard-login/email-templates", (Moved)
                 "apidocs/admin-console/platform-configuration/standard-login/multiple-smtp-domain",
               ],
             },
@@ -892,9 +1364,9 @@ const sidebars = {
             "apidocs/admin-console/platform-security/auth-security-configuration",
             "apidocs/admin-console/platform-security/password-policy",
             "apidocs/admin-console/platform-security/security-question",
-            "apidocs/admin-console/platform-security/multi-factor-auth",
-            "apidocs/admin-console/platform-security/risk-based-auth",
-            "apidocs/admin-console/platform-security/session-management",
+            //"apidocs/admin-console/platform-security/multi-factor-auth", (Moved)
+            //"apidocs/admin-console/platform-security/risk-based-auth", (Moved)
+            //"apidocs/admin-console/platform-security/session-management", (Moved)
             "apidocs/admin-console/platform-security/regulations",
 
             // Admin Console > Platform Security > Captcha Providers
