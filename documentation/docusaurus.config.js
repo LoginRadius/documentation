@@ -148,7 +148,7 @@ const config = {
       docs: {
         sidebar: {
           autoCollapseCategories: true,
-          hideable: true,
+          hideable: false,
         },
       },
       sidebar: {
@@ -161,7 +161,9 @@ const config = {
             integrationId: "cm3qv5k4t0026ctns1w4ugr8s", // required
             organizationId: "org_7WE77CMkrySCsff3", // required
             primaryBrandColor: "#26D6FF", // required -- your brand color, the widget color scheme is derived from this
-            organizationDisplayName: "Inkeep",
+            organizationDisplayName: "LoginRadius",
+            customIcons: {
+              search: { custom: "/img/logoonly.png" }}, // ex. using builtIn
             // ...optional settings
             theme: {
               // stylesheetUrls: ['/inkeep-overrides.css'], // optional
