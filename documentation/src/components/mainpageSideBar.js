@@ -332,8 +332,8 @@ export const mainpageSideBar = {
           {
             type: "link",
             label: "Customer Management",
-            href: "/docs/customer-management/overview",
-            docId: "customer-management/overview",
+            href: "/docs/user-management/user-management/overview",
+            docId: "user-management/user-management/overview",
             unlisted: false,
           },
           {
