@@ -298,11 +298,11 @@ pre::-webkit-scrollbar-thumb {
 
 .footer {
   padding: 1px;
+  background-color: var(--ifm-navbar-background-color);
+
 }
 
-[data-theme="dark"] .footer {
-  background-color: var(--ifm-navbar-background-color);
-}
+
 
 .navbar__brand {
   margin-right: 0%;
@@ -355,3 +355,16 @@ pre::-webkit-scrollbar-thumb {
 .menu__list-item:not(:first-child) {
   margin-top: 0;
 }
+
+blockquote{
+  @apply p-3
+}
+
+a{
+  @apply text-[#008ECF]
+}
+
+.no-anchor-styling>a{
+  @apply text-current
+}
+

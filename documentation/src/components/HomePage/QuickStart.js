@@ -4,7 +4,7 @@ function QuickStart() {
   return (
     <div className="flex-col p-5">
       <h1 className="text-xl">Quick Starts</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="no-anchor-styling grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
         <a href="#" rel="noopener noreferrer" className="!no-underline">
           <div className=" shadow shadow-gray-500 rounded-lg p-6 text-center hover:scale-105 cursor-pointer flex flex-col justify-between h-full">
             <div className="text-blue-500 mb-4">

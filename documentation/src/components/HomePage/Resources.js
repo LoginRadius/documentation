@@ -19,7 +19,7 @@ const Resources = () => {
     <div className="m-3">
       <h1 className="text-xl font-bold mb-8">Resources</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 no-anchor-styling">
         {cards.map((card, index) => (
           <a
             key={index}

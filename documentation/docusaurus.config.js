@@ -163,7 +163,7 @@ const config = {
             primaryBrandColor: "#26D6FF", // required -- your brand color, the widget color scheme is derived from this
             organizationDisplayName: "LoginRadius",
             customIcons: {
-              search: { custom: "/img/logoonly.png" }}, // ex. using builtIn
+              search: { custom: "/img/logoonly.svg" }}, // ex. using builtIn
             // ...optional settings
             theme: {
               // stylesheetUrls: ['/inkeep-overrides.css'], // optional
@@ -181,7 +181,7 @@ const config = {
           },
           aiChatSettings: {
             // optional settings
-            botAvatarSrcUrl: "/img/logoonly.png", // use your own bot avatar
+            botAvatarSrcUrl: "/img/logoonly-dark.svg", // use your own bot avatar
             quickQuestions: [
               "Get Started with LoginRadius",
               "How does the LoginRadius User Registration System work?",
